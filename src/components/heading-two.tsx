@@ -16,8 +16,7 @@ const HeadingOne = ({ children }: Props) => (
           "font-bold",
           "leading-normal",
           "my-2",
-          text.size.base,
-          `sm:${text.size.md}`,
+          text.size.md,
           text.color.primary
         )}
       >

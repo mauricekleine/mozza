@@ -35,8 +35,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
             className={classNames(
               "m-auto",
               "px-4 pt-10",
-              text.size.small,
-              `sm:${text.size.base}`,
+              text.size.base,
               "md:w-4/5 lg:w-3/5 xl:w-2/5"
             )}
           >

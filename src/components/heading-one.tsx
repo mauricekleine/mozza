@@ -17,8 +17,7 @@ const HeadingTwo = ({ children }: Props) => (
           "leading-normal",
           "my-4",
           "text-center",
-          text.size.md,
-          `sm:${text.size.lg}`
+          text.size.lg
         )}
       >
         {children}

@@ -16,8 +16,7 @@ const Title = ({ children }: Props) => (
           "font-bold",
           "leading-normal",
           "mb-2",
-          text.size.lg,
-          `sm:${text.size.xl}`
+          text.size.xl
         )}
       >
         {children}

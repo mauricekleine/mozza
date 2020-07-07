@@ -13,11 +13,7 @@ const Link = ({ children, href }: Props) => (
   <Theme>
     {({ text }) => (
       <a
-        className={classNames(
-          text.color.primary,
-          "underline",
-          `hover:${text.color.muted}`
-        )}
+        className={classNames(text.color.hover, "underline")}
         href={href}
         rel="noopener noreferrer"
         target="_blank"

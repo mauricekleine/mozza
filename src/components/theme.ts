@@ -10,15 +10,15 @@ export const theme = {
   text: {
     color: {
       default: "text-gray-800",
+      hover: "text-blue-600 hover:text-gray-700",
       muted: "text-gray-700",
       primary: "text-blue-600",
     },
     size: {
-      base: "text-xl",
-      lg: "text-4xl",
-      md: "text-3xl",
-      small: "text-lg",
-      xl: "text-6xl",
+      base: "text-lg sm:text-xl",
+      lg: "text-3xl sm:text-4xl",
+      md: "text-2xl sm:text-3xl",
+      xl: "text-4xl sm:text-6xl",
     },
   },
 };

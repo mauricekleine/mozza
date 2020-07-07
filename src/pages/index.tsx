@@ -13,17 +13,15 @@ const Home = () => {
           <img className="h-40 rounded-full w-40" src="/maurice-kleine.jpg" />
         </div>
 
-        <div>
-          <p className="font-bold text-6xl">Hey!</p>
-          <p className="text-gray-700 text-2xl">
-            If you somehow stumbled upon this page and you would like to get in
-            touch, hit me up!
-          </p>
-        </div>
+        <p className="font-bold text-6xl">Hey!</p>
+        <p className="text-gray-700 text-2xl">
+          If you somehow stumbled upon this page and you would like to get in
+          touch, hit me up!
+        </p>
 
         <div className="mt-4">
           <div className="flex flex-col sm:flex-row sm:items-center">
-            <p>💌 Email</p>
+            <p className="sm:mr-2">💌 email</p>
 
             <Link href="mailto:hey@mauricekleine.com">
               hey@mauricekleine.com
@@ -31,7 +29,7 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center">
-            <p>🤝 LinkedIn</p>
+            <p className="sm:mr-2">🤝 linkedin</p>
 
             <Link href="https://www.linkedin.com/in/mauricekleine/">
               @mauricekleine
@@ -39,7 +37,7 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center">
-            <p>📷 Instagram</p>
+            <p className="sm:mr-2">📷 insta</p>
 
             <Link href="https://www.instagram.com/clocksandquestionmarks/">
               @clocksandquestionmarks

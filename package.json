@@ -14,6 +14,7 @@
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix --quiet"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",

@@ -2,8 +2,13 @@
 import { createElement } from "react";
 
 import Center from "../components/center";
+import HeadingOne from "../components/heading-one";
+import HeadingThree from "../components/heading-three";
+import HeadingTwo from "../components/heading-two";
 import Link from "../components/link";
 import Section from "../components/section";
+import Subtitle from "../components/subtitle";
+import Title from "../components/title";
 
 const Home = () => {
   return (
@@ -13,64 +18,56 @@ const Home = () => {
           <img className="h-40 rounded-full w-40" src="/maurice-kleine.jpg" />
         </div>
 
-        <p className="font-bold text-6xl">Hey!</p>
-        <p className="text-gray-700 text-2xl">
+        <Title>Hey!</Title>
+        <Subtitle>
           If you somehow stumbled upon this page and you would like to get in
           touch, hit me up!
-        </p>
+        </Subtitle>
 
-        <div className="mt-4">
-          <div className="flex flex-col sm:flex-row sm:items-center">
-            <p className="sm:mr-2">💌 email</p>
+        <div className="flex flex-col sm:flex-row sm:items-center">
+          <p className="sm:mr-2">💌 email</p>
 
-            <Link href="mailto:hey@mauricekleine.com">
-              hey@mauricekleine.com
-            </Link>
-          </div>
+          <Link href="mailto:hey@mauricekleine.com">hey@mauricekleine.com</Link>
+        </div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center">
-            <p className="sm:mr-2">🤝 linkedin</p>
+        <div className="flex flex-col sm:flex-row sm:items-center">
+          <p className="sm:mr-2">🤝 linkedin</p>
 
-            <Link href="https://www.linkedin.com/in/mauricekleine/">
-              @mauricekleine
-            </Link>
-          </div>
+          <Link href="https://www.linkedin.com/in/mauricekleine/">
+            @mauricekleine
+          </Link>
+        </div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center">
-            <p className="sm:mr-2">📷 insta</p>
+        <div className="flex flex-col sm:flex-row sm:items-center">
+          <p className="sm:mr-2">📷 insta</p>
 
-            <Link href="https://www.instagram.com/clocksandquestionmarks/">
-              @clocksandquestionmarks
-            </Link>
-          </div>
+          <Link href="https://www.instagram.com/clocksandquestionmarks/">
+            @clocksandquestionmarks
+          </Link>
         </div>
       </Section>
 
       <Section>
         <Center>
-          <p className="border-b-2 mb-6 text-2xl">I value</p>
+          <HeadingOne>I value</HeadingOne>
 
           <div className="mb-6">
-            <p className="text-blue-700 text-3xl">
-              Growth and self-actualisation
-            </p>
+            <HeadingTwo>Growth and self-actualisation</HeadingTwo>
             <p>To learn is to be alive</p>
           </div>
 
           <div className="mb-6">
-            <p className="text-blue-700 text-3xl">Compassion and inclusion</p>
+            <HeadingTwo>Compassion and inclusion</HeadingTwo>
             <p>Being judgemental is a thing of the past</p>
           </div>
 
           <div className="mb-6">
-            <p className="text-blue-700 text-3xl">Openness and honesty</p>
+            <HeadingTwo>Openness and honesty</HeadingTwo>
             <p>Sharing is caring is sharing is caring</p>
           </div>
 
           <div className="mb-6">
-            <p className="text-blue-700 text-3xl">
-              Open-mindedness and experimentation
-            </p>
+            <HeadingTwo>Open-mindedness and experimentation</HeadingTwo>
             <p>
               Traditions are overrated and rules are meant to be critically
               examined
@@ -78,9 +75,7 @@ const Home = () => {
           </div>
 
           <div className="mb-6">
-            <p className="text-blue-700 text-3xl">
-              Ownership and accountability
-            </p>
+            <HeadingTwo>Ownership and accountability</HeadingTwo>
             <p>Finger-pointers beware</p>
           </div>
         </Center>
@@ -88,7 +83,7 @@ const Home = () => {
 
       <Section>
         <Center>
-          <p className="border-b-2 mb-6 text-2xl">Talk to me about</p>
+          <HeadingOne>Talk to me about</HeadingOne>
 
           <div>
             <p>remote work 🌍</p>
@@ -104,22 +99,23 @@ const Home = () => {
             <p>craft beers 🍻</p>
             <p>bunnies 😳</p>
 
-            <p className="mt-6">Yep, bunnies 🐰🐰</p>
+            <p className="mt-8">Yep, bunnies 🐰🐰</p>
           </div>
         </Center>
       </Section>
 
       <Section>
         <Center>
-          <p className="border-b-2 mb-6 text-2xl">In the wild</p>
+          <HeadingOne>In the wild</HeadingOne>
         </Center>
 
         <Center>
-          <p className="border-b-2 mb-6">Videos</p>
+          <HeadingThree>Videos</HeadingThree>
+
           <iframe
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-full"
+            className="mt-2 w-full"
             frameBorder="0"
             height="315"
             src="https://www.youtube-nocookie.com/embed/6erqtEfHozU"
@@ -128,37 +124,110 @@ const Home = () => {
         </Center>
 
         <Center>
-          <p className="border-b-2 mb-6">Articles</p>
+          <HeadingThree>Articles</HeadingThree>
 
-          <Link href="https://www.productboard.com/blog/supporting-mental-health/">
-            Supporting mental health the productboard way
-          </Link>
+          <p className="py-2">
+            <Link href="https://www.productboard.com/blog/supporting-mental-health/">
+              Supporting mental health the productboard way
+            </Link>
+          </p>
 
-          <Link href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
-            How we want to do remote at productboard 🌎
-          </Link>
+          <p className="py-2">
+            <Link href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
+              How we want to do remote at productboard 🌎
+            </Link>
+          </p>
 
-          <Link href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
-            On Comfort Zones
-          </Link>
+          <p className="py-2">
+            <Link href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
+              On Comfort Zones
+            </Link>
+          </p>
 
-          <Link href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
-            What I’ve done, learned, and taught during my first 4 weeks as a
-            front-end engineer at productboard!
-          </Link>
+          <p className="py-2">
+            <Link href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
+              What I’ve done, learned, and taught during my first 4 weeks as a
+              front-end engineer at productboard!
+            </Link>
+          </p>
         </Center>
 
         <Center>
-          <p className="border-b-2 mb-6">Podcasts</p>
+          <HeadingThree>Podcasts</HeadingThree>
 
-          <Link href="https://www.startremote.net/interviews/maurice-kleine">
-            StartRemote #2: Maurice on how to build the first fully remote team
-          </Link>
+          <p className="py-2">
+            <Link href="https://www.startremote.net/interviews/maurice-kleine">
+              StartRemote #2: Maurice on how to build the first fully remote
+              team
+            </Link>
+          </p>
 
-          <Link href="https://soundcloud.com/people-of-productboard/1-maurice">
-            People of productboard episode #1: Maurice – Product Developer
-          </Link>
+          <p className="py-2">
+            <Link href="https://soundcloud.com/people-of-productboard/1-maurice">
+              People of productboard episode #1: Maurice – Product Developer
+            </Link>
+          </p>
         </Center>
+      </Section>
+
+      <Section>
+        <Center>
+          <HeadingOne>Pet projects</HeadingOne>
+        </Center>
+
+        <div className="mb-8">
+          <HeadingThree>SEDS</HeadingThree>
+
+          <p>
+            The Social Education and Development Society (SEDS) is a NGO that
+            has been actively involved in socially transforming initiatives and
+            rural development for over 38 years near the town of Penukonda in
+            Andhra Pradesh, India. I created and maintain their homepage.
+          </p>
+
+          <p>
+            🔗 <Link href="https://sedsngo.org/">website</Link>
+          </p>
+
+          <p>
+            😺 <Link href="https://github.com/mauricekleine/seds">source</Link>
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <HeadingThree>Tinnies</HeadingThree>
+
+          <p>
+            Beer tracking, but better. Mainly a playground for me to mess around
+            with cool new technologies.
+          </p>
+
+          <p>
+            🔗 <Link href="https://tinnies.xyz/">website</Link>
+          </p>
+
+          <p>
+            😺{" "}
+            <Link href="https://github.com/mauricekleine/tinnies">source</Link>
+          </p>
+        </div>
+
+        <div>
+          <HeadingThree>The Remote Work Library</HeadingThree>
+
+          <p>A curated list of remote work resources.</p>
+
+          <p>
+            🔗 <Link href="https://theremoteworklibrary.com/">website</Link>
+          </p>
+
+          <p>
+            😺{" "}
+            <Link href="https://github.com/mauricekleine/the-remote-work-library">
+              source
+            </Link>
+          </p>
+        </div>
       </Section>
     </>
   );

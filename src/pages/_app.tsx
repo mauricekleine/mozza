@@ -1,25 +1,54 @@
 /** @jsx createElement */
+import classNames from "classnames";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { createElement } from "react";
 
+import Link from "../components/link";
+import Theme, { ThemeProvider, theme } from "../components/theme";
+
 import "../css/styles.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <div className="bg-gray-100 text-gray-800">
-    <Head>
-      <title>Maurice Kleine</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+  <ThemeProvider value={theme}>
+    <Theme>
+      {({ bg, text }) => (
+        <div
+          className={classNames(
+            "font-mono",
+            "leading-relaxed",
+            bg.default,
+            text.color.default
+          )}
+        >
+          <Head>
+            <title>Maurice Kleine</title>
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-    <main className="font-mono md:leading-loose m-auto px-4 pt-8 text-xl md:w-4/5 lg:w-3/5 xl:w-2/5">
-      <Component {...pageProps} />
-    </main>
+          <main
+            className={classNames(
+              "m-auto",
+              "px-4 pt-10",
+              text.size.default,
+              "md:w-4/5 lg:w-3/5 xl:w-2/5"
+            )}
+          >
+            <Component {...pageProps} />
+          </main>
 
-    <footer className="font-mono m-auto pb-8 text-center w-3/5">
-      <p>Made with 💖</p>
-    </footer>
-  </div>
+          <footer className="m-auto pb-8 text-center w-3/5">
+            <p>
+              Made with 💖 | 😺{" "}
+              <Link href="https://github.com/mauricekleine/mk-website">
+                source
+              </Link>
+            </p>
+          </footer>
+        </div>
+      )}
+    </Theme>
+  </ThemeProvider>
 );
 
 export default MyApp;

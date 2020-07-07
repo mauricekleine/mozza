@@ -1,5 +1,8 @@
 /** @jsx createElement */
+import classNames from "classnames";
 import { ReactNode, createElement } from "react";
+
+import Theme from "./theme";
 
 type Props = {
   children: ReactNode;
@@ -7,14 +10,22 @@ type Props = {
 };
 
 const Link = ({ children, href }: Props) => (
-  <a
-    className="py-4 text-blue-700 underline hover:text-gray-600"
-    href={href}
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    {children}
-  </a>
+  <Theme>
+    {({ text }) => (
+      <a
+        className={classNames(
+          text.color.primary,
+          "underline",
+          `hover:${text.color.muted}`
+        )}
+        href={href}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {children}
+      </a>
+    )}
+  </Theme>
 );
 
 export default Link;

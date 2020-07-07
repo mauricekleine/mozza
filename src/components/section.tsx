@@ -6,7 +6,9 @@ type Props = {
 };
 
 const Section = ({ children }: Props) => (
-  <section className="border-b-2 mb-8 px-8 py-6">{children}</section>
+  <section className="bg-white border-b-4 mb-8 px-10 py-8 rounded-lg shadow-lg">
+    {children}
+  </section>
 );
 
 export default Section;

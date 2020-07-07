@@ -16,7 +16,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
         <div
           className={classNames(
             "font-mono",
-            "leading-relaxed",
+            "leading-normal",
+            "sm:leading-relaxed",
             bg.default,
             text.color.default
           )}
@@ -30,14 +31,15 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
             className={classNames(
               "m-auto",
               "px-4 pt-10",
-              text.size.default,
+              text.size.small,
+              `sm:${text.size.base}`,
               "md:w-4/5 lg:w-3/5 xl:w-2/5"
             )}
           >
             <Component {...pageProps} />
           </main>
 
-          <footer className="m-auto pb-8 text-center w-3/5">
+          <footer className="pb-8 text-center">
             <p>
               Made with 💖 | 😺{" "}
               <Link href="https://github.com/mauricekleine/mk-website">

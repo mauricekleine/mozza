@@ -14,9 +14,11 @@ export const theme = {
       primary: "text-blue-600",
     },
     size: {
-      default: "text-xl",
-      subtitle: "text-4xl",
-      title: "text-6xl",
+      base: "text-xl",
+      lg: "text-4xl",
+      md: "text-3xl",
+      small: "text-lg",
+      xl: "text-6xl",
     },
   },
 };

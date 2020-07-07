@@ -11,7 +11,17 @@ type Props = {
 const Title = ({ children }: Props) => (
   <Theme>
     {({ text }) => (
-      <p className={classNames("font-bold", text.size.title)}>{children}</p>
+      <p
+        className={classNames(
+          "font-bold",
+          "leading-normal",
+          "mb-2",
+          text.size.lg,
+          `sm:${text.size.xl}`
+        )}
+      >
+        {children}
+      </p>
     )}
   </Theme>
 );

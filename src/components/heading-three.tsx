@@ -7,7 +7,7 @@ type Props = {
 };
 
 const HeadingThree = ({ children }: Props) => (
-  <p className={classNames("border-b-2")}>{children}</p>
+  <p className={classNames("font-bold", "border-b-2")}>{children}</p>
 );
 
 export default HeadingThree;

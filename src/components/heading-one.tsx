@@ -11,7 +11,16 @@ type Props = {
 const HeadingTwo = ({ children }: Props) => (
   <Theme>
     {({ text }) => (
-      <p className={classNames("leading-loose", text.size.subtitle)}>
+      <p
+        className={classNames(
+          "font-bold",
+          "leading-normal",
+          "my-4",
+          "text-center",
+          text.size.md,
+          `sm:${text.size.lg}`
+        )}
+      >
         {children}
       </p>
     )}

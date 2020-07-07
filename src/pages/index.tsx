@@ -48,9 +48,9 @@ const Home = () => {
       </Section>
 
       <Section>
-        <Center>
-          <HeadingOne>I value</HeadingOne>
+        <HeadingOne>I value</HeadingOne>
 
+        <Center>
           <div className="mb-6">
             <HeadingTwo>Growth and self-actualisation</HeadingTwo>
             <p>To learn is to be alive</p>
@@ -74,7 +74,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="mb-6">
+          <div>
             <HeadingTwo>Ownership and accountability</HeadingTwo>
             <p>Finger-pointers beware</p>
           </div>
@@ -82,48 +82,44 @@ const Home = () => {
       </Section>
 
       <Section>
+        <HeadingOne>Talk to me about</HeadingOne>
+
         <Center>
-          <HeadingOne>Talk to me about</HeadingOne>
+          <p>remote work 🌍</p>
+          <p>mental health 🧠</p>
+          <p>meditation 🧘‍♂️</p>
+          <p>philosophy 🙇‍♂️</p>
+          <p>the future 🛸</p>
+          <p>people management 🤝</p>
+          <p>product management 🚀</p>
+          <p>javascript & typescript 👨‍💻</p>
+          <p>tech 📠</p>
+          <p>mexican food 🌯</p>
+          <p>craft beers 🍻</p>
+          <p>bunnies 😳</p>
 
-          <div>
-            <p>remote work 🌍</p>
-            <p>mental health 🧠</p>
-            <p>meditation 🧘‍♂️</p>
-            <p>philosophy 🙇‍♂️</p>
-            <p>the future 🛸</p>
-            <p>people management 🤝</p>
-            <p>product management 🚀</p>
-            <p>javascript & typescript 👨‍💻</p>
-            <p>tech 📠</p>
-            <p>mexican food 🌯</p>
-            <p>craft beers 🍻</p>
-            <p>bunnies 😳</p>
-
-            <p className="mt-8">Yep, bunnies 🐰🐰</p>
-          </div>
+          <p className="mt-8">Yep, bunnies 🐰🐰</p>
         </Center>
       </Section>
 
       <Section>
-        <Center>
-          <HeadingOne>In the wild</HeadingOne>
-        </Center>
+        <HeadingOne>In the wild</HeadingOne>
 
-        <Center>
+        <div className="mb-8">
           <HeadingThree>Videos</HeadingThree>
 
           <iframe
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="mt-2 w-full"
+            className="mt-2 rounded-md shadow w-full"
             frameBorder="0"
             height="315"
             src="https://www.youtube-nocookie.com/embed/6erqtEfHozU"
             width="560"
           ></iframe>
-        </Center>
+        </div>
 
-        <Center>
+        <div className="mb-8">
           <HeadingThree>Articles</HeadingThree>
 
           <p className="py-2">
@@ -144,15 +140,15 @@ const Home = () => {
             </Link>
           </p>
 
-          <p className="py-2">
+          <p className="pt-2">
             <Link href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
               What I’ve done, learned, and taught during my first 4 weeks as a
               front-end engineer at productboard!
             </Link>
           </p>
-        </Center>
+        </div>
 
-        <Center>
+        <div>
           <HeadingThree>Podcasts</HeadingThree>
 
           <p className="py-2">
@@ -162,21 +158,19 @@ const Home = () => {
             </Link>
           </p>
 
-          <p className="py-2">
+          <p className="pt-2">
             <Link href="https://soundcloud.com/people-of-productboard/1-maurice">
               People of productboard episode #1: Maurice – Product Developer
             </Link>
           </p>
-        </Center>
+        </div>
       </Section>
 
       <Section>
-        <Center>
-          <HeadingOne>Pet projects</HeadingOne>
-        </Center>
+        <HeadingOne>Pet projects</HeadingOne>
 
         <div className="mb-8">
-          <HeadingThree>SEDS</HeadingThree>
+          <HeadingThree>🌱 SEDS</HeadingThree>
 
           <p>
             The Social Education and Development Society (SEDS) is a NGO that
@@ -195,7 +189,7 @@ const Home = () => {
         </div>
 
         <div className="mb-8">
-          <HeadingThree>Tinnies</HeadingThree>
+          <HeadingThree>🍺 Tinnies</HeadingThree>
 
           <p>
             Beer tracking, but better. Mainly a playground for me to mess around
@@ -213,7 +207,7 @@ const Home = () => {
         </div>
 
         <div>
-          <HeadingThree>The Remote Work Library</HeadingThree>
+          <HeadingThree>📚 The Remote Work Library</HeadingThree>
 
           <p>A curated list of remote work resources.</p>
 

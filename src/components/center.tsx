@@ -6,7 +6,7 @@ type Props = {
 };
 
 const Center = ({ children }: Props) => (
-  <div className="flex flex-col items-center mb-8 text-center">{children}</div>
+  <div className="flex flex-col items-center text-center">{children}</div>
 );
 
 export default Center;

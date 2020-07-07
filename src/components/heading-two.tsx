@@ -12,7 +12,14 @@ const HeadingOne = ({ children }: Props) => (
   <Theme>
     {({ text }) => (
       <p
-        className={classNames("leading-loose", "text-3xl", text.color.primary)}
+        className={classNames(
+          "font-bold",
+          "leading-normal",
+          "my-2",
+          text.size.base,
+          `sm:${text.size.md}`,
+          text.color.primary
+        )}
       >
         {children}
       </p>

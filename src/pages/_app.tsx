@@ -25,6 +25,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
           <Head>
             <title>Maurice Kleine</title>
             <link rel="icon" href="/favicon.ico" />
+            <meta
+              name="description"
+              content="Maurice Kleine - problem solver by day, problem solver by night"
+            />
           </Head>
 
           <main

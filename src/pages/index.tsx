@@ -15,7 +15,11 @@ const Home = () => {
     <>
       <Section>
         <div className="flex justify-center">
-          <img className="h-40 rounded-full w-40" src="/maurice-kleine.jpg" />
+          <img
+            alt="Maurice Kleine"
+            className="h-40 rounded-full w-40"
+            src="/maurice-kleine.jpg"
+          />
         </div>
 
         <Title>Hey!</Title>
@@ -115,6 +119,7 @@ const Home = () => {
             frameBorder="0"
             height="315"
             src="https://www.youtube-nocookie.com/embed/6erqtEfHozU"
+            title="Building the Foundations of Remote Work - Maurice Kleine"
             width="560"
           ></iframe>
         </div>
@@ -179,7 +184,7 @@ const Home = () => {
             Andhra Pradesh, India. I created and maintain their homepage.
           </p>
 
-          <p>
+          <p className="mb-1">
             🔗 <Link href="https://sedsngo.org/">website</Link>
           </p>
 
@@ -196,7 +201,7 @@ const Home = () => {
             with cool new technologies.
           </p>
 
-          <p>
+          <p className="mb-1">
             🔗 <Link href="https://tinnies.xyz/">website</Link>
           </p>
 
@@ -211,7 +216,7 @@ const Home = () => {
 
           <p>A curated list of remote work resources.</p>
 
-          <p>
+          <p className="mb-1">
             🔗 <Link href="https://theremoteworklibrary.com/">website</Link>
           </p>
 

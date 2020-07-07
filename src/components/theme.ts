@@ -10,7 +10,7 @@ export const theme = {
   text: {
     color: {
       default: "text-gray-800",
-      muted: "text-gray-600",
+      muted: "text-gray-700",
       primary: "text-blue-600",
     },
     size: {

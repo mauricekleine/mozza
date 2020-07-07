@@ -8,7 +8,7 @@ type Props = {
 
 const Link = ({ children, href }: Props) => (
   <a
-    className="bg-blue-100 block my-2 px-4 rounded-lg w-full hover:bg-blue-200"
+    className="block my-2 px-4 py-2 sm:py-0 rounded-lg underline hover:text-gray-600"
     href={href}
     rel="noopener noreferrer"
     target="_blank"

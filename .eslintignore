@@ -11,3 +11,6 @@
 
 # generated
 /src/types/graphql.ts
+
+# tailwind plugs
+/plugins

@@ -22,76 +22,102 @@ const Home = () => {
         </div>
 
         <div className="mt-4">
-          <Link href="mailto:hey@mauricekleine.com">
-            💌 hey@mauricekleine.com
-          </Link>
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <p>💌 Email</p>
 
-          <Link href="https://www.linkedin.com/in/mauricekleine/">
-            🤝 @mauricekleine
-          </Link>
+            <Link href="mailto:hey@mauricekleine.com">
+              hey@mauricekleine.com
+            </Link>
+          </div>
 
-          <Link href="https://www.instagram.com/clocksandquestionmarks/">
-            📷 @clocksandquestionmarks
-          </Link>
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <p>🤝 LinkedIn</p>
+
+            <Link href="https://www.linkedin.com/in/mauricekleine/">
+              @mauricekleine
+            </Link>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <p>📷 Instagram</p>
+
+            <Link href="https://www.instagram.com/clocksandquestionmarks/">
+              @clocksandquestionmarks
+            </Link>
+          </div>
         </div>
       </Section>
 
       <Section>
         <Center>
-          <p className="text-4xl">I value</p>
+          <p className="border-b-2 mb-6 text-2xl">I value</p>
 
-          <p className="text-blue-600 text-3xl">
-            Growth and self-actualisation
-          </p>
-          <p>To learn is to be alive</p>
+          <div className="mb-6">
+            <p className="text-blue-700 text-3xl">
+              Growth and self-actualisation
+            </p>
+            <p>To learn is to be alive</p>
+          </div>
 
-          <p className="text-blue-600 text-3xl">Compassion and inclusion</p>
-          <p>Being judgemental is a thing of the past</p>
+          <div className="mb-6">
+            <p className="text-blue-700 text-3xl">Compassion and inclusion</p>
+            <p>Being judgemental is a thing of the past</p>
+          </div>
 
-          <p className="text-blue-600 text-3xl">Openness and honesty</p>
-          <p>Sharing is caring is sharing is caring</p>
+          <div className="mb-6">
+            <p className="text-blue-700 text-3xl">Openness and honesty</p>
+            <p>Sharing is caring is sharing is caring</p>
+          </div>
 
-          <p className="text-blue-600 text-3xl">
-            Open-mindedness and experimentation
-          </p>
-          <p>
-            Traditions are overrated and rules are meant to be critically
-            examined
-          </p>
+          <div className="mb-6">
+            <p className="text-blue-700 text-3xl">
+              Open-mindedness and experimentation
+            </p>
+            <p>
+              Traditions are overrated and rules are meant to be critically
+              examined
+            </p>
+          </div>
 
-          <p className="text-blue-600 text-3xl">Ownership and accountability</p>
-          <p>Finger-pointers beware</p>
+          <div className="mb-6">
+            <p className="text-blue-700 text-3xl">
+              Ownership and accountability
+            </p>
+            <p>Finger-pointers beware</p>
+          </div>
         </Center>
       </Section>
 
       <Section>
         <Center>
-          <p className="text-4xl">Talk to me about</p>
-          <p>remote work 🌍</p>
-          <p>mental health 🧠</p>
-          <p>meditation 🧘‍♂️</p>
-          <p>philosophy 🙇‍♂️</p>
-          <p>the future 🛸</p>
-          <p>people management 🤝</p>
-          <p>product management 🚀</p>
-          <p>javascript & typescript 👨‍💻</p>
-          <p>tech 📠</p>
-          <p>mexican food 🌯</p>
-          <p>craft beers 🍻</p>
-          <p>bunnies 😳</p>
+          <p className="border-b-2 mb-6 text-2xl">Talk to me about</p>
 
-          <p>Yep, bunnies 🐰🐰</p>
+          <div>
+            <p>remote work 🌍</p>
+            <p>mental health 🧠</p>
+            <p>meditation 🧘‍♂️</p>
+            <p>philosophy 🙇‍♂️</p>
+            <p>the future 🛸</p>
+            <p>people management 🤝</p>
+            <p>product management 🚀</p>
+            <p>javascript & typescript 👨‍💻</p>
+            <p>tech 📠</p>
+            <p>mexican food 🌯</p>
+            <p>craft beers 🍻</p>
+            <p>bunnies 😳</p>
+
+            <p className="mt-6">Yep, bunnies 🐰🐰</p>
+          </div>
         </Center>
       </Section>
 
       <Section>
         <Center>
-          <p className="text-4xl">In the wild</p>
+          <p className="border-b-2 mb-6 text-2xl">In the wild</p>
         </Center>
 
         <Center>
-          <p className="text-2xl">Videos</p>
-
+          <p className="border-b-2 mb-6">Videos</p>
           <iframe
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -104,7 +130,7 @@ const Home = () => {
         </Center>
 
         <Center>
-          <p className="text-2xl">Articles</p>
+          <p className="border-b-2 mb-6">Articles</p>
 
           <Link href="https://www.productboard.com/blog/supporting-mental-health/">
             Supporting mental health the productboard way
@@ -125,7 +151,7 @@ const Home = () => {
         </Center>
 
         <Center>
-          <p className="text-2xl">Podcasts</p>
+          <p className="border-b-2 mb-6">Podcasts</p>
 
           <Link href="https://www.startremote.net/interviews/maurice-kleine">
             StartRemote #2: Maurice on how to build the first fully remote team

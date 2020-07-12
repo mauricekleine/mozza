@@ -13,15 +13,15 @@ import Title from "../components/title";
 const Home = () => {
   return (
     <>
-      <Section>
-        <div className="flex justify-center">
-          <img
-            alt="Maurice Kleine"
-            className="h-40 rounded-full w-40"
-            src="/maurice-kleine.jpg"
-          />
-        </div>
+      <div className="flex justify-center -mb-4 z-0">
+        <img
+          alt="Maurice Kleine"
+          className="h-40 w-40 sm:h-56 sm:w-56"
+          src="/maurice-kleine.png"
+        />
+      </div>
 
+      <Section>
         <Title>Hey!</Title>
         <Subtitle>
           If you somehow stumbled upon this page and you would like to get in
@@ -88,22 +88,27 @@ const Home = () => {
       <Section>
         <HeadingOne>Talk to me about</HeadingOne>
 
-        <Center>
-          <p>remote work 🌍</p>
-          <p>mental health 🧠</p>
-          <p>meditation 🧘‍♂️</p>
-          <p>philosophy 🙇‍♂️</p>
-          <p>the future 🛸</p>
-          <p>people management 🤝</p>
-          <p>product management 🚀</p>
-          <p>javascript & typescript 👨‍💻</p>
-          <p>tech 📠</p>
-          <p>mexican food 🌯</p>
-          <p>craft beers 🍻</p>
-          <p>bunnies 😳</p>
+        <div>
+          <p>🌍 remote work</p>
+          <p>🧠 mental health</p>
+          <p>🧘‍♂️ meditation</p>
+          <p>🙇‍♂️ philosophy</p>
+          <p>🛸 the future</p>
+          <p>🤝 people management</p>
+          <p>🚀 product management</p>
+          <p>👨‍💻 javascript & typescript</p>
+          <p>📠 tech</p>
+          <p>🌯 mexican food</p>
+          <p>🍻 craft beers</p>
+          <p>😳 bunnies</p>
 
-          <p className="mt-8">Yep, bunnies 🐰🐰</p>
-        </Center>
+          <p className="mt-8">
+            🐰 yep,{" "}
+            <Link href="https://www.instagram.com/bunniesofamsterdam/">
+              bunnies
+            </Link>
+          </p>
+        </div>
       </Section>
 
       <Section>
@@ -153,7 +158,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div>
+        <div className="mb-8">
           <HeadingThree>Podcasts</HeadingThree>
 
           <p className="py-2">
@@ -211,7 +216,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div>
+        <div className="mb-8">
           <HeadingThree>📚 The Remote Work Library</HeadingThree>
 
           <p>A curated list of remote work resources.</p>
@@ -223,6 +228,23 @@ const Home = () => {
           <p>
             😺{" "}
             <Link href="https://github.com/mauricekleine/the-remote-work-library">
+              source
+            </Link>
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <HeadingThree>🤙 This website</HeadingThree>
+
+          <p>Yep, the website you&apos;re looking at right now.</p>
+
+          <p className="mb-1">
+            🔗 <Link href="https://mauricekleine.com.com/">website</Link>
+          </p>
+
+          <p>
+            😺{" "}
+            <Link href="https://github.com/mauricekleine/mk-website">
               source
             </Link>
           </p>

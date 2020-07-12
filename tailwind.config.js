@@ -4,7 +4,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       mono: [
-        "PT Mono",
+        "Roboto Mono",
         "Menlo",
         "Monaco",
         "Consolas",

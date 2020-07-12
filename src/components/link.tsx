@@ -13,7 +13,7 @@ const Link = ({ children, href }: Props) => (
   <Theme>
     {({ text }) => (
       <a
-        className={classNames(text.color.hover, "underline")}
+        className={classNames("inline-block underline", text.color.hover)}
         href={href}
         rel="noopener noreferrer"
         target="_blank"

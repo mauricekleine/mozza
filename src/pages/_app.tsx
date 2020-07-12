@@ -33,23 +33,15 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
 
           <main
             className={classNames(
+              "flex flex-col",
               "m-auto",
-              "px-4 pt-10",
+              "px-4 py-10",
               text.size.base,
               "md:w-4/5 lg:w-3/5 xl:w-2/5"
             )}
           >
             <Component {...pageProps} />
           </main>
-
-          <footer className="pb-8 text-center">
-            <p>
-              Made with 💖 | 😺{" "}
-              <Link href="https://github.com/mauricekleine/mk-website">
-                source
-              </Link>
-            </p>
-          </footer>
         </div>
       )}
     </Theme>

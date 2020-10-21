@@ -2,76 +2,59 @@
 import { createElement } from "react";
 
 import Center from "../components/center";
-import HeadingOne from "../components/heading-one";
-import HeadingThree from "../components/heading-three";
-import HeadingTwo from "../components/heading-two";
+import Heading from "../components/heading";
 import Link from "../components/link";
 import Section from "../components/section";
-import Subtitle from "../components/subtitle";
+import Text from "../components/text";
 import Title from "../components/title";
 
 const Home = () => {
   return (
     <>
-      <div className="flex justify-center -mb-4 z-0">
-        <img
-          alt="Maurice Kleine"
-          className="h-40 w-40 sm:h-56 sm:w-56"
-          src="/maurice-kleine.png"
-        />
-      </div>
-
       <Section>
-        <Title>Hey!</Title>
-        <Subtitle>
-          If you somehow stumbled upon this page and you would like to get in
-          touch, hit me up!
-        </Subtitle>
+        <div className="flex flex-col-reverse items-center justify-evenly mb-4 sm:flex-row sm:justify-center">
+          <div className="pb-8">
+            <Title outline="left">Hey! 🤘</Title>
 
-        <div className="flex flex-col sm:flex-row sm:items-center">
-          <p className="sm:mr-2">💌 email</p>
+            <Text>
+              If you somehow stumbled upon this page and you would like to get
+              in touch, hit me up!
+            </Text>
 
-          <Link href="mailto:hey@mauricekleine.com">hey@mauricekleine.com</Link>
-        </div>
+            <Link href="mailto:hey@mauricekleine.com">
+              hey@mauricekleine.com
+            </Link>
+          </div>
 
-        <div className="flex flex-col sm:flex-row sm:items-center">
-          <p className="sm:mr-2">🤝 linkedin</p>
-
-          <Link href="https://www.linkedin.com/in/mauricekleine/">
-            @mauricekleine
-          </Link>
-        </div>
-
-        <div className="flex flex-col sm:flex-row sm:items-center">
-          <p className="sm:mr-2">📷 insta</p>
-
-          <Link href="https://www.instagram.com/clocksandquestionmarks/">
-            @clocksandquestionmarks
-          </Link>
+          <img
+            alt="Maurice Kleine"
+            className="h-40 mr-4 w-40 sm:h-56 sm:w-56 rounded-full"
+            src="/maurice-kleine.png"
+          />
         </div>
       </Section>
 
-      <Section>
-        <HeadingOne>I value</HeadingOne>
+      <Section odd>
+        <Title>I value</Title>
 
         <Center>
           <div className="mb-6">
-            <HeadingTwo>Growth and self-actualisation</HeadingTwo>
+            <Heading>Growth and self-actualisation</Heading>
             <p>To learn is to be alive</p>
           </div>
 
           <div className="mb-6">
-            <HeadingTwo>Compassion and inclusion</HeadingTwo>
+            <Heading>Compassion and inclusion</Heading>
             <p>Being judgemental is a thing of the past</p>
           </div>
 
           <div className="mb-6">
-            <HeadingTwo>Openness and honesty</HeadingTwo>
+            <Heading>Openness and honesty</Heading>
             <p>Sharing is caring is sharing is caring</p>
           </div>
 
           <div className="mb-6">
-            <HeadingTwo>Open-mindedness and experimentation</HeadingTwo>
+            <Heading>Open-mindedness and experimentation</Heading>
             <p>
               Traditions are overrated and rules are meant to be critically
               examined
@@ -79,16 +62,16 @@ const Home = () => {
           </div>
 
           <div>
-            <HeadingTwo>Ownership and accountability</HeadingTwo>
+            <Heading>Ownership and accountability</Heading>
             <p>Finger-pointers beware</p>
           </div>
         </Center>
       </Section>
 
       <Section>
-        <HeadingOne>Talk to me about</HeadingOne>
+        <Title>Talk to me about</Title>
 
-        <div>
+        <Center>
           <p>🌍 remote work</p>
           <p>🧠 mental health</p>
           <p>🧘‍♂️ meditation</p>
@@ -108,19 +91,19 @@ const Home = () => {
               bunnies
             </Link>
           </p>
-        </div>
+        </Center>
       </Section>
 
-      <Section>
-        <HeadingOne>In the wild</HeadingOne>
+      <Section odd>
+        <Title>In the wild</Title>
 
         <div className="mb-8">
-          <HeadingThree>Videos</HeadingThree>
+          <Heading>Videos</Heading>
 
           <iframe
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="mt-2 rounded-md shadow w-full"
+            className="mt-2 rounded-md w-full"
             frameBorder="0"
             height="315"
             src="https://www.youtube-nocookie.com/embed/6erqtEfHozU"
@@ -130,21 +113,21 @@ const Home = () => {
         </div>
 
         <div className="mb-8">
-          <HeadingThree>Articles</HeadingThree>
+          <Heading>Articles</Heading>
 
-          <p className="py-2">
+          <p className="py-1">
             <Link href="https://www.productboard.com/blog/supporting-mental-health/">
               Supporting mental health the productboard way
             </Link>
           </p>
 
-          <p className="py-2">
+          <p className="py-1">
             <Link href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
               How we want to do remote at productboard 🌎
             </Link>
           </p>
 
-          <p className="py-2">
+          <p className="py-1">
             <Link href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
               On Comfort Zones
             </Link>
@@ -159,9 +142,9 @@ const Home = () => {
         </div>
 
         <div className="mb-8">
-          <HeadingThree>Podcasts</HeadingThree>
+          <Heading>Podcasts</Heading>
 
-          <p className="py-2">
+          <p className="py-1">
             <Link href="https://www.startremote.net/interviews/maurice-kleine">
               StartRemote #2: Maurice on how to build the first fully remote
               team
@@ -177,78 +160,93 @@ const Home = () => {
       </Section>
 
       <Section>
-        <HeadingOne>Pet projects</HeadingOne>
+        <Title>Pet projects</Title>
 
         <div className="mb-8">
-          <HeadingThree>🌱 SEDS</HeadingThree>
+          <Heading>🌱 SEDS</Heading>
 
-          <p>
+          <Text>
             The Social Education and Development Society (SEDS) is a NGO that
             has been actively involved in socially transforming initiatives and
             rural development for over 38 years near the town of Penukonda in
             Andhra Pradesh, India. I created and maintain their homepage.
-          </p>
+          </Text>
 
-          <p className="mb-1">
-            🔗 <Link href="https://sedsngo.org/">website</Link>
-          </p>
+          <p className="flex">
+            <span className="mr-4">
+              🔗 <Link href="https://sedsngo.org/">website</Link>
+            </span>
 
-          <p>
-            😺 <Link href="https://github.com/mauricekleine/seds">source</Link>
+            <span>
+              😺{" "}
+              <Link href="https://github.com/mauricekleine/seds">source</Link>
+            </span>
           </p>
         </div>
 
         <div className="mb-8">
-          <HeadingThree>🍺 Tinnies</HeadingThree>
+          <Heading>🍺 Tinnies</Heading>
 
-          <p>
+          <Text>
             Beer tracking, but better. Mainly a playground for me to mess around
             with cool new technologies.
-          </p>
+          </Text>
 
-          <p className="mb-1">
-            🔗 <Link href="https://tinnies.xyz/">website</Link>
-          </p>
+          <p className="flex">
+            <span className="mr-4">
+              🔗 <Link href="https://tinnies.xyz/">website</Link>
+            </span>
 
-          <p>
-            😺{" "}
-            <Link href="https://github.com/mauricekleine/tinnies">source</Link>
-          </p>
-        </div>
-
-        <div className="mb-8">
-          <HeadingThree>📚 The Remote Work Library</HeadingThree>
-
-          <p>A curated list of remote work resources.</p>
-
-          <p className="mb-1">
-            🔗 <Link href="https://theremoteworklibrary.com/">website</Link>
-          </p>
-
-          <p>
-            😺{" "}
-            <Link href="https://github.com/mauricekleine/the-remote-work-library">
-              source
-            </Link>
+            <span>
+              😺{" "}
+              <Link href="https://github.com/mauricekleine/tinnies">
+                source
+              </Link>
+            </span>
           </p>
         </div>
 
         <div className="mb-8">
-          <HeadingThree>🤙 This website</HeadingThree>
+          <Heading>📚 The Remote Work Library</Heading>
 
-          <p>Yep, the website you&apos;re looking at right now.</p>
+          <Text>A curated list of remote work resources.</Text>
 
-          <p className="mb-1">
-            🔗 <Link href="https://mauricekleine.com.com/">website</Link>
-          </p>
+          <p className="flex">
+            <span className="mr-4">
+              🔗 <Link href="https://theremoteworklibrary.com/">website</Link>
+            </span>
 
-          <p>
-            😺{" "}
-            <Link href="https://github.com/mauricekleine/mk-website">
-              source
-            </Link>
+            <span>
+              😺{" "}
+              <Link href="https://github.com/mauricekleine/the-remote-work-library">
+                source
+              </Link>
+            </span>
           </p>
         </div>
+
+        <div>
+          <Heading>🤙 This website</Heading>
+
+          <Text>Yep, the website you&apos;re looking at right now.</Text>
+
+          <p className="flex">
+            <span className="mr-4">
+              🔗 <Link href="https://mauricekleine.com.com/">website</Link>
+            </span>
+
+            <span>
+              😺{" "}
+              <Link href="https://github.com/mauricekleine/mk-website">
+                source
+              </Link>
+            </span>
+          </p>
+        </div>
+      </Section>
+
+      <Section odd>
+        <Title>Cya 👋</Title>
       </Section>
     </>
   );

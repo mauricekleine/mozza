@@ -8,7 +8,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head />
 
-        <body className="bg-red-500">
+        <body className="white p-4">
           <Main />
           <NextScript />
         </body>

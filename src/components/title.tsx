@@ -2,27 +2,26 @@
 import classNames from "classnames";
 import { ReactNode, createElement } from "react";
 
-import Theme from "./theme";
-
 type Props = {
   children: ReactNode;
+  outline?: "center" | "left";
 };
 
-const Title = ({ children }: Props) => (
-  <Theme>
-    {({ text }) => (
-      <p
-        className={classNames(
-          "font-bold",
-          "leading-normal",
-          "mb-2",
-          text.size.xl
-        )}
-      >
-        {children}
-      </p>
+const Title = ({ outline = "center", children }: Props) => (
+  <p
+    className={classNames(
+      "font-serif",
+      "leading-none",
+      "my-12",
+      "text-5xl",
+      "md:text-6xl",
+      {
+        "text-center": outline === "center",
+      }
     )}
-  </Theme>
+  >
+    {children}
+  </p>
 );
 
 export default Title;

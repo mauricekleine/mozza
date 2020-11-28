@@ -7,10 +7,10 @@ type Props = {
 
 const Link = ({ children, href }: Props) => (
   <a
-    className="inline-block text-gray-800 underline hover:text-gray-600"
+    className="inline-block text-gray-700 bg-yellow-200 px-2 hover:text-gray-900 hover:underline rounded-lg"
     href={href}
     rel="noopener noreferrer"
-    target="_blank"
+    target={href.startsWith("/") ? "" : "_blank"}
   >
     {children}
   </a>

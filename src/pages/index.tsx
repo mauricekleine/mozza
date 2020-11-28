@@ -8,10 +8,18 @@ import Title from "../components/title";
 const Home = () => {
   return (
     <>
+      <div className="flex justify-end pb-2 pr-2">
+        <div className="mr-4">
+          <Link href="/art">👨‍🎨 My art</Link>
+        </div>
+
+        <Link href="https://soundcloud.com/fluncle">👨‍🎤 My music</Link>
+      </div>
+
       <Section>
         <div className="flex flex-col-reverse items-center justify-evenly mb-4 sm:flex-row sm:justify-center">
           <div className="pb-8">
-            <Title outline="left">Hey! 🤘</Title>
+            <Title outline="left">🤙 Hey!</Title>
 
             <Text>
               If you somehow stumbled upon this page and you would like to get

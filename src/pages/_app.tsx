@@ -1,7 +1,5 @@
-/** @jsx createElement */
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { createElement } from "react";
 
 import "../css/styles.css";
 

@@ -1,6 +1,4 @@
-/** @jsx createElement */
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import { createElement } from "react";
 
 class MyDocument extends Document {
   render() {

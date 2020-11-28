@@ -1,6 +1,3 @@
-/** @jsx createElement */
-import { createElement } from "react";
-
 import Center from "../components/center";
 import Heading from "../components/heading";
 import Link from "../components/link";

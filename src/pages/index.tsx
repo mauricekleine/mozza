@@ -14,7 +14,7 @@ const Home = () => {
         <div className="flex flex-col items-center space-y-4">
           <img
             alt="Maurice Kleine"
-            className="bg-yellow-500 h-56 w-56 rounded-full"
+            className="bg-white h-56 w-56 rounded-full"
             src="/maurice-kleine.png"
           />
 

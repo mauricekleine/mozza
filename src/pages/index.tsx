@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Center from "../components/center";
 import Heading from "../components/heading";
 import Link from "../components/link";
@@ -8,18 +10,36 @@ import Title from "../components/title";
 const Home = () => {
   return (
     <>
-      <div className="flex justify-end pb-2 pr-2">
-        <div className="mr-4">
-          <Link href="/art">👨‍🎨 My art</Link>
-        </div>
-
-        <Link href="https://soundcloud.com/fluncle">👨‍🎤 My music</Link>
-      </div>
-
       <Section>
-        <div className="flex flex-col-reverse items-center justify-evenly mb-4 sm:flex-row sm:justify-center">
+        <div className="flex flex-col items-center space-y-4">
+          <img
+            alt="Maurice Kleine"
+            className="bg-yellow-500 h-56 w-56 rounded-full"
+            src="/maurice-kleine.png"
+          />
+
+          <div className="flex items-center justify-center space-x-2">
+            <Link href="https://github.com/mauricekleine">
+              <Image height={36} src="/github.svg" width={36} />
+            </Link>
+
+            <Link href="https://www.linkedin.com/in/mauricekleine/">
+              <Image height={36} src="/linkedin.svg" width={36} />
+            </Link>
+
+            <Link href="https://twitter.com/therealfluncle">
+              <Image height={36} src="/twitter.svg" width={36} />
+            </Link>
+          </div>
+        </div>
+      </Section>
+
+      <Section odd>
+        <div className="flex flex-col items-center justify-evenly mb-4 sm:justify-center">
+          <div className="flex justify-center"></div>
+
           <div className="pb-8">
-            <Title outline="left">🤙 Hey!</Title>
+            <Title outline="left">Hey! 🤙</Title>
 
             <Text>
               If you somehow stumbled upon this page and you would like to get
@@ -30,16 +50,10 @@ const Home = () => {
               hey@mauricekleine.com
             </Link>
           </div>
-
-          <img
-            alt="Maurice Kleine"
-            className="h-40 mr-4 w-40 sm:h-56 sm:w-56 rounded-full"
-            src="/maurice-kleine.png"
-          />
         </div>
       </Section>
 
-      <Section odd>
+      <Section>
         <Title>I value</Title>
 
         <Center>
@@ -73,7 +87,7 @@ const Home = () => {
         </Center>
       </Section>
 
-      <Section>
+      <Section odd>
         <Title>Talk to me about</Title>
 
         <Center>
@@ -99,7 +113,7 @@ const Home = () => {
         </Center>
       </Section>
 
-      <Section odd>
+      <Section>
         <Title>In the wild</Title>
 
         <div className="mb-8">
@@ -164,93 +178,95 @@ const Home = () => {
         </div>
       </Section>
 
-      <Section>
+      <Section odd>
         <Title>Pet projects</Title>
 
-        <div className="mb-8">
-          <Heading>🌱 SEDS</Heading>
+        <div className="space-y-16">
+          <div>
+            <Heading>🌱 SEDS</Heading>
 
-          <Text>
-            The Social Education and Development Society (SEDS) is a NGO that
-            has been actively involved in socially transforming initiatives and
-            rural development for over 38 years near the town of Penukonda in
-            Andhra Pradesh, India. I created and maintain their homepage.
-          </Text>
+            <Text>
+              The Social Education and Development Society (SEDS) is a NGO that
+              has been actively involved in socially transforming initiatives
+              and rural development for over 38 years near the town of Penukonda
+              in Andhra Pradesh, India. I created and maintain their homepage.
+            </Text>
 
-          <p className="flex">
-            <span className="mr-4">
-              🔗 <Link href="https://sedsngo.org/">website</Link>
-            </span>
+            <p className="flex">
+              <span className="mr-4">
+                🔗 <Link href="https://sedsngo.org/">website</Link>
+              </span>
 
-            <span>
-              😺{" "}
-              <Link href="https://github.com/mauricekleine/seds">source</Link>
-            </span>
-          </p>
-        </div>
+              <span>
+                😺{" "}
+                <Link href="https://github.com/mauricekleine/seds">source</Link>
+              </span>
+            </p>
+          </div>
 
-        <div className="mb-8">
-          <Heading>🍺 Tinnies</Heading>
+          <div>
+            <Heading>🍺 Tinnies</Heading>
 
-          <Text>
-            Beer tracking, but better. Mainly a playground for me to mess around
-            with cool new technologies.
-          </Text>
+            <Text>
+              Beer tracking, but better. Mainly a playground for me to mess
+              around with cool new technologies.
+            </Text>
 
-          <p className="flex">
-            <span className="mr-4">
-              🔗 <Link href="https://tinnies.xyz/">website</Link>
-            </span>
+            <p className="flex">
+              <span className="mr-4">
+                🔗 <Link href="https://tinnies.xyz/">website</Link>
+              </span>
 
-            <span>
-              😺{" "}
-              <Link href="https://github.com/mauricekleine/tinnies">
-                source
-              </Link>
-            </span>
-          </p>
-        </div>
+              <span>
+                😺{" "}
+                <Link href="https://github.com/mauricekleine/tinnies">
+                  source
+                </Link>
+              </span>
+            </p>
+          </div>
 
-        <div className="mb-8">
-          <Heading>📚 The Remote Work Library</Heading>
+          <div>
+            <Heading>📚 The Remote Work Library</Heading>
 
-          <Text>A curated list of remote work resources.</Text>
+            <Text>A curated list of remote work resources.</Text>
 
-          <p className="flex">
-            <span className="mr-4">
-              🔗 <Link href="https://theremoteworklibrary.com/">website</Link>
-            </span>
+            <p className="flex">
+              <span className="mr-4">
+                🔗 <Link href="https://theremoteworklibrary.com/">website</Link>
+              </span>
 
-            <span>
-              😺{" "}
-              <Link href="https://github.com/mauricekleine/the-remote-work-library">
-                source
-              </Link>
-            </span>
-          </p>
-        </div>
+              <span>
+                😺{" "}
+                <Link href="https://github.com/mauricekleine/the-remote-work-library">
+                  source
+                </Link>
+              </span>
+            </p>
+          </div>
 
-        <div>
-          <Heading>🤙 This website</Heading>
+          <div>
+            <Heading>🤙 This website</Heading>
 
-          <Text>Yep, the website you&apos;re looking at right now.</Text>
+            <Text>Yep, the website you&apos;re looking at right now.</Text>
 
-          <p className="flex">
-            <span className="mr-4">
-              🔗 <Link href="https://mauricekleine.com.com/">website</Link>
-            </span>
+            <p className="flex">
+              <span className="mr-4">
+                🔗 <Link href="https://mauricekleine.com.com/">website</Link>
+              </span>
 
-            <span>
-              😺{" "}
-              <Link href="https://github.com/mauricekleine/mk-website">
-                source
-              </Link>
-            </span>
-          </p>
+              <span>
+                😺{" "}
+                <Link href="https://github.com/mauricekleine/mk-website">
+                  source
+                </Link>
+              </span>
+            </p>
+          </div>
         </div>
       </Section>
 
-      <Section odd>
+      <Section>
         <Title>Cya 👋</Title>
       </Section>
     </>

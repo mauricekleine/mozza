@@ -18,21 +18,50 @@ const Home = () => {
             src="/maurice-kleine.png"
           />
 
-          <div className="flex items-center justify-center space-x-2">
+          <div className="flex items-center justify-center space-x-3">
             <Link href="https://github.com/mauricekleine">
-              <Image height={36} src="/github.svg" width={36} />
+              <Image
+                alt="Maurice Kleine Github"
+                height={32}
+                src="/github.svg"
+                width={32}
+              />
             </Link>
 
             <Link href="https://www.goodreads.com/mauricekleine">
-              <Image height={36} src="/goodreads.svg" width={36} />
+              <Image
+                alt="Maurice Kleine Goodreads"
+                height={32}
+                src="/goodreads.svg"
+                width={32}
+              />
             </Link>
 
             <Link href="https://www.linkedin.com/in/mauricekleine/">
-              <Image height={36} src="/linkedin.svg" width={36} />
+              <Image
+                alt="Maurice Kleine LinkedIn"
+                height={32}
+                src="/linkedin.svg"
+                width={32}
+              />
+            </Link>
+
+            <Link href="https://www.producthunt.com/@mauricekleine">
+              <Image
+                alt="Maurice Kleine Producthunt"
+                height={32}
+                src="/producthunt.svg"
+                width={32}
+              />
             </Link>
 
             <Link href="https://twitter.com/therealfluncle">
-              <Image height={36} src="/twitter.svg" width={36} />
+              <Image
+                alt="Maurice Kleine Twitter"
+                height={32}
+                src="/twitter.svg"
+                width={32}
+              />
             </Link>
           </div>
         </div>

@@ -23,6 +23,10 @@ const Home = () => {
               <Image height={36} src="/github.svg" width={36} />
             </Link>
 
+            <Link href="https://www.goodreads.com/mauricekleine">
+              <Image height={36} src="/goodreads.svg" width={36} />
+            </Link>
+
             <Link href="https://www.linkedin.com/in/mauricekleine/">
               <Image height={36} src="/linkedin.svg" width={36} />
             </Link>

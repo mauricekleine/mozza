@@ -260,13 +260,16 @@ const Home = () => {
           </div>
 
           <div>
-            <Heading>📚 The Remote Work Library</Heading>
+            <Heading>📚 The Remote Work Library [Archived]</Heading>
 
             <Text>A curated list of remote work resources.</Text>
 
             <p className="flex">
               <span className="mr-4">
-                🔗 <Link href="https://theremoteworklibrary.com/">website</Link>
+                🔗{" "}
+                <Link href="https://the-remote-work-library.now.sh">
+                  website
+                </Link>
               </span>
 
               <span>

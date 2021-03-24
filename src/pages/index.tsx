@@ -55,7 +55,7 @@ const Home = () => {
               />
             </Link>
 
-            <Link href="https://twitter.com/therealfluncle">
+            <Link href="https://twitter.com/maurice_kleine">
               <Image
                 alt="Maurice Kleine Twitter"
                 height={32}

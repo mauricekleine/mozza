@@ -10,7 +10,7 @@ const Art = () => {
         </div>
       </div>
 
-      <Section></Section>
+      <Section>Books</Section>
     </>
   );
 };

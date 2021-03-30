@@ -1,23 +1,42 @@
+import classNames from "classnames";
 import { AppProps } from "next/app";
 import Head from "next/head";
+
+import Nav from "../components/nav";
+import Theme, { ThemeProvider, theme } from "../components/theme";
 
 import "../css/styles.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <>
-    <Head>
-      <title>Maurice Kleine</title>
-      <link rel="icon" href="/favicon.png" />
-      <meta
-        name="description"
-        content="Maurice Kleine - problem solver by day, problem solver by night"
-      />
-    </Head>
+  <ThemeProvider value={theme}>
+    <Theme>
+      {({ text }) => (
+        <>
+          <Head>
+            <link rel="icon" href="/favicon.png" />
 
-    <main className="leading-normal text-base text-gray-800">
-      <Component {...pageProps} />
-    </main>
-  </>
+            <meta
+              name="description"
+              content="Maurice Kleine - problem solver by day, problem solver by night"
+            />
+
+            <title>Maurice Kleine</title>
+          </Head>
+
+          <Nav />
+
+          <main
+            className={classNames(
+              "font-serif leading-normal text-lg",
+              text.default
+            )}
+          >
+            <Component {...pageProps} />
+          </main>
+        </>
+      )}
+    </Theme>
+  </ThemeProvider>
 );
 
 export default MyApp;

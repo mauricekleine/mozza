@@ -5,14 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
-        serif: ["Piazzolla", ...defaultTheme.fontFamily.sans],
-      },
-      fontSize: {
-        base: "1.5rem",
-        "3xl": "2rem",
-        "5xl": "4rem",
-        "6xl": "6rem",
+        sans: ["FiraSans", ...defaultTheme.fontFamily.sans],
+        serif: ["Merriweather", ...defaultTheme.fontFamily.sans],
       },
     },
   },

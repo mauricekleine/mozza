@@ -7,13 +7,13 @@ type Props = {
   children: ReactNode;
 };
 
-const Heading = ({ children }: Props) => (
+const Title = ({ children }: Props) => (
   <Theme>
     {({ text }) => (
       <p
         className={classNames(
           text.dark,
-          "antialiased font-bold font-sans leading-relaxed text-3xl"
+          "antialiased font-sans font-black leading-none my-12 text-6xl"
         )}
       >
         {children}
@@ -22,4 +22,4 @@ const Heading = ({ children }: Props) => (
   </Theme>
 );
 
-export default Heading;
+export default Title;

@@ -14,9 +14,3 @@
   font-weight: bold;
   src: url(../../public/fonts/Merriweather/Merriweather-Bold.ttf);
 }
-
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;

@@ -5,6 +5,7 @@ import Head from "next/head";
 import Nav from "../components/nav";
 import Theme, { ThemeProvider, theme } from "../components/theme";
 
+import "tailwindcss/tailwind.css";
 import "../css/styles.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (

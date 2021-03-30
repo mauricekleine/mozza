@@ -14,35 +14,36 @@ import Theme from "./theme";
 const Nav = () => (
   <Theme>
     {({ bg, text }) => (
-      <nav className="fixed left-0 px-4 top-0 w-screen z-50">
-        <div className={classNames(bg.default, "h-4")}></div>
+      <nav
+        className={classNames(bg.default, "fixed left-4 right-4 top-0 z-50")}
+      >
         <div
           className={classNames(
             bg.white,
-            "flex h-16 rounded-lg text-xs sm:text-sm"
+            "text-xs mt-4 px-6 rounded-lg sm:px-0 sm:text-sm"
           )}
         >
-          <div className="flex justify-between sm:mx-auto sm:w-4/6 md:w-3/5">
+          <div className="flex h-16 justify-between mx-auto sm:w-4/6 md:w-3/5">
             <div className="flex items-center space-x-2 sm:space-x-3">
               <NextLink href="/">
-                <a className="flex items-center">
+                <a className="flex items-center space-x-2">
                   <Image
                     alt="Maurice Kleine"
-                    height={48}
+                    height={40}
                     src="/maurice-kleine.png"
-                    width={48}
+                    width={28}
                   />
-                  <span className="hidden sm:visible">Maurice Kleine</span>
+                  <span className="hidden sm:inline-block">Maurice Kleine</span>
                 </a>
               </NextLink>
 
-              {/* <NextLink href="/books" passHref>
+              <NextLink href="/books" passHref>
                 <Link>Posts</Link>
               </NextLink>
 
               <NextLink href="/books" passHref>
                 <Link>Books</Link>
-              </NextLink> */}
+              </NextLink>
             </div>
 
             <div className="flex items-center space-x-2 sm:space-x-3">

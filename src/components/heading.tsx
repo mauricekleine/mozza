@@ -13,7 +13,7 @@ const Heading = ({ children }: Props) => (
       <p
         className={classNames(
           text.dark,
-          "antialiased font-bold font-sans leading-relaxed text-3xl"
+          "antialiased font-bold font-sans mb-2 text-3xl"
         )}
       >
         {children}

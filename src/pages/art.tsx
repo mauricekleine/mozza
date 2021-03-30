@@ -6,10 +6,8 @@ const Art = () => {
     <>
       <div className="flex justify-end pb-2 pr-2">
         <div className="mr-4">
-          <Link href="/">🤙 Hey!</Link>
+          <Link href="/">🤙 Home!</Link>
         </div>
-
-        <Link href="https://soundcloud.com/fluncle">👨‍🎤 My music</Link>
       </div>
 
       <Section>

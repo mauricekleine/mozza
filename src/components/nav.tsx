@@ -37,9 +37,9 @@ const Nav = () => (
                 </a>
               </NextLink>
 
-              <NextLink href="/books" passHref>
+              {/* <NextLink href="/books" passHref>
                 <Link>Posts</Link>
-              </NextLink>
+              </NextLink> */}
 
               <NextLink href="/books" passHref>
                 <Link>Books</Link>

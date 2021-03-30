@@ -15,20 +15,23 @@ const Link = (
 ) => (
   <Theme>
     {({ text }) =>
-      href ? (
+      ref ? (
         <a
-          className={classNames(text.link, "underline hover:no-underline")}
-          href={href}
-          rel="noopener noreferrer"
-          target="_blank"
+          className={classNames(
+            text.link,
+            "cursor-pointer underline hover:no-underline"
+          )}
+          onClick={onClick}
+          ref={ref}
         >
           {children}
         </a>
       ) : (
         <a
           className={classNames(text.link, "underline hover:no-underline")}
-          onClick={onClick}
-          ref={ref}
+          href={href}
+          rel="noopener noreferrer"
+          target="_blank"
         >
           {children}
         </a>

@@ -14,15 +14,15 @@ import Theme from "./theme";
 const Nav = () => (
   <Theme>
     {({ bg, text }) => (
-      <nav className="fixed h-16 left-0 px-4 top-0 w-screen z-50">
+      <nav className="fixed left-0 px-4 top-0 w-screen z-50">
         <div className={classNames(bg.default, "h-4")}></div>
         <div
           className={classNames(
             bg.white,
-            "flex h-full px-4 rounded-lg text-xs sm:text-sm"
+            "flex h-16 rounded-lg text-xs sm:text-sm"
           )}
         >
-          <div className="flex items-center justify-between w-full sm:mx-auto sm:w-4/6 md:w-3/5">
+          <div className="flex justify-between sm:mx-auto sm:w-4/6 md:w-3/5">
             <div className="flex items-center space-x-2 sm:space-x-3">
               <NextLink href="/">
                 <a className="flex items-center">
@@ -32,15 +32,11 @@ const Nav = () => (
                     src="/maurice-kleine.png"
                     width={48}
                   />
-                  Maurice Kleine
+                  <span className="hidden sm:visible">Maurice Kleine</span>
                 </a>
               </NextLink>
 
-              {/* <NextLink href="/" passHref>
-                <Link>Home</Link>
-              </NextLink>
-
-              <NextLink href="/books" passHref>
+              {/* <NextLink href="/books" passHref>
                 <Link>Posts</Link>
               </NextLink>
 
@@ -49,7 +45,7 @@ const Nav = () => (
               </NextLink> */}
             </div>
 
-            <div className="flex h-full items-center space-x-2 sm:space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <Link href="https://github.com/mauricekleine">
                 <GitHubLogo
                   className={classNames(text.link, "fill-current h-4 w-4")}

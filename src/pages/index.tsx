@@ -82,16 +82,13 @@ const Home = () => {
           <div>
             <Heading>Videos</Heading>
 
-            <iframe
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="mt-2 rounded-md w-full"
-              frameBorder="0"
-              height="315"
-              src="https://www.youtube-nocookie.com/embed/6erqtEfHozU"
-              title="Building the Foundations of Remote Work - Maurice Kleine"
-              width="560"
-            ></iframe>
+            <ul className="list-disc space-y-3">
+              <li>
+                <Link href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
+                  Building the Foundations of Remote Work
+                </Link>
+              </li>
+            </ul>
           </div>
 
           <div>

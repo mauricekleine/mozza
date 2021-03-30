@@ -24,8 +24,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
             <title>Maurice Kleine</title>
           </Head>
 
-          <Nav />
-
           <main
             className={classNames(
               "font-serif leading-normal text-lg",
@@ -34,6 +32,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
           >
             <Component {...pageProps} />
           </main>
+
+          <Nav />
         </>
       )}
     </Theme>

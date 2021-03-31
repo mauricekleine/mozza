@@ -13,7 +13,7 @@ const bookRecommendations: BookRecommendation[] = [
   {
     authors: ["Kerry Patterson and 3 others"],
     tags: ["non-fiction", "communication"],
-    title: "Crucial Conversation",
+    title: "Crucial Conversations",
   },
   {
     authors: ["Philip Pullman"],

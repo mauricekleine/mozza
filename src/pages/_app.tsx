@@ -11,8 +11,8 @@ import "../css/styles.css";
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider value={theme}>
     <Theme>
-      {({ text }) => (
-        <>
+      {({ bg, text }) => (
+        <div className={classNames(bg.white, "rounded-lg")}>
           <Head>
             <link rel="icon" href="/favicon.png" />
 
@@ -34,7 +34,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
           >
             <Component {...pageProps} />
           </main>
-        </>
+        </div>
       )}
     </Theme>
   </ThemeProvider>

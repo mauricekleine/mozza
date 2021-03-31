@@ -7,7 +7,7 @@ import Tag from "../../components/tag";
 
 const Blog = () => {
   return (
-    <Page subtitle="" title="Recent posts [WIP 🚧]">
+    <Page subtitle="Brain dump (WIP 🚧)" title="Recent posts">
       <div className="space-y-4">
         <Card>
           <CardContent>

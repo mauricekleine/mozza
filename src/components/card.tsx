@@ -10,7 +10,7 @@ type Props = {
 const Card = ({ children }: Props) => (
   <Theme>
     {({ bg }) => (
-      <div className={classNames(bg.white, "rounded-md shadow-sm")}>
+      <div className={classNames(bg.gray, "rounded-md shadow-sm")}>
         {children}
       </div>
     )}

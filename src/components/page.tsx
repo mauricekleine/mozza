@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
+import Display from "./display";
 import Heading from "./heading";
 import Section from "./section";
 
@@ -10,15 +11,13 @@ type Props = {
 };
 
 const Page = ({ children, subtitle, title }: Props) => (
-  <div className="mt-8">
-    <Section>
-      <Heading>{title}</Heading>
+  <Section>
+    <Display>{title}</Display>
 
-      <p className="mb-8">{subtitle}</p>
+    <Heading>{subtitle}</Heading>
 
-      <div>{children}</div>
-    </Section>
-  </div>
+    <div className="mt-4">{children}</div>
+  </Section>
 );
 
 export default Page;

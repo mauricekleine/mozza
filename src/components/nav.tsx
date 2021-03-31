@@ -13,13 +13,11 @@ import Theme from "./theme";
 const Nav = () => (
   <Theme>
     {({ bg, text }) => (
-      <nav
-        className={classNames(bg.default, "fixed left-4 right-4 top-0 z-50")}
-      >
+      <nav className={classNames(bg.gray, "fixed left-4 right-4 top-0 z-50")}>
         <div
           className={classNames(
             bg.white,
-            "text-xs mt-4 px-6 rounded-lg sm:px-0 sm:text-sm"
+            "text-xs mt-4 px-6 rounded-lg rounded-b-none sm:px-0 sm:text-sm"
           )}
         >
           <div className="flex h-16 justify-between mx-auto sm:w-4/6 md:w-3/5">

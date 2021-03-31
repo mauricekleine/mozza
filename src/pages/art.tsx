@@ -4,43 +4,41 @@ import ExternalLink from "../components/external-link";
 import Page from "../components/page";
 import artCollection from "../data/art-collection";
 
-const Art = () => {
-  return (
-    <Page
-      subtitle={
-        <span>
-          My digtal collages, some of which are{" "}
-          <ExternalLink href="https://opensea.io/accounts/mauricekleine">
-            available as NFTs
-          </ExternalLink>
-        </span>
-      }
-      title="Art"
-    >
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        {artCollection.map(({ href, title }) => (
-          <a
-            className="cursor-pointer relative rounded-md shadow-sm hover:shadow-none"
-            href={href}
-            key={title}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <div className="absolute bg-gray-900 flex h-full items-center justify-center left-0 opacity-0 text-white text-2xl top-0 transition-opacity w-full z-40 hover:opacity-75">
-              .{title}
-            </div>
+const Art = () => (
+  <Page
+    subtitle={
+      <span>
+        My digtal collages, some of which are{" "}
+        <ExternalLink href="https://opensea.io/accounts/mauricekleine">
+          available as NFTs
+        </ExternalLink>
+      </span>
+    }
+    title="Art"
+  >
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      {artCollection.map(({ href, title }) => (
+        <a
+          className="cursor-pointer relative rounded-md shadow-sm hover:shadow-none"
+          href={href}
+          key={title}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <div className="absolute bg-gray-900 flex h-full items-center justify-center left-0 opacity-0 text-white text-2xl top-0 transition-opacity w-full z-40 hover:opacity-75">
+            .{title}
+          </div>
 
-            <Image
-              height={720}
-              layout="responsive"
-              src={`/art/${title}.jpg`}
-              width={720}
-            />
-          </a>
-        ))}
-      </div>
-    </Page>
-  );
-};
+          <Image
+            height={720}
+            layout="responsive"
+            src={`/art/${title}.jpg`}
+            width={720}
+          />
+        </a>
+      ))}
+    </div>
+  </Page>
+);
 
 export default Art;

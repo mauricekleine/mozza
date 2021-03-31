@@ -1,12 +1,16 @@
+import Card from "../components/card";
+import CardContent from "../components/card-content";
+import CardTitle from "../components/card-title";
 import Display from "../components/display";
+import ExternalLink from "../components/external-link";
 import Heading from "../components/heading";
-import Link from "../components/link";
 import Section from "../components/section";
+import Tag from "../components/tag";
 
 const Home = () => {
   return (
     <>
-      <Section>
+      <Section type="hero">
         <div className="space-y-4">
           <Display>Hey! 🤙</Display>
 
@@ -14,10 +18,32 @@ const Home = () => {
             If you somehow stumbled upon this page and you would like to get in
             touch, hit me up through any of the channels above.
           </span>
+
+          <p>
+            <span>Talk to me about: </span>
+            <Tag>🌍 remote work</Tag>
+            <Tag>🧠 mental health</Tag>
+            <Tag>🧘‍♂️ meditation</Tag>
+            <Tag>🙇‍♂️ philosophy</Tag>
+            <Tag>🛸 the future</Tag>
+            <Tag>🥊 boxing</Tag>
+            <Tag>🤝 people management</Tag>
+            <Tag>🚀 product management</Tag>
+            <Tag>👨‍💻 javascript & typescript</Tag>
+            <Tag>📠 tech</Tag>
+            <Tag>🌯 mexican food</Tag>
+            <Tag>🍻 craft beers</Tag>
+            <Tag>
+              🐰
+              <ExternalLink href="https://www.instagram.com/bunniesofamsterdam/">
+                bunnies
+              </ExternalLink>
+            </Tag>
+          </p>
         </div>
       </Section>
 
-      <Section odd>
+      <Section>
         <Display>I value</Display>
 
         <div className="space-y-8">
@@ -51,31 +77,7 @@ const Home = () => {
         </div>
       </Section>
 
-      <Section>
-        <Display>Talk to me about</Display>
-
-        <p>🌍 remote work</p>
-        <p>🧠 mental health</p>
-        <p>🧘‍♂️ meditation</p>
-        <p>🙇‍♂️ philosophy</p>
-        <p>🛸 the future</p>
-        <p>🤝 people management</p>
-        <p>🚀 product management</p>
-        <p>👨‍💻 javascript & typescript</p>
-        <p>📠 tech</p>
-        <p>🌯 mexican food</p>
-        <p>🍻 craft beers</p>
-        <p>😳 bunnies</p>
-
-        <p className="flex space-x-2 mt-8">
-          <span>🐰 yep, </span>
-          <Link href="https://www.instagram.com/bunniesofamsterdam/">
-            bunnies
-          </Link>
-        </p>
-      </Section>
-
-      <Section odd>
+      <Section type="hero">
         <Display>In the wild</Display>
 
         <div className="space-y-8">
@@ -84,9 +86,9 @@ const Home = () => {
 
             <ul className="list-disc space-y-3">
               <li>
-                <Link href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
+                <ExternalLink href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
                   Building the Foundations of Remote Work
-                </Link>
+                </ExternalLink>
               </li>
             </ul>
           </div>
@@ -96,28 +98,28 @@ const Home = () => {
 
             <ul className="list-disc space-y-3">
               <li>
-                <Link href="https://www.productboard.com/blog/supporting-mental-health/">
+                <ExternalLink href="https://www.productboard.com/blog/supporting-mental-health/">
                   Supporting mental health the productboard way
-                </Link>
+                </ExternalLink>
               </li>
 
               <li>
-                <Link href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
+                <ExternalLink href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
                   How we want to do remote at productboard 🌎
-                </Link>
+                </ExternalLink>
               </li>
 
               <li>
-                <Link href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
+                <ExternalLink href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
                   On Comfort Zones
-                </Link>
+                </ExternalLink>
               </li>
 
               <li>
-                <Link href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
+                <ExternalLink href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
                   What I’ve done, learned, and taught during my first 4 weeks as
                   a front-end engineer at productboard!
-                </Link>
+                </ExternalLink>
               </li>
             </ul>
           </div>
@@ -127,16 +129,16 @@ const Home = () => {
 
             <ul className="list-disc space-y-3">
               <li>
-                <Link href="https://www.startremote.net/interviews/maurice-kleine">
+                <ExternalLink href="https://www.startremote.net/interviews/maurice-kleine">
                   StartRemote #2: Maurice on how to build the first fully remote
                   team
-                </Link>
+                </ExternalLink>
               </li>
 
               <li>
-                <Link href="https://soundcloud.com/people-of-productboard/1-maurice">
+                <ExternalLink href="https://soundcloud.com/people-of-productboard/1-maurice">
                   People of productboard episode #1: Maurice – Product Developer
-                </Link>
+                </ExternalLink>
               </li>
             </ul>
           </div>
@@ -146,62 +148,81 @@ const Home = () => {
       <Section>
         <Display>Pet projects</Display>
 
-        <div className="space-y-8">
-          <div className="space-y-2">
-            <Link href="https://sedsngo.org/">
-              <Heading>🌱 SEDS</Heading>
-            </Link>
+        <div className="space-y-4">
+          <Card>
+            <CardContent>
+              <CardTitle>
+                <ExternalLink href="https://sedsngo.org/">🌱 SEDS</ExternalLink>
+              </CardTitle>
 
-            <p>
-              The Social Education and Development Society (SEDS) is a NGO that
-              has been actively involved in socially transforming initiatives
-              and rural development for over 38 years near the town of Penukonda
-              in Andhra Pradesh, India. I created and maintain their homepage.
-            </p>
+              <p>
+                The Social Education and Development Society (SEDS) is a NGO
+                that has been actively involved in socially transforming
+                initiatives and rural development for over 38 years near the
+                town of Penukonda in Andhra Pradesh, India. I created and
+                maintain their homepage.
+              </p>
 
-            <Link href="https://github.com/mauricekleine/seds">source</Link>
-          </div>
+              <ExternalLink href="https://github.com/mauricekleine/seds">
+                <span className="font-mono text-sm">source</span>
+              </ExternalLink>
+            </CardContent>
+          </Card>
 
-          <div className="space-y-2">
-            <Link href="https://tinnies.xyz/">
-              <Heading>🍺 Tinnies</Heading>
-            </Link>
+          <Card>
+            <CardContent>
+              <CardTitle>
+                <ExternalLink href="https://tinnies.xyx/">
+                  🍺 Tinnies
+                </ExternalLink>
+              </CardTitle>
 
-            <p>
-              Beer tracking, but better. Mainly a playground for me to mess
-              around with cool new technologies.
-            </p>
+              <p>
+                Beer tracking, but better. Mainly a playground for me to mess
+                around with cool new technologies.
+              </p>
 
-            <Link href="https://github.com/mauricekleine/tinnies">source</Link>
-          </div>
+              <ExternalLink href="https://github.com/mauricekleine/tinnies">
+                <span className="font-mono text-sm">source</span>
+              </ExternalLink>
+            </CardContent>
+          </Card>
 
-          <div className="space-y-2">
-            <Link href="https://the-remote-work-library.now.sh">
-              <Heading>📚 The Remote Work Library [Archived]</Heading>
-            </Link>
+          <Card>
+            <CardContent>
+              <CardTitle>
+                <ExternalLink href="https://the-remote-work-library.now.sh">
+                  📚 The Remote Work Library [Archived]
+                </ExternalLink>
+              </CardTitle>
 
-            <p>A curated list of remote work resources.</p>
+              <p>A curated list of remote work resources.</p>
 
-            <Link href="https://github.com/mauricekleine/the-remote-work-library">
-              source
-            </Link>
-          </div>
+              <ExternalLink href="https://github.com/mauricekleine/the-remote-work-library">
+                <span className="font-mono text-sm">source</span>
+              </ExternalLink>
+            </CardContent>
+          </Card>
 
-          <div className="space-y-2">
-            <Link href="https://mauricekleine.com.com/">
-              <Heading>🤙 This website</Heading>
-            </Link>
+          <Card>
+            <CardContent>
+              <CardTitle>
+                <ExternalLink href="https://mauricekleine.com.com/">
+                  🤙 This website
+                </ExternalLink>
+              </CardTitle>
 
-            <p>Yep, the website you&apos;re looking at right now.</p>
+              <p>Yep, the website you&apos;re looking at right now.</p>
 
-            <Link href="https://github.com/mauricekleine/mk-website">
-              source
-            </Link>
-          </div>
+              <ExternalLink href="https://github.com/mauricekleine/mk-website">
+                <span className="font-mono text-sm">source</span>
+              </ExternalLink>
+            </CardContent>
+          </Card>
         </div>
       </Section>
 
-      <Section odd>
+      <Section type="hero">
         <Display>Cya 👋</Display>
       </Section>
     </>

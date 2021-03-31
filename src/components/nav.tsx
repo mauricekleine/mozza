@@ -1,9 +1,8 @@
 import classNames from "classnames";
 import Image from "next/image";
-import NextLink from "next/link";
 
-import Link from "../components/link";
-
+import ExternalLink from "./external-link";
+import InternalLink from "./internal-link";
 import GitHubLogo from "./svg/github.svg";
 import GoodreadsLogo from "./svg/goodreads.svg";
 import LinkedInLogo from "./svg/linkedin.svg";
@@ -25,7 +24,7 @@ const Nav = () => (
         >
           <div className="flex h-16 justify-between mx-auto sm:w-4/6 md:w-3/5">
             <div className="flex items-center space-x-2 sm:space-x-3">
-              <NextLink href="/">
+              <InternalLink href="/">
                 <a className="flex items-center space-x-2">
                   <Image
                     alt="Maurice Kleine"
@@ -33,49 +32,46 @@ const Nav = () => (
                     src="/maurice-kleine.png"
                     width={28}
                   />
+
                   <span className="hidden sm:inline-block">Maurice Kleine</span>
                 </a>
-              </NextLink>
+              </InternalLink>
 
-              {/* <NextLink href="/books" passHref>
-                <Link>Posts</Link>
-              </NextLink> */}
-
-              <NextLink href="/books" passHref>
-                <Link>Books</Link>
-              </NextLink>
+              <InternalLink href="/art">Art</InternalLink>
+              <InternalLink href="/blog">Blog</InternalLink>
+              <InternalLink href="/books">Books</InternalLink>
             </div>
 
             <div className="flex items-center space-x-2 sm:space-x-3">
-              <Link href="https://github.com/mauricekleine">
+              <ExternalLink href="https://github.com/mauricekleine">
                 <GitHubLogo
                   className={classNames(text.link, "fill-current h-4 w-4")}
                 />
-              </Link>
+              </ExternalLink>
 
-              <Link href="https://www.goodreads.com/mauricekleine">
+              <ExternalLink href="https://www.goodreads.com/mauricekleine">
                 <GoodreadsLogo
                   className={classNames(text.link, "fill-current h-4 w-4")}
                 />
-              </Link>
+              </ExternalLink>
 
-              <Link href="https://www.linkedin.com/in/mauricekleine/">
+              <ExternalLink href="https://www.linkedin.com/in/mauricekleine/">
                 <LinkedInLogo
                   className={classNames(text.link, "fill-current h-4 w-4")}
                 />
-              </Link>
+              </ExternalLink>
 
-              <Link href="https://www.producthunt.com/@mauricekleine">
+              <ExternalLink href="https://www.producthunt.com/@mauricekleine">
                 <ProducthuntLogo
                   className={classNames(text.link, "fill-current h-4 w-4")}
                 />
-              </Link>
+              </ExternalLink>
 
-              <Link href="https://twitter.com/maurice_kleine">
+              <ExternalLink href="https://twitter.com/maurice_kleine">
                 <TwitterLogo
                   className={classNames(text.link, "fill-current h-4 w-4")}
                 />
-              </Link>
+              </ExternalLink>
             </div>
           </div>
         </div>

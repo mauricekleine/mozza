@@ -1,32 +1,45 @@
-import Link from "../components/link";
-import Section from "../components/section";
+import Image from "next/image";
+
+import ExternalLink from "../components/external-link";
+import Page from "../components/page";
+import artCollection from "../data/art-collection";
 
 const Art = () => {
   return (
-    <>
-      <div className="flex justify-end pb-2 pr-2">
-        <div className="mr-4">
-          <Link href="/">🤙 Home!</Link>
-        </div>
-      </div>
+    <Page
+      subtitle={
+        <span>
+          My digtal collages, some of which are{" "}
+          <ExternalLink href="https://opensea.io/accounts/mauricekleine">
+            available as NFTs
+          </ExternalLink>
+        </span>
+      }
+      title="Art"
+    >
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        {artCollection.map(({ href, title }) => (
+          <a
+            className="cursor-pointer relative rounded-md shadow-sm hover:shadow-none"
+            href={href}
+            key={title}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div className="absolute bg-gray-900 flex h-full items-center justify-center left-0 opacity-0 text-white text-2xl top-0 transition-opacity w-full z-40 hover:opacity-75">
+              .{title}
+            </div>
 
-      <Section>
-        <div className="grid grid-cols-3">
-          <img className="rounded" src="/art/directions.jpg" />
-          <img className="rounded" src="/art/dont-cry.jpg" />
-          <img className="rounded" src="/art/drops.jpg" />
-          <img className="rounded" src="/art/forgotten.jpg" />
-          <img className="rounded" src="/art/gloom.jpg" />
-          <img className="rounded" src="/art/infinity.jpg" />
-          <img className="rounded" src="/art/prufung.jpg" />
-          <img className="rounded" src="/art/rainy-days.jpg" />
-          <img className="rounded" src="/art/terminus.jpg" />
-          <img className="rounded" src="/art/the-cave-II.jpg" />
-          <img className="rounded" src="/art/the-portal.jpg" />
-          <img className="rounded" src="/art/unknown.jpg" />
-        </div>
-      </Section>
-    </>
+            <Image
+              height={720}
+              layout="responsive"
+              src={`/art/${title}.jpg`}
+              width={720}
+            />
+          </a>
+        ))}
+      </div>
+    </Page>
   );
 };
 

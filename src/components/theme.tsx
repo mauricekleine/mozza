@@ -6,6 +6,7 @@ export const theme = {
     white: "bg-white",
   },
   text: {
+    active: "text-gray-900",
     dark: "text-gray-800",
     default: "text-gray-600",
     link: "text-gray-700 hover:text-gray-900",

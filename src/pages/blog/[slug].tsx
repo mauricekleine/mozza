@@ -9,7 +9,8 @@ import { slugToString } from "../../utils/string";
 
 const BlogPost = () => {
   const router = useRouter();
-  const title = slugToString(router.query.slug as string);
+  const { slug } = router.query;
+  const title = slug ? slugToString(slug as string) : "";
 
   return (
     <Page subtitle="" title={title}>

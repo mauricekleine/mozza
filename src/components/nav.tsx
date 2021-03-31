@@ -25,7 +25,7 @@ const Nav = () => (
           <div className="flex h-16 justify-between mx-auto sm:w-4/6 md:w-3/5">
             <div className="flex items-center space-x-2 sm:space-x-3">
               <InternalLink href="/">
-                <a className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
                   <Image
                     alt="Maurice Kleine"
                     height={40}
@@ -34,7 +34,7 @@ const Nav = () => (
                   />
 
                   <span className="hidden sm:inline-block">Maurice Kleine</span>
-                </a>
+                </div>
               </InternalLink>
 
               <InternalLink href="/art">Art</InternalLink>

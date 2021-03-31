@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import { useRouter } from "next/dist/client/router";
 import NextLink from "next/link";
+import { useRouter } from "next/router";
 import { ReactNode } from "react";
 
 import Theme from "./theme";

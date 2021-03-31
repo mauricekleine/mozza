@@ -1,9 +1,9 @@
 {
-  "name": "mk-website",
+  "name": "maurice-kleine-personal-website",
   "homepage": "https://mauricekleine.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mauricekleine/mk-website"
+    "url": "https://github.com/mauricekleine/personal-website"
   },
   "version": "0.1.0",
   "private": true,

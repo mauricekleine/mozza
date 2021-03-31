@@ -214,7 +214,7 @@ const Home = () => {
 
               <p>Yep, the website you&apos;re looking at right now.</p>
 
-              <ExternalLink href="https://github.com/mauricekleine/mk-website">
+              <ExternalLink href="https://github.com/mauricekleine/personal-website">
                 <span className="font-mono text-sm">source</span>
               </ExternalLink>
             </CardContent>

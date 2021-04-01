@@ -1,4 +1,3 @@
-import CardContainer from "../../components/card-container";
 import Link from "../../components/link";
 import Page from "../../components/page";
 import Tag from "../../components/tag";
@@ -6,7 +5,7 @@ import Tag from "../../components/tag";
 const Blog = () => {
   return (
     <Page title="Recent posts 🚧">
-      <CardContainer>
+      <div className="space-y-8">
         <div>
           <Link href="/blog/my-second-post" type="title">
             My second post
@@ -66,7 +65,7 @@ const Blog = () => {
             <Tag>Dystopian fiction</Tag>
           </div>
         </div>
-      </CardContainer>
+      </div>
     </Page>
   );
 };

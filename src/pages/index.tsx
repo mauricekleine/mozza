@@ -1,4 +1,3 @@
-import CardContainer from "../components/card-container";
 import Display from "../components/display";
 import Heading from "../components/heading";
 import Link from "../components/link";
@@ -141,7 +140,7 @@ const Home = () => (
     <Section>
       <Display>Pet projects</Display>
 
-      <CardContainer>
+      <div className="space-y-2">
         <div>
           <Link href="https://sedsngo.org/" type="title">
             🌱 SEDS
@@ -197,7 +196,7 @@ const Home = () => (
             <span className="font-mono text-sm">source</span>
           </Link>
         </div>
-      </CardContainer>
+      </div>
     </Section>
   </>
 );

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import ExternalLink from "../components/external-link";
+import Link from "../components/link";
 import Page from "../components/page";
 import artCollection from "../data/art-collection";
 
@@ -9,9 +9,9 @@ const Art = () => (
     subtitle={
       <span>
         My digtal collages, some of which are{" "}
-        <ExternalLink href="https://opensea.io/accounts/mauricekleine">
+        <Link href="https://opensea.io/accounts/mauricekleine">
           available as NFTs
-        </ExternalLink>
+        </Link>
       </span>
     }
     title="Art"

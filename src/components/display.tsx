@@ -12,8 +12,8 @@ const Title = ({ children }: Props) => (
     {({ text }) => (
       <p
         className={classNames(
-          text.dark,
-          "antialiased font-sans font-black leading-none my-12 text-6xl"
+          text.darker,
+          "font-sans font-black leading-none my-12 text-5xl sm:text-6xl"
         )}
       >
         {children}

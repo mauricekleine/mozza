@@ -1,18 +1,16 @@
-import classNames from "classnames";
 import { ReactNode } from "react";
 
-import Theme from "./theme";
+import Link from "./link";
 
 type Props = {
   children: ReactNode;
+  href: HTMLAnchorElement["href"];
 };
 
-const CardTitle = ({ children }: Props) => (
-  <Theme>
-    {({ text }) => (
-      <p className={classNames(text.dark, "font-bold mb-1")}>{children}</p>
-    )}
-  </Theme>
+const CardTitle = ({ children, href }: Props) => (
+  <Link className="font-bold font-sans text-xl" href={href}>
+    <p>{children}</p>
+  </Link>
 );
 
 export default CardTitle;

@@ -28,8 +28,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
 
           <main
             className={classNames(
-              "font-serif leading-normal text-lg",
-              text.default
+              text.default,
+              "font-serif leading-normal text-lg"
             )}
           >
             <Component {...pageProps} />

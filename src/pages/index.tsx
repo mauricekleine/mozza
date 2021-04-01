@@ -1,6 +1,4 @@
-import Card from "../components/card";
 import CardContainer from "../components/card-container";
-import CardTitle from "../components/card-title";
 import Display from "../components/display";
 import Heading from "../components/heading";
 import Link from "../components/link";
@@ -144,8 +142,10 @@ const Home = () => (
       <Display>Pet projects</Display>
 
       <CardContainer>
-        <Card>
-          <CardTitle href="https://sedsngo.org/">🌱 SEDS</CardTitle>
+        <div>
+          <Link href="https://sedsngo.org/" type="title">
+            🌱 SEDS
+          </Link>
 
           <p>
             The Social Education and Development Society (SEDS) is a NGO that
@@ -157,10 +157,12 @@ const Home = () => (
           <Link href="https://github.com/mauricekleine/seds">
             <span className="font-mono text-sm">source</span>
           </Link>
-        </Card>
+        </div>
 
-        <Card>
-          <CardTitle href="https://tinnies.xyx/">🍺 Tinnies</CardTitle>
+        <div>
+          <Link href="https://tinnies.xyx/" type="title">
+            🍺 Tinnies
+          </Link>
 
           <p>
             Beer tracking, but better. Mainly a playground for me to mess around
@@ -170,31 +172,31 @@ const Home = () => (
           <Link href="https://github.com/mauricekleine/tinnies">
             <span className="font-mono text-sm">source</span>
           </Link>
-        </Card>
+        </div>
 
-        <Card>
-          <CardTitle href="https://the-remote-work-library.now.sh">
+        <div>
+          <Link href="https://the-remote-work-library.now.sh" type="title">
             📚 The Remote Work Library [Archived]
-          </CardTitle>
+          </Link>
 
           <p>A curated list of remote work resources.</p>
 
           <Link href="https://github.com/mauricekleine/the-remote-work-library">
             <span className="font-mono text-sm">source</span>
           </Link>
-        </Card>
+        </div>
 
-        <Card>
-          <CardTitle href="https://mauricekleine.com.com/">
+        <div>
+          <Link href="https://mauricekleine.com.com/" type="title">
             🤙 This website
-          </CardTitle>
+          </Link>
 
           <p>Yep, the website you&apos;re looking at right now.</p>
 
           <Link href="https://github.com/mauricekleine/personal-website">
             <span className="font-mono text-sm">source</span>
           </Link>
-        </Card>
+        </div>
       </CardContainer>
     </Section>
   </>

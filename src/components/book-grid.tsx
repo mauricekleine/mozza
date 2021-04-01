@@ -1,8 +1,7 @@
 import { BookRecommendation } from "../data/book-recommendations";
 
-import Card from "./card";
-import CardTitle from "./card-title";
 import Heading from "./heading";
+import Link from "./link";
 import Tag from "./tag";
 
 type Props = {
@@ -16,8 +15,10 @@ const BookGrid = ({ books, title }: Props) => (
 
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
       {books.map((book) => (
-        <Card key={book.title}>
-          <CardTitle href={book.href}>{book.title}</CardTitle>
+        <div key={book.title}>
+          <Link href={book.href} type="title">
+            {book.title}
+          </Link>
 
           <div>
             {book.series && (
@@ -34,7 +35,7 @@ const BookGrid = ({ books, title }: Props) => (
               <Tag key={`${book.title}-${tag}`}>{tag}</Tag>
             ))}
           </p>
-        </Card>
+        </div>
       ))}
     </div>
   </div>

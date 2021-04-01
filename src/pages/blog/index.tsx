@@ -1,6 +1,4 @@
-import Card from "../../components/card";
 import CardContainer from "../../components/card-container";
-import CardTitle from "../../components/card-title";
 import Link from "../../components/link";
 import Page from "../../components/page";
 import Tag from "../../components/tag";
@@ -9,8 +7,10 @@ const Blog = () => {
   return (
     <Page title="Recent posts 🚧">
       <CardContainer>
-        <Card>
-          <CardTitle href="/blog/my-second-post">My second post</CardTitle>
+        <div>
+          <Link href="/blog/my-second-post" type="title">
+            My second post
+          </Link>
 
           <p className="h-48 overflow-hidden">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -35,10 +35,12 @@ const Blog = () => {
             <Tag>Mental health</Tag>
             <Tag>Mindfulness</Tag>
           </div>
-        </Card>
+        </div>
 
-        <Card>
-          <CardTitle href="/blog/my-first-post">My first post</CardTitle>
+        <div>
+          <Link href="/blog/my-first-post" type="title">
+            My first post
+          </Link>
 
           <p className="h-48 overflow-hidden">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -63,7 +65,7 @@ const Blog = () => {
             <Tag>Book review</Tag>
             <Tag>Dystopian fiction</Tag>
           </div>
-        </Card>
+        </div>
       </CardContainer>
     </Page>
   );

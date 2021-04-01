@@ -21,7 +21,7 @@ const Nav = () => (
         >
           <div className="flex h-16 justify-between mx-auto sm:w-4/6 md:w-3/5">
             <div className="flex items-center space-x-2 sm:space-x-3">
-              <Link className="no-underline" href="/">
+              <Link href="/" type="nav">
                 <div className="flex items-center space-x-2">
                   <Image
                     alt="Maurice Kleine"
@@ -34,15 +34,15 @@ const Nav = () => (
                 </div>
               </Link>
 
-              <Link className="no-underline" href="/art">
+              <Link href="/art" type="nav">
                 Art
               </Link>
 
-              <Link className="no-underline" href="/blog">
+              <Link href="/blog" type="nav">
                 Blog
               </Link>
 
-              <Link className="no-underline" href="/books">
+              <Link href="/books" type="nav">
                 Books
               </Link>
             </div>

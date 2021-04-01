@@ -9,15 +9,20 @@ type Props = {
   children: ReactNode;
   className?: HTMLAttributes<HTMLAnchorElement>["className"];
   href: string;
+  type?: "default" | "nav" | "title";
 };
 
-const Link = ({ children, className, href }: Props) => {
+const Link = ({ children, href, className, type = "default" }: Props) => {
   const router = useRouter();
   const isActiveRoute = router.route.includes(href);
   const isInternalLink = href.startsWith("/");
 
   const sharedClassnames = classNames(
-    "inline-block leading-tight underline hover:no-underline",
+    "inline-block leading-tight",
+    {
+      "mb-2": type === "title",
+      "underline hover:no-underline": type !== "nav",
+    },
     className
   );
 

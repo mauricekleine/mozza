@@ -17,7 +17,7 @@ const Link = ({ children, className, href }: Props) => {
   const isInternalLink = href.startsWith("/");
 
   const sharedClassnames = classNames(
-    "leading-tight underline hover:no-underline",
+    "inline-block leading-tight underline hover:no-underline",
     className
   );
 
@@ -31,7 +31,7 @@ const Link = ({ children, className, href }: Props) => {
                 "font-bold": isActiveRoute,
               })}
             >
-              <p>{children}</p>
+              {children}
             </a>
           </NextLink>
         )}
@@ -48,7 +48,7 @@ const Link = ({ children, className, href }: Props) => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <p>{children}</p>
+          {children}
         </a>
       )}
     </Theme>

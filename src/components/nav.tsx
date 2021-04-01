@@ -11,7 +11,7 @@ import Theme from "./theme";
 
 const Nav = () => (
   <Theme>
-    {({ bg, text }) => (
+    {({ bg }) => (
       <nav className={classNames(bg.gray, "fixed left-4 right-4 top-0 z-50")}>
         <div
           className={classNames(
@@ -47,35 +47,34 @@ const Nav = () => (
               </Link>
             </div>
 
-            <div className="flex items-center space-x-2 sm:space-x-3">
-              <Link href="https://github.com/mauricekleine">
-                <GitHubLogo
-                  className={classNames(text.link, "fill-current h-4 w-4")}
-                />
+            <div className="flex items-center space-x-0.5 sm:space-x-1">
+              <Link className="p-1" href="https://github.com/mauricekleine">
+                <GitHubLogo className="fill-current h-4 w-4" />
               </Link>
 
-              <Link href="https://www.goodreads.com/mauricekleine">
-                <GoodreadsLogo
-                  className={classNames(text.link, "fill-current h-4 w-4")}
-                />
+              <Link
+                className="p-1"
+                href="https://www.goodreads.com/mauricekleine"
+              >
+                <GoodreadsLogo className="fill-current h-4 w-4" />
               </Link>
 
-              <Link href="https://www.linkedin.com/in/mauricekleine/">
-                <LinkedInLogo
-                  className={classNames(text.link, "fill-current h-4 w-4")}
-                />
+              <Link
+                className="p-1"
+                href="https://www.linkedin.com/in/mauricekleine/"
+              >
+                <LinkedInLogo className="fill-current h-4 w-4" />
               </Link>
 
-              <Link href="https://www.producthunt.com/@mauricekleine">
-                <ProducthuntLogo
-                  className={classNames(text.link, "fill-current h-4 w-4")}
-                />
+              <Link
+                className="p-1"
+                href="https://www.producthunt.com/@mauricekleine"
+              >
+                <ProducthuntLogo className="fill-current h-4 w-4" />
               </Link>
 
-              <Link href="https://twitter.com/maurice_kleine">
-                <TwitterLogo
-                  className={classNames(text.link, "fill-current h-4 w-4")}
-                />
+              <Link className="p-1" href="https://twitter.com/maurice_kleine">
+                <TwitterLogo className="fill-current h-4 w-4" />
               </Link>
             </div>
           </div>

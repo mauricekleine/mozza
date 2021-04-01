@@ -9,7 +9,7 @@ type Props = {
 
 const CardTitle = ({ children, href }: Props) => (
   <Link className="font-bold font-sans text-xl" href={href}>
-    <p>{children}</p>
+    {children}
   </Link>
 );
 

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { ReactNode } from "react";
 
 import Display from "./display";
@@ -11,13 +12,19 @@ type Props = {
 };
 
 const Page = ({ children, subtitle, title }: Props) => (
-  <Section>
-    <Display>{title}</Display>
+  <>
+    <Head>
+      <title>{title} | Maurice Kleine</title>
+    </Head>
 
-    {subtitle && <Heading>{subtitle}</Heading>}
+    <Section>
+      <Display>{title}</Display>
 
-    <div className="mt-4">{children}</div>
-  </Section>
+      {subtitle && <Heading>{subtitle}</Heading>}
+
+      <div className="mt-4">{children}</div>
+    </Section>
+  </>
 );
 
 export default Page;

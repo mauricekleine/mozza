@@ -10,7 +10,7 @@ const BlogPost = () => {
   const title = slug ? slugToString(slug as string) : "";
 
   return (
-    <Page subtitle="" title={title}>
+    <Page title={title}>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque
         risus, dapibus at vulputate ut, ullamcorper in justo. Etiam eget leo

@@ -1,7 +1,6 @@
 import classNames from "classnames";
 
 import Link from "./link";
-import PageCorners from "./page-corners";
 import GitHubLogo from "./svg/github.svg";
 import GoodreadsLogo from "./svg/goodreads.svg";
 import LinkedInLogo from "./svg/linkedin.svg";
@@ -16,7 +15,7 @@ const Nav = () => (
         <nav
           className={classNames(
             bg.default,
-            "fixed left-4 px-6 right-4 text-xs top-0 z-50 sm:px-0 sm:text-sm"
+            "fixed left-0 px-4 right-0 text-xs top-0 z-50 sm:text-sm"
           )}
         >
           <div

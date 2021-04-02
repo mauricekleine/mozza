@@ -11,16 +11,19 @@ const Art = () => (
     subtitle={
       <Theme>
         {({ text }) => (
-          <div>
-            My digtal collages, some of which are{" "}
-            <Link href="https://opensea.io/accounts/mauricekleine">
-              available as NFTs
-            </Link>
-            .
-            <p className={classNames(text.default, "mt-2 text-xs")}>
+          <>
+            <span className="block">
+              My digtal collages, some of which are{" "}
+              <Link href="https://opensea.io/accounts/mauricekleine">
+                available as NFTs
+              </Link>
+              .
+            </span>
+
+            <span className={classNames(text.default, "block mt-2 text-xs")}>
               High resolution versions available upon request
-            </p>
-          </div>
+            </span>
+          </>
         )}
       </Theme>
     }

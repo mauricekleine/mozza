@@ -2,12 +2,14 @@ import Display from "../components/display";
 import Heading from "../components/heading";
 import Link from "../components/link";
 import Section from "../components/section";
+import SpaceContainer from "../components/space-container";
 import Tag from "../components/tag";
+import petProjects from "../data/pet-projects";
 
 const Home = () => (
   <>
     <Section>
-      <div className="space-y-4">
+      <SpaceContainer>
         <Display>Hey! 🤙</Display>
 
         <Heading>
@@ -32,13 +34,13 @@ const Home = () => (
             🐰 bunnies
           </Tag>
         </p>
-      </div>
+      </SpaceContainer>
     </Section>
 
     <Section>
       <Display>I value</Display>
 
-      <div className="space-y-8">
+      <SpaceContainer size="lg">
         <div>
           <Heading>Growth and self-actualisation</Heading>
           <span>To learn is to be alive</span>
@@ -66,29 +68,29 @@ const Home = () => (
           <Heading>Ownership and accountability</Heading>
           <span>Finger-pointers beware</span>
         </div>
-      </div>
+      </SpaceContainer>
     </Section>
 
     <Section>
       <Display>In the wild</Display>
 
-      <div className="space-y-8">
+      <SpaceContainer size="xl">
         <div>
           <Heading>Videos</Heading>
 
-          <ul className="list-disc space-y-3">
+          <SpaceContainer element="ul" size="sm">
             <li>
               <Link href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
                 Building the Foundations of Remote Work
               </Link>
             </li>
-          </ul>
+          </SpaceContainer>
         </div>
 
         <div>
           <Heading>Articles</Heading>
 
-          <ul className="list-disc space-y-3">
+          <SpaceContainer element="ul" size="sm">
             <li>
               <Link href="https://www.productboard.com/blog/supporting-mental-health/">
                 Supporting mental health the productboard way
@@ -96,7 +98,7 @@ const Home = () => (
             </li>
 
             <li>
-              <Link href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
+              <Link href="https://www.linkedin.com/pdivse/how-we-want-do-remote-productboard-maurice-kleine/">
                 How we want to do remote at productboard 🌎
               </Link>
             </li>
@@ -113,13 +115,13 @@ const Home = () => (
                 front-end engineer at productboard!
               </Link>
             </li>
-          </ul>
+          </SpaceContainer>
         </div>
 
         <div>
           <Heading>Podcasts</Heading>
 
-          <ul className="list-disc space-y-3">
+          <SpaceContainer element="ul" size="sm">
             <li>
               <Link href="https://www.startremote.net/interviews/maurice-kleine">
                 StartRemote #2: Maurice on how to build the first fully remote
@@ -132,71 +134,33 @@ const Home = () => (
                 People of productboard episode #1: Maurice – Product Developer
               </Link>
             </li>
-          </ul>
+          </SpaceContainer>
         </div>
-      </div>
+      </SpaceContainer>
     </Section>
 
     <Section>
       <Display>Pet projects</Display>
 
-      <div className="space-y-2">
-        <div>
-          <Link href="https://sedsngo.org/" type="title">
-            🌱 SEDS
-          </Link>
+      <SpaceContainer size="xl">
+        {petProjects.map((project) => (
+          <div key={project.name}>
+            <div className="flex space-x-2">
+              <Link href={project.url} type="title">
+                {project.name}
+              </Link>
 
-          <p>
-            The Social Education and Development Society (SEDS) is a NGO that
-            has been actively involved in socially transforming initiatives and
-            rural development for over 38 years near the town of Penukonda in
-            Andhra Pradesh, India. I created and maintain their homepage.
-          </p>
+              <div className="font-mono text-sm">
+                <span className="mr-2">|</span>
 
-          <Link href="https://github.com/mauricekleine/seds">
-            <span className="font-mono text-sm">source</span>
-          </Link>
-        </div>
+                <Link href={project.repo}>source</Link>
+              </div>
+            </div>
 
-        <div>
-          <Link href="https://tinnies.xyx/" type="title">
-            🍺 Tinnies
-          </Link>
-
-          <p>
-            Beer tracking, but better. Mainly a playground for me to mess around
-            with cool new technologies.
-          </p>
-
-          <Link href="https://github.com/mauricekleine/tinnies">
-            <span className="font-mono text-sm">source</span>
-          </Link>
-        </div>
-
-        <div>
-          <Link href="https://the-remote-work-library.now.sh" type="title">
-            📚 The Remote Work Library [Archived]
-          </Link>
-
-          <p>A curated list of remote work resources.</p>
-
-          <Link href="https://github.com/mauricekleine/the-remote-work-library">
-            <span className="font-mono text-sm">source</span>
-          </Link>
-        </div>
-
-        <div>
-          <Link href="https://mauricekleine.com.com/" type="title">
-            🤙 This website
-          </Link>
-
-          <p>Yep, the website you&apos;re looking at right now.</p>
-
-          <Link href="https://github.com/mauricekleine/personal-website">
-            <span className="font-mono text-sm">source</span>
-          </Link>
-        </div>
-      </div>
+            <p>{project.description}</p>
+          </div>
+        ))}
+      </SpaceContainer>
     </Section>
   </>
 );

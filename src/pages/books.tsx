@@ -1,5 +1,6 @@
 import BookGrid from "../components/book-grid";
 import Page from "../components/page";
+import SpaceContainer from "../components/space-container";
 import bookRecommendations from "../data/book-recommendations";
 
 const fictionRecommendations = bookRecommendations.filter(
@@ -12,10 +13,10 @@ const nonFictionRecommendations = bookRecommendations.filter(
 
 const Books = () => (
   <Page title="Books I recommend">
-    <div className="space-y-8">
+    <SpaceContainer size="xl">
       <BookGrid books={nonFictionRecommendations} title="Non-fiction" />
       <BookGrid books={fictionRecommendations} title="Fiction" />
-    </div>
+    </SpaceContainer>
   </Page>
 );
 

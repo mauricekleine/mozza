@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
 
+import Link from "./link";
 import Theme from "./theme";
 
 type Props = {
@@ -16,20 +17,17 @@ const Tag = ({ children, href }: Props) => {
     <Theme>
       {({ bg, text }) =>
         href ? (
-          <a
+          <Link
             className={classNames(
               bg.dark,
               bg.darkHover,
               sharedClassnames,
-              text.dark,
-              "underline hover:no-underline"
+              text.dark
             )}
             href={href}
-            rel="noopener noreferrer"
-            target="_blank"
           >
             {children}
-          </a>
+          </Link>
         ) : (
           <span className={classNames(bg.dark, text.dark, sharedClassnames)}>
             {children}

@@ -13,10 +13,10 @@ const BookGrid = ({ books, title }: Props) => (
   <div>
     <Heading hasDivider>{title}</Heading>
 
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div className="grid grid-cols-1 gap-8 lg:gap-4 lg:grid-cols-2">
       {books.map((book) => (
         <div key={book.title}>
-          <Link href={book.href} type="title">
+          <Link className="inline-block" href={book.href} type="title">
             {book.title}
           </Link>
 

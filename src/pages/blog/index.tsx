@@ -1,11 +1,12 @@
 import Link from "../../components/link";
 import Page from "../../components/page";
+import SpaceContainer from "../../components/space-container";
 import Tag from "../../components/tag";
 
 const Blog = () => {
   return (
     <Page title="Recent posts 🚧">
-      <div className="space-y-8">
+      <SpaceContainer size="xl">
         <div>
           <Link href="/blog/my-second-post" type="title">
             My second post
@@ -65,7 +66,7 @@ const Blog = () => {
             <Tag>Dystopian fiction</Tag>
           </div>
         </div>
-      </div>
+      </SpaceContainer>
     </Page>
   );
 };

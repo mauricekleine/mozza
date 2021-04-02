@@ -81,7 +81,7 @@ const bookRecommendations: BookRecommendation[] = [
   {
     authors: ["Gene Kim", "Kevin Behr", "George Spafford"],
     href: "https://www.goodreads.com/book/show/17255186-the-phoenix-project",
-    tags: ["dev-ops"],
+    tags: ["devOps"],
     title:
       "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
     type: "non-fiction",

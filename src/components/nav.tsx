@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import Image from "next/image";
 
 import Link from "./link";
 import PageCorners from "./page-corners";
@@ -16,25 +15,22 @@ const Nav = () => (
       <>
         <nav
           className={classNames(
-            "fixed left-4 px-6 right-4 text-xs z-50 sm:px-0 sm:text-sm"
+            bg.default,
+            "fixed left-4 px-6 right-4 text-xs top-0 z-50 sm:px-0 sm:text-sm"
           )}
         >
-          <PageCorners />
-
           <div
             className={classNames(
-              bg.white,
               "flex h-16 justify-between mx-auto sm:w-4/6 md:w-3/5"
             )}
           >
             <div className="flex items-center space-x-2 sm:space-x-3">
               <Link href="/" type="nav">
                 <div className="flex items-center space-x-2">
-                  <Image
+                  <img
                     alt="Maurice Kleine"
-                    height={40}
+                    className="bg-white object-contain p-0.5 rounded-full h-10 w-10"
                     src="/maurice-kleine.png"
-                    width={28}
                   />
 
                   <span className="hidden sm:inline-block">Maurice Kleine</span>
@@ -55,13 +51,18 @@ const Nav = () => (
             </div>
 
             <div className="flex items-center space-x-0.5 sm:space-x-1">
-              <Link className="p-1" href="https://github.com/mauricekleine">
+              <Link
+                className="p-1"
+                href="https://github.com/mauricekleine"
+                type="nav"
+              >
                 <GitHubLogo className="fill-current h-4 w-4" />
               </Link>
 
               <Link
                 className="p-1"
                 href="https://www.goodreads.com/mauricekleine"
+                type="nav"
               >
                 <GoodreadsLogo className="fill-current h-4 w-4" />
               </Link>
@@ -69,6 +70,7 @@ const Nav = () => (
               <Link
                 className="p-1"
                 href="https://www.linkedin.com/in/mauricekleine/"
+                type="nav"
               >
                 <LinkedInLogo className="fill-current h-4 w-4" />
               </Link>
@@ -76,11 +78,16 @@ const Nav = () => (
               <Link
                 className="p-1"
                 href="https://www.producthunt.com/@mauricekleine"
+                type="nav"
               >
                 <ProducthuntLogo className="fill-current h-4 w-4" />
               </Link>
 
-              <Link className="p-1" href="https://twitter.com/maurice_kleine">
+              <Link
+                className="p-1"
+                href="https://twitter.com/maurice_kleine"
+                type="nav"
+              >
                 <TwitterLogo className="fill-current h-4 w-4" />
               </Link>
             </div>

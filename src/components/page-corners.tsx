@@ -9,46 +9,51 @@ type Props = {
 const PageCorners = ({ position = "top" }: Props) => (
   <Theme>
     {({ bg }) => (
-      <>
+      <div
+        className={classNames("fixed left-4 right-4", {
+          "bottom-0": position === "bottom",
+          "top-16": position === "top",
+        })}
+      >
         <div
-          className={classNames(bg.default, "fixed left-4 h-4 right-4 z-50", {
-            "bottom-0": position === "bottom",
-            "top-0": position === "top",
+          className={classNames("absolute flex h-4 left-0 w-4", {
+            "bottom-4 items-end": position === "bottom",
           })}
-        />
+        >
+          <div className={classNames(bg.default, "h-1/2 w-1/2")}></div>
+
+          <div
+            className={classNames(
+              bg.white,
+              "absolute h-full rounded-full w-full"
+            )}
+          ></div>
+        </div>
 
         <div
-          className={classNames(bg.default, "fixed h-2 left-4 w-2", {
-            "bottom-4": position === "bottom",
-            "top-4": position === "top",
+          className={classNames("absolute flex justify-end h-4 right-0 w-4", {
+            "bottom-4 items-end": position === "bottom",
           })}
-        ></div>
+        >
+          <div className={classNames(bg.default, "h-1/2 w-1/2")}></div>
 
-        <div
-          className={classNames(bg.white, "fixed h-4 left-4 rounded-full w-4", {
-            "bottom-4": position === "bottom",
-            "top-4": position === "top",
-          })}
-        ></div>
+          <div
+            className={classNames(
+              bg.white,
+              "absolute h-full rounded-full w-full"
+            )}
+          ></div>
+        </div>
 
-        <div
-          className={classNames(bg.default, "fixed h-2 right-4 w-2", {
-            "bottom-4": position === "bottom",
-            "top-4": position === "top",
-          })}
-        ></div>
-
-        <div
-          className={classNames(
-            bg.white,
-            "fixed h-4 right-4 rounded-full w-4",
-            {
-              "bottom-4": position === "bottom",
-              "top-4": position === "top",
-            }
-          )}
-        ></div>
-      </>
+        {position === "bottom" && (
+          <div
+            className={classNames(
+              bg.default,
+              "absolute bottom-0 left-0 h-4 right-0 z-50"
+            )}
+          />
+        )}
+      </div>
     )}
   </Theme>
 );

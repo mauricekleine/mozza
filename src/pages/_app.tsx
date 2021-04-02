@@ -2,8 +2,8 @@ import classNames from "classnames";
 import { AppProps } from "next/app";
 import Head from "next/head";
 
-import Footer from "../components/footer";
 import Nav from "../components/nav";
+import PageCorners from "../components/page-corners";
 import Theme, { ThemeProvider, theme } from "../components/theme";
 
 import "tailwindcss/tailwind.css";
@@ -27,6 +27,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
 
           <Nav />
 
+          <PageCorners />
+
           <main
             className={classNames(
               bg.white,
@@ -37,7 +39,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
             <Component {...pageProps} />
           </main>
 
-          <Footer />
+          <PageCorners position="bottom" />
         </div>
       )}
     </Theme>

@@ -32,8 +32,10 @@ const Link = ({ children, href, className, type = "default" }: Props) => {
         {({ text }) => (
           <NextLink href={href}>
             <a
-              className={classNames(sharedClassnames, text.darkest, {
+              className={classNames(sharedClassnames, {
                 "font-bold": isActiveRoute,
+                [text.darkest]: type !== "nav",
+                [text.white]: type == "nav",
               })}
             >
               {children}
@@ -48,7 +50,10 @@ const Link = ({ children, href, className, type = "default" }: Props) => {
     <Theme>
       {({ text }) => (
         <a
-          className={classNames(sharedClassnames, text.darkest)}
+          className={classNames(sharedClassnames, {
+            [text.darkest]: type !== "nav",
+            [text.white]: type == "nav",
+          })}
           href={href}
           rel="noopener noreferrer"
           target="_blank"

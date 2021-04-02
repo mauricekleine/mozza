@@ -5,14 +5,14 @@ export const theme = {
     dark: "bg-gray-200",
     darkHover: "hover:bg-gray-100",
     default: "bg-gray-900",
-    white: "bg-white",
+    white: "bg-gray-50",
   },
   text: {
     dark: "text-gray-800",
     darker: "text-gray-900",
     darkest: "text-black",
     default: "text-gray-600",
-    white: "text-white",
+    white: "text-gray-50",
   },
 };
 

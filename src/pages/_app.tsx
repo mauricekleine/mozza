@@ -26,12 +26,17 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
 
           <Nav />
 
-          <div className="bg-white fixed left-4 top-16 right-4 bottom-4 rounded-lg"></div>
+          <div
+            className={classNames(
+              bg.white,
+              "bottom-2 fixed left-2 right-2 rounded-lg top-16 sm:bottom-4 sm:left-4 sm:right-4"
+            )}
+          ></div>
 
           <main
             className={classNames(
               text.default,
-              "font-serif leading-normal p-4 relative text-lg"
+              "font-serif leading-normal p-2 relative text-lg sm:p-4"
             )}
           >
             <Component {...pageProps} />
@@ -40,7 +45,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
           <div
             className={classNames(
               bg.default,
-              "fixed bottom-0 left-0 h-4 right-0 z-50"
+              "bottom-0 fixed left-0 h-2 right-0 z-50 sm:h-4"
             )}
           />
         </div>

@@ -15,7 +15,7 @@ const Nav = () => (
         <nav
           className={classNames(
             bg.default,
-            "fixed left-0 px-4 right-0 text-xs top-0 z-50 sm:text-sm"
+            "fixed left-4 right-4 text-xs top-0 z-50 sm:text-sm"
           )}
         >
           <div

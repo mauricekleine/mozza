@@ -4,7 +4,7 @@ export const theme = {
   bg: {
     dark: "bg-gray-200",
     darkHover: "hover:bg-gray-100",
-    gray: "bg-gray-100",
+    default: "bg-black",
     white: "bg-white",
   },
   text: {

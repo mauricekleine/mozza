@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { AppProps } from "next/app";
 import Head from "next/head";
 
+import Footer from "../components/footer";
 import Nav from "../components/nav";
 import Theme, { ThemeProvider, theme } from "../components/theme";
 
@@ -12,7 +13,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider value={theme}>
     <Theme>
       {({ bg, text }) => (
-        <div className={classNames(bg.white, "rounded-lg")}>
+        <div className={classNames(bg.default, "p-4")}>
           <Head>
             <link rel="icon" href="/favicon.png" />
 
@@ -28,12 +29,15 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
 
           <main
             className={classNames(
+              bg.white,
               text.default,
               "font-serif leading-normal text-lg"
             )}
           >
             <Component {...pageProps} />
           </main>
+
+          <Footer />
         </div>
       )}
     </Theme>

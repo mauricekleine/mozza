@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head />
 
-        <body>
+        <body className="bg-black">
           <Main />
           <NextScript />
         </body>

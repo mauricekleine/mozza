@@ -3,13 +3,11 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { HTMLAttributes, ReactNode } from "react";
 
-import Theme from "./theme";
-
 type Props = {
   children: ReactNode;
   className?: HTMLAttributes<HTMLAnchorElement>["className"];
   href: string;
-  type?: "default" | "nav" | "title";
+  type?: "default" | "nav";
 };
 
 const Link = ({ children, href, className, type = "default" }: Props) => {
@@ -18,9 +16,8 @@ const Link = ({ children, href, className, type = "default" }: Props) => {
   const isInternalLink = href.startsWith("/");
 
   const sharedClassnames = classNames(
-    "leading-tight",
     {
-      "mb-2": type === "title",
+      "text-white": type == "nav",
       "underline hover:no-underline": type !== "nav",
     },
     className
@@ -28,40 +25,27 @@ const Link = ({ children, href, className, type = "default" }: Props) => {
 
   if (isInternalLink) {
     return (
-      <Theme>
-        {({ text }) => (
-          <NextLink href={href}>
-            <a
-              className={classNames(sharedClassnames, {
-                "font-bold": isActiveRoute,
-                [text.darkest]: type !== "nav",
-                [text.white]: type == "nav",
-              })}
-            >
-              {children}
-            </a>
-          </NextLink>
-        )}
-      </Theme>
+      <NextLink href={href}>
+        <a
+          className={classNames(sharedClassnames, {
+            "font-bold": isActiveRoute,
+          })}
+        >
+          {children}
+        </a>
+      </NextLink>
     );
   }
 
   return (
-    <Theme>
-      {({ text }) => (
-        <a
-          className={classNames(sharedClassnames, {
-            [text.darkest]: type !== "nav",
-            [text.white]: type == "nav",
-          })}
-          href={href}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          {children}
-        </a>
-      )}
-    </Theme>
+    <a
+      className={sharedClassnames}
+      href={href}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      {children}
+    </a>
   );
 };
 

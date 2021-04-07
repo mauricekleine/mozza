@@ -1,31 +1,25 @@
-import classNames from "classnames";
 import Image from "next/image";
 
 import Link from "../components/link";
 import Page from "../components/page";
-import Theme from "../components/theme";
 import artCollection from "../data/art-collection";
 
 const Art = () => (
   <Page
     subtitle={
-      <Theme>
-        {({ text }) => (
-          <>
-            <span className="block">
-              My digtal collages, some of which are{" "}
-              <Link href="https://opensea.io/accounts/mauricekleine">
-                available as NFTs
-              </Link>
-              .
-            </span>
+      <>
+        <span className="block">
+          My digtal collages, some of which are{" "}
+          <Link href="https://opensea.io/accounts/mauricekleine">
+            available as NFTs
+          </Link>
+          .
+        </span>
 
-            <span className={classNames(text.default, "block mt-2 text-xs")}>
-              High resolution versions available upon request
-            </span>
-          </>
-        )}
-      </Theme>
+        <span className="block mt-2 text-primary-600 text-xs">
+          High resolution versions available upon request
+        </span>
+      </>
     }
     title="Art"
   >

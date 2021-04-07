@@ -145,10 +145,8 @@ const Home = () => (
       <SpaceContainer size="xl">
         {petProjects.map((project) => (
           <div key={project.name}>
-            <div className="flex space-x-2">
-              <Link href={project.url} type="title">
-                {project.name}
-              </Link>
+            <div className="flex items-center space-x-2">
+              <Link href={project.url}>{project.name}</Link>
 
               <div className="font-mono text-sm">
                 <span className="mr-2">|</span>

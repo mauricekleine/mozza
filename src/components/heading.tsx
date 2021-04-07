@@ -7,16 +7,16 @@ type Props = {
 };
 
 const Heading = ({ children, hasDivider = false }: Props) => (
-  <p
+  <h2
     className={classNames(
-      "font-bold font-sans mb-2 text-2xl text-primary-800 sm:text-3xl",
+      "font-bold font-sans mb-1 text-2xl text-primary-800 sm:mb-2 sm:text-3xl",
       {
-        "border-b-2 mb-4": hasDivider,
+        "border-b border-primary-300 mb-2": hasDivider,
       }
     )}
   >
     {children}
-  </p>
+  </h2>
 );
 
 export default Heading;

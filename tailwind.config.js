@@ -2,6 +2,7 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
+  plugins: [require("@tailwindcss/typography")],
   purge: ["./src/pages/**/*.tsx", "./src/components/**/*.tsx"],
   theme: {
     fontFamily: {

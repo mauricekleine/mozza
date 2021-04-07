@@ -14,10 +14,15 @@
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix --quiet"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.0",
     "classnames": "~2.2.6",
+    "date-fns": "^2.19.0",
+    "gray-matter": "^4.0.2",
     "next": "^10.1.3",
     "react": "~17.0.0",
-    "react-dom": "~17.0.0"
+    "react-dom": "~17.0.0",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1"
   },
   "devDependencies": {
     "@svgr/webpack": "~5.5.0",

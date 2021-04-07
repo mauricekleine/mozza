@@ -16,6 +16,7 @@ const Link = ({ children, href, className, type = "default" }: Props) => {
   const isInternalLink = href.startsWith("/");
 
   const sharedClassnames = classNames(
+    "leading-normal",
     {
       "text-white": type == "nav",
       "underline hover:no-underline": type !== "nav",

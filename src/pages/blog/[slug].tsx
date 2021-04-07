@@ -1,36 +1,64 @@
-import { useRouter } from "next/dist/client/router";
+import { GetStaticPropsContext } from "next";
+import remark from "remark";
+import html from "remark-html";
 
 import Page from "../../components/page";
 import Tag from "../../components/tag";
-import { slugToString } from "../../utils/string";
+import { Post, getPostBySlug, getPostSlugs } from "../../utils/posts";
 
-const BlogPost = () => {
-  const router = useRouter();
-  const { slug } = router.query;
-  const title = slug ? slugToString(slug as string) : "";
+type Props = {
+  post: Post;
+};
 
-  return (
-    <Page title={title}>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque
-        risus, dapibus at vulputate ut, ullamcorper in justo. Etiam eget leo
-        eros. Nunc id fringilla dolor, eu pretium sapien. Mauris vestibulum
-        hendrerit massa vel vehicula. Aenean ornare varius est, at gravida metus
-        tempus et. Donec eget dui a dui congue consequat id id libero. Fusce sed
-        elit a erat congue vehicula vel id turpis. Donec molestie luctus eros,
-        sed dictum justo aliquet in. Nam id elit a nunc cursus bibendum. Sed id
-        sagittis ipsum. Mauris eu ullamcorper elit. Quisque luctus turpis at
-        ante eleifend interdum. Sed vehicula purus ac risus fringilla varius.
-        Sed convallis, justo eget posuere vehicula, neque quam semper arcu, non
-        consectetur mauris nisl at nulla.
-      </p>
+const BlogPost = ({ post }: Props) => (
+  <Page
+    meta={`${post.relativeDate} · ${post.readingTime} minute read`}
+    title={post.title}
+  >
+    <div className="space-y-3">
+      <div
+        className="leading-relaxed prose text-primary-600"
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      />
 
       <div>
-        <Tag>Mental health</Tag>
-        <Tag>Mindfulness</Tag>
+        {post.tags.map((tag) => (
+          <Tag key={`${post.slug}-${tag}`}>{tag}</Tag>
+        ))}
       </div>
-    </Page>
-  );
+    </div>
+  </Page>
+);
+
+export const getStaticPaths = async () => {
+  const slugs = getPostSlugs();
+  const paths = slugs.map((slug) => ({
+    params: {
+      slug,
+    },
+  }));
+
+  return {
+    fallback: false,
+    paths,
+  };
+};
+
+export const getStaticProps = async ({
+  params,
+}: GetStaticPropsContext<{ slug: string }>) => {
+  const post = getPostBySlug(params.slug);
+  const result = await remark().use(html).process(post.content);
+  const content = result.toString();
+
+  return {
+    props: {
+      post: {
+        ...post,
+        content,
+      },
+    },
+  };
 };
 
 export default BlogPost;

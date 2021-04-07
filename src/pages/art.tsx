@@ -8,17 +8,17 @@ const Art = () => (
   <Page
     subtitle={
       <>
-        <span className="block">
+        <p>
           My digtal collages, some of which are{" "}
           <Link href="https://opensea.io/accounts/mauricekleine">
             available as NFTs
           </Link>
           .
-        </span>
+        </p>
 
-        <span className="block mt-2 text-primary-600 text-xs">
+        <p className="font-normal text-primary-600 text-xs">
           High resolution versions available upon request
-        </span>
+        </p>
       </>
     }
     title="Art"
@@ -32,11 +32,12 @@ const Art = () => (
           rel="noopener noreferrer"
           target="_blank"
         >
-          <div className="absolute bg-gray-900 flex h-full items-center justify-center left-0 opacity-0 text-white text-2xl top-0 transition-opacity w-full z-40 hover:opacity-75">
+          <div className="absolute bg-primary-900 flex h-full items-center justify-center left-0 opacity-0 text-white text-2xl top-0 transition-opacity w-full z-40 hover:opacity-75">
             .{title}
           </div>
 
           <Image
+            className="rounded"
             height={720}
             layout="responsive"
             src={`/art/${title}.jpg`}

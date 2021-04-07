@@ -16,7 +16,7 @@ const BookGrid = ({ books, title }: Props) => (
     <div className="grid grid-cols-1 gap-8 lg:gap-4 lg:grid-cols-2">
       {books.map((book) => (
         <div key={book.title}>
-          <Link className="inline-block" href={book.href} type="title">
+          <Link className="inline-block" href={book.href}>
             {book.title}
           </Link>
 

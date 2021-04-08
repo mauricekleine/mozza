@@ -18,7 +18,7 @@ const Blog = ({ posts }: Props) => (
               {post.title}
             </Link>
 
-            <p className="font-sans text-primary-600 text-sm">
+            <p className="font-sans text-primary-600 text-sm dark:text-primary-400">
               {post.relativeDate} · {post.readingTime} minute read
             </p>
           </div>

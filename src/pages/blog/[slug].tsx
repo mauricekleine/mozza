@@ -17,7 +17,7 @@ const BlogPost = ({ post }: Props) => (
   >
     <div className="space-y-3">
       <div
-        className="leading-relaxed prose text-primary-600"
+        className="leading-relaxed prose text-primary-600 dark:text-primary-300"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 

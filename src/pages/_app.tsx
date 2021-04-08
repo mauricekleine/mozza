@@ -7,7 +7,7 @@ import "tailwindcss/tailwind.css";
 import "../css/styles.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <div className="antialiased bg-primary-900 text-primary-700">
+  <div className="antialiased bg-primary-900 text-primary-700 dark:bg-black">
     <Head>
       <link rel="icon" href="/favicon.png" />
 
@@ -21,13 +21,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
 
     <Nav />
 
-    <div className="bg-primary-50 bottom-2 fixed left-2 right-2 rounded-lg top-16 sm:bottom-4 sm:left-4 sm:right-4"></div>
+    <div className="bg-primary-50 bottom-2 fixed left-2 right-2 rounded-lg top-16 dark:hidden sm:bottom-4 sm:left-4 sm:right-4"></div>
 
-    <main className="font-serif leading-relaxed p-2 relative sm:p-4">
+    <main className="font-serif leading-relaxed p-2 relative dark:text-primary-300 sm:p-4">
       <Component {...pageProps} />
     </main>
 
-    <div className="bg-primary-900 bottom-0 fixed left-0 h-2 right-0 z-50 sm:h-4" />
+    <div className="bg-primary-900 bottom-0 fixed left-0 h-2 right-0 z-50 dark:hidden sm:h-4" />
   </div>
 );
 

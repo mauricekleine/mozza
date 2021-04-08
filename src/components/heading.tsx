@@ -9,7 +9,7 @@ type Props = {
 const Heading = ({ children, hasDivider = false }: Props) => (
   <h2
     className={classNames(
-      "font-bold font-sans mb-1 text-2xl text-primary-800 sm:mb-2 sm:text-3xl",
+      "font-bold font-sans mb-1 text-2xl text-primary-800 dark:text-primary-200 sm:mb-2 sm:text-3xl",
       {
         "border-b border-primary-300 mb-2": hasDivider,
       }

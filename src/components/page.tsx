@@ -22,7 +22,9 @@ const Page = ({ children, meta, subtitle, title }: Props) => (
       <Display>
         {title}
         {meta && (
-          <p className="font-normal mt-2 text-primary-600 text-sm">{meta}</p>
+          <p className="font-normal mt-2 text-primary-600 text-sm dark:text-primary-400">
+            {meta}
+          </p>
         )}
       </Display>
 

@@ -16,7 +16,7 @@ const Art = () => (
           .
         </p>
 
-        <p className="font-normal text-primary-600 text-xs">
+        <p className="font-normal text-primary-600 text-xs dark:text-primary-300">
           High resolution versions available upon request
         </p>
       </>

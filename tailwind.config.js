@@ -1,6 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
+  darkMode: "class",
   mode: "jit",
   plugins: [require("@tailwindcss/typography")],
   purge: ["./src/pages/**/*.tsx", "./src/components/**/*.tsx"],
@@ -13,6 +14,7 @@ module.exports = {
       black: colors.black,
       primary: colors.blueGray,
       white: colors.white,
+      yellow: colors.yellow,
     },
   },
 };

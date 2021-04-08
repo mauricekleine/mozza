@@ -8,7 +8,9 @@ const NavLogo = () => (
       src="/maurice-kleine.png"
     />
 
-    <span className="hidden ml-3 lg:inline-block">Maurice Kleine</span>
+    <span className="font-bold hidden ml-3 lg:inline-block">
+      Maurice Kleine
+    </span>
   </Link>
 );
 

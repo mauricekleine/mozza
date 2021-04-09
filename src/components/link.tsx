@@ -13,7 +13,6 @@ type Props = {
 const Link = ({ children, href, className, type = "default" }: Props) => {
   const { pathname } = useRouter();
   const isRootRoute = href === "/" && pathname === "/";
-  console.log(href.substr(1));
   const isActiveRoute =
     isRootRoute || (href.length > 1 && pathname.includes(href));
   const isInternalLink = href.startsWith("/");

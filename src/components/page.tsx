@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import Display from "./display";
 import Heading from "./heading";
 import Section from "./section";
+import Small from "./small";
 
 type Props = {
   children: ReactNode | ReactNode[];
@@ -19,14 +20,9 @@ const Page = ({ children, meta, subtitle, title }: Props) => (
     </Head>
 
     <Section>
-      <Display>
-        {title}
-        {meta && (
-          <p className="font-normal mt-2 text-primary-600 text-sm dark:text-primary-400">
-            {meta}
-          </p>
-        )}
-      </Display>
+      <Display>{title}</Display>
+
+      {meta && <Small>{meta}</Small>}
 
       {subtitle && <Heading>{subtitle}</Heading>}
 

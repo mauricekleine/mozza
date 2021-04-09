@@ -30,7 +30,7 @@ const NavSm = ({ colorSchemeToggle }: Props) => {
   }, [handleMobileMenuClose, pathname]);
 
   return (
-    <div className="sm:hidden" ref={mobileMenuRef}>
+    <div className="px-8 sm:hidden" ref={mobileMenuRef}>
       <div className="flex h-16 items-center">
         <div className="flex flex-1">
           <button

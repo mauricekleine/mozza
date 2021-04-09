@@ -20,7 +20,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="bg-primary-900 fixed px-8 top-0 w-full z-50 dark:backdrop-blur-sm dark:bg-black dark:backdrop-filter dark:opacity-90 sm:px-4 sm:shadow-xl sm:text-sm">
+      <nav className="bg-primary-900 fixed top-0 w-full z-50 dark:backdrop-blur-sm dark:bg-black dark:backdrop-filter dark:opacity-90">
         <NavMd colorSchemeToggle={ColorSchemeToggle} />
         <NavSm colorSchemeToggle={ColorSchemeToggle} />
       </nav>

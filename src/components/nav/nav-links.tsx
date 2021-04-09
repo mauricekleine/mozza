@@ -13,6 +13,10 @@ const NavLinks = () => (
     <Link href="/books" type="nav">
       Books
     </Link>
+
+    <Link href="/resume" type="nav">
+      Resume
+    </Link>
   </>
 );
 

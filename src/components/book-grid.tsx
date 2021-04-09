@@ -3,6 +3,7 @@ import { BookRecommendation } from "../data/book-recommendations";
 import Heading from "./heading";
 import Link from "./link";
 import Tag from "./tag";
+import Title from "./title";
 
 type Props = {
   books: BookRecommendation[];
@@ -13,21 +14,21 @@ const BookGrid = ({ books, title }: Props) => (
   <div>
     <Heading hasDivider>{title}</Heading>
 
-    <div className="grid grid-cols-1 gap-4 lg:gap-6 lg:grid-cols-2 xl:gap-8 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 lg:gap-6 lg:grid-cols-2 xl:gap-8">
       {books.map((book) => (
         <div key={book.title}>
-          <Link className="inline-block" href={book.href}>
-            {book.title}
+          <Link href={book.href}>
+            <Title>{book.title}</Title>
           </Link>
 
           <div>
             {book.series && (
-              <p className="text-sm">
+              <p>
                 {book.series.title} #{book.series.book}
               </p>
             )}
 
-            <p className="text-sm">{book.authors.join(", ")}</p>
+            <p>{book.authors.join(", ")}</p>
           </div>
 
           <p>

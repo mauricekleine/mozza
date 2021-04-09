@@ -21,7 +21,7 @@ const Link = ({ children, href, className, type = "default" }: Props) => {
     "leading-normal",
     {
       "text-sm text-white": type == "nav",
-      "underline dark:text-white hover:no-underline": type !== "nav",
+      "underline hover:no-underline": type !== "nav",
     },
     className
   );

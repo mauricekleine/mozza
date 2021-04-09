@@ -10,7 +10,7 @@ type Props = {
 
 const NavMd = ({ colorSchemeToggle }: Props) => (
   <div className="hidden sm:block">
-    <div className="flex h-16 items-center justify-between mx-auto sm:w-4/6 md:w-3/5">
+    <div className="flex h-16 items-center justify-between mx-auto px-2 sm:w-4/6 md:w-4/5 lg:w-3/5">
       <div className="flex items-center space-x-3">
         <NavLogo />
 

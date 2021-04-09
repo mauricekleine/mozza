@@ -1,7 +1,9 @@
 import Link from "../../components/link";
 import Page from "../../components/page";
+import Small from "../../components/small";
 import SpaceContainer from "../../components/space-container";
 import Tag from "../../components/tag";
+import Title from "../../components/title";
 import { Post, getAllPosts } from "../../utils/posts";
 
 type Props = {
@@ -12,25 +14,22 @@ const Blog = ({ posts }: Props) => (
   <Page title="🚧 Recent posts">
     <SpaceContainer size="xl">
       {posts.map((post) => (
-        <div className="space-y-3" key={post.slug}>
+        <div className="space-y-2" key={post.slug}>
           <div>
-            <Link className="font-bold text-xl" href={`/blog/${post.slug}`}>
-              {post.title}
+            <Link href={`/blog/${post.slug}`}>
+              <Title>{post.title}</Title>
             </Link>
 
-            <p className="font-sans text-primary-600 text-sm dark:text-primary-400">
+            <Small>
               {post.relativeDate} · {post.readingTime} minute read
-            </p>
+            </Small>
           </div>
 
           <p>
-            {post.excerpt}{" "}
-            <Link className="text-primary-600" href={`/blog/${post.slug}`}>
-              Read more...
-            </Link>
+            {post.excerpt} <Link href={`/blog/${post.slug}`}>Read more...</Link>
           </p>
 
-          <div className="text-primary-600 text-sm">
+          <div>
             {post.tags.map((tag) => (
               <Tag key={`${post.slug}-${tag}`}>{tag}</Tag>
             ))}

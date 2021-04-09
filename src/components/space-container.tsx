@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 type Props = {
   children: ReactNode | ReactNode[];
   element?: keyof JSX.IntrinsicElements;
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "sm" | "md" | "lg" | "xl" | "2xl";
 };
 
 const SpaceContainer = ({ children, element = "div", size = "md" }: Props) => {
@@ -13,6 +13,7 @@ const SpaceContainer = ({ children, element = "div", size = "md" }: Props) => {
   return (
     <Element
       className={classNames({
+        "space-y-10": size === "2xl",
         "space-y-2": size === "sm",
         "space-y-4": size === "md",
         "space-y-6": size === "lg",

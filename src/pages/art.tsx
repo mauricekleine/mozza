@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import Link from "../components/link";
 import Page from "../components/page";
+import Small from "../components/small";
 import artCollection from "../data/art-collection";
 
 const Art = () => (
@@ -16,9 +17,7 @@ const Art = () => (
           .
         </p>
 
-        <p className="font-normal text-primary-600 text-xs dark:text-primary-300">
-          High resolution versions available upon request
-        </p>
+        <Small>High resolution versions available upon request</Small>
       </>
     }
     title="Art"
@@ -38,10 +37,10 @@ const Art = () => (
 
           <Image
             className="rounded"
-            height={720}
+            height="720"
             layout="responsive"
             src={`/art/${title}.jpg`}
-            width={720}
+            width="720"
           />
         </a>
       ))}

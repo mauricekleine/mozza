@@ -17,7 +17,7 @@ const useColorScheme = () => {
     const hasThemeStored = "theme" in localStorage;
 
     if (
-      (hasThemeStored && localStorage.theme === "dark") ||
+      (hasThemeStored && localStorage.getItem("theme") === "dark") ||
       (!hasThemeStored && hasDarkModePref)
     ) {
       setColorScheme("dark");

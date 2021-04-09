@@ -1,3 +1,5 @@
+import { Transition } from "@headlessui/react";
+import classNames from "classnames";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 
@@ -51,8 +53,18 @@ const NavSm = () => {
         </div>
       </div>
 
-      {isMobileMenuToggled && (
-        <div className="flex flex-col items-center pb-3 space-y-2">
+      <div
+        className={classNames("duration-300 transition-opacity", {
+          "invisible opacity-0": !isMobileMenuToggled,
+          "opacity-100": isMobileMenuToggled,
+        })}
+      >
+        <div
+          className={classNames("flex flex-col items-center space-y-2", {
+            "h-0": !isMobileMenuToggled,
+            "pb-3": isMobileMenuToggled,
+          })}
+        >
           <Link href="/" type="nav">
             Home
           </Link>
@@ -61,7 +73,7 @@ const NavSm = () => {
 
           <NavSocialLinks />
         </div>
-      )}
+      </div>
     </div>
   );
 };

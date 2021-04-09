@@ -6,12 +6,10 @@ import NavSocialLinks from "./nav-social-links";
 const NavMd = () => (
   <div className="hidden sm:block">
     <div className="flex h-16 items-center justify-between mx-auto sm:w-4/6 md:w-3/5">
-      <div className="flex items-center">
+      <div className="flex items-center space-x-3">
         <NavLogo />
 
-        <div className="space-x-3">
-          <NavLinks />
-        </div>
+        <NavLinks />
       </div>
 
       <div className="flex space-x-2">

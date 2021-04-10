@@ -20,7 +20,7 @@ const Link = ({ children, href, className, type = "default" }: Props) => {
   const sharedClassnames = classNames(
     "leading-normal",
     {
-      "text-sm text-white": type == "nav",
+      "px-1 text-sm text-white": type == "nav",
       "underline hover:no-underline": type !== "nav",
     },
     className

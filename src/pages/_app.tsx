@@ -23,7 +23,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
 
     <div className="bg-primary-50 bottom-2 fixed left-2 right-2 rounded-lg top-16 dark:hidden sm:bottom-4 sm:left-4 sm:right-4"></div>
 
-    <main className="font-serif mx-auto p-2 relative text-primary-700 w-full dark:text-primary-200 sm:w-4/6 md:w-4/5 lg:w-3/5">
+    <main className="font-serif my-16 mx-auto p-2 relative text-primary-700 w-full dark:text-primary-200 sm:w-4/6 md:w-4/5 lg:w-3/5">
       <Component {...pageProps} />
     </main>
 

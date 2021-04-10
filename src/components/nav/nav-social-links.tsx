@@ -8,7 +8,7 @@ import TwitterLogo from "../svg/twitter.svg";
 const NavSocialLinks = () => (
   <div className="flex items-center space-x-1">
     <Link
-      className="p-1.5 sm:p-1"
+      className="px-2 py-1 sm:px-1"
       href="https://github.com/mauricekleine"
       type="nav"
     >
@@ -16,7 +16,7 @@ const NavSocialLinks = () => (
     </Link>
 
     <Link
-      className="p-1.5 sm:p-1"
+      className="px-2 py-1 sm:px-1"
       href="https://www.goodreads.com/mauricekleine"
       type="nav"
     >
@@ -24,7 +24,7 @@ const NavSocialLinks = () => (
     </Link>
 
     <Link
-      className="p-1.5 sm:p-1"
+      className="px-2 py-1 sm:px-1"
       href="https://www.linkedin.com/in/mauricekleine/"
       type="nav"
     >
@@ -32,7 +32,7 @@ const NavSocialLinks = () => (
     </Link>
 
     <Link
-      className="p-1.5 sm:p-1"
+      className="px-2 py-1 sm:px-1"
       href="https://www.producthunt.com/@mauricekleine"
       type="nav"
     >
@@ -40,7 +40,7 @@ const NavSocialLinks = () => (
     </Link>
 
     <Link
-      className="p-1.5 sm:p-1"
+      className="px-2 py-1 sm:px-1"
       href="https://twitter.com/maurice_kleine"
       type="nav"
     >

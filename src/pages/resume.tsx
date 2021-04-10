@@ -24,25 +24,28 @@ const experienceSortedByEndDate = experience.sort((exp1, exp2) => {
 
 const Resume = () => {
   return (
-    <Page
-      subtitle="To me, the most important goal in life is to learn new things - whether that be professionally in my career, or in my personal life while meeting new people, discovering new places and trying new things."
-      title="Resume Maurice Kleine"
-    >
+    <Page title="Resume Maurice Kleine">
+      <Heading>
+        To me, the most important goal in life is to learn new things - whether
+        that be professionally in my career, or in my personal life while
+        meeting new people, discovering new places and trying new things.
+      </Heading>
+
       <div className="flex flex-col justify-between mt-12 space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0">
         <div className="flex-1">
           <Heading>👨‍💻 Experience</Heading>
 
-          <SpaceContainer size="lg">
+          <SpaceContainer size="sm">
             {experienceSortedByEndDate.map(({ company, positions }) => (
               <div className="pl-2" key={company.name}>
                 <div className="flex items-center">
-                  <div className="border-2 border-primary-800 h-4 inline-block ml-[-0.4375rem] mr-[0.3125rem] rounded-full w-4 dark:border-primary-600"></div>
+                  <div className="border-2 border-primary-800 h-3.5 inline-block mr-1.5 rounded-full w-3.5 -ml-1.5 dark:border-primary-300"></div>
 
                   <Link href={company.website}>{company.name}</Link>
                 </div>
 
-                <div className="border-l-2 border-primary-800 pl-3 pt-1 dark:border-primary-600">
-                  <SpaceContainer>
+                <div className="border-l-2 border-primary-800 pl-3 pt-1 dark:border-primary-400">
+                  <SpaceContainer size="xs">
                     {positions.map(
                       ({ endDate, location, startDate, title }) => {
                         const start = new Date(startDate);
@@ -71,11 +74,11 @@ const Resume = () => {
         </div>
 
         <div className="flex-1">
-          <SpaceContainer size="2xl">
+          <SpaceContainer size="lg">
             <div>
               <Heading>📚 Education</Heading>
 
-              <SpaceContainer size="lg">
+              <SpaceContainer size="sm">
                 <div>
                   <Title>Information​ S​cience</Title>
                   <p>Bachelor of Arts (BA) · Average grade: 8.0</p>

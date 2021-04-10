@@ -12,9 +12,9 @@ type Props = {
 
 const Blog = ({ posts }: Props) => (
   <Page title="🚧 Recent posts">
-    <SpaceContainer size="xl">
+    <SpaceContainer size="md">
       {posts.map((post) => (
-        <div className="space-y-2" key={post.slug}>
+        <SpaceContainer key={post.slug} size="xs">
           <div>
             <Link href={`/blog/${post.slug}`}>
               <Title>{post.title}</Title>
@@ -34,7 +34,7 @@ const Blog = ({ posts }: Props) => (
               <Tag key={`${post.slug}-${tag}`}>{tag}</Tag>
             ))}
           </div>
-        </div>
+        </SpaceContainer>
       ))}
     </SpaceContainer>
   </Page>

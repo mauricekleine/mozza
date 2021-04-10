@@ -34,7 +34,7 @@ const NavSm = ({ colorSchemeToggle }: Props) => {
       <div className="flex h-16 items-center">
         <div className="flex flex-1">
           <button
-            className="text-primary-100 focus:outline-none"
+            className="p-1 text-primary-100 focus:outline-none -ml-1"
             onClick={handleMobileMenuToggle}
             type="button"
           >

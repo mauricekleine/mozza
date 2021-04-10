@@ -3,26 +3,21 @@ import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode | ReactNode[];
-  element?: keyof JSX.IntrinsicElements;
-  size?: "sm" | "md" | "lg" | "xl" | "2xl";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
 };
 
-const SpaceContainer = ({ children, element = "div", size = "md" }: Props) => {
-  const Element = element;
-
-  return (
-    <Element
-      className={classNames({
-        "space-y-10": size === "2xl",
-        "space-y-2": size === "sm",
-        "space-y-4": size === "md",
-        "space-y-6": size === "lg",
-        "space-y-8": size === "xl",
-      })}
-    >
-      {children}
-    </Element>
-  );
-};
+const SpaceContainer = ({ children, size = "md" }: Props) => (
+  <div
+    className={classNames({
+      "space-y-10": size === "lg",
+      "space-y-2": size === "xs",
+      "space-y-32": size === "xl",
+      "space-y-6": size === "sm",
+      "space-y-8": size === "md",
+    })}
+  >
+    {children}
+  </div>
+);
 
 export default SpaceContainer;

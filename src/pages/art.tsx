@@ -1,27 +1,25 @@
 import Image from "next/image";
 
+import Heading from "../components/heading";
 import Link from "../components/link";
 import Page from "../components/page";
 import Small from "../components/small";
 import artCollection from "../data/art-collection";
 
 const Art = () => (
-  <Page
-    subtitle={
-      <>
-        <p>
-          My digtal collages, some of which are{" "}
-          <Link href="https://opensea.io/accounts/mauricekleine">
-            available as NFTs
-          </Link>
-          .
-        </p>
+  <Page title="Art">
+    <Heading>
+      My digtal collages, some of which are{" "}
+      <Link href="https://opensea.io/accounts/mauricekleine">
+        available as NFTs
+      </Link>
+      .
+    </Heading>
 
-        <Small>High resolution versions available upon request</Small>
-      </>
-    }
-    title="Art"
-  >
+    <div className="mb-4 -mt-2">
+      <Small>High resolution versions available upon request</Small>
+    </div>
+
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
       {artCollection.map(({ href, title }) => (
         <a

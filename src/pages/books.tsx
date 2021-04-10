@@ -13,7 +13,7 @@ const nonFictionRecommendations = bookRecommendations.filter(
 
 const Books = () => (
   <Page title="Books I recommend">
-    <SpaceContainer size="xl">
+    <SpaceContainer size="md">
       <BookGrid books={nonFictionRecommendations} title="Non-fiction" />
       <BookGrid books={fictionRecommendations} title="Fiction" />
     </SpaceContainer>

@@ -3,6 +3,8 @@ import remark from "remark";
 import html from "remark-html";
 
 import Page from "../../components/page";
+import Small from "../../components/small";
+import SpaceContainer from "../../components/space-container";
 import Tag from "../../components/tag";
 import { Post, getPostBySlug, getPostSlugs } from "../../utils/posts";
 
@@ -11,11 +13,14 @@ type Props = {
 };
 
 const BlogPost = ({ post }: Props) => (
-  <Page
-    meta={`${post.relativeDate} · ${post.readingTime} minute read`}
-    title={post.title}
-  >
-    <div className="space-y-3">
+  <Page title={post.title}>
+    <div className="mb-12 -mt-8">
+      <Small>
+        {post.relativeDate} · {post.readingTime} minute read
+      </Small>
+    </div>
+
+    <SpaceContainer size="xs">
       <div
         className="leading-normal prose text-primary-700 dark:text-primary-200"
         dangerouslySetInnerHTML={{ __html: post.content }}
@@ -26,7 +31,7 @@ const BlogPost = ({ post }: Props) => (
           <Tag key={`${post.slug}-${tag}`}>{tag}</Tag>
         ))}
       </div>
-    </div>
+    </SpaceContainer>
   </Page>
 );
 

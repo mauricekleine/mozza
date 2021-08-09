@@ -12,7 +12,7 @@ const NavSocialLinks = () => (
       href="https://github.com/mauricekleine"
       type="nav"
     >
-      <GitHubLogo className="fill-current h-4 w-4" />
+      <GitHubLogo className="w-4 h-4 fill-current" />
     </Link>
 
     <Link
@@ -20,7 +20,7 @@ const NavSocialLinks = () => (
       href="https://www.goodreads.com/mauricekleine"
       type="nav"
     >
-      <GoodreadsLogo className="fill-current h-4 w-4" />
+      <GoodreadsLogo className="w-4 h-4 fill-current" />
     </Link>
 
     <Link
@@ -28,7 +28,7 @@ const NavSocialLinks = () => (
       href="https://www.linkedin.com/in/mauricekleine/"
       type="nav"
     >
-      <LinkedInLogo className="fill-current h-4 w-4" />
+      <LinkedInLogo className="w-4 h-4 fill-current" />
     </Link>
 
     <Link
@@ -36,15 +36,7 @@ const NavSocialLinks = () => (
       href="https://www.producthunt.com/@mauricekleine"
       type="nav"
     >
-      <ProducthuntLogo className="fill-current h-4 w-4" />
-    </Link>
-
-    <Link
-      className="px-2 py-1 sm:px-1"
-      href="https://twitter.com/maurice_kleine"
-      type="nav"
-    >
-      <TwitterLogo className="fill-current h-4 w-4" />
+      <ProducthuntLogo className="w-4 h-4 fill-current" />
     </Link>
   </div>
 );

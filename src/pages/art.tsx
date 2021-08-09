@@ -23,17 +23,18 @@ const Art = () => (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
       {artCollection.map(({ href, title }) => (
         <a
-          className="cursor-pointer relative rounded-md shadow-sm hover:shadow-none"
+          className="relative rounded-md shadow-sm cursor-pointer hover:shadow-none"
           href={href}
           key={title}
           rel="noopener noreferrer"
           target="_blank"
         >
-          <div className="absolute bg-primary-900 flex h-full items-center justify-center left-0 opacity-0 text-white text-2xl top-0 transition-opacity w-full z-40 hover:opacity-75">
+          <div className="absolute top-0 left-0 z-40 flex items-center justify-center w-full h-full text-2xl text-white transition-opacity opacity-0 bg-primary-900 hover:opacity-75">
             .{title}
           </div>
 
           <Image
+            alt={`${title} - Maurice Kleine`}
             className="rounded"
             height="720"
             layout="responsive"

@@ -12,8 +12,9 @@ const useColorScheme = () => {
   }, [colorScheme, setColorScheme]);
 
   useEffect(() => {
-    const hasDarkModePref = window.matchMedia("(prefers-color-scheme: dark)")
-      .matches;
+    const hasDarkModePref = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     const hasThemeStored = "theme" in localStorage;
 
     if (

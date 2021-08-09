@@ -1,20 +1,12 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
   "settings": {
     "react": {
       "version": "detect"
     }
   },
   "extends": [
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
+    "next",
+    "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "plugin:typescript-sort-keys/recommended"
@@ -33,8 +25,10 @@
         "newlines-between": "always"
       }
     ],
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
+    "no-restricted-imports": [
+      "error",
+      { "patterns": ["@prisma/*", ".prisma/*"] }
+    ],
     "sort-imports": [
       "error",
       {

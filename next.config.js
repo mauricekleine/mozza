@@ -1,7 +1,8 @@
 module.exports = {
-  future: {
-    webpack5: true,
+  eslint: {
+    dirs: ["src"],
   },
+  reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

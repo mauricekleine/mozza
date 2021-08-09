@@ -3,7 +3,6 @@ import GitHubLogo from "../svg/github.svg";
 import GoodreadsLogo from "../svg/goodreads.svg";
 import LinkedInLogo from "../svg/linkedin.svg";
 import ProducthuntLogo from "../svg/producthunt.svg";
-import TwitterLogo from "../svg/twitter.svg";
 
 const NavSocialLinks = () => (
   <div className="flex items-center space-x-1">

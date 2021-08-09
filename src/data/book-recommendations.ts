@@ -33,8 +33,7 @@ const bookRecommendations: BookRecommendation[] = [
   },
   {
     authors: ["Philip Pullman"],
-    href:
-      "https://www.goodreads.com/book/show/19034943-the-secret-commonwealth",
+    href: "https://www.goodreads.com/book/show/19034943-the-secret-commonwealth",
     series: {
       book: 1,
       href: "https://www.goodreads.com/series/199547-the-book-of-dust",
@@ -65,8 +64,7 @@ const bookRecommendations: BookRecommendation[] = [
   },
   {
     authors: ["Charlie Mackesy"],
-    href:
-      "https://www.goodreads.com/book/show/43708884-the-boy-the-mole-the-fox-and-the-horse",
+    href: "https://www.goodreads.com/book/show/43708884-the-boy-the-mole-the-fox-and-the-horse",
     tags: ["wholesome"],
     title: "The Boy, the Mole, the Fox and the Horse",
     type: "fiction",

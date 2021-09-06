@@ -1,5 +1,5 @@
 import { GetStaticPropsContext } from "next";
-import remark from "remark";
+import { remark } from "remark";
 import html from "remark-html";
 
 import Page from "../../components/page";

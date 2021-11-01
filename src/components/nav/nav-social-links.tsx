@@ -3,6 +3,7 @@ import GitHubLogo from "../svg/github.svg";
 import GoodreadsLogo from "../svg/goodreads.svg";
 import LinkedInLogo from "../svg/linkedin.svg";
 import ProducthuntLogo from "../svg/producthunt.svg";
+import TwitterLogo from "../svg/twitter.svg";
 
 const NavSocialLinks = () => (
   <div className="flex items-center space-x-1">
@@ -36,6 +37,14 @@ const NavSocialLinks = () => (
       type="nav"
     >
       <ProducthuntLogo className="w-4 h-4 fill-current" />
+    </Link>
+
+    <Link
+      className="px-2 py-1 sm:px-1"
+      href="https://twitter.com/maurice_kleine"
+      type="nav"
+    >
+      <TwitterLogo className="fill-current h-4 w-4" />
     </Link>
   </div>
 );

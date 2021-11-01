@@ -21,6 +21,7 @@ const experience: Experience[] = [
     },
     positions: [
       {
+        endDate: "2021/11/01",
         location: "Remote",
         startDate: "2019/07/01",
         title: "Engineering Manager",

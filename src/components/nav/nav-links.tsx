@@ -6,13 +6,9 @@ const NavLinks = () => (
       Art
     </Link>
 
-    <Link href="/blog" type="nav">
+    {/* <Link href="/blog" type="nav">
       Blog
-    </Link>
-
-    <Link href="/books" type="nav">
-      Books
-    </Link>
+    </Link> */}
 
     <Link href="/resume" type="nav">
       Resume

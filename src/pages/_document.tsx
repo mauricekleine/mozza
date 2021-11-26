@@ -6,11 +6,13 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link href="https://fonts.googleapis.com" rel="preconnect" />
+
           <link
             crossOrigin="anonymous"
             href="https://fonts.gstatic.com"
             rel="preconnect"
           />
+
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700;900&family=Merriweather:wght@400;700&display=swap"

@@ -1,51 +1,41 @@
 {
-  "name": "maurice-kleine-personal-website",
+  "name": "maurice-kleine-dot-com",
   "homepage": "https://mauricekleine.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mauricekleine/personal-website"
+    "url": "https://github.com/mauricekleine/mauricekleine.com"
   },
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint --dir src",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "prepare": "husky install",
     "start": "next start"
   },
   "dependencies": {
     "@tailwindcss/typography": "~0.4.0",
     "classnames": "~2.3.1",
-    "date-fns": "~2.25.0",
+    "date-fns": "~2.26.0",
     "gray-matter": "~4.0.2",
-    "next": "~12.0.2",
-    "remark": "~14.0.1",
+    "next": "~12.0.4",
+    "remark": "~14.0.2",
     "remark-html": "~15.0.0"
   },
   "devDependencies": {
-    "@svgr/webpack": "~5.5.0",
-    "@types/node": "^16.11.6",
-    "@types/react": "~17.0.0",
-    "@typescript-eslint/eslint-plugin": "~5.2.0",
+    "@types/react": "^17.0.37",
+    "@typescript-eslint/eslint-plugin": "~5.4.0",
     "autoprefixer": "~10.4.0",
-    "eslint": "^7.32.0",
-    "eslint-config-next": "~12.0.2",
+    "eslint": "~7.32.0",
+    "eslint-config-next": "~12.0.4",
     "eslint-config-prettier": "~8.3.0",
-    "eslint-plugin-import": "~2.25.2",
-    "eslint-plugin-prettier": "~4.0.0",
-    "eslint-plugin-typescript-sort-keys": "~2.0.0",
-    "lint-staged": "~11.2.6",
-    "postcss": "~8.3.6",
-    "prettier": "~2.4.1",
-    "simple-git-hooks": "^2.7.0",
+    "eslint-plugin-typescript-sort-keys": "~2.1.0",
+    "husky": "^7.0.4",
+    "lint-staged": "~12.1.0",
+    "postcss": "~8.4.0",
     "tailwindcss": "~2.2.7",
-    "typescript": "~4.4.2"
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --fix",
-    "*.js": "eslint --cache --fix"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+    "typescript": "~4.5.0"
   }
 }

@@ -61,6 +61,7 @@ const Resume = () => {
                             <Title>{title}</Title>
 
                             <p>{tenureString}</p>
+
                             <p>{location}</p>
                           </div>
                         );
@@ -81,12 +82,15 @@ const Resume = () => {
               <SpaceContainer size="sm">
                 <div>
                   <Title>Information​ S​cience</Title>
+
                   <p>Bachelor of Arts (BA) · Average grade: 8.0</p>
+
                   <p>University of Groningen · 2011 - 2015</p>
                 </div>
 
                 <div>
                   <Title>Bachelor Honours Programme</Title>
+
                   <p>University of Groningen · 2011 - 2015</p>
                 </div>
               </SpaceContainer>
@@ -97,6 +101,7 @@ const Resume = () => {
 
               <div>
                 <Title>Professional Scrum Master I</Title>
+
                 <p>Scrum.org · Aug 2017</p>
               </div>
             </div>
@@ -110,8 +115,11 @@ const Resume = () => {
                     ENFJ-T Personality
                   </Link>
                 </li>
+
                 <li>I have two bunnies</li>
+
                 <li>My favorite food is Mexican food</li>
+
                 <li>I brew my own ginger beer</li>
               </ul>
             </div>

@@ -4,8 +4,8 @@ import { ReactNode, useEffect, useRef } from "react";
 
 import useToggle from "../../utils/use-toggle";
 import Link from "../link";
-import MenuSVG from "../svg/menu.svg";
-import XSVG from "../svg/x.svg";
+import MenuIcon from "../svg/menu";
+import XIcon from "../svg/x";
 
 import NavLinks from "./nav-links";
 import NavLogo from "./nav-logo";
@@ -31,26 +31,26 @@ const NavSm = ({ colorSchemeToggle }: Props) => {
 
   return (
     <div className="px-8 sm:hidden" ref={mobileMenuRef}>
-      <div className="flex h-16 items-center">
+      <div className="flex items-center h-16">
         <div className="flex flex-1">
           <button
-            className="p-1 text-primary-100 focus:outline-none -ml-1"
+            className="p-1 -ml-1 text-primary-100 focus:outline-none"
             onClick={handleMobileMenuToggle}
             type="button"
           >
             {isMobileMenuToggled ? (
-              <XSVG className="h-6 w-6" />
+              <XIcon className="w-6 h-6" />
             ) : (
-              <MenuSVG className="h-6 w-6" />
+              <MenuIcon className="w-6 h-6" />
             )}
           </button>
         </div>
 
-        <div className="flex flex-1 justify-center">
+        <div className="flex justify-center flex-1">
           <NavLogo />
         </div>
 
-        <div className="flex flex-1 justify-end">{colorSchemeToggle}</div>
+        <div className="flex justify-end flex-1">{colorSchemeToggle}</div>
       </div>
 
       <div

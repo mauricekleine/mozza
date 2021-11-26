@@ -17,17 +17,29 @@ const Home = () => (
 
         <p className="mt-4">
           <Tag>🌍 remote work</Tag>
+
           <Tag>🧠 mental health</Tag>
+
           <Tag>🧘‍♂️ meditation</Tag>
+
           <Tag>🙇‍♂️ philosophy</Tag>
+
           <Tag>🛸 the future</Tag>
+
           <Tag>🥊 boxing</Tag>
+
           <Tag>🤝 people management</Tag>
+
           <Tag>🚀 product management</Tag>
+
           <Tag>👨‍💻 javascript & typescript</Tag>
+
           <Tag>📠 tech</Tag>
+
           <Tag>🌯 mexican food</Tag>
+
           <Tag>🍻 craft beers</Tag>
+
           <Tag href="https://www.instagram.com/bunniesofamsterdam/">
             🐰 bunnies
           </Tag>
@@ -40,21 +52,25 @@ const Home = () => (
         <SpaceContainer size="sm">
           <div>
             <Heading>Growth and self-actualisation</Heading>
+
             <span>To learn is to be alive</span>
           </div>
 
           <div>
             <Heading>Compassion and inclusion</Heading>
+
             <span>Being judgemental is a thing of the past</span>
           </div>
 
           <div>
             <Heading>Openness and honesty</Heading>
+
             <span>Sharing is caring is sharing is caring</span>
           </div>
 
           <div>
             <Heading>Open-mindedness and experimentation</Heading>
+
             <span>
               Traditions are overrated and rules are meant to be critically
               examined
@@ -63,6 +79,7 @@ const Home = () => (
 
           <div>
             <Heading>Ownership and accountability</Heading>
+
             <span>Finger-pointers beware</span>
           </div>
         </SpaceContainer>

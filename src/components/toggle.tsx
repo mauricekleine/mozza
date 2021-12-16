@@ -16,7 +16,7 @@ const Toggle = ({ isToggled, leftLabel, onToggle, rightLabel }: Props) => (
     >
       <div
         className={classNames(
-          "bg-primary-100 ease-in-out h-4 opacity-90 rounded-full transform transition-transform w-4",
+          "bg-primary-100 ease-in-out h-4 opacity-90 rounded-full transition-transform w-4",
           {
             "translate-x-1": !isToggled,
             "translate-x-6": isToggled,
@@ -25,7 +25,7 @@ const Toggle = ({ isToggled, leftLabel, onToggle, rightLabel }: Props) => (
       ></div>
 
       <div
-        className={classNames("transform", {
+        className={classNames({
           "-translate-x-3": isToggled,
           "translate-x-2": !isToggled,
         })}

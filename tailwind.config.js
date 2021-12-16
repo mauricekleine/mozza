@@ -1,16 +1,14 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
+  content: ["./src/pages/**/*.tsx", "./src/components/**/*.tsx"],
   darkMode: "class",
-  mode: "jit",
   plugins: [require("@tailwindcss/typography")],
-  purge: ["./src/pages/**/*.tsx", "./src/components/**/*.tsx"],
   theme: {
     colors: {
       black: colors.black,
-      primary: colors.blueGray,
+      primary: colors.slate,
       white: colors.white,
-      yellow: colors.yellow,
     },
     extend: {
       fontFamily: {

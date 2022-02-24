@@ -3,11 +3,9 @@ import { useRouter } from "next/router";
 import { ReactNode, useEffect, useRef } from "react";
 
 import useToggle from "../../utils/use-toggle";
-import Link from "../link";
 import MenuIcon from "../svg/menu";
 import XIcon from "../svg/x";
 
-import NavLinks from "./nav-links";
 import NavLogo from "./nav-logo";
 import NavSocialLinks from "./nav-social-links";
 
@@ -65,12 +63,6 @@ const NavSm = ({ colorSchemeToggle }: Props) => {
             "pb-3": isMobileMenuToggled,
           })}
         >
-          <Link href="/" type="nav">
-            Home
-          </Link>
-
-          <NavLinks />
-
           <NavSocialLinks />
         </div>
       </div>

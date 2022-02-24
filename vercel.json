@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "/resume",
+      "headers": [
+        {
+          "key": "x-robots-tag",
+          "value": "none"
+        }
+      ]
+    }
+  ]
+}

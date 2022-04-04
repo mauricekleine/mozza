@@ -1,6 +1,6 @@
+import { Moon, Sun } from "phosphor-react";
+
 import useColorScheme from "../../utils/use-color-scheme";
-import MoonIcon from "../svg/moon";
-import SunIcon from "../svg/sun";
 import Toggle from "../toggle";
 
 import NavMd from "./nav-md";
@@ -12,9 +12,9 @@ const Nav = () => {
   const ColorSchemeToggle = (
     <Toggle
       isToggled={colorScheme === "dark"}
-      leftLabel={<SunIcon className="w-4 h-4" />}
+      leftLabel={<Sun className="w-4 h-4" />}
       onToggle={toggleColorScheme}
-      rightLabel={<MoonIcon className="w-4 h-4" />}
+      rightLabel={<Moon className="w-4 h-4" />}
     />
   );
 

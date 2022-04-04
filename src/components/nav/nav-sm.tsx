@@ -1,10 +1,9 @@
 import classNames from "classnames";
 import { useRouter } from "next/router";
+import { List, X } from "phosphor-react";
 import { ReactNode, useEffect, useRef } from "react";
 
 import useToggle from "../../utils/use-toggle";
-import MenuIcon from "../svg/menu";
-import XIcon from "../svg/x";
 
 import NavLogo from "./nav-logo";
 import NavSocialLinks from "./nav-social-links";
@@ -37,9 +36,9 @@ const NavSm = ({ colorSchemeToggle }: Props) => {
             type="button"
           >
             {isMobileMenuToggled ? (
-              <XIcon className="w-6 h-6" />
+              <X className="w-6 h-6" />
             ) : (
-              <MenuIcon className="w-6 h-6" />
+              <List className="w-6 h-6" />
             )}
           </button>
         </div>

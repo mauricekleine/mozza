@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-import NavLogo from "./nav-logo";
-import NavSocialLinks from "./nav-social-links";
+import NavLogo from "~/components/nav/nav-logo";
+import NavSocialLinks from "~/components/nav/nav-social-links";
 
 type Props = {
   colorSchemeToggle: ReactNode;

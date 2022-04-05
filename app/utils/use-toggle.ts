@@ -1,8 +1,8 @@
 import { MutableRefObject, useCallback, useState } from "react";
 
-import useOnOutsideClick from "./use-on-outside-click";
+import useOnOutsideClick from "~/utils/use-on-outside-click";
 
-const useToggle = (ref: MutableRefObject<HTMLElement>) => {
+const useToggle = (ref: MutableRefObject<HTMLElement | null>) => {
   const [isToggled, setIsToggled] = useState(false);
 
   const handleToggleOff = useCallback(

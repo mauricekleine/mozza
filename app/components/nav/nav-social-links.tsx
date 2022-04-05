@@ -1,7 +1,7 @@
 import { GithubLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
 
-import Link from "../link";
-import GoodreadsLogo from "../svg/goodreads";
+import Link from "~/components/link";
+import GoodreadsLogo from "~/components/svg/goodreads";
 
 const NavSocialLinks = () => (
   <div className="flex items-center space-x-1">

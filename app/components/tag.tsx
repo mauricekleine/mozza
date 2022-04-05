@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
 
-import Link from "./link";
+import Link from "~/components/link";
 
 type Props = {
   children: ReactNode;

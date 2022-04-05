@@ -1,8 +1,9 @@
 type PetProject = {
+  archived?: boolean;
   description: string;
   name: string;
   repo: string;
-  url: string;
+  url?: string;
 };
 
 const petProjects: PetProject[] = [
@@ -14,17 +15,17 @@ const petProjects: PetProject[] = [
     url: "https://sedsngo.org",
   },
   {
+    archived: true,
     description:
       "Beer tracking, but better. Mainly a playground for me to mess around with cool new technologies.",
     name: "🍺 Tinnies",
     repo: "https://github.com/mauricekleine/tinnies",
-    url: "https://tinnies.xyx",
   },
   {
-    description: "A curated list of remote work resources. Archived.",
+    archived: true,
+    description: "A curated list of remote work resources.",
     name: "📚 The Remote Work Library",
     repo: "https://github.com/mauricekleine/the-remote-work-library",
-    url: "https://the-remote-work-library.now.sh",
   },
   {
     description: "Yep, the website you're looking at right now.",

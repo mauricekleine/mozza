@@ -1,10 +1,16 @@
-import Display from "../components/display";
-import Heading from "../components/heading";
-import Link from "../components/link";
-import Page from "../components/page";
-import SpaceContainer from "../components/space-container";
-import Tag from "../components/tag";
-import petProjects from "../data/pet-projects";
+import { MetaFunction } from "@remix-run/react/routeModules";
+
+import Display from "~/components/display";
+import Heading from "~/components/heading";
+import Link from "~/components/link";
+import Page from "~/components/page";
+import SpaceContainer from "~/components/space-container";
+import Tag from "~/components/tag";
+import petProjects from "~/data/pet-projects";
+
+export const meta: MetaFunction = () => ({
+  title: "Hey! 🤙 | Maurice Kleine",
+});
 
 const Home = () => (
   <Page title="Hey! 🤙">
@@ -160,7 +166,15 @@ const Home = () => (
           {petProjects.map((project) => (
             <div key={project.name}>
               <div className="flex items-center space-x-2">
-                <Link href={project.url}>{project.name}</Link>
+                {project.url ? (
+                  <Link href={project.url}>{project.name}</Link>
+                ) : (
+                  <p>
+                    <span>{project.name} </span>
+
+                    <span>{project.archived ? "[archived]" : null}</span>
+                  </p>
+                )}
 
                 <div className="font-mono text-sm">
                   <span className="mr-2">|</span>

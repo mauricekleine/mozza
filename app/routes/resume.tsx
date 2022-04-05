@@ -1,11 +1,12 @@
+import { MetaFunction } from "@remix-run/node";
 import { compareDesc, format, formatDistance, max } from "date-fns";
 
-import Heading from "../components/heading";
-import Link from "../components/link";
-import Page from "../components/page";
-import SpaceContainer from "../components/space-container";
-import Title from "../components/title";
-import experience, { Experience } from "../data/experience";
+import Heading from "~/components/heading";
+import Link from "~/components/link";
+import Page from "~/components/page";
+import SpaceContainer from "~/components/space-container";
+import Title from "~/components/title";
+import experience, { Experience } from "~/data/experience";
 
 const getLastEndDate = (experience: Experience) => {
   const endDates = experience.positions.map(({ endDate }) =>
@@ -20,6 +21,10 @@ const experienceSortedByEndDate = experience.sort((exp1, exp2) => {
   const exp2EndDate = getLastEndDate(exp2);
 
   return compareDesc(exp1EndDate, exp2EndDate);
+});
+
+export const meta: MetaFunction = () => ({
+  title: "Resume | Maurice Kleine",
 });
 
 const Resume = () => {

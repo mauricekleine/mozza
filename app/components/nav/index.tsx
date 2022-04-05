@@ -1,10 +1,9 @@
 import { Moon, Sun } from "phosphor-react";
 
-import useColorScheme from "../../utils/use-color-scheme";
-import Toggle from "../toggle";
-
-import NavMd from "./nav-md";
-import NavSm from "./nav-sm";
+import NavMd from "~/components/nav/nav-md";
+import NavSm from "~/components/nav/nav-sm";
+import Toggle from "~/components/toggle";
+import useColorScheme from "~/utils/use-color-scheme";
 
 const Nav = () => {
   const { colorScheme, toggleColorScheme } = useColorScheme();

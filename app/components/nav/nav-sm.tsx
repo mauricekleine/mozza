@@ -1,30 +1,23 @@
 import classNames from "classnames";
-import { useRouter } from "next/router";
 import { List, X } from "phosphor-react";
-import { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useRef } from "react";
 
-import useToggle from "../../utils/use-toggle";
-
-import NavLogo from "./nav-logo";
-import NavSocialLinks from "./nav-social-links";
+import NavLogo from "~/components/nav/nav-logo";
+import NavSocialLinks from "~/components/nav/nav-social-links";
+import useToggle from "~/utils/use-toggle";
 
 type Props = {
   colorSchemeToggle: ReactNode;
 };
 
 const NavSm = ({ colorSchemeToggle }: Props) => {
-  const mobileMenuRef = useRef<HTMLDivElement>();
-  const { pathname } = useRouter();
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const {
     handleToggleOff: handleMobileMenuClose,
     handleToggle: handleMobileMenuToggle,
     isToggled: isMobileMenuToggled,
   } = useToggle(mobileMenuRef);
-
-  useEffect(() => {
-    handleMobileMenuClose();
-  }, [handleMobileMenuClose, pathname]);
 
   return (
     <div className="px-8 sm:hidden" ref={mobileMenuRef}>

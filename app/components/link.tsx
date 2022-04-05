@@ -1,6 +1,5 @@
+import { NavLink } from "@remix-run/react";
 import classNames from "classnames";
-import NextLink from "next/link";
-import { useRouter } from "next/router";
 import { HTMLAttributes, ReactNode } from "react";
 
 type Props = {
@@ -11,11 +10,7 @@ type Props = {
 };
 
 const Link = ({ children, href, className, type = "default" }: Props) => {
-  const { pathname } = useRouter();
-  const isRootRoute = href === "/" && pathname === "/";
-  const isActiveRoute =
-    isRootRoute || (href.length > 1 && pathname.includes(href));
-  const isInternalLink = href.startsWith("/");
+  const isInternalLink = !href.startsWith("http");
 
   const sharedClassnames = classNames(
     "leading-normal",
@@ -28,15 +23,16 @@ const Link = ({ children, href, className, type = "default" }: Props) => {
 
   if (isInternalLink) {
     return (
-      <NextLink href={href}>
-        <a
-          className={classNames(sharedClassnames, {
-            "font-bold": isActiveRoute,
-          })}
-        >
-          {children}
-        </a>
-      </NextLink>
+      <NavLink
+        className={({ isActive }) =>
+          classNames(sharedClassnames, {
+            "font-bold": isActive,
+          })
+        }
+        to={href}
+      >
+        {children}
+      </NavLink>
     );
   }
 

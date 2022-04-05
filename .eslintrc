@@ -1,18 +1,11 @@
 {
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "extends": [
-    "next/core-web-vitals",
-    "plugin:typescript-sort-keys/recommended",
+    "@remix-run/eslint-config",
+    "@remix-run/eslint-config/node",
     "prettier"
   ],
-  "plugins": ["import"],
+  "plugins": ["import", "unused-imports"],
   "rules": {
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
     "import/order": [
       "error",
       {
@@ -25,8 +18,11 @@
     ],
     "no-restricted-imports": [
       "error",
-      { "patterns": ["@prisma/*", ".prisma/*"] }
+      {
+        "patterns": [".*"]
+      }
     ],
+    "react/jsx-newline": [1, { "prevent": false }],
     "sort-imports": [
       "error",
       {
@@ -35,12 +31,6 @@
         "ignoreMemberSort": false,
         "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
       }
-    ],
-    "sort-keys": [
-      "error",
-      "asc",
-      { "caseSensitive": true, "natural": false, "minKeys": 2 }
-    ],
-    "react/jsx-newline": [1, { "prevent": false }]
+    ]
   }
 }

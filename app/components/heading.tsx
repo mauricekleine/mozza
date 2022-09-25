@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
@@ -9,9 +9,9 @@ type Props = {
 const Heading = ({ children, hasDivider = false }: Props) => (
   <h2
     className={classNames(
-      "font-bold font-sans mb-1 text-2xl text-primary-800 dark:text-primary-100 sm:mb-2 sm:text-3xl",
+      "mb-1 font-sans text-2xl font-bold text-primary-800 dark:text-primary-100 sm:mb-2 sm:text-3xl",
       {
-        "border-b border-primary-300 mb-2": hasDivider,
+        "mb-2 border-b border-primary-300": hasDivider,
       }
     )}
   >

@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
 };
 
 const Small = ({ children }: Props) => (
-  <p className="font-normal font-sans text-primary-600 text-sm dark:text-primary-400">
+  <p className="font-sans text-sm font-normal text-primary-600 dark:text-primary-400">
     {children}
   </p>
 );

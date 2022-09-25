@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
 };
 
 const Title = ({ children }: Props) => (
-  <h3 className="font-bold text-lg text-primary-900 dark:text-primary-50">
+  <h3 className="text-lg font-bold text-primary-900 dark:text-primary-50">
     {children}
   </h3>
 );

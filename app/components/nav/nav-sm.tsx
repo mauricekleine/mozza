@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import { List, X } from "phosphor-react";
-import { ReactNode, useRef } from "react";
+import type { ReactNode } from "react";
+import { useRef } from "react";
 
 import NavLogo from "~/components/nav/nav-logo";
 import NavSocialLinks from "~/components/nav/nav-social-links";
@@ -14,37 +15,36 @@ const NavSm = ({ colorSchemeToggle }: Props) => {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const {
-    handleToggleOff: handleMobileMenuClose,
     handleToggle: handleMobileMenuToggle,
     isToggled: isMobileMenuToggled,
   } = useToggle(mobileMenuRef);
 
   return (
     <div className="px-8 sm:hidden" ref={mobileMenuRef}>
-      <div className="flex items-center h-16">
+      <div className="flex h-16 items-center">
         <div className="flex flex-1">
           <button
-            className="p-1 -ml-1 text-primary-100 focus:outline-none"
+            className="-ml-1 p-1 text-primary-100 focus:outline-none"
             onClick={handleMobileMenuToggle}
             type="button"
           >
             {isMobileMenuToggled ? (
-              <X className="w-6 h-6" />
+              <X className="h-6 w-6" />
             ) : (
-              <List className="w-6 h-6" />
+              <List className="h-6 w-6" />
             )}
           </button>
         </div>
 
-        <div className="flex justify-center flex-1">
+        <div className="flex flex-1 justify-center">
           <NavLogo />
         </div>
 
-        <div className="flex justify-end flex-1">{colorSchemeToggle}</div>
+        <div className="flex flex-1 justify-end">{colorSchemeToggle}</div>
       </div>
 
       <div
-        className={classNames("duration-300 transition-opacity", {
+        className={classNames("transition-opacity duration-300", {
           "invisible opacity-0": !isMobileMenuToggled,
           "opacity-100": isMobileMenuToggled,
         })}

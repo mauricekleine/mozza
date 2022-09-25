@@ -1,6 +1,6 @@
 import { NavLink } from "@remix-run/react";
 import classNames from "classnames";
-import { HTMLAttributes, ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 
 type Props = {
   children: ReactNode;

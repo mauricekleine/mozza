@@ -1,4 +1,4 @@
-import { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 import { compareDesc, format, formatDistance, max } from "date-fns";
 
 import Heading from "~/components/heading";
@@ -6,7 +6,8 @@ import Link from "~/components/link";
 import Page from "~/components/page";
 import SpaceContainer from "~/components/space-container";
 import Title from "~/components/title";
-import experience, { Experience } from "~/data/experience";
+import type { Experience } from "~/data/experience";
+import experience from "~/data/experience";
 
 const getLastEndDate = (experience: Experience) => {
   const endDates = experience.positions.map(({ endDate }) =>
@@ -36,7 +37,7 @@ const Resume = () => {
         meeting new people, discovering new places and trying new things.
       </Heading>
 
-      <div className="flex flex-col justify-between mt-12 space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0">
+      <div className="mt-12 flex flex-col justify-between space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0">
         <div className="flex-1">
           <Heading>👨‍💻 Experience</Heading>
 
@@ -44,7 +45,7 @@ const Resume = () => {
             {experienceSortedByEndDate.map(({ company, positions }) => (
               <div className="pl-2" key={company.name}>
                 <div className="flex items-center">
-                  <div className="border-2 border-primary-800 h-3.5 inline-block mr-1.5 rounded-full w-3.5 -ml-1.5 dark:border-primary-300"></div>
+                  <div className="mr-1.5 -ml-1.5 inline-block h-3.5 w-3.5 rounded-full border-2 border-primary-800 dark:border-primary-300"></div>
 
                   <Link href={company.website}>{company.name}</Link>
                 </div>
@@ -86,6 +87,14 @@ const Resume = () => {
 
               <SpaceContainer size="sm">
                 <div>
+                  <Title>Psychology</Title>
+
+                  <p>Bachelor of Science (BSc)</p>
+
+                  <p>Open University of the Netherlands · 2022 -</p>
+                </div>
+
+                <div>
                   <Title>Information​ S​cience</Title>
 
                   <p>Bachelor of Arts (BA) · Average grade: 8.0</p>
@@ -114,7 +123,7 @@ const Resume = () => {
             <div>
               <Heading>🧔 Random facts</Heading>
 
-              <ul className="list-disc ml-6">
+              <ul className="ml-6 list-disc">
                 <li>
                   <Link href="https://www.16personalities.com/enfj-personality">
                     ENFJ-T Personality

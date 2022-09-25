@@ -1,4 +1,4 @@
-import { MetaFunction } from "@remix-run/react/routeModules";
+import type { MetaFunction } from "@remix-run/node";
 
 import Display from "~/components/display";
 import Heading from "~/components/heading";
@@ -32,8 +32,6 @@ const Home = () => (
 
           <Tag>🛸 the future</Tag>
 
-          <Tag>🥊 boxing</Tag>
-
           <Tag>🤝 people management</Tag>
 
           <Tag>🚀 product management</Tag>
@@ -50,45 +48,6 @@ const Home = () => (
             🐰 bunnies
           </Tag>
         </p>
-      </div>
-
-      <div>
-        <Display>I value</Display>
-
-        <SpaceContainer size="sm">
-          <div>
-            <Heading>Growth and self-actualisation</Heading>
-
-            <span>To learn is to be alive</span>
-          </div>
-
-          <div>
-            <Heading>Compassion and inclusion</Heading>
-
-            <span>Being judgemental is a thing of the past</span>
-          </div>
-
-          <div>
-            <Heading>Openness and honesty</Heading>
-
-            <span>Sharing is caring is sharing is caring</span>
-          </div>
-
-          <div>
-            <Heading>Open-mindedness and experimentation</Heading>
-
-            <span>
-              Traditions are overrated and rules are meant to be critically
-              examined
-            </span>
-          </div>
-
-          <div>
-            <Heading>Ownership and accountability</Heading>
-
-            <span>Finger-pointers beware</span>
-          </div>
-        </SpaceContainer>
       </div>
 
       <div>

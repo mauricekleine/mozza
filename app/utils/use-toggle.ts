@@ -1,4 +1,5 @@
-import { MutableRefObject, useCallback, useState } from "react";
+import type { MutableRefObject } from "react";
+import { useCallback, useState } from "react";
 
 import useOnOutsideClick from "~/utils/use-on-outside-click";
 

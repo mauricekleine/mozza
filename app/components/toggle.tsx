@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type Props = {
   isToggled: boolean;
@@ -11,12 +11,12 @@ type Props = {
 const Toggle = ({ isToggled, leftLabel, onToggle, rightLabel }: Props) => (
   <>
     <div
-      className="bg-primary-700 cursor-pointer flex h-6 items-center px-0.5 rounded-full text-primary-100 w-12 dark:bg-primary-800"
+      className="flex h-6 w-12 cursor-pointer items-center rounded-full bg-primary-700 px-0.5 text-primary-100 dark:bg-primary-800"
       onClick={onToggle}
     >
       <div
         className={classNames(
-          "bg-primary-100 ease-in-out h-4 opacity-90 rounded-full transition-transform w-4",
+          "h-4 w-4 rounded-full bg-primary-100 opacity-90 transition-transform ease-in-out",
           {
             "translate-x-1": !isToggled,
             "translate-x-6": isToggled,

@@ -11,9 +11,9 @@ const Nav = () => {
   const ColorSchemeToggle = (
     <Toggle
       isToggled={colorScheme === "dark"}
-      leftLabel={<Sun className="w-4 h-4" />}
+      leftLabel={<Sun className="h-4 w-4" />}
       onToggle={toggleColorScheme}
-      rightLabel={<Moon className="w-4 h-4" />}
+      rightLabel={<Moon className="h-4 w-4" />}
     />
   );
 

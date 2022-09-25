@@ -18,43 +18,44 @@
     "lint": "eslint ./app && prettier ./app --check",
     "lint:fix": "eslint ./app --fix && prettier ./app --write",
     "prepare": "husky install",
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+    "typecheck": "tsc -b"
   },
   "dependencies": {
-    "@remix-run/node": "~1.4.1",
-    "@remix-run/react": "~1.4.1",
-    "@remix-run/vercel": "~1.4.1",
-    "@vercel/node": "~1.14.0",
-    "classnames": "~2.3.1",
-    "date-fns": "~2.28.0",
+    "@remix-run/node": "~1.7.2",
+    "@remix-run/react": "~1.7.2",
+    "@remix-run/vercel": "~1.7.2",
+    "classnames": "~2.3.2",
+    "date-fns": "~2.29.3",
+    "isbot": "~3.5.4",
     "phosphor-react": "~1.4.1",
-    "react": "~17.0.2",
-    "react-dom": "~17.0.2"
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "~1.4.1",
-    "@remix-run/eslint-config": "~1.4.1",
-    "@remix-run/serve": "~1.4.1",
-    "@tailwindcss/typography": "~0.5.2",
-    "@types/node": "~17.0.23",
-    "@types/react": "~17.0.43",
-    "@types/react-dom": "~17.0.14",
-    "autoprefixer": "~10.4.4",
-    "concurrently": "~7.1.0",
-    "eslint": "~8.12.0",
+    "@remix-run/dev": "~1.7.2",
+    "@remix-run/eslint-config": "~1.7.2",
+    "@remix-run/serve": "~1.7.2",
+    "@tailwindcss/typography": "~0.5.7",
+    "@types/node": "~18.7.21",
+    "@types/react": "~18.0.21",
+    "@types/react-dom": "~18.0.6",
+    "autoprefixer": "~10.4.12",
+    "concurrently": "~7.4.0",
+    "eslint": "~8.24.0",
     "eslint-config-prettier": "~8.5.0",
-    "eslint-plugin-import": "~2.25.4",
+    "eslint-plugin-import": "~2.26.0",
     "eslint-plugin-unused-imports": "~2.0.0",
-    "husky": "~7.0.4",
-    "lint-staged": "~12.3.7",
-    "postcss": "~8.4.12",
-    "prettier": "~2.6.2",
-    "prettier-plugin-tailwindcss": "~0.1.8",
-    "tailwindcss": "~3.0.23",
-    "typescript": "~4.6.3"
+    "husky": "~8.0.1",
+    "lint-staged": "~13.0.3",
+    "postcss": "~8.4.16",
+    "prettier": "~2.7.1",
+    "prettier-plugin-tailwindcss": "~0.1.13",
+    "tailwindcss": "~3.1.8",
+    "typescript": "~4.8.3"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

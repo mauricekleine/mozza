@@ -2,13 +2,14 @@ import petProjects from "~/data/pet-projects";
 import Display from "~/ui/display";
 import Heading from "~/ui/heading";
 import Link from "~/ui/link";
-import Page from "~/ui/page";
 import SpaceContainer from "~/ui/space-container";
 import Tag from "~/ui/tag";
 
 export default function HomePage() {
   return (
-    <Page title="Hey! 🤙">
+    <>
+      <Display>Hey! 🤙</Display>
+
       <SpaceContainer size="xl">
         <div>
           <Heading>
@@ -145,6 +146,6 @@ export default function HomePage() {
           </SpaceContainer>
         </div>
       </SpaceContainer>
-    </Page>
+    </>
   );
 }

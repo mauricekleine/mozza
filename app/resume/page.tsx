@@ -2,9 +2,9 @@ import { compareDesc, format, formatDistance, max } from "date-fns";
 
 import type { Experience } from "~/data/experience";
 import experience from "~/data/experience";
+import Display from "~/ui/display";
 import Heading from "~/ui/heading";
 import Link from "~/ui/link";
-import Page from "~/ui/page";
 import SpaceContainer from "~/ui/space-container";
 import Title from "~/ui/title";
 
@@ -25,7 +25,9 @@ const experienceSortedByEndDate = experience.sort((exp1, exp2) => {
 
 export default function ResumePage() {
   return (
-    <Page title="Resume Maurice Kleine">
+    <>
+      <Display>Resume Maurice Kleine</Display>
+
       <Heading>
         To me, the most important goal in life is to learn new things - whether
         that be professionally in my career, or in my personal life while
@@ -135,6 +137,6 @@ export default function ResumePage() {
           </SpaceContainer>
         </div>
       </div>
-    </Page>
+    </>
   );
 }

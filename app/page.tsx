@@ -1,24 +1,21 @@
-import petProjects from "~/data/pet-projects";
-import Display from "~/ui/display";
-import Heading from "~/ui/heading";
-import Link from "~/ui/link";
-import SpaceContainer from "~/ui/space-container";
-import Tag from "~/ui/tag";
+import petProjects from "~/pet-projects";
+import { Stack } from "~/ui/layout";
+import { Heading, Link, Tag } from "~/ui/typography";
 
 export default function HomePage() {
   return (
-    <>
-      <Display>Hey! 🤙</Display>
+    <div>
+      <Heading as="h1">Hey! 🤙</Heading>
 
-      <SpaceContainer size="xl">
-        <div>
+      <Stack gap="gap-32">
+        <Stack gap="gap-4">
           <Heading>
             If you somehow stumbled upon this page and you would like to get in
             touch, hit me up through any of the channels above. Talk to me
             about:
           </Heading>
 
-          <p className="mt-4">
+          <Stack direction="horizontal" gap="gap-2">
             <Tag>🌍 remote work</Tag>
 
             <Tag>🧠 mental health</Tag>
@@ -44,29 +41,29 @@ export default function HomePage() {
             <Tag href="https://www.instagram.com/bunniesofamsterdam/">
               🐰 bunnies
             </Tag>
-          </p>
-        </div>
+          </Stack>
+        </Stack>
 
         <div>
-          <Display>In the wild</Display>
+          <Heading as="h1">In the wild</Heading>
 
-          <SpaceContainer size="md">
+          <Stack gap="gap-8">
             <div>
               <Heading>Videos</Heading>
 
-              <SpaceContainer size="sm">
+              <Stack gap="gap-2">
                 <p>
                   <Link href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
                     Building the Foundations of Remote Work
                   </Link>
                 </p>
-              </SpaceContainer>
+              </Stack>
             </div>
 
             <div>
               <Heading>Articles</Heading>
 
-              <SpaceContainer size="xs">
+              <Stack gap="gap-2">
                 <p>
                   <Link href="https://www.productboard.com/blog/supporting-mental-health/">
                     Supporting mental health the productboard way
@@ -91,13 +88,13 @@ export default function HomePage() {
                     as a front-end engineer at productboard!
                   </Link>
                 </p>
-              </SpaceContainer>
+              </Stack>
             </div>
 
             <div>
               <Heading>Podcasts</Heading>
 
-              <SpaceContainer size="xs">
+              <Stack gap="gap-2">
                 <p>
                   <Link href="https://www.startremote.net/interviews/maurice-kleine">
                     StartRemote #2: Maurice on how to build the first fully
@@ -111,15 +108,15 @@ export default function HomePage() {
                     Developer
                   </Link>
                 </p>
-              </SpaceContainer>
+              </Stack>
             </div>
-          </SpaceContainer>
+          </Stack>
         </div>
 
         <div>
-          <Display>Pet projects</Display>
+          <Heading as="h1">Pet projects</Heading>
 
-          <SpaceContainer size="md">
+          <Stack gap="gap-8">
             {petProjects.map((project) => (
               <div key={project.name}>
                 <div className="flex items-center space-x-2">
@@ -143,9 +140,9 @@ export default function HomePage() {
                 <p>{project.description}</p>
               </div>
             ))}
-          </SpaceContainer>
+          </Stack>
         </div>
-      </SpaceContainer>
-    </>
+      </Stack>
+    </div>
   );
 }

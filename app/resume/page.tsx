@@ -1,12 +1,9 @@
 import { compareDesc, format, formatDistance, max } from "date-fns";
 
-import type { Experience } from "~/data/experience";
-import experience from "~/data/experience";
-import Display from "~/ui/display";
-import Heading from "~/ui/heading";
-import Link from "~/ui/link";
-import SpaceContainer from "~/ui/space-container";
-import Title from "~/ui/title";
+import type { Experience } from "~/resume/experience";
+import experience from "~/resume/experience";
+import { Stack } from "~/ui/layout";
+import { Heading, Link } from "~/ui/typography";
 
 const getLastEndDate = (experience: Experience) => {
   const endDates = experience.positions.map(({ endDate }) =>
@@ -26,7 +23,7 @@ const experienceSortedByEndDate = experience.sort((exp1, exp2) => {
 export default function ResumePage() {
   return (
     <>
-      <Display>Resume Maurice Kleine</Display>
+      <Heading as="h1">Resume Maurice Kleine</Heading>
 
       <Heading>
         To me, the most important goal in life is to learn new things - whether
@@ -38,7 +35,7 @@ export default function ResumePage() {
         <div className="flex-1">
           <Heading>👨‍💻 Experience</Heading>
 
-          <SpaceContainer size="sm">
+          <Stack gap="gap-8">
             {experienceSortedByEndDate.map(({ company, positions }) => (
               <div className="pl-2" key={company.name}>
                 <div className="flex items-center">
@@ -48,7 +45,7 @@ export default function ResumePage() {
                 </div>
 
                 <div className="border-l-2 border-primary-800 pl-3 pt-1 dark:border-primary-400">
-                  <SpaceContainer size="xs">
+                  <Stack gap="gap-2">
                     {positions.map(
                       ({ endDate, location, startDate, title }) => {
                         const start = new Date(startDate);
@@ -61,7 +58,7 @@ export default function ResumePage() {
 
                         return (
                           <div key={title}>
-                            <Title>{title}</Title>
+                            <Heading as="h3">{title}</Heading>
 
                             <p>{tenureString}</p>
 
@@ -70,29 +67,29 @@ export default function ResumePage() {
                         );
                       }
                     )}
-                  </SpaceContainer>
+                  </Stack>
                 </div>
               </div>
             ))}
-          </SpaceContainer>
+          </Stack>
         </div>
 
         <div className="flex-1">
-          <SpaceContainer size="lg">
+          <Stack gap="gap-8">
             <div>
               <Heading>📚 Education</Heading>
 
-              <SpaceContainer size="sm">
+              <Stack gap="gap-4">
                 <div>
-                  <Title>Psychology</Title>
+                  <Heading as="h3">Psychology</Heading>
 
                   <p>Bachelor of Science (BSc)</p>
 
-                  <p>Open University of the Netherlands · 2022 -</p>
+                  <p>Open University of the Netherlands · 2022 - Present</p>
                 </div>
 
                 <div>
-                  <Title>Information​ S​cience</Title>
+                  <Heading as="h3">Information​ S​cience</Heading>
 
                   <p>Bachelor of Arts (BA) · Average grade: 8.0</p>
 
@@ -100,25 +97,25 @@ export default function ResumePage() {
                 </div>
 
                 <div>
-                  <Title>Bachelor Honours Programme</Title>
+                  <Heading as="h3">Bachelor Honours Programme</Heading>
 
                   <p>University of Groningen · 2011 - 2015</p>
                 </div>
-              </SpaceContainer>
+              </Stack>
             </div>
 
             <div>
               <Heading>📜 Certifications</Heading>
 
               <div>
-                <Title>Professional Scrum Master I</Title>
+                <Heading as="h3">Professional Scrum Master I</Heading>
 
                 <p>Scrum.org · Aug 2017</p>
               </div>
             </div>
 
             <div>
-              <Heading>🧔 Random facts</Heading>
+              <Heading>🧔‍♂️ Random facts</Heading>
 
               <ul className="ml-6 list-disc">
                 <li>
@@ -134,7 +131,7 @@ export default function ResumePage() {
                 <li>I brew my own ginger beer</li>
               </ul>
             </div>
-          </SpaceContainer>
+          </Stack>
         </div>
       </div>
     </>

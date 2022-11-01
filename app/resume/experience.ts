@@ -29,20 +29,6 @@ const experience: Experience[] = [
   },
   {
     company: {
-      name: "Freelance",
-      website: "https://mauricekleine.com",
-    },
-    positions: [
-      {
-        endDate: "2022/03/01",
-        location: "Amsterdam",
-        startDate: "2021/11/01",
-        title: "Software Engineer for various projects",
-      },
-    ],
-  },
-  {
-    company: {
       name: "Productboard",
       website: "https://productboard.com",
     },
@@ -68,7 +54,6 @@ const experience: Experience[] = [
     },
     positions: [
       {
-        endDate: "2020/06/01",
         location: "Remote",
         startDate: "2013/08/01",
         title: "Full-stack Engineer",

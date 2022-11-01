@@ -1,7 +1,7 @@
 import { GithubLogo, GoodreadsLogo, LinkedinLogo } from "~/ui/icon";
-import Link from "~/ui/link";
+import { Link } from "~/ui/typography";
 
-export default function NavSocialLinks() {
+export function SocialLinks() {
   return (
     <div className="flex items-center space-x-1">
       <Link

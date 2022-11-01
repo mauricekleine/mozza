@@ -5,15 +5,16 @@ import type { ReactNode } from "react";
 import { useRef } from "react";
 
 import { List, X } from "~/ui/icon";
-import NavLogo from "~/ui/nav/nav-logo";
-import NavSocialLinks from "~/ui/nav/nav-social-links";
 import useToggle from "~/utils/use-toggle";
+
+import { Logo } from "./logo";
+import { SocialLinks } from "./social-links";
 
 type Props = {
   colorSchemeToggle: ReactNode;
 };
 
-export default function NavSm({ colorSchemeToggle }: Props) {
+export function MobileNavigation({ colorSchemeToggle }: Props) {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const {
@@ -39,7 +40,7 @@ export default function NavSm({ colorSchemeToggle }: Props) {
         </div>
 
         <div className="flex flex-1 justify-center">
-          <NavLogo />
+          <Logo />
         </div>
 
         <div className="flex flex-1 justify-end">{colorSchemeToggle}</div>
@@ -57,7 +58,7 @@ export default function NavSm({ colorSchemeToggle }: Props) {
             "pb-3": isMobileMenuToggled,
           })}
         >
-          <NavSocialLinks />
+          <SocialLinks />
         </div>
       </div>
     </div>

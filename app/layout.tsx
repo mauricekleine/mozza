@@ -1,6 +1,6 @@
 import { Inter } from "@next/font/google";
 
-import Nav from "~/ui/nav";
+import { Navigation } from "~/ui/navigation";
 
 import "~/global.css";
 
@@ -16,16 +16,20 @@ export default function RootLayout({
   return (
     <html className={inter.className} lang="en">
       <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+
         <title>Hey! 🤙 | Maurice Kleine</title>
       </head>
 
       <body className="bg-primary-900 dark:bg-black">
         <div className="bg-primary-900 antialiased dark:bg-black">
-          <Nav />
+          <Navigation />
 
           <div className="fixed bottom-2 left-2 right-2 top-16 rounded-lg bg-primary-50 dark:hidden sm:bottom-4 sm:left-4 sm:right-4"></div>
 
-          <main className="relative mx-auto my-16 w-full p-2 text-primary-700 dark:text-primary-200 sm:w-4/6 md:w-4/5 lg:w-3/5">
+          <main className="relative mx-auto mt-32 mb-16 w-full p-2 text-primary-700 dark:text-primary-200 sm:w-4/6 md:w-4/5 lg:w-3/5">
             {children}
           </main>
 

@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import Link from "~/ui/link";
+import { Link } from "~/ui/typography";
 
-export default function NavLogo() {
+export function Logo() {
   return (
     <Link href="/" type="nav">
       <div className="flex items-center">

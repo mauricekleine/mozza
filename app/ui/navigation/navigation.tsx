@@ -1,12 +1,13 @@
 "use client";
 
+import { Toggle } from "~/ui/forms";
 import { Moon, Sun } from "~/ui/icon";
-import NavMd from "~/ui/nav/nav-md";
-import NavSm from "~/ui/nav/nav-sm";
-import Toggle from "~/ui/toggle";
 import useColorScheme from "~/utils/use-color-scheme";
 
-export default function Nav() {
+import { DesktopNavigation } from "./desktop-navigation";
+import { MobileNavigation } from "./mobile-navigation";
+
+export function Navigation() {
   const { colorScheme, toggleColorScheme } = useColorScheme();
 
   const ColorSchemeToggle = (
@@ -21,9 +22,9 @@ export default function Nav() {
   return (
     <>
       <nav className="fixed top-0 z-50 w-full bg-primary-900 dark:bg-black">
-        <NavMd colorSchemeToggle={ColorSchemeToggle} />
+        <DesktopNavigation colorSchemeToggle={ColorSchemeToggle} />
 
-        <NavSm colorSchemeToggle={ColorSchemeToggle} />
+        <MobileNavigation colorSchemeToggle={ColorSchemeToggle} />
       </nav>
     </>
   );

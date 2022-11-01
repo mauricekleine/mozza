@@ -9,12 +9,7 @@ type Props = {
   type?: "default" | "nav";
 };
 
-export default function Link({
-  children,
-  href,
-  className,
-  type = "default",
-}: Props) {
+export function Link({ children, href, className, type = "default" }: Props) {
   const isInternalLink = !href.startsWith("http");
 
   const sharedClassnames = classNames(

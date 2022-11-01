@@ -8,12 +8,7 @@ type Props = {
   rightLabel: ReactNode;
 };
 
-export default function Toggle({
-  isToggled,
-  leftLabel,
-  onToggle,
-  rightLabel,
-}: Props) {
+export function Toggle({ isToggled, leftLabel, onToggle, rightLabel }: Props) {
   return (
     <>
       <div

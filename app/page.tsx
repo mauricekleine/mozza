@@ -1,148 +1,140 @@
 import petProjects from "~/pet-projects";
 import { Stack } from "~/ui/layout";
-import { Heading, Link, Tag } from "~/ui/typography";
+import { Heading, Link, Tag, Typewriter } from "~/ui/typography";
 
 export default function HomePage() {
   return (
-    <div>
-      <Heading as="h1">Hey! 🤙</Heading>
+    <Stack gap="gap-32">
+      <Stack gap="gap-10">
+        <Stack alignItems="center">
+          <Heading as="h1">Maurice Kleine</Heading>
 
-      <Stack gap="gap-32">
-        <Stack gap="gap-4">
           <Heading>
-            If you somehow stumbled upon this page and you would like to get in
-            touch, hit me up through any of the channels above. Talk to me
-            about:
+            <Stack direction="horizontal" gap="gap-1">
+              <span>Freelance</span>
+
+              <Typewriter
+                text={[
+                  "Software",
+                  "Frontend",
+                  "Backend",
+                  "Full-stack",
+                  "Product",
+                  "UX/UI",
+                ]}
+              />
+
+              <span>Engineer</span>
+            </Stack>
           </Heading>
+        </Stack>
 
-          <Stack direction="horizontal" gap="gap-2">
-            <Tag>🌍 remote work</Tag>
+        <Stack direction="orthogonal" gap="gap-2" justifyContent="center">
+          <Tag>📠 tech</Tag>
 
-            <Tag>🧠 mental health</Tag>
+          <Tag>👨‍💻 javascript</Tag>
 
-            <Tag>🧘‍♂️ meditation</Tag>
+          <Tag>🧠 psychology</Tag>
 
-            <Tag>🙇‍♂️ philosophy</Tag>
+          <Tag>🧘‍♂️ meditation</Tag>
 
-            <Tag>🛸 the future</Tag>
+          <Tag>🏃‍♂️ Running</Tag>
 
-            <Tag>🤝 people management</Tag>
+          <Tag>📚 Reading</Tag>
 
-            <Tag>🚀 product management</Tag>
+          <Tag>🙇‍♂️ philosophy</Tag>
 
-            <Tag>👨‍💻 javascript & typescript</Tag>
+          <Tag>🛸 the future</Tag>
 
-            <Tag>📠 tech</Tag>
+          <Tag>🌯 mexican food</Tag>
 
-            <Tag>🌯 mexican food</Tag>
+          <Tag>🍻 craft beers</Tag>
 
-            <Tag>🍻 craft beers</Tag>
+          <Tag>🐰 bunnies</Tag>
+        </Stack>
+      </Stack>
 
-            <Tag href="https://www.instagram.com/bunniesofamsterdam/">
-              🐰 bunnies
-            </Tag>
+      <Stack gap="gap-8">
+        <Heading as="h1">In the wild</Heading>
+
+        <Stack gap="gap-2">
+          <Heading>Videos</Heading>
+
+          <Stack gap="gap-2">
+            <Link href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
+              Building the Foundations of Remote Work
+            </Link>
           </Stack>
         </Stack>
 
-        <div>
-          <Heading as="h1">In the wild</Heading>
+        <Stack gap="gap-2">
+          <Heading>Articles</Heading>
 
-          <Stack gap="gap-8">
-            <div>
-              <Heading>Videos</Heading>
+          <Stack gap="gap-2">
+            <Link href="https://www.productboard.com/blog/supporting-mental-health/">
+              Supporting mental health the productboard way
+            </Link>
 
-              <Stack gap="gap-2">
-                <p>
-                  <Link href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
-                    Building the Foundations of Remote Work
-                  </Link>
-                </p>
-              </Stack>
-            </div>
+            <Link href="https://www.linkedin.com/pdivse/how-we-want-do-remote-productboard-maurice-kleine/">
+              How we want to do remote at productboard 🌎
+            </Link>
 
-            <div>
-              <Heading>Articles</Heading>
+            <Link href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
+              On Comfort Zones
+            </Link>
 
-              <Stack gap="gap-2">
-                <p>
-                  <Link href="https://www.productboard.com/blog/supporting-mental-health/">
-                    Supporting mental health the productboard way
-                  </Link>
-                </p>
-
-                <p>
-                  <Link href="https://www.linkedin.com/pdivse/how-we-want-do-remote-productboard-maurice-kleine/">
-                    How we want to do remote at productboard 🌎
-                  </Link>
-                </p>
-
-                <p>
-                  <Link href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
-                    On Comfort Zones
-                  </Link>
-                </p>
-
-                <p>
-                  <Link href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
-                    What I’ve done, learned, and taught during my first 4 weeks
-                    as a front-end engineer at productboard!
-                  </Link>
-                </p>
-              </Stack>
-            </div>
-
-            <div>
-              <Heading>Podcasts</Heading>
-
-              <Stack gap="gap-2">
-                <p>
-                  <Link href="https://www.startremote.net/interviews/maurice-kleine">
-                    StartRemote #2: Maurice on how to build the first fully
-                    remote team
-                  </Link>
-                </p>
-
-                <p>
-                  <Link href="https://soundcloud.com/people-of-productboard/1-maurice">
-                    People of productboard episode #1: Maurice – Product
-                    Developer
-                  </Link>
-                </p>
-              </Stack>
-            </div>
+            <Link href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
+              What I’ve done, learned, and taught during my first 4 weeks as a
+              front-end engineer at productboard!
+            </Link>
           </Stack>
-        </div>
+        </Stack>
 
-        <div>
-          <Heading as="h1">Pet projects</Heading>
+        <Stack gap="gap-2">
+          <Heading>Podcasts</Heading>
 
-          <Stack gap="gap-8">
-            {petProjects.map((project) => (
-              <div key={project.name}>
-                <div className="flex items-center space-x-2">
-                  {project.url ? (
-                    <Link href={project.url}>{project.name}</Link>
-                  ) : (
-                    <p>
-                      <span>{project.name} </span>
+          <Stack gap="gap-2">
+            <Link href="https://www.startremote.net/interviews/maurice-kleine">
+              StartRemote #2: Maurice on how to build the first fully remote
+              team
+            </Link>
 
-                      <span>{project.archived ? "[archived]" : null}</span>
-                    </p>
-                  )}
-
-                  <div className="font-mono text-sm">
-                    <span className="mr-2">|</span>
-
-                    <Link href={project.repo}>source</Link>
-                  </div>
-                </div>
-
-                <p>{project.description}</p>
-              </div>
-            ))}
+            <Link href="https://soundcloud.com/people-of-productboard/1-maurice">
+              People of productboard episode #1: Maurice – Product Developer
+            </Link>
           </Stack>
-        </div>
+        </Stack>
       </Stack>
-    </div>
+
+      <Stack gap="gap-8">
+        <Heading as="h1">Pet projects</Heading>
+
+        <Stack gap="gap-8">
+          {petProjects.map((project) => (
+            <div key={project.name}>
+              <Stack alignItems="center" direction="horizontal" gap="gap-2">
+                {project.url ? (
+                  <Link href={project.url}>{project.name}</Link>
+                ) : (
+                  <p>
+                    <span>{project.name} </span>
+
+                    <span>{project.archived ? "[archived]" : null}</span>
+                  </p>
+                )}
+
+                <div className="font-mono text-sm">
+                  <span className="mr-2">|</span>
+
+                  <Link href={project.repo}>source</Link>
+                </div>
+              </Stack>
+
+              <p>{project.description}</p>
+            </div>
+          ))}
+        </Stack>
+      </Stack>
+    </Stack>
   );
 }

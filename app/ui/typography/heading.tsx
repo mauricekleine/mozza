@@ -13,12 +13,12 @@ export function Heading({ as = "h2", children }: Props) {
 
   return (
     <Element
-      className={classNames("text-primary-800 dark:text-primary-100", {
-        "text-lg sm:text-xl font-semibold leading-5 sm:tracking-tight mb-1":
+      className={classNames({
+        "text-lg sm:text-xl font-semibold leading-normal sm:tracking-tight text-primary-600 dark:text-primary-300":
           as === "h3",
-        "text-2xl sm:text-3xl font-bold leading-7 sm:tracking-tight mb-2":
+        "text-2xl sm:text-3xl font-bold leading-relaxed sm:tracking-tight text-primary-700 dark:text-primary-300":
           as === "h2",
-        "text-5xl sm:text-6xl font-black leading-10 sm:tracking-tight mb-4":
+        "text-5xl sm:text-6xl md:text-7xl font-black sm:tracking-tight text-primary-800 dark:text-primary-50":
           as === "h1",
       })}
     >

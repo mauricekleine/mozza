@@ -1,20 +1,19 @@
 import classNames from "classnames";
 import type { ReactNode } from "react";
-import { Children } from "react";
 import type { ValueOf } from "type-fest";
 
-export const StackAlignItems = {
+const StackAlignItems = {
   CENTER: "center",
   NONE: "none",
 } as const;
 
-export const StackDirection = {
+const StackDirection = {
   HORIZONTAL: "horizontal",
+  ORTHOGONAL: "orthogonal",
   VERTICAL: "vertical",
 } as const;
 
-export const StackGap = {
-  GAP0: "gap-0",
+const StackGap = {
   GAP1: "gap-1",
   GAP2: "gap-2",
   GAP4: "gap-4",
@@ -24,7 +23,8 @@ export const StackGap = {
   GAP32: "gap-32",
 } as const;
 
-export const StackJustifyContent = {
+const StackJustifyContent = {
+  AROUND: "around",
   BETWEEN: "between",
   CENTER: "center",
   END: "end",
@@ -40,7 +40,7 @@ type Props = {
 };
 
 export function Stack({
-  alignItems = StackAlignItems.CENTER,
+  alignItems = StackAlignItems.NONE,
   children,
   direction = StackDirection.VERTICAL,
   gap,
@@ -51,12 +51,25 @@ export function Stack({
       className={classNames("flex flex-wrap", {
         "flex-col": direction === StackDirection.VERTICAL,
         "flex-row": direction === StackDirection.HORIZONTAL,
-        "items-center":
-          direction === StackDirection.HORIZONTAL &&
-          alignItems === StackAlignItems.CENTER,
+        "items-center": alignItems === StackAlignItems.CENTER,
+        "justify-around": justifyContent === StackJustifyContent.AROUND,
         "justify-between": justifyContent === StackJustifyContent.BETWEEN,
         "justify-center": justifyContent === StackJustifyContent.CENTER,
         "justify-end": justifyContent === StackJustifyContent.END,
+        "gap-1":
+          direction === StackDirection.ORTHOGONAL && gap === StackGap.GAP1,
+        "gap-2":
+          direction === StackDirection.ORTHOGONAL && gap === StackGap.GAP2,
+        "gap-4":
+          direction === StackDirection.ORTHOGONAL && gap === StackGap.GAP4,
+        "gap-6":
+          direction === StackDirection.ORTHOGONAL && gap === StackGap.GAP6,
+        "gap-8":
+          direction === StackDirection.ORTHOGONAL && gap === StackGap.GAP8,
+        "gap-10":
+          direction === StackDirection.ORTHOGONAL && gap === StackGap.GAP10,
+        "gap-32":
+          direction === StackDirection.ORTHOGONAL && gap === StackGap.GAP32,
         "gap-x-1":
           direction === StackDirection.HORIZONTAL && gap === StackGap.GAP1,
         "gap-x-2":

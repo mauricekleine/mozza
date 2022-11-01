@@ -49,7 +49,7 @@ const experience: Experience[] = [
   },
   {
     company: {
-      name: "Self-employed / freelance",
+      name: "Freelance",
       website: "https://mauricekleine.com",
     },
     positions: [

@@ -23,7 +23,7 @@ const experienceSortedByEndDate = experience.sort((exp1, exp2) => {
 export default function ResumePage() {
   return (
     <>
-      <Heading as="h1">Resume Maurice Kleine</Heading>
+      <Heading as="h1">Maurice Kleine</Heading>
 
       <Heading>
         To me, the most important goal in life is to learn new things - whether
@@ -32,7 +32,7 @@ export default function ResumePage() {
       </Heading>
 
       <div className="mt-12 flex flex-col justify-between space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0">
-        <div className="flex-1">
+        <Stack gap="gap-2">
           <Heading>👨‍💻 Experience</Heading>
 
           <Stack gap="gap-8">
@@ -72,11 +72,11 @@ export default function ResumePage() {
               </div>
             ))}
           </Stack>
-        </div>
+        </Stack>
 
         <div className="flex-1">
           <Stack gap="gap-8">
-            <div>
+            <Stack gap="gap-2">
               <Heading>📚 Education</Heading>
 
               <Stack gap="gap-4">
@@ -102,9 +102,9 @@ export default function ResumePage() {
                   <p>University of Groningen · 2011 - 2015</p>
                 </div>
               </Stack>
-            </div>
+            </Stack>
 
-            <div>
+            <Stack gap="gap-2">
               <Heading>📜 Certifications</Heading>
 
               <div>
@@ -112,9 +112,9 @@ export default function ResumePage() {
 
                 <p>Scrum.org · Aug 2017</p>
               </div>
-            </div>
+            </Stack>
 
-            <div>
+            <Stack gap="gap-2">
               <Heading>🧔‍♂️ Random facts</Heading>
 
               <ul className="ml-6 list-disc">
@@ -130,7 +130,7 @@ export default function ResumePage() {
 
                 <li>I brew my own ginger beer</li>
               </ul>
-            </div>
+            </Stack>
           </Stack>
         </div>
       </div>

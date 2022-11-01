@@ -4,7 +4,7 @@ import Nav from "~/ui/nav";
 
 import "~/global.css";
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
 });
 

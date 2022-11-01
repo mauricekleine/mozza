@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./app/**/*.{ts,tsx}"],
@@ -9,12 +10,6 @@ module.exports = {
       black: colors.black,
       primary: colors.slate,
       white: colors.white,
-    },
-    extend: {
-      fontFamily: {
-        sans: ["Fira Sans", "sans"],
-        serif: ["Merriweather", "sans-serif"],
-      },
     },
   },
 };

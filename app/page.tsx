@@ -50,13 +50,13 @@ export default function HomePage() {
           <Heading as="h3">Podcasts</Heading>
 
           <Stack gap={2}>
-            <Link href="https://www.startremote.net/interviews/maurice-kleine">
+            <Link href="https://open.spotify.com/episode/3q9fPb4zXXPhANnfzT0gyD?si=1b09a3bdd93e4fb5">
               StartRemote #2: Maurice on how to build the first fully remote
               team
             </Link>
 
             <Link href="https://soundcloud.com/people-of-productboard/1-maurice">
-              People of productboard episode #1: Maurice – Product Developer
+              People of productboard episode #1: Maurice - Product Developer
             </Link>
           </Stack>
         </Stack>

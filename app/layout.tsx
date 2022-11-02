@@ -1,4 +1,4 @@
-import { sans } from "~/ui/fonts";
+import { sans, serif } from "~/ui/fonts";
 import { Navigation } from "~/ui/navigation";
 
 import "~/global.css";

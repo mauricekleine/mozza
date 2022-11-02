@@ -1,9 +1,8 @@
-import classNames from "classnames";
-
-import { sans, serif } from "~/ui/fonts";
+import { sans } from "~/ui/fonts";
 import { Navigation } from "~/ui/navigation";
 
 import "~/global.css";
+import "~/ui/fonts";
 
 export default function RootLayout({
   children,
@@ -26,12 +25,6 @@ export default function RootLayout({
         <main className="relative mx-auto mt-32 mb-16 w-full px-8 sm:w-4/6 sm:px-0 md:w-4/5 lg:w-3/5">
           {children}
         </main>
-
-        <div
-          className={classNames(serif.className, "py-4 text-center text-xs")}
-        >
-          © Maurice Kleine
-        </div>
       </body>
     </html>
   );

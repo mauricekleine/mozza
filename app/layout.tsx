@@ -1,12 +1,7 @@
-import { Inter } from "@next/font/google";
-
+import { sans } from "~/ui/fonts";
 import { Navigation } from "~/ui/navigation";
 
 import "~/global.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-});
 
 export default function RootLayout({
   children,
@@ -14,13 +9,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={inter.className} lang="en">
+    <html className={sans} lang="en">
       <head>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
 
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
 
-        <title>Hey! 🤙 | Maurice Kleine</title>
+        <title>Maurice Kleine</title>
       </head>
 
       <body className="bg-primary-900 dark:bg-black">

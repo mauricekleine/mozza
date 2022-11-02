@@ -32,10 +32,10 @@ export default function ResumePage() {
       </Heading>
 
       <div className="mt-12 flex flex-col justify-between space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0">
-        <Stack gap="gap-2">
+        <Stack gap={2}>
           <Heading>👨‍💻 Experience</Heading>
 
-          <Stack gap="gap-8">
+          <Stack gap={8}>
             {experienceSortedByEndDate.map(({ company, positions }) => (
               <div className="pl-2" key={company.name}>
                 <div className="flex items-center">
@@ -45,7 +45,7 @@ export default function ResumePage() {
                 </div>
 
                 <div className="border-l-2 border-primary-800 pl-3 pt-1 dark:border-primary-400">
-                  <Stack gap="gap-2">
+                  <Stack gap={2}>
                     {positions.map(
                       ({ endDate, location, startDate, title }) => {
                         const start = new Date(startDate);
@@ -75,11 +75,11 @@ export default function ResumePage() {
         </Stack>
 
         <div className="flex-1">
-          <Stack gap="gap-8">
-            <Stack gap="gap-2">
+          <Stack gap={8}>
+            <Stack gap={2}>
               <Heading>📚 Education</Heading>
 
-              <Stack gap="gap-4">
+              <Stack gap={4}>
                 <div>
                   <Heading as="h3">Psychology</Heading>
 
@@ -104,7 +104,7 @@ export default function ResumePage() {
               </Stack>
             </Stack>
 
-            <Stack gap="gap-2">
+            <Stack gap={2}>
               <Heading>📜 Certifications</Heading>
 
               <div>
@@ -114,7 +114,7 @@ export default function ResumePage() {
               </div>
             </Stack>
 
-            <Stack gap="gap-2">
+            <Stack gap={2}>
               <Heading>🧔‍♂️ Random facts</Heading>
 
               <ul className="ml-6 list-disc">

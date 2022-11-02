@@ -15,7 +15,7 @@ export function Link({ children, href, className, type = "default" }: Props) {
   const sharedClassnames = classNames(
     "leading-normal",
     {
-      "px-1 text-sm text-white": type == "nav",
+      "text-sm text-white": type == "nav",
       "underline hover:no-underline": type !== "nav",
     },
     className

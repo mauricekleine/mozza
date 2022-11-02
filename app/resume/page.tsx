@@ -22,7 +22,7 @@ const experienceSortedByEndDate = experience.sort((exp1, exp2) => {
 
 export default function ResumePage() {
   return (
-    <>
+    <Stack gap={8}>
       <Heading as="h1">Maurice Kleine</Heading>
 
       <Heading>
@@ -31,48 +31,50 @@ export default function ResumePage() {
         meeting new people, discovering new places and trying new things.
       </Heading>
 
-      <div className="mt-12 flex flex-col justify-between space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0">
-        <Stack gap={2}>
-          <Heading>👨‍💻 Experience</Heading>
+      <div className="flex flex-col justify-between space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0">
+        <div className="flex-1">
+          <Stack gap={2}>
+            <Heading>👨‍💻 Experience</Heading>
 
-          <Stack gap={8}>
-            {experienceSortedByEndDate.map(({ company, positions }) => (
-              <div className="pl-2" key={company.name}>
-                <div className="flex items-center">
-                  <div className="mr-1.5 -ml-1.5 inline-block h-3.5 w-3.5 rounded-full border-2 border-primary-300"></div>
+            <Stack gap={8}>
+              {experienceSortedByEndDate.map(({ company, positions }) => (
+                <div className="pl-2" key={company.name}>
+                  <div className="flex items-center">
+                    <div className="mr-1.5 -ml-1.5 inline-block h-3.5 w-3.5 rounded-full border-2 border-primary-300"></div>
 
-                  <Link href={company.website}>{company.name}</Link>
-                </div>
+                    <Link href={company.website}>{company.name}</Link>
+                  </div>
 
-                <div className="border-l-2 border-primary-400 pl-3 pt-1">
-                  <Stack gap={2}>
-                    {positions.map(
-                      ({ endDate, location, startDate, title }) => {
-                        const start = new Date(startDate);
-                        const end = endDate ? new Date(endDate) : new Date();
+                  <div className="border-l-2 border-primary-400 pl-3 pt-1">
+                    <Stack gap={2}>
+                      {positions.map(
+                        ({ endDate, location, startDate, title }) => {
+                          const start = new Date(startDate);
+                          const end = endDate ? new Date(endDate) : new Date();
 
-                        const tenureString = `
+                          const tenureString = `
                             ${format(start, "MMM yyyy")} -
                             ${endDate ? format(end, "MMM yyyy") : "Present"} ·
                             ${formatDistance(start, end)}`;
 
-                        return (
-                          <div key={title}>
-                            <Heading as="h3">{title}</Heading>
+                          return (
+                            <div key={title}>
+                              <Heading as="h3">{title}</Heading>
 
-                            <p>{tenureString}</p>
+                              <p>{tenureString}</p>
 
-                            <p>{location}</p>
-                          </div>
-                        );
-                      }
-                    )}
-                  </Stack>
+                              <p>{location}</p>
+                            </div>
+                          );
+                        }
+                      )}
+                    </Stack>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </Stack>
           </Stack>
-        </Stack>
+        </div>
 
         <div className="flex-1">
           <Stack gap={8}>
@@ -134,6 +136,6 @@ export default function ResumePage() {
           </Stack>
         </div>
       </div>
-    </>
+    </Stack>
   );
 }

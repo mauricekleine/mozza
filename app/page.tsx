@@ -31,7 +31,7 @@ export default function HomePage() {
               Supporting mental health the productboard way
             </Link>
 
-            <Link href="https://www.linkedin.com/pdivse/how-we-want-do-remote-productboard-maurice-kleine/">
+            <Link href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
               How we want to do remote at productboard 🌎
             </Link>
 

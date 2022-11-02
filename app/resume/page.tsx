@@ -39,12 +39,12 @@ export default function ResumePage() {
             {experienceSortedByEndDate.map(({ company, positions }) => (
               <div className="pl-2" key={company.name}>
                 <div className="flex items-center">
-                  <div className="mr-1.5 -ml-1.5 inline-block h-3.5 w-3.5 rounded-full border-2 border-primary-800 dark:border-primary-300"></div>
+                  <div className="mr-1.5 -ml-1.5 inline-block h-3.5 w-3.5 rounded-full border-2 border-primary-300"></div>
 
                   <Link href={company.website}>{company.name}</Link>
                 </div>
 
-                <div className="border-l-2 border-primary-800 pl-3 pt-1 dark:border-primary-400">
+                <div className="border-l-2 border-primary-400 pl-3 pt-1">
                   <Stack gap={2}>
                     {positions.map(
                       ({ endDate, location, startDate, title }) => {

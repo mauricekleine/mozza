@@ -16,11 +16,11 @@ export function Heading({ as = "h2", children }: Props) {
   return (
     <Element
       className={classNames({
-        "text-lg sm:text-xl font-semibold leading-normal sm:tracking-tight text-primary-600 dark:text-primary-300":
+        "text-lg font-semibold leading-normal text-primary-300 sm:text-xl sm:tracking-tight":
           as === "h3",
-        [`${serif} text-2xl sm:text-3xl font-bold leading-relaxed sm:tracking-tight text-primary-700 dark:text-primary-300`]:
+        [`${serif} text-2xl font-bold leading-relaxed text-primary-300 sm:text-3xl sm:tracking-tight`]:
           as === "h2",
-        "text-5xl sm:text-6xl md:text-7xl font-black sm:tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-primary-600 to-primary-800 dark:from-white dark:to-primary-300":
+        "bg-gradient-to-b from-white to-primary-300 bg-clip-text text-5xl font-black text-transparent sm:text-6xl sm:tracking-tight md:text-7xl":
           as === "h1",
       })}
     >

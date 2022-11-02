@@ -27,7 +27,7 @@ export default function RootLayout({
           {children}
         </main>
 
-        <div className={classNames(serif.className, "hidden")} />
+        <div className={classNames(serif.className, "bg-black")}>&nbsp;</div>
       </body>
     </html>
   );

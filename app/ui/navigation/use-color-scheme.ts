@@ -3,11 +3,29 @@
 import { useCallback, useEffect, useState } from "react";
 
 const useColorScheme = () => {
-  const [colorScheme, setColorScheme] = useState<"dark" | "light">(() => {
-    if (typeof window === undefined) {
-      return "dark";
-    }
+  const [colorScheme, setColorScheme] = useState<"dark" | "light">("dark");
 
+  const updateColorScheme = (colorScheme: "dark" | "light") => {
+    if (colorScheme === "dark") {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setColorScheme("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setColorScheme("light");
+    }
+  };
+
+  const toggleColorScheme = useCallback(() => {
+    if (colorScheme === "dark") {
+      updateColorScheme("light");
+    } else {
+      updateColorScheme("dark");
+    }
+  }, [colorScheme]);
+
+  useEffect(() => {
     const hasDarkModePref = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
@@ -17,31 +35,11 @@ const useColorScheme = () => {
       (hasThemeStored && localStorage.getItem("theme") === "dark") ||
       (!hasThemeStored && hasDarkModePref)
     ) {
-      return "dark";
-    }
-
-    return "light";
-  });
-
-  const toggleColorScheme = useCallback(() => {
-    if (colorScheme === "dark") {
-      setColorScheme("light");
+      updateColorScheme("dark");
     } else {
-      setColorScheme("dark");
+      updateColorScheme("light");
     }
-  }, [colorScheme, setColorScheme]);
-
-  useEffect(() => {
-    if (colorScheme === "dark") {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    }
-
-    if (colorScheme === "light") {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [colorScheme]);
+  }, []);
 
   return {
     colorScheme,

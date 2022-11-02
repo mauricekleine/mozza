@@ -28,7 +28,7 @@ export function Text({ as = "span", children, serif, size }: Props) {
   return (
     <Element
       className={classNames({
-        [fontSerif]: serif,
+        [fontSerif.className]: serif,
         "text-xs font-semibold uppercase tracking-tighter text-primary-400 sm:text-sm":
           size === "xs",
         "text-sm text-primary-800 sm:text-base": size === "sm",

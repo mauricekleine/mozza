@@ -9,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={sans} lang="en">
+    <html className={sans.className} lang="en">
       <head>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
 

@@ -8,5 +8,5 @@ const lora = Lora({
   subsets: ["latin"],
 });
 
-export const sans = inter.className;
-export const serif = lora.className;
+export const sans = inter;
+export const serif = lora;

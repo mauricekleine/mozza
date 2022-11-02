@@ -20,14 +20,18 @@ export default function RootLayout({
         <title>Maurice Kleine</title>
       </head>
 
-      <body className="relative bg-black">
+      <body className="relative bg-black text-primary-200">
         <Navigation />
 
-        <main className="relative mx-auto mt-32 mb-16 w-full px-8 text-primary-200 sm:w-4/6 sm:px-0 md:w-4/5 lg:w-3/5">
+        <main className="relative mx-auto mt-32 mb-16 w-full px-8 sm:w-4/6 sm:px-0 md:w-4/5 lg:w-3/5">
           {children}
         </main>
 
-        <div className={classNames(serif.className, "bg-black")}>&nbsp;</div>
+        <div
+          className={classNames(serif.className, "py-4 text-center text-xs")}
+        >
+          © Maurice Kleine
+        </div>
       </body>
     </html>
   );

@@ -1,4 +1,3 @@
-import { Stars } from "~/stars";
 import { sans } from "~/ui/fonts";
 import { Navigation } from "~/ui/navigation";
 

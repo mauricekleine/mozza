@@ -25,7 +25,7 @@ export default function ResumePage() {
     <Stack gap={8}>
       <Heading as="h1">Maurice Kleine</Heading>
 
-      <Heading>
+      <Heading as="h3">
         To me, the most important goal in life is to learn new things - whether
         that be professionally in my career, or in my personal life while
         meeting new people, discovering new places and trying new things.
@@ -34,18 +34,18 @@ export default function ResumePage() {
       <div className="flex flex-col justify-between space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0">
         <div className="flex-1">
           <Stack gap={2}>
-            <Heading>👨‍💻 Experience</Heading>
+            <Heading as="h2">👨‍💻 Experience</Heading>
 
             <Stack gap={8}>
               {experienceSortedByEndDate.map(({ company, positions }) => (
                 <div className="pl-2" key={company.name}>
                   <div className="flex items-center">
-                    <div className="mr-1.5 -ml-1.5 inline-block h-3.5 w-3.5 rounded-full border-2 border-primary-300"></div>
+                    <div className="mr-1.5 -ml-1.5 inline-block h-3.5 w-3.5 rounded-full border-2 border-slate-300"></div>
 
                     <Link href={company.website}>{company.name}</Link>
                   </div>
 
-                  <div className="border-l-2 border-primary-400 pl-3 pt-1">
+                  <div className="border-l-2 border-slate-400 pl-3 pt-1">
                     <Stack gap={2}>
                       {positions.map(
                         ({ endDate, location, startDate, title }) => {
@@ -79,7 +79,7 @@ export default function ResumePage() {
         <div className="flex-1">
           <Stack gap={8}>
             <Stack gap={2}>
-              <Heading>📚 Education</Heading>
+              <Heading as="h2">📚 Education</Heading>
 
               <Stack gap={4}>
                 <div>
@@ -107,7 +107,7 @@ export default function ResumePage() {
             </Stack>
 
             <Stack gap={2}>
-              <Heading>📜 Certifications</Heading>
+              <Heading as="h2">📜 Certifications</Heading>
 
               <div>
                 <Heading as="h3">Professional Scrum Master I</Heading>
@@ -117,7 +117,7 @@ export default function ResumePage() {
             </Stack>
 
             <Stack gap={2}>
-              <Heading>🧔‍♂️ Random facts</Heading>
+              <Heading as="h2">🧔‍♂️ Random facts</Heading>
 
               <ul className="ml-6 list-disc">
                 <li>

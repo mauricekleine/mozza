@@ -29,16 +29,16 @@ export function Text({ as = "span", children, serif, size }: Props) {
     <Element
       className={classNames({
         [fontSerif.className]: serif,
-        "text-xs font-semibold uppercase tracking-tighter text-primary-400 sm:text-sm":
+        "text-xs font-semibold uppercase tracking-tighter text-slate-400 sm:text-sm":
           size === "xs",
-        "text-sm text-primary-800 sm:text-base": size === "sm",
-        "text-base text-primary-800 sm:text-lg": size === "base",
-        "text-lg text-primary-800 sm:text-xl": size === "lg",
-        "text-xl: text-primary-800 sm:text-2xl": size === "xl",
-        "text-2xl text-primary-800 sm:text-3xl": size === "2xl",
-        "text-3xl text-primary-800 sm:text-4xl": size === "3xl",
-        "text-4xl text-primary-800 sm:text-5xl": size === "4xl",
-        "text-5xl text-primary-800 sm:text-6xl": size === "5xl",
+        "text-sm text-slate-800 sm:text-base": size === "sm",
+        "text-base text-slate-800 sm:text-lg": size === "base",
+        "text-lg text-slate-800 sm:text-xl": size === "lg",
+        "text-xl: text-slate-800 sm:text-2xl": size === "xl",
+        "text-2xl text-slate-800 sm:text-3xl": size === "2xl",
+        "text-3xl text-slate-800 sm:text-4xl": size === "3xl",
+        "text-4xl text-slate-800 sm:text-5xl": size === "4xl",
+        "text-5xl text-slate-800 sm:text-6xl": size === "5xl",
       })}
     >
       {children}

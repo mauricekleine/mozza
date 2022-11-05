@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { Stack } from "~/ui/layout";
+import { Grid, Stack } from "~/ui/layout";
 import { Heading, Tag, Text, Typewriter } from "~/ui/typography";
 
 export function PageHeader() {
@@ -16,7 +16,7 @@ export function PageHeader() {
         <Stack alignItems="center">
           <Heading as="h1">Maurice Kleine</Heading>
 
-          <Heading>
+          <Heading as="h3">
             <Stack direction="horizontal" gap={1}>
               <Text>Freelance</Text>
 
@@ -47,7 +47,7 @@ export function PageHeader() {
             Talk to me about
           </Text>
 
-          <Stack direction="orthogonal" gap={2} justifyContent="center">
+          <Stack direction="horizontal" gap={2} justifyContent="center" wrap>
             <Tag>📠 tech</Tag>
 
             <Tag>👨‍💻 javascript</Tag>

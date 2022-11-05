@@ -4,8 +4,8 @@ type Props = {
 
 export function Tag({ children }: Props) {
   return (
-    <span className="rounded-md bg-primary-700 px-2 py-1 text-xs uppercase tracking-tight text-primary-300">
+    <p className="whitespace-nowrap rounded-md bg-slate-700 px-2 py-1 text-xs uppercase tracking-tight text-slate-300">
       {children}
-    </span>
+    </p>
   );
 }

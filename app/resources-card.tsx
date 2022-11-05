@@ -10,7 +10,7 @@ export function ResourcesCard() {
 
       <Card.Title>In the Wild</Card.Title>
 
-      <Grid columns={{ md: 2 }} gap={8}>
+      <Grid columns={{ base: "none", md: 2 }} gap={8}>
         <Stack gap={2}>
           <Heading as="h3">Articles</Heading>
 

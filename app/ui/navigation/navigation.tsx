@@ -10,7 +10,7 @@ import { SocialLinks } from "./social-links";
 
 export function Navigation() {
   return (
-    <nav className="fixed top-0 z-50 w-full bg-gradient-to-b from-black to-transparent">
+    <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-gradient-to-b from-black to-transparent backdrop-blur-lg">
       <div className="mx-auto flex h-16 items-center justify-between px-8 sm:w-4/6 sm:px-0 md:w-4/5 lg:w-3/5">
         <Link href="/" type="nav">
           <Stack alignItems="center" direction="horizontal" gap={2}>

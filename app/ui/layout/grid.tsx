@@ -25,7 +25,7 @@ export function Grid({
 
   return (
     <div
-      className={classNames("grid grid-flow-col", {
+      className={classNames("grid", {
         "gap-1": gap === 1,
         "gap-2": gap === 2,
         "gap-4": gap === 4,

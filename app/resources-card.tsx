@@ -1,5 +1,8 @@
+"use client";
+
+import { BookOpen } from "phosphor-react";
+
 import { Card } from "~/ui/card";
-import { BookOpen } from "~/ui/icon";
 import { Grid, Stack } from "~/ui/layout";
 import { Heading, Link } from "~/ui/typography";
 

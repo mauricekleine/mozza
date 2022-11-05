@@ -1,7 +1,8 @@
 "use client";
 
+import { Package } from "phosphor-react";
+
 import { Card } from "~/ui/card";
-import { Package } from "~/ui/icon";
 import { Stack } from "~/ui/layout";
 
 export function ServicesCard() {

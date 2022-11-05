@@ -1,8 +1,9 @@
 "use client";
 
+import { Cat } from "phosphor-react";
+
 import petProjects from "~/pet-projects";
 import { Card } from "~/ui/card";
-import { Cat } from "~/ui/icon";
 import { Stack } from "~/ui/layout";
 import { Heading, Link, Text } from "~/ui/typography";
 

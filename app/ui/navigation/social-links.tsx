@@ -1,4 +1,8 @@
-import { GithubLogo, GoodreadsLogo, LinkedinLogo } from "~/ui/icon";
+"use client";
+
+import { GithubLogo, LinkedinLogo } from "phosphor-react";
+
+import { GoodreadsLogo } from "~/ui/icon";
 import { Link } from "~/ui/typography";
 
 import { Stack } from "../layout";

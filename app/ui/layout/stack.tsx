@@ -7,6 +7,7 @@ type AlignItems = "center" | "none";
 type Direction = "horizontal" | "vertical";
 type Gap = 1 | 2 | 4 | 6 | 8 | 10 | 16 | 32;
 type JustifyContent = "around" | "between" | "center" | "end";
+type TextAlign = "center" | "left" | "right";
 
 type Props = {
   alignItems?: AlignItems;
@@ -14,6 +15,7 @@ type Props = {
   direction?: ResponsiveProp<Direction>;
   gap?: Gap;
   justifyContent?: JustifyContent;
+  textAlign?: TextAlign;
   wrap?: boolean;
 };
 
@@ -23,6 +25,7 @@ export function Stack({
   direction: directionProp = { base: "vertical" },
   gap,
   justifyContent,
+  textAlign,
   wrap,
 }: Props) {
   const direction = toResponsiveObject(directionProp);
@@ -54,6 +57,9 @@ export function Stack({
         "justify-between": justifyContent === "between",
         "justify-center": justifyContent === "center",
         "justify-end": justifyContent === "end",
+        "text-center": textAlign === "center",
+        "text-left": textAlign === "left",
+        "text-right": textAlign === "right",
       })}
     >
       {children}

@@ -1,4 +1,4 @@
-const colors = require("tailwindcss/colors");
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,6 +8,10 @@ module.exports = {
     extend: {
       animation: {
         blink: "blink 1s steps(2) infinite",
+      },
+      fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        serif: ['var(--font-serif)', ...fontFamily.serif],
       },
       keyframes: {
         blink: {

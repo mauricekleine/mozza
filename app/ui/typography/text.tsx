@@ -1,8 +1,6 @@
 import classNames from "classnames";
 import type { ReactNode } from "react";
 
-import { serif as fontSerif } from "../fonts";
-
 type HeadingElement = "p" | "span";
 type HeadingSize =
   | "xs"
@@ -18,17 +16,15 @@ type HeadingSize =
 type Props = {
   as?: HeadingElement;
   children: ReactNode;
-  serif?: boolean;
   size?: HeadingSize;
 };
 
-export function Text({ as = "span", children, serif, size }: Props) {
+export function Text({ as = "span", children, size }: Props) {
   const Element = as;
 
   return (
     <Element
       className={classNames({
-        [fontSerif.className]: serif,
         "text-xs font-semibold uppercase tracking-tighter text-slate-400 sm:text-sm":
           size === "xs",
         "text-sm text-slate-800 sm:text-base": size === "sm",

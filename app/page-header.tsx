@@ -13,7 +13,7 @@ export function PageHeader() {
         initial={{ opacity: 0, y: 75 }}
         transition={{ ease: "easeOut", duration: 1.5 }}
       >
-        <Stack alignItems="center">
+        <Stack alignItems="center" justifyContent="center" textAlign="center">
           <Heading as="h1">Maurice Kleine</Heading>
 
           <Heading as="h3">

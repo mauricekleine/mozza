@@ -11,7 +11,7 @@ export function LogoLink({
 
   return (
     <a className="group" href={href} rel="noopener noreferrer" target="_blank">
-      <Logo className=" max-h-8 fill-white transition-opacity group-hover:opacity-75" />
+      <Logo className="max-h-8 w-full fill-white transition-opacity group-hover:opacity-75" />
     </a>
   );
 }

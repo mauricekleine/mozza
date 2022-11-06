@@ -2,7 +2,6 @@
 
 import { GithubLogo, LinkedinLogo } from "phosphor-react";
 
-import { GoodreadsLogo } from "~/ui/icon";
 import { Link } from "~/ui/typography";
 
 import { Stack } from "../layout";
@@ -17,14 +16,6 @@ export function SocialLinks() {
     >
       <Link className="p-1" href="https://github.com/mauricekleine" type="nav">
         <GithubLogo className="h-4 w-4 fill-white" />
-      </Link>
-
-      <Link
-        className="p-1"
-        href="https://www.goodreads.com/mauricekleine"
-        type="nav"
-      >
-        <GoodreadsLogo className="h-[0.875rem] w-[0.875rem] fill-white" />
       </Link>
 
       <Link

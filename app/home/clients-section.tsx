@@ -1,8 +1,17 @@
-import { ProductboardLogo } from "~/home/client-logos/productboard-logo";
-import { TopAnimationLogo } from "~/home/client-logos/top-animation-logo";
-import { UButlerLogo } from "~/home/client-logos/ubutler-logo";
-import { Section, Stack } from "~/ui/layout";
+import {
+  DistriversLogo,
+  GoodupLogo,
+  KlippaLogo,
+  LogoLink,
+  ProductboardLogo,
+  QuestLogo,
+  TopAnimationLogo,
+  UButlerLogo,
+} from "~/home/client-logos";
+import { Grid, Section, Stack } from "~/ui/layout";
 import { Heading } from "~/ui/typography";
+
+import { VacanceSelectLogo } from "./client-logos/vacance-select-logo";
 
 export function ClientsSection() {
   return (
@@ -11,18 +20,32 @@ export function ClientsSection() {
         <Stack gap={8} textAlign="center">
           <Heading as="h4">Past projects</Heading>
 
-          <Stack
+          <Grid
             alignItems="center"
-            direction="horizontal"
-            gap={{ base: 8, md: 16 }}
-            justifyContent="center"
+            columns={{ base: 2, md: 4 }}
+            gap={{ base: 4, md: 8 }}
+            justifyItems="center"
+            rows={{ base: "none", md: 2 }}
           >
-            <TopAnimationLogo className="h-6 fill-white lg:h-8" />
+            <LogoLink href="https://ubutler.nl" logo={UButlerLogo} />
 
-            <ProductboardLogo className="h-6 fill-white lg:h-8" />
+            <LogoLink href="https://productboard.com" logo={ProductboardLogo} />
 
-            <UButlerLogo className="h-6 fill-white lg:h-8" />
-          </Stack>
+            <LogoLink href="https://quest.app" logo={QuestLogo} />
+
+            <LogoLink href="https://goodup.com" logo={GoodupLogo} />
+
+            <LogoLink href="https://klippa.com" logo={KlippaLogo} />
+
+            <LogoLink
+              href="https://vacanceselect.recruitee.com/"
+              logo={VacanceSelectLogo}
+            />
+
+            <LogoLink href="https://animatiewerk.nl" logo={TopAnimationLogo} />
+
+            <LogoLink href="https://distrivers.nl" logo={DistriversLogo} />
+          </Grid>
         </Stack>
       </Section>
     </div>

@@ -1,14 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: ["next/core-web-vitals", "prettier"],
-  overrides: [
-    {
-      files: "./app/ui/**/*",
-      rules: {
-        "no-restricted-imports": "off",
-      },
-    },
-  ],
   plugins: ["import", "unused-imports"],
   rules: {
     "import/order": [
@@ -28,20 +20,16 @@ module.exports = {
         "newlines-between": "always",
         pathGroups: [
           {
-            pattern: "~/**",
+            pattern: "~/ui/**",
             group: "internal",
             position: "before",
           },
         ],
-      },
-    ],
-    "no-restricted-imports": [
-      "error",
-      {
-        patterns: [
+        pathGroups: [
           {
-            group: ["./*"],
-            message: "Relative imports are only allowed in the /app/ui folder",
+            pattern: "~/**",
+            group: "internal",
+            position: "after",
           },
         ],
       },

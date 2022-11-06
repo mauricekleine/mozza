@@ -37,9 +37,7 @@ export default function RootLayout({
       <body className="relative bg-black text-slate-200">
         <Navigation />
 
-        <main className="relative mx-auto mt-32 mb-16 w-full px-2 sm:w-4/6 sm:px-0 md:w-4/5 lg:w-3/5">
-          {children}
-        </main>
+        <main className="mt-32 mb-16">{children}</main>
       </body>
     </html>
   );

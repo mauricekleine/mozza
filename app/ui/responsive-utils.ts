@@ -1,4 +1,4 @@
-type Breakpoints = "base" | "sm" | "md" | "lg" | "xl";
+type Breakpoints = "base" | "sm" | "md" | "lg";
 
 type ResponsiveValue = number | string;
 

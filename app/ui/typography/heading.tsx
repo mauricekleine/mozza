@@ -14,13 +14,13 @@ export function Heading({ as, children }: Props) {
   return (
     <Element
       className={classNames({
-        "text-lg font-semibold leading-normal text-slate-300 sm:text-xl sm:tracking-tight":
+        "text-lg font-semibold leading-normal text-slate-400 sm:text-xl sm:tracking-tight":
           as === "h4",
         "font-serif text-2xl font-bold leading-relaxed text-slate-300 sm:text-3xl sm:tracking-tight":
           as === "h3",
         "text-3xl font-extrabold sm:text-4xl sm:tracking-normal md:text-5xl":
           as === "h2",
-        "bg-gradient-to-b from-white to-slate-400 bg-clip-text text-6xl font-black text-transparent sm:tracking-tight md:text-7xl":
+        "bg-gradient-to-b from-slate-50 to-slate-400 bg-clip-text text-6xl font-black text-transparent sm:tracking-tight md:text-7xl":
           as === "h1",
       })}
     >

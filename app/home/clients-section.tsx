@@ -15,7 +15,7 @@ import { VacanceSelectLogo } from "./client-logos/vacance-select-logo";
 
 export function ClientsSection() {
   return (
-    <div className="border-b border-t border-white/10 bg-black bg-gradient-to-r from-black via-slate-900/50 to-black px-8 py-8 sm:px-0">
+    <div className="border-b border-t border-slate-200/10 bg-black bg-gradient-to-r from-black via-slate-900/50 to-black px-8 py-8 sm:px-0">
       <Section size="lg">
         <Stack gap={8} textAlign="center">
           <Heading as="h4">Past projects</Heading>

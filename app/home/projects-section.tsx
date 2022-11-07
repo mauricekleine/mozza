@@ -5,7 +5,7 @@ import { Cat } from "phosphor-react";
 import petProjects from "~/home/pet-projects";
 import { Card } from "~/ui/card";
 import { Section, Stack } from "~/ui/layout";
-import { Heading, Link, Text } from "~/ui/typography";
+import { ExternalLink, Heading, Text } from "~/ui/typography";
 
 export function ProjectsSection() {
   return (
@@ -26,12 +26,12 @@ export function ProjectsSection() {
                 <Stack direction="horizontal" gap={2}>
                   {project.url ? (
                     <Text>
-                      <Link href={project.url}>website</Link>
+                      <ExternalLink href={project.url}>website</ExternalLink>
                     </Text>
                   ) : null}
 
                   <Text>
-                    <Link href={project.repo}>source</Link>
+                    <ExternalLink href={project.repo}>source</ExternalLink>
                   </Text>
                 </Stack>
               </div>

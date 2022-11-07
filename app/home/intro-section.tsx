@@ -15,7 +15,7 @@ export function IntroSection() {
 
         <Card.Title>Hi! I&apos;m Maurice</Card.Title>
 
-        <Stack gap={2}>
+        <Stack gap={4}>
           <Text weight="bold">
             To me, the most important goal in life is to learn new things -
             whether that be professionally in my career, or in my personal life
@@ -28,7 +28,7 @@ export function IntroSection() {
             direction={{ base: "vertical", lg: "horizontal" }}
             gap={{ base: 8, md: 16 }}
           >
-            <Stack gap={2}>
+            <Stack gap={4}>
               <Text as="p">
                 <Text>
                   You can find out more about me by reading articles I wrote
@@ -113,7 +113,7 @@ export function IntroSection() {
 
               <Image
                 alt="Maurice Kleine"
-                className="rounded-full opacity-75"
+                className="rounded-full opacity-90"
                 height={256}
                 src="/maurice-kleine.jpeg"
                 width={256}

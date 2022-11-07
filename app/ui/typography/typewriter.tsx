@@ -79,7 +79,7 @@ export function Typewriter({ text }: Props) {
     <div className="inline-block">
       <span>{textToRender}</span>
 
-      <span className="animate-blink border-r border-r-white"></span>
+      <span className="animate-blink border-r border-r-slate-200"></span>
     </div>
   );
 }

@@ -21,11 +21,38 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={classNames(sans.variable, serif.variable)} lang="en">
+    <html
+      className={classNames(
+        sans.variable,
+        serif.variable,
+        "bg-black text-slate-200"
+      )}
+      lang="en"
+    >
       <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link
+          href="/apple-touch-icon.png"
+          rel="apple-touch-icon"
+          sizes="180x180"
+        />
 
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+        <link
+          href="/favicon-16x16.png"
+          rel="icon"
+          sizes="16x16"
+          type="image/png"
+        />
+
+        <link
+          href="/favicon-32x32.png"
+          rel="icon"
+          sizes="32x32"
+          type="image/png"
+        />
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+        <link rel="manifest" href="/site.webmanifest" />
 
         <meta content="utf-8" name="charset" />
 
@@ -34,7 +61,7 @@ export default function RootLayout({
         <title>Maurice Kleine</title>
       </head>
 
-      <body className="relative bg-black text-slate-200">
+      <body>
         <Navigation />
 
         <main className="mt-32 mb-16">{children}</main>

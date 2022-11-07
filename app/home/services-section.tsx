@@ -18,7 +18,7 @@ export function ServicesSection() {
         >
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
             <div
-              className="rounded-lg border border-white/10 bg-gradient-to-br from-white/10 via-black to-black px-8 py-8 text-left"
+              className="rounded-lg border border-slate-200/10 bg-gradient-to-br from-white/10 via-black to-black px-8 py-8 text-left"
               key={i}
             >
               <Stack gap={2}>

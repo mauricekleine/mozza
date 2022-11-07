@@ -8,7 +8,7 @@ type Props = {
 export function ExternalLink({ children, href }: Props) {
   return (
     <a
-      className="inline-flex items-center text-slate-200/75 underline transition-colors hover:text-white hover:no-underline"
+      className="inline-flex items-center text-slate-400 underline transition-colors hover:text-slate-200 hover:no-underline"
       href={href}
       rel="noopener noreferrer"
       target="_blank"

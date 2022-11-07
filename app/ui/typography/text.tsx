@@ -1,25 +1,18 @@
 import classNames from "classnames";
 import type { ReactNode } from "react";
 
-type HeadingElement = "p" | "span";
-type HeadingSize =
-  | "xs"
-  | "sm"
-  | "base"
-  | "lg"
-  | "xl"
-  | "2xl"
-  | "3xl"
-  | "4xl"
-  | "5xl";
+type Element = "p" | "span";
+type Size = "xs" | "base";
+type Weight = "normal" | "bold";
 
 type Props = {
-  as?: HeadingElement;
+  as?: Element;
   children: ReactNode;
-  size?: HeadingSize;
+  size?: Size;
+  weight?: Weight;
 };
 
-export function Text({ as = "span", children, size }: Props) {
+export function Text({ as = "span", children, size, weight }: Props) {
   const Element = as;
 
   return (
@@ -27,14 +20,7 @@ export function Text({ as = "span", children, size }: Props) {
       className={classNames({
         "text-xs font-semibold uppercase tracking-tighter text-slate-400 sm:text-sm":
           size === "xs",
-        "text-sm text-slate-800 sm:text-base": size === "sm",
-        "text-base text-slate-800 sm:text-lg": size === "base",
-        "text-lg text-slate-800 sm:text-xl": size === "lg",
-        "text-xl: text-slate-800 sm:text-2xl": size === "xl",
-        "text-2xl text-slate-800 sm:text-3xl": size === "2xl",
-        "text-3xl text-slate-800 sm:text-4xl": size === "3xl",
-        "text-4xl text-slate-800 sm:text-5xl": size === "4xl",
-        "text-5xl text-slate-800 sm:text-6xl": size === "5xl",
+        "font-bold": weight === "bold",
       })}
     >
       {children}

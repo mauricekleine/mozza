@@ -1,8 +1,8 @@
 import {
   ClientsSection,
+  IntroSection,
   PageHeader,
   ProjectsSection,
-  ResourcesSection,
   ServicesSection,
 } from "~/home";
 import { Stack } from "~/ui/layout";
@@ -17,7 +17,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <ResourcesSection />
+      <IntroSection />
 
       {/* <ServicesSection /> */}
 

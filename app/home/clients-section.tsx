@@ -27,24 +27,27 @@ export function ClientsSection() {
             justifyItems="center"
             rows={{ base: "none", md: 2 }}
           >
-            <LogoLink href="https://ubutler.nl" logo={UButlerLogo} />
+            <LogoLink href="https://ubutler.nl/" logo={UButlerLogo} />
 
-            <LogoLink href="https://productboard.com" logo={ProductboardLogo} />
+            <LogoLink
+              href="https://productboard.com/"
+              logo={ProductboardLogo}
+            />
 
-            <LogoLink href="https://quest.app" logo={QuestLogo} />
+            <LogoLink href="https://quest.app/" logo={QuestLogo} />
 
-            <LogoLink href="https://goodup.com" logo={GoodupLogo} />
+            <LogoLink href="https://goodup.com/" logo={GoodupLogo} />
 
-            <LogoLink href="https://klippa.com" logo={KlippaLogo} />
+            <LogoLink href="https://klippa.com/" logo={KlippaLogo} />
 
             <LogoLink
               href="https://vacanceselect.recruitee.com/"
               logo={VacanceSelectLogo}
             />
 
-            <LogoLink href="https://animatiewerk.nl" logo={TopAnimationLogo} />
+            <LogoLink href="https://animatiewerk.nl/" logo={TopAnimationLogo} />
 
-            <LogoLink href="https://distrivers.nl" logo={DistriversLogo} />
+            <LogoLink href="https://distrivers.nl/" logo={DistriversLogo} />
           </Grid>
         </Stack>
       </Section>

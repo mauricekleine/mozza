@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { Link } from "~/ui/typography";
+import { Link, Text } from "~/ui/typography";
 
 import { Section, Stack } from "../layout";
 
@@ -18,16 +18,14 @@ export function Navigation() {
               <div className="h-10 w-10 rounded-full bg-white p-0.5">
                 <Image
                   alt="Maurice Kleine"
-                  className="h-9 w-9 object-contain"
+                  className="rounded-full"
                   height={256}
                   src="/maurice-kleine.png"
                   width={256}
                 />
               </div>
 
-              <span className="hidden font-bold sm:inline-block">
-                Maurice Kleine
-              </span>
+              <Text weight="bold">Maurice Kleine</Text>
             </Stack>
           </Link>
 

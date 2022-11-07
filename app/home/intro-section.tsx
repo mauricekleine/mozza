@@ -71,8 +71,8 @@ export function IntroSection() {
                 <ExternalLink href="https://www.linkedin.com/in/mauricekleine/">
                   LinkedIn
                 </ExternalLink>
-                , or keep scrolling if you want to learns what value I can add
-                to your company or project.
+                , or keep scrolling if you want to learn what value I can add to
+                your company or project.
               </Text>
             </Stack>
 

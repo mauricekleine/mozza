@@ -29,50 +29,76 @@ export function IntroSection() {
             gap={{ base: 8, md: 16 }}
           >
             <Stack gap={2}>
-              <Text>
-                You can find out more about me by reading articles I wrote about{" "}
+              <Text as="p">
+                <Text>
+                  You can find out more about me by reading articles I wrote
+                  about{" "}
+                </Text>
+
                 <ExternalLink href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
                   remote work
                 </ExternalLink>
-                ,{" "}
+
+                <Text>, </Text>
+
                 <ExternalLink href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
                   comfort zones
-                </ExternalLink>{" "}
-                and{" "}
+                </ExternalLink>
+
+                <Text> and </Text>
+
                 <ExternalLink href="https://www.productboard.com/blog/supporting-mental-health/">
                   mental health in the work place
                 </ExternalLink>
-                ; by reading{" "}
+
+                <Text>; by reading </Text>
+
                 <ExternalLink href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
                   this article
-                </ExternalLink>{" "}
-                or listening to{" "}
+                </ExternalLink>
+
+                <Text> or listening to </Text>
+
                 <ExternalLink href="https://soundcloud.com/people-of-productboard/1-maurice/">
                   this podcast
-                </ExternalLink>{" "}
-                about my time at Productboard; by listening to a podcast in
-                which{" "}
+                </ExternalLink>
+
+                <Text>
+                  {" "}
+                  about my time at Productboard; by listening to a podcast in
+                  which{" "}
+                </Text>
+
                 <ExternalLink href="https://open.spotify.com/episode/3q9fPb4zXXPhANnfzT0gyD?si=1b09a3bdd93e4fb5">
                   I get interviewed about remote work
                 </ExternalLink>
-                ; or by watching the recording of{" "}
+
+                <Text>; or by watching the recording of </Text>
+
                 <ExternalLink href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
                   a meetup I organized about remote work
                 </ExternalLink>
-                .
+
+                <Text>.</Text>
               </Text>
 
-              <Text>
-                You can find my open source work on{" "}
+              <Text as="p">
+                <Text>You can find my open source work on </Text>
+
                 <ExternalLink href="https://github.com/mauricekleine/">
                   GitHub
                 </ExternalLink>
-                , browse my experience and skills on{" "}
+
+                <Text>, browse my experience and skills on </Text>
+
                 <ExternalLink href="https://www.linkedin.com/in/mauricekleine/">
                   LinkedIn
                 </ExternalLink>
-                , or keep scrolling if you want to learn what value I can add to
-                your company or project.
+
+                <Text>
+                  , or keep scrolling if you want to learn what value I can add
+                  to your company or project.
+                </Text>
               </Text>
             </Stack>
 

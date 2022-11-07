@@ -25,7 +25,7 @@ export function IntroSection() {
 
           <Stack
             alignItems="center"
-            direction={{ base: "vertical", md: "horizontal" }}
+            direction={{ base: "vertical", lg: "horizontal" }}
             gap={{ base: 8, md: 16 }}
           >
             <Stack gap={2}>
@@ -54,7 +54,7 @@ export function IntroSection() {
                 which{" "}
                 <ExternalLink href="https://open.spotify.com/episode/3q9fPb4zXXPhANnfzT0gyD?si=1b09a3bdd93e4fb5">
                   I get interviewed about remote work
-                </ExternalLink>{" "}
+                </ExternalLink>
                 ; or by watching the recording of{" "}
                 <ExternalLink href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
                   a meetup I organized about remote work

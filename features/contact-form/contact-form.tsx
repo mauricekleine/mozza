@@ -28,7 +28,13 @@ export function ContactForm({ onSubmitted }: Props) {
         <InputGroup>
           <Label htmlFor="email">Email</Label>
 
-          <Input name="email" placeholder="Email" required type="email" />
+          <Input
+            autoFocus
+            name="email"
+            placeholder="Email"
+            required
+            type="email"
+          />
         </InputGroup>
 
         <InputGroup>

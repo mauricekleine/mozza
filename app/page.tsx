@@ -5,7 +5,6 @@ import {
   HeroSection,
   IntroSection,
   ProjectsSection,
-  ServicesSection,
 } from "~/marketing";
 
 export default function HomePage() {

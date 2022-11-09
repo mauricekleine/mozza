@@ -1,4 +1,3 @@
-import { NextRequest } from "next/server";
 import invariant from "tiny-invariant";
 
 invariant(

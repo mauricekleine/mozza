@@ -67,5 +67,6 @@ module.exports = {
         memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
       },
     ],
+    "unused-imports/no-unused-imports": "error",
   },
 };

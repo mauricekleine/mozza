@@ -3,6 +3,7 @@
 import { Inter, Lora } from "@next/font/google";
 import classNames from "classnames";
 import { MotionConfig } from "framer-motion";
+import Script from "next/script";
 
 import { Navigation, ToastProvider, ToastViewport } from "~/design-system";
 
@@ -60,6 +61,12 @@ export default function RootLayout({
         <meta content="utf-8" name="charset" />
 
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+        <script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          async
+          defer
+        ></script>
 
         <title>Maurice Kleine</title>
       </head>

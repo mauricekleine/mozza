@@ -1,14 +1,20 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { z } from "zod";
 
-import { todoist } from "~/lib";
+import { todoist, turnstile } from "~/lib";
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
+  request: NextApiRequest,
+  response: NextApiResponse
 ) {
-  if (req.method !== "POST") {
-    return res.status(400).json({ data: "Method not allowed" });
+  if (request.method !== "POST") {
+    return response.status(400).json({ data: "Method not allowed" });
+  }
+
+  const verification = await turnstile.verify(request);
+
+  if (verification.success === false) {
+    return response.status(400).json({ data: "Verification failed" });
   }
 
   const schema = z.object({
@@ -17,7 +23,7 @@ export default async function handler(
     phone: z.string(),
   });
 
-  const result = schema.safeParse(req.body);
+  const result = schema.safeParse(request.body);
 
   if (result.success) {
     await todoist.addTask({
@@ -27,8 +33,8 @@ export default async function handler(
       priority: 4,
     });
 
-    return res.status(200).json({ data: result.data });
+    return response.status(200).json({ data: result.data });
   }
 
-  return res.status(400).json({ error: result.error.format() });
+  return response.status(400).json({ error: result.error.format() });
 }

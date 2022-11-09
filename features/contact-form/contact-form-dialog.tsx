@@ -13,9 +13,20 @@ type Props = {
 };
 
 export function ContactFormDialog({ buttonSize, buttonVariant }: Props) {
+  const [hasErrors, setHasErrors] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isToastOpen, setIsToastOpen] = useState(false);
 
+  const handleSubmit = ({ success }: { success: boolean }) => {
+    setIsToastOpen(true);
+
+    if (!success) {
+      setHasErrors(true);
+    } else {
+      setHasErrors(false);
+      setIsDialogOpen(false);
+    }
+  };
   return (
     <>
       <Dialog
@@ -41,12 +52,7 @@ export function ContactFormDialog({ buttonSize, buttonVariant }: Props) {
               soon as possible. I aim to reply within 12 hours.
             </Dialog.Description>
 
-            <ContactForm
-              onSubmitted={() => {
-                setIsDialogOpen(false);
-                setIsToastOpen(true);
-              }}
-            />
+            <ContactForm onSubmitted={handleSubmit} />
           </Card>
         </Dialog.Content>
       </Dialog>
@@ -56,11 +62,16 @@ export function ContactFormDialog({ buttonSize, buttonVariant }: Props) {
         onOpenChange={(open) => {
           setIsToastOpen(open);
         }}
+        variant={hasErrors ? "error" : "success"}
       >
-        <Toast.Title>Inquiry submitted</Toast.Title>
+        <Toast.Title>
+          {hasErrors ? "Something went wrong" : "Inquiry submitted"}
+        </Toast.Title>
 
         <Toast.Description>
-          Your inquiry was received and will be answered as soon as possible
+          {hasErrors
+            ? "Please try again"
+            : "Your inquiry was received and will be answered as soon as possible"}
         </Toast.Description>
       </Toast>
     </>

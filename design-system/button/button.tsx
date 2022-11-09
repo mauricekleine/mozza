@@ -21,6 +21,7 @@ type AnchorProps = {
 type ButtonProps = {
   as?: "button";
   href?: never;
+  isDisabled?: boolean;
   isLoading?: boolean;
   onClick?: IntrinsicButtonProps["onClick"];
   type?: IntrinsicButtonProps["type"];
@@ -78,14 +79,15 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
       );
     }
 
-    const { isLoading, onClick, type = "button" } = props;
+    const { isDisabled, isLoading, onClick, type = "button" } = props;
 
     return (
       <button
         className={classNames(className, {
+          "opacity-75": isDisabled,
           "animate-pulse": isLoading,
         })}
-        disabled={isLoading}
+        disabled={isDisabled || isLoading}
         onClick={onClick}
         ref={ref as ForwardedRef<HTMLButtonElement>}
         type={type}

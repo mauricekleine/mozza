@@ -8,11 +8,11 @@ type Props = {
 };
 
 export function FormButton({ children }: Props) {
-  const { isSubmitting } = useForm();
+  const { isDisabled, isSubmitting } = useForm();
 
   return (
     <Stack direction="horizontal" justifyContent="end">
-      <Button isLoading={isSubmitting} type="submit">
+      <Button isDisabled={isDisabled} isLoading={isSubmitting} type="submit">
         {children}
       </Button>
     </Stack>

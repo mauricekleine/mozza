@@ -9,7 +9,7 @@ type IntrinsicFormProps = ComponentProps<"form">;
 type Props = {
   action: Exclude<IntrinsicFormProps["action"], undefined>;
   children: ReactNode | ReactNode[];
-  onSubmitted: () => void;
+  onSubmitted: ({ success }: { success: boolean }) => void;
   transformFormData: (formData: FormData) => { [key: string]: unknown };
 };
 
@@ -20,16 +20,18 @@ export function FormRoot({
   transformFormData,
 }: Props) {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [verificationToken, setVerificationToken] = useState<string>();
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
     const data = transformFormData(formData);
+    data["cf-turnstile-token"] = verificationToken;
 
     setIsSubmitting(true);
 
-    await fetch(action, {
+    const response = await fetch(action, {
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
@@ -37,13 +39,25 @@ export function FormRoot({
       method: "POST",
     });
 
-    onSubmitted();
+    onSubmitted({
+      success: response.status === 200,
+    });
+
     setIsSubmitting(false);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <FormProvider value={{ isSubmitting }}>{children}</FormProvider>
+    <form className="w-full" onSubmit={handleSubmit}>
+      <FormProvider
+        value={{
+          isDisabled: !verificationToken,
+          isSubmitting,
+          setVerificationToken,
+          verificationToken,
+        }}
+      >
+        {children}
+      </FormProvider>
     </form>
   );
 }

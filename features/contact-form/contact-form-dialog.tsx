@@ -19,8 +19,8 @@ export function ContactFormDialog({ buttonSize, buttonVariant }: Props) {
   return (
     <>
       <Dialog
+        isOpen={isDialogOpen}
         onOpenChange={(open) => setIsDialogOpen(open)}
-        open={isDialogOpen}
       >
         <Dialog.Trigger asChild>
           <Button
@@ -32,7 +32,7 @@ export function ContactFormDialog({ buttonSize, buttonVariant }: Props) {
           </Button>
         </Dialog.Trigger>
 
-        <Dialog.Content>
+        <Dialog.Content isOpen={isDialogOpen}>
           <Card>
             <Dialog.Title>Contact me</Dialog.Title>
 

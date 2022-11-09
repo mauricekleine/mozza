@@ -1,5 +1,8 @@
+"use client";
+
 import { Inter, Lora } from "@next/font/google";
 import classNames from "classnames";
+import { MotionConfig } from "framer-motion";
 
 import { Navigation, ToastProvider, ToastViewport } from "~/design-system";
 
@@ -62,13 +65,15 @@ export default function RootLayout({
       </head>
 
       <body>
-        <ToastProvider>
-          <Navigation />
+        <MotionConfig reducedMotion="user">
+          <ToastProvider>
+            <Navigation />
 
-          <main className="mt-32 mb-16">{children}</main>
+            <main className="mt-32 mb-16">{children}</main>
 
-          <ToastViewport />
-        </ToastProvider>
+            <ToastViewport />
+          </ToastProvider>
+        </MotionConfig>
       </body>
     </html>
   );

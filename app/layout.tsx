@@ -62,11 +62,7 @@ export default function RootLayout({
 
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-        <script
-          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          async
-          defer
-        ></script>
+        <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" />
 
         <title>Maurice Kleine</title>
       </head>

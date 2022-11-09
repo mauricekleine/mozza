@@ -44,9 +44,9 @@ export function ContactForm({ onSubmitted }: Props) {
           </InputGroup>
 
           <InputGroup>
-            <Label htmlFor="phone">Phonenumber</Label>
+            <Label htmlFor="phone">Phone number</Label>
 
-            <Input name="phone" placeholder="Phonenumber" type="text" />
+            <Input name="phone" placeholder="Phone number" type="text" />
           </InputGroup>
 
           <InputGroup>
@@ -61,11 +61,17 @@ export function ContactForm({ onSubmitted }: Props) {
             />
           </InputGroup>
 
-          <InputGroup>
-            <Form.Protection />
-          </InputGroup>
-
           <Form.Button>Submit</Form.Button>
+
+          <div className="border-t border-white/10 pt-6">
+            <InputGroup>
+              <div className="text-center">
+                <Label htmlFor="">Spam protection</Label>
+              </div>
+
+              <Form.Protection />
+            </InputGroup>
+          </div>
         </Fieldset>
       </Form>
     </>

@@ -1,3 +1,5 @@
+"use client";
+
 import classNames from "classnames";
 import NextLink from "next/link";
 import { ArrowUpRight } from "phosphor-react";

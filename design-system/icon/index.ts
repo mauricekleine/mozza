@@ -2,6 +2,7 @@ import { FC } from "react";
 
 export type Icon = FC<{ className?: string }>;
 
+// All icons provided by https://phosphoricons.com/
 export { ArrowUpRight } from "./arrow-up-right";
 export { Cat } from "./cat";
 export { CircleNotch } from "./circle-notch";

@@ -1,20 +1,28 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextRequest } from "next/server";
 import { z } from "zod";
 
 import { todoist, turnstile } from "~/lib";
 
-export default async function handler(
-  request: NextApiRequest,
-  response: NextApiResponse
-) {
+export const config = {
+  runtime: "experimental-edge",
+};
+
+export default async function handler(request: NextRequest) {
   if (request.method !== "POST") {
-    return response.status(400).json({ data: "Method not allowed" });
+    return new Response(JSON.stringify({ data: "Method not allowed" }), {
+      status: 400,
+    });
   }
 
-  const verification = await turnstile.verify(request);
+  const formData = await request.formData();
+  const headers = request.headers;
+
+  const verification = await turnstile.verify(formData, headers);
 
   if (verification.success === false) {
-    return response.status(400).json({ data: "Verification failed" });
+    return new Response(JSON.stringify({ data: "Verification failed" }), {
+      status: 400,
+    });
   }
 
   const schema = z.object({
@@ -23,18 +31,22 @@ export default async function handler(
     phone: z.string(),
   });
 
-  const result = schema.safeParse(request.body);
+  const result = schema.safeParse(Object.fromEntries(formData));
 
   if (result.success) {
-    await todoist.addTask({
+    await todoist.createTask({
       content: `New inquiry from ${result.data.email}`,
       description: `**Inquiry**: ${result.data.inquiry}\n**Email**: ${result.data.email}\n**Phone**: ${result.data.phone}`,
       dueString: "in 181 minutes", // 3 hours + 1 minute to trigger notifications
       priority: 4,
     });
 
-    return response.status(200).json({ data: result.data });
+    return new Response(JSON.stringify({ data: result.data }), {
+      status: 200,
+    });
   }
 
-  return response.status(400).json({ error: result.error.format() });
+  return new Response(JSON.stringify({ data: result.error.format() }), {
+    status: 400,
+  });
 }

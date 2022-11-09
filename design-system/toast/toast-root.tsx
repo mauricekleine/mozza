@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Close as ClosePrimitive,
   Root as RootPrimitive,
@@ -5,14 +7,7 @@ import {
 } from "@radix-ui/react-toast";
 import classNames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  CheckCircle,
-  Confetti,
-  HandsClapping,
-  SmileyXEyes,
-  X,
-  XCircle,
-} from "phosphor-react";
+import { Confetti, SmileyXEyes, X } from "phosphor-react";
 
 import { Stack } from "../layout";
 

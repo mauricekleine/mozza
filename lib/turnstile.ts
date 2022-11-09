@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest } from "next/server";
 import invariant from "tiny-invariant";
 
 invariant(
@@ -7,16 +7,21 @@ invariant(
 );
 
 export const turnstile = {
-  verify: async function (request: NextApiRequest) {
-    const token = request.body["cf-turnstile-token"];
+  verify: async function verify(formData: FormData, headers: Headers) {
+    const token = formData.get("cf-turnstile-response");
+    const ip = headers.get("CF-Connecting-IP");
 
     if (!token) {
       return { success: false };
     }
 
-    const data = new URLSearchParams();
+    const data = new FormData();
     data.append("response", token);
     data.append("secret", process.env.TURNSTILE_SECRET_KEY as string);
+
+    if (ip) {
+      data.append("ip", ip);
+    }
 
     const result = await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",

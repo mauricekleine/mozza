@@ -1,14 +1,18 @@
 import classNames from "classnames";
-import type { ReactNode } from "react";
+import { ReactNode, forwardRef } from "react";
 
 type HeadingElement = "h1" | "h2" | "h3" | "h4";
 
 type Props = {
   as: HeadingElement;
   children: ReactNode;
+  id?: string;
 };
 
-export function Heading({ as, children }: Props) {
+export const Heading = forwardRef<HTMLHeadingElement, Props>(function Heading(
+  { as, children, ...props },
+  ref
+) {
   const Element = as;
 
   return (
@@ -23,8 +27,10 @@ export function Heading({ as, children }: Props) {
         "bg-gradient-to-b from-slate-50 to-slate-400 bg-clip-text text-6xl font-black text-transparent sm:tracking-tight md:text-7xl":
           as === "h1",
       })}
+      ref={ref}
+      {...props}
     >
       {children}
     </Element>
   );
-}
+});

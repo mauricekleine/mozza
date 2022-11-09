@@ -4,6 +4,9 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
   content: ["./app/**/*.{ts,tsx}"],
   darkMode: "class",
+  plugins: [
+    require("@tailwindcss/forms")
+  ],
   theme: {
     extend: {
       animation: {

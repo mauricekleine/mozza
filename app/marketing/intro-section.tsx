@@ -5,7 +5,7 @@ import { HandWaving } from "phosphor-react";
 
 import { Card } from "~/ui/card";
 import { Section, Stack } from "~/ui/layout";
-import { ExternalLink, Text } from "~/ui/typography";
+import { Link, Text } from "~/ui/typography";
 
 export function IntroSection() {
   return (
@@ -35,33 +35,33 @@ export function IntroSection() {
                   about{" "}
                 </Text>
 
-                <ExternalLink href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
+                <Link href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
                   remote work
-                </ExternalLink>
+                </Link>
 
                 <Text>, </Text>
 
-                <ExternalLink href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
+                <Link href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
                   comfort zones
-                </ExternalLink>
+                </Link>
 
                 <Text> and </Text>
 
-                <ExternalLink href="https://www.productboard.com/blog/supporting-mental-health/">
+                <Link href="https://www.productboard.com/blog/supporting-mental-health/">
                   mental health in the work place
-                </ExternalLink>
+                </Link>
 
                 <Text>; by reading </Text>
 
-                <ExternalLink href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
+                <Link href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
                   this article
-                </ExternalLink>
+                </Link>
 
                 <Text> or listening to </Text>
 
-                <ExternalLink href="https://soundcloud.com/people-of-productboard/1-maurice/">
+                <Link href="https://soundcloud.com/people-of-productboard/1-maurice/">
                   this podcast
-                </ExternalLink>
+                </Link>
 
                 <Text>
                   {" "}
@@ -69,15 +69,15 @@ export function IntroSection() {
                   which{" "}
                 </Text>
 
-                <ExternalLink href="https://open.spotify.com/episode/3q9fPb4zXXPhANnfzT0gyD?si=1b09a3bdd93e4fb5">
+                <Link href="https://open.spotify.com/episode/3q9fPb4zXXPhANnfzT0gyD?si=1b09a3bdd93e4fb5">
                   I get interviewed about remote work
-                </ExternalLink>
+                </Link>
 
                 <Text>; or by watching the recording of </Text>
 
-                <ExternalLink href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
+                <Link href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
                   a meetup I organized about remote work
-                </ExternalLink>
+                </Link>
 
                 <Text>.</Text>
               </Text>
@@ -85,15 +85,13 @@ export function IntroSection() {
               <Text as="p">
                 <Text>You can find my open source work on </Text>
 
-                <ExternalLink href="https://github.com/mauricekleine/">
-                  GitHub
-                </ExternalLink>
+                <Link href="https://github.com/mauricekleine/">GitHub</Link>
 
                 <Text>, browse my experience and skills on </Text>
 
-                <ExternalLink href="https://www.linkedin.com/in/mauricekleine/">
+                <Link href="https://www.linkedin.com/in/mauricekleine/">
                   LinkedIn
-                </ExternalLink>
+                </Link>
 
                 <Text>
                   , or keep scrolling if you want to learn what value I can add

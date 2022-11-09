@@ -1,3 +1,6 @@
+import { Grid, Section, Stack } from "~/ui/layout";
+import { Heading } from "~/ui/typography";
+
 import {
   DistriversLogo,
   GoodupLogo,
@@ -7,11 +10,8 @@ import {
   QuestLogo,
   TopAnimationLogo,
   UButlerLogo,
-} from "~/home/client-logos";
-import { Grid, Section, Stack } from "~/ui/layout";
-import { Heading } from "~/ui/typography";
-
-import { VacanceSelectLogo } from "./client-logos/vacance-select-logo";
+  VacanceSelectLogo,
+} from "./client-logos";
 
 export function ClientsSection() {
   return (

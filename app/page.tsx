@@ -4,7 +4,7 @@ import {
   IntroSection,
   ProjectsSection,
   ServicesSection,
-} from "~/home";
+} from "~/marketing";
 import { Stack } from "~/ui/layout";
 import { Section } from "~/ui/layout/section";
 

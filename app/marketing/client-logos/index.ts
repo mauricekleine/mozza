@@ -6,3 +6,4 @@ export { ProductboardLogo } from "./productboard-logo";
 export { QuestLogo } from "./quest-logo";
 export { TopAnimationLogo } from "./top-animation-logo";
 export { UButlerLogo } from "./ubutler-logo";
+export { VacanceSelectLogo } from "./vacance-select-logo";

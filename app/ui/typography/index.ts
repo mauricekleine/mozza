@@ -1,5 +1,3 @@
-export { ButtonLink } from "./button-link";
-export { ExternalLink } from "./external-link";
 export { Heading } from "./heading";
 export { Link } from "./link";
 export { Tag } from "./tag";

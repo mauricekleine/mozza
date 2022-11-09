@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, PaperPlaneTilt } from "phosphor-react";
+import { ArrowUpRight } from "phosphor-react";
 
+import { ContactFormDialog } from "~/contact-form/contact-form-dialog";
+import { Button } from "~/ui/button";
 import { Section, Stack } from "~/ui/layout";
-import { ButtonLink, Heading, Text, Typewriter } from "~/ui/typography";
+import { Heading, Text, Typewriter } from "~/ui/typography";
 
 export function HeroSection() {
   return (
@@ -55,21 +57,15 @@ export function HeroSection() {
               gap={2}
               justifyContent="center"
             >
-              <ButtonLink
-                as="button"
-                iconLeft={PaperPlaneTilt}
-                onClick={() => {}}
-                type="solid"
-              >
-                Contact
-              </ButtonLink>
+              <ContactFormDialog buttonVariant="solid" />
 
-              <ButtonLink
+              <Button
+                as="a"
                 href="https://www.linkedin.com/in/mauricekleine/"
                 iconRight={ArrowUpRight}
               >
                 LinkedIn
-              </ButtonLink>
+              </Button>
             </Stack>
           </motion.div>
         </Stack>

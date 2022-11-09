@@ -2,6 +2,7 @@ import { Inter, Lora } from "@next/font/google";
 import classNames from "classnames";
 
 import { Navigation } from "~/ui/navigation";
+import { ToastProvider, ToastViewport } from "~/ui/toast";
 
 import "~/global.css";
 
@@ -62,9 +63,13 @@ export default function RootLayout({
       </head>
 
       <body>
-        <Navigation />
+        <ToastProvider>
+          <Navigation />
 
-        <main className="mt-32 mb-16">{children}</main>
+          <main className="mt-32 mb-16">{children}</main>
+
+          <ToastViewport />
+        </ToastProvider>
       </body>
     </html>
   );

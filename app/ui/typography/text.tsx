@@ -1,27 +1,42 @@
 import classNames from "classnames";
-import type { ReactNode } from "react";
+import { ForwardedRef, ReactNode, forwardRef } from "react";
 
-type Element = "p" | "small" | "span";
+type Element = "p" | "span";
 type Weight = "normal" | "bold";
 
 type Props = {
   as?: Element;
   children: ReactNode;
+  id?: string;
   weight?: Weight;
 };
 
-export function Text({ as = "span", children, weight }: Props) {
-  const Element = as;
+export const Text = forwardRef<HTMLParagraphElement | HTMLSpanElement, Props>(
+  function Text({ as = "span", children, weight, ...props }, ref) {
+    const className = classNames({
+      "font-bold": weight === "bold",
+    });
 
-  return (
-    <Element
-      className={classNames({
-        "text-xs font-semibold uppercase tracking-tighter text-slate-400 sm:text-sm":
-          as === "small",
-        "font-bold": weight === "bold",
-      })}
-    >
-      {children}
-    </Element>
-  );
-}
+    if (as === "p") {
+      return (
+        <p
+          className={className}
+          ref={ref as ForwardedRef<HTMLParagraphElement>}
+          {...props}
+        >
+          {children}
+        </p>
+      );
+    }
+
+    return (
+      <span
+        className={className}
+        ref={ref as ForwardedRef<HTMLSpanElement>}
+        {...props}
+      >
+        {children}
+      </span>
+    );
+  }
+);

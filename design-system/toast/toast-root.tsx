@@ -7,8 +7,8 @@ import {
 } from "@radix-ui/react-toast";
 import classNames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
-import { Confetti, SmileyXEyes, X } from "phosphor-react";
 
+import { Confetti, SmileyXEyes, X } from "../icon";
 import { Stack } from "../layout";
 
 type Props = {

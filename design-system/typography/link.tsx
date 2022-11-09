@@ -1,9 +1,8 @@
-"use client";
-
 import classNames from "classnames";
 import NextLink from "next/link";
-import { ArrowUpRight } from "phosphor-react";
 import type { HTMLAttributes, ReactNode } from "react";
+
+import { ArrowUpRight } from "../icon";
 
 type Props = {
   children: ReactNode;
@@ -37,7 +36,7 @@ export function Link({ children, href, type = "default" }: Props) {
     >
       <span>{children}</span>
 
-      <ArrowUpRight className="inline-block" />
+      <ArrowUpRight />
     </a>
   );
 }

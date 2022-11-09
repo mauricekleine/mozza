@@ -1,8 +1,7 @@
-import { IconProps } from "phosphor-react";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
+import { Icon } from "../icon";
 
 type Props = {
-  icon: ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>;
+  icon: Icon;
 };
 
 export function CardIcon({ icon }: Props) {

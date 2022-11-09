@@ -1,9 +1,15 @@
 "use client";
 
-import { PaperPlaneTilt } from "phosphor-react";
 import { useState } from "react";
 
-import { Button, ButtonProps, Card, Dialog, Toast } from "~/design-system";
+import {
+  Button,
+  ButtonProps,
+  Card,
+  Dialog,
+  PaperPlaneTilt,
+  Toast,
+} from "~/design-system";
 
 import { ContactForm } from "~/contact-form";
 

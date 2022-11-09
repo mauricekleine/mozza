@@ -1,9 +1,6 @@
-"use client";
-
 import Image from "next/image";
-import { HandWaving } from "phosphor-react";
 
-import { Card, Link, Section, Stack, Text } from "~/design-system";
+import { Card, HandWaving, Link, Section, Stack, Text } from "~/design-system";
 
 export function IntroSection() {
   return (

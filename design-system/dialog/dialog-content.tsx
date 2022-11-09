@@ -2,8 +2,9 @@
 
 import { Close, Content, Overlay, Portal } from "@radix-ui/react-dialog";
 import { AnimatePresence, motion } from "framer-motion";
-import { X } from "phosphor-react";
 import { ReactNode } from "react";
+
+import { X } from "../icon";
 
 type Props = {
   children: ReactNode | ReactNode[];

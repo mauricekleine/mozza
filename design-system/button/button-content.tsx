@@ -1,9 +1,6 @@
-"use client";
-
 import classNames from "classnames";
-import { CircleNotch } from "phosphor-react";
 
-import { Icon } from "../icon";
+import { CircleNotch, Icon } from "../icon";
 import { Stack } from "../layout";
 
 import { ButtonSize } from "./button";

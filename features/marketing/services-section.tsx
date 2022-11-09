@@ -1,8 +1,4 @@
-"use client";
-
-import { Package } from "phosphor-react";
-
-import { Grid, Heading, Section, Stack } from "~/design-system";
+import { Grid, Heading, Package, Section, Stack } from "~/design-system";
 
 export function ServicesSection() {
   return (

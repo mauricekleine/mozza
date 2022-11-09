@@ -1,3 +1,5 @@
+"use client";
+
 import { Title as TitlePrimitive } from "@radix-ui/react-dialog";
 
 import { Heading } from "../typography";

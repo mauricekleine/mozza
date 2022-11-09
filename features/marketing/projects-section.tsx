@@ -1,8 +1,12 @@
-"use client";
-
-import { Cat } from "phosphor-react";
-
-import { Card, Heading, Link, Section, Stack, Text } from "~/design-system";
+import {
+  Card,
+  Cat,
+  Heading,
+  Link,
+  Section,
+  Stack,
+  Text,
+} from "~/design-system";
 
 import petProjects from "./pet-projects";
 

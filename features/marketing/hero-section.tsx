@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "phosphor-react";
 
 import {
+  ArrowUpRight,
   Button,
   Heading,
   Section,

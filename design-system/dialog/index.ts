@@ -1,5 +1,3 @@
-"use client";
-
 import { DialogClose } from "./dialog-close";
 import { DialogContent } from "./dialog-content";
 import { DialogDescription } from "./dialog-description";

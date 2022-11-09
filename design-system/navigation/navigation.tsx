@@ -1,11 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { GithubLogo, LinkedinLogo } from "phosphor-react";
 
 import { ContactFormDialog } from "~/contact-form/contact-form-dialog";
 
+import { GithubLogo, LinkedinLogo } from "../icon";
 import { Section, Stack } from "../layout";
 import { Text } from "../typography";
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { DialogProps, Root as RootPrimitive } from "@radix-ui/react-dialog";
 
 export function DialogRoot({

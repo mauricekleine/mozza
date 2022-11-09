@@ -52,10 +52,10 @@ export function ContactFormDialog({ buttonSize, buttonVariant }: Props) {
       </Dialog>
 
       <Toast
+        isOpen={isToastOpen}
         onOpenChange={(open) => {
           setIsToastOpen(open);
         }}
-        open={isToastOpen}
       >
         <Toast.Title>Inquiry submitted</Toast.Title>
 

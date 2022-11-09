@@ -30,7 +30,7 @@ export function DialogContent({ children, isOpen }: Props) {
               }}
               initial={{ opacity: 0 }}
             >
-              <Content asChild className="mx-auto w-3/4 md:w-1/2">
+              <Content asChild className="mx-auto w-10/12 sm:w-1/2">
                 <motion.div
                   animate={{
                     opacity: 1,

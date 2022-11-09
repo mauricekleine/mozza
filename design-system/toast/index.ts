@@ -1,5 +1,3 @@
-"use client";
-
 import { ToastClose } from "./toast-close";
 import { ToastDescription } from "./toast-description";
 import { ToastRoot } from "./toast-root";

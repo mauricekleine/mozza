@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { z } from "zod";
 
-import { todoist } from "~/lib/todoist";
+import { todoist } from "~/lib";
 
 export default async function handler(
   req: NextApiRequest,

@@ -1,20 +1,18 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{ts,tsx}"],
+  content: ["./(app|design-system|features)/**/*.{ts,tsx}"],
   darkMode: "class",
-  plugins: [
-    require("@tailwindcss/forms")
-  ],
+  plugins: [require("@tailwindcss/forms")],
   theme: {
     extend: {
       animation: {
         blink: "blink 1s steps(2) infinite",
       },
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
-        serif: ['var(--font-serif)', ...fontFamily.serif],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        serif: ["var(--font-serif)", ...fontFamily.serif],
       },
       keyframes: {
         blink: {

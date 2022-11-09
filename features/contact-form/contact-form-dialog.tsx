@@ -3,11 +3,9 @@
 import { PaperPlaneTilt } from "phosphor-react";
 import { useState } from "react";
 
+import { Button, ButtonProps, Card, Dialog, Toast } from "~/design-system";
+
 import { ContactForm } from "~/contact-form";
-import { Button, ButtonProps } from "~/ui/button";
-import { Card } from "~/ui/card";
-import { Dialog } from "~/ui/dialog";
-import { Toast } from "~/ui/toast";
 
 type Props = {
   buttonSize?: ButtonProps["size"];

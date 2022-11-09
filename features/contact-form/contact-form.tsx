@@ -1,4 +1,11 @@
-import { Fieldset, Form, Input, InputGroup, Label, Textarea } from "~/ui/form";
+import {
+  Fieldset,
+  Form,
+  Input,
+  InputGroup,
+  Label,
+  Textarea,
+} from "~/design-system";
 
 type Props = {
   onSubmitted: () => void;

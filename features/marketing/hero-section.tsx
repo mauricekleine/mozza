@@ -3,10 +3,16 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "phosphor-react";
 
-import { ContactFormDialog } from "~/contact-form/contact-form-dialog";
-import { Button } from "~/ui/button";
-import { Section, Stack } from "~/ui/layout";
-import { Heading, Text, Typewriter } from "~/ui/typography";
+import {
+  Button,
+  Heading,
+  Section,
+  Stack,
+  Text,
+  Typewriter,
+} from "~/design-system";
+
+import { ContactFormDialog } from "~/contact-form";
 
 export function HeroSection() {
   return (

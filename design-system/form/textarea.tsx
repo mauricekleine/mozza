@@ -1,10 +1,6 @@
-import {
-  ChangeEventHandler,
-  ComponentProps,
-  ReactNode,
-  useRef,
-  useState,
-} from "react";
+"use client";
+
+import { ChangeEventHandler, ComponentProps, useState } from "react";
 
 type IntrinsicTextareaProps = ComponentProps<"textarea">;
 

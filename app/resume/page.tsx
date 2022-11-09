@@ -1,9 +1,9 @@
 import { compareDesc, format, formatDistance, max } from "date-fns";
 
-import type { Experience } from "~/resume/experience";
-import experience from "~/resume/experience";
-import { Stack } from "~/ui/layout";
-import { Heading, Link } from "~/ui/typography";
+import { Heading, Link, Stack } from "~/design-system";
+
+import type { Experience } from "./experience";
+import experience from "./experience";
 
 const getLastEndDate = (experience: Experience) => {
   const endDates = experience.positions.map(({ endDate }) =>

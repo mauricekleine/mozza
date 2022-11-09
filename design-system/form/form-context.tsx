@@ -1,4 +1,6 @@
-import { RefObject, createContext } from "react";
+"use client";
+
+import { createContext } from "react";
 
 type FormContext = {
   isSubmitting: boolean;

@@ -1,5 +1,4 @@
-import { Grid, Section, Stack } from "~/ui/layout";
-import { Heading } from "~/ui/typography";
+import { Grid, Heading, Section, Stack } from "~/design-system";
 
 import {
   DistriversLogo,

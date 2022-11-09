@@ -5,9 +5,9 @@ import Link from "next/link";
 import { GithubLogo, LinkedinLogo } from "phosphor-react";
 
 import { ContactFormDialog } from "~/contact-form/contact-form-dialog";
-import { Text } from "~/ui/typography";
 
 import { Section, Stack } from "../layout";
+import { Text } from "../typography";
 
 export function Navigation() {
   return (

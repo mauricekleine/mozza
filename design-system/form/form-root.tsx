@@ -1,3 +1,5 @@
+"use client";
+
 import { ComponentProps, FormEventHandler, ReactNode, useState } from "react";
 
 import { FormProvider } from "./form-context";

@@ -2,9 +2,7 @@
 
 import { Cat } from "phosphor-react";
 
-import { Card } from "~/ui/card";
-import { Section, Stack } from "~/ui/layout";
-import { Heading, Link, Text } from "~/ui/typography";
+import { Card, Heading, Link, Section, Stack, Text } from "~/design-system";
 
 import petProjects from "./pet-projects";
 

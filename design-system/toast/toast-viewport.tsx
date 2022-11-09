@@ -1,3 +1,5 @@
+"use client";
+
 import { Viewport as ViewportPrimitive } from "@radix-ui/react-toast";
 
 export function ToastViewport() {

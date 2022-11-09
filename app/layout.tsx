@@ -1,10 +1,9 @@
 import { Inter, Lora } from "@next/font/google";
 import classNames from "classnames";
 
-import { Navigation } from "~/ui/navigation";
-import { ToastProvider, ToastViewport } from "~/ui/toast";
+import { Navigation, ToastProvider, ToastViewport } from "~/design-system";
 
-import "~/global.css";
+import "./global.css";
 
 const sans = Inter({
   subsets: ["latin"],

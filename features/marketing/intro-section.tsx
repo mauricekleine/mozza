@@ -3,9 +3,7 @@
 import Image from "next/image";
 import { HandWaving } from "phosphor-react";
 
-import { Card } from "~/ui/card";
-import { Section, Stack } from "~/ui/layout";
-import { Link, Text } from "~/ui/typography";
+import { Card, Link, Section, Stack, Text } from "~/design-system";
 
 export function IntroSection() {
   return (

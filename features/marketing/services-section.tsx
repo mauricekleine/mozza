@@ -2,8 +2,7 @@
 
 import { Package } from "phosphor-react";
 
-import { Grid, Section, Stack } from "~/ui/layout";
-import { Heading } from "~/ui/typography";
+import { Grid, Heading, Section, Stack } from "~/design-system";
 
 export function ServicesSection() {
   return (

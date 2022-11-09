@@ -1,3 +1,5 @@
+"use client";
+
 import { Close, Content, Overlay, Portal } from "@radix-ui/react-dialog";
 import { motion } from "framer-motion";
 import { X } from "phosphor-react";

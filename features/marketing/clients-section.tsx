@@ -22,7 +22,7 @@ export function ClientsSection() {
           <Grid
             alignItems="center"
             columns={{ base: 2, md: 4 }}
-            gap={{ base: 4, md: 8 }}
+            gap={8}
             justifyItems="center"
             rows={{ base: "none", md: 2 }}
           >

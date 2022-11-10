@@ -1,17 +1,12 @@
+import { IconBase } from "./icon-base";
+
 type Props = {
   className?: string;
 };
 
-export function LinkedinLogo({ className = "h-4 w-4" }: Props) {
+export function LinkedinLogo({ className }: Props) {
   return (
-    <svg
-      className={className}
-      fill="currentColor"
-      height="192"
-      viewBox="0 0 256 256"
-      width="192"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <IconBase className={className}>
       <rect width="256" height="256" fill="none"></rect>
 
       <rect
@@ -61,6 +56,6 @@ export function LinkedinLogo({ className = "h-4 w-4" }: Props) {
       ></path>
 
       <circle cx="88" cy="80" r="12"></circle>
-    </svg>
+    </IconBase>
   );
 }

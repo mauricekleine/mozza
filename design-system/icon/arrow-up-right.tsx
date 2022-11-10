@@ -1,17 +1,12 @@
+import { IconBase } from "./icon-base";
+
 type Props = {
   className?: string;
 };
 
-export function ArrowUpRight({ className = "h-4 w-4" }: Props) {
+export function ArrowUpRight({ className }: Props) {
   return (
-    <svg
-      className={className}
-      fill="currentColor"
-      height="192"
-      viewBox="0 0 256 256"
-      width="192"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <IconBase className={className}>
       <rect width="256" height="256" fill="none"></rect>
 
       <line
@@ -34,6 +29,6 @@ export function ArrowUpRight({ className = "h-4 w-4" }: Props) {
         strokeLinejoin="round"
         strokeWidth="16"
       ></polyline>
-    </svg>
+    </IconBase>
   );
 }

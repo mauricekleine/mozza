@@ -17,7 +17,7 @@ import { ContactFormDialog } from "~/contact-form";
 export function HeroSection() {
   return (
     <Section>
-      <div className="my-32">
+      <div className="my-16 sm:my-32">
         <Stack gap={16}>
           <motion.div
             animate={{ opacity: 1, y: 0 }}

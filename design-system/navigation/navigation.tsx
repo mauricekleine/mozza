@@ -32,18 +32,13 @@ export function Navigation() {
 
           <Stack alignItems="center" direction="horizontal" gap={4}>
             <Stack alignItems="center" direction="horizontal" gap={2}>
-              <Link
-                className="p-1"
-                href="https://github.com/mauricekleine"
-                type="nav"
-              >
+              <Link className="p-1" href="https://github.com/mauricekleine">
                 <GithubLogo className="h-4 w-4 fill-white" />
               </Link>
 
               <Link
                 className="-mr-1 p-1"
                 href="https://www.linkedin.com/in/mauricekleine/"
-                type="nav"
               >
                 <LinkedinLogo className="h-4 w-4 fill-white" />
               </Link>

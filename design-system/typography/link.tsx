@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import NextLink from "next/link";
 import type { HTMLAttributes, ReactNode } from "react";
 
@@ -8,16 +7,13 @@ type Props = {
   children: ReactNode;
   className?: HTMLAttributes<HTMLAnchorElement>["className"];
   href: string;
-  type?: "default" | "nav";
 };
 
-export function Link({ children, href, type = "default" }: Props) {
+export function Link({ children, href }: Props) {
   const isInternalLink = !href.startsWith("http");
 
-  const className = classNames("leading-normal", {
-    "text-sm text-white": type == "nav",
-    "underline hover:no-underline": type !== "nav",
-  });
+  const className =
+    "text-slate-400 underline transition-colors hover:text-slate-200 hover:no-underline";
 
   if (isInternalLink) {
     return (
@@ -29,7 +25,7 @@ export function Link({ children, href, type = "default" }: Props) {
 
   return (
     <a
-      className="inline-flex items-center text-slate-400 underline transition-colors hover:text-slate-200 hover:no-underline"
+      className={className}
       href={href}
       rel="noopener noreferrer"
       target="_blank"

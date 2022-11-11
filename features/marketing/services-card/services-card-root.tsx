@@ -9,7 +9,9 @@ export function ServicesCardRoot({
 }) {
   return (
     <div className="rounded-lg border border-slate-200/10 bg-gradient-to-br from-slate-200/10 to-black px-8 py-8 text-left">
-      <Stack gap={2}>{children}</Stack>
+      <Stack gap={2} textAlign="center">
+        {children}
+      </Stack>
     </div>
   );
 }

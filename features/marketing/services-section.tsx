@@ -73,7 +73,11 @@ export function ServicesSection() {
 
             <ServicesCard.Title>DevOps & Infrastructure</ServicesCard.Title>
 
-            <ServicesCard.Description>TODO</ServicesCard.Description>
+            <ServicesCard.Description>
+              From setting up software workflows, to creating and maintaining
+              acceptance, staging and production environments that are
+              automatically deployed.
+            </ServicesCard.Description>
           </ServicesCard>
 
           <ServicesCard>
@@ -81,7 +85,11 @@ export function ServicesSection() {
 
             <ServicesCard.Title>Product Management</ServicesCard.Title>
 
-            <ServicesCard.Description>TODO</ServicesCard.Description>
+            <ServicesCard.Description>
+              Nothing is as frustrating as shipping features that are not used.
+              Listening to your users, capturing their insights and translating
+              that into high-confidence roadmaps.
+            </ServicesCard.Description>
           </ServicesCard>
 
           <ServicesCard>
@@ -89,7 +97,11 @@ export function ServicesSection() {
 
             <ServicesCard.Title>Engineering Management</ServicesCard.Title>
 
-            <ServicesCard.Description>TODO</ServicesCard.Description>
+            <ServicesCard.Description>
+              Coaching teams and team members, hiring and onboarding processes,
+              and working cross-functionally in an agile way - I can help you
+              improve all of this.
+            </ServicesCard.Description>
           </ServicesCard>
         </Grid>
       </Stack>

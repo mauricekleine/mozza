@@ -14,7 +14,7 @@ export function CompanyRoot({ children, logo, website }: Props) {
   const Logo = logo;
 
   return (
-    <Stack alignItems="start" gap={4}>
+    <Stack alignItems="start" gap={2}>
       <LogoLink href={website} logo={Logo} />
 
       <Stack gap={4}>{children}</Stack>

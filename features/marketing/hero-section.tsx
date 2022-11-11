@@ -32,7 +32,13 @@ export function HeroSection() {
               <Heading as="h1">Maurice Kleine</Heading>
 
               <Stack direction="horizontal" gap={1}>
-                <Text color={300} serif size="2xl" weight="bold">
+                <Text
+                  color={400}
+                  serif
+                  size="2xl"
+                  tracking="tight"
+                  weight="bold"
+                >
                   Freelance
                 </Text>
 
@@ -47,7 +53,13 @@ export function HeroSection() {
                   ]}
                 />
 
-                <Text color={300} serif size="2xl" weight="bold">
+                <Text
+                  color={400}
+                  serif
+                  size="2xl"
+                  tracking="tight"
+                  weight="bold"
+                >
                   Engineer
                 </Text>
               </Stack>

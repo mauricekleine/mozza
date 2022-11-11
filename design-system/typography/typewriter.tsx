@@ -79,7 +79,7 @@ export function Typewriter({ text }: Props) {
 
   return (
     <>
-      <Text color={300} serif size="2xl" weight="bold">
+      <Text color={400} serif size="2xl" tracking="tight" weight="bold">
         {textToRender}
       </Text>
 

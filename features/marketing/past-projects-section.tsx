@@ -1,12 +1,14 @@
 import { Grid, Heading, Section, Stack, Text } from "~/design-system";
 
 import {
+  AeonLogo,
   DistriversLogo,
   GoodupLogo,
   KlippaLogo,
   LogoLink,
   ProductboardLogo,
   QuestLogo,
+  StormDigitalLogo,
   TopAnimationLogo,
   UButlerLogo,
   VacanceSelectLogo,
@@ -28,10 +30,10 @@ export function PastProjectsSection() {
       </Section>
 
       <div className="border-b border-t border-slate-200/10 bg-black bg-gradient-to-r from-black via-slate-900/50 to-black px-8 py-8 sm:px-0">
-        <Section size="lg">
+        <Section>
           <Grid
             alignItems="center"
-            columns={{ base: 2, md: 4 }}
+            columns={{ base: 2, md: 5 }}
             gap={8}
             justifyItems="center"
             rows={{ base: "none", md: 2 }}
@@ -45,9 +47,16 @@ export function PastProjectsSection() {
 
             <LogoLink href="https://quest.app/" logo={QuestLogo} />
 
+            <LogoLink href="https://aeon.co/" logo={AeonLogo} />
+
             <LogoLink href="https://goodup.com/" logo={GoodupLogo} />
 
             <LogoLink href="https://klippa.com/" logo={KlippaLogo} />
+
+            <LogoLink
+              href="https://www.crunchbase.com/organization/storm-digital/"
+              logo={StormDigitalLogo}
+            />
 
             <LogoLink
               href="https://vacanceselect.recruitee.com/"

@@ -9,7 +9,7 @@ export function IntroSection() {
       <Card>
         <Card.Icon icon={HandWaving} />
 
-        <Card.Title>Hi! I&apos;m Maurice</Card.Title>
+        <Card.Title>Hi, nice to meet you!</Card.Title>
 
         <Stack gap={4}>
           <Text weight="bold">

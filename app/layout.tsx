@@ -1,6 +1,6 @@
 "use client";
 
-import { Inter, Lora } from "@next/font/google";
+import { Inter, Vollkorn } from "@next/font/google";
 import classNames from "classnames";
 import { MotionConfig } from "framer-motion";
 import Script from "next/script";
@@ -16,7 +16,7 @@ const sans = Inter({
   variable: "--font-sans",
 });
 
-const serif = Lora({
+const serif = Vollkorn({
   subsets: ["latin"],
   variable: "--font-serif",
 });

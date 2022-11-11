@@ -1,17 +1,15 @@
 import classNames from "classnames";
 import { ForwardedRef, ReactNode, forwardRef } from "react";
 
-type Element = "p" | "span";
-type Weight = "normal" | "semibold" | "bold";
-
 type Props = {
-  as?: Element;
+  as?: "p" | "span";
   children: ReactNode;
   color?: 0 | 50 | 100 | 200 | 300 | 400;
   id?: string;
   serif?: boolean;
   size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl";
-  weight?: Weight;
+  tracking?: "tighter" | "tight" | "normal";
+  weight?: "normal" | "semibold" | "bold";
 };
 
 export const Text = forwardRef<HTMLParagraphElement | HTMLSpanElement, Props>(
@@ -20,9 +18,10 @@ export const Text = forwardRef<HTMLParagraphElement | HTMLSpanElement, Props>(
       as = "span",
       children,
       color = 200,
-      weight,
+      weight = "normal",
       serif = false,
-      size,
+      size = "base",
+      tracking = "normal",
       ...props
     },
     ref
@@ -44,6 +43,9 @@ export const Text = forwardRef<HTMLParagraphElement | HTMLSpanElement, Props>(
       "text-slate-200": color === 200,
       "text-slate-300": color === 300,
       "text-slate-400": color === 400,
+      "tracking-tighter": tracking === "tighter",
+      "tracking-tight": tracking === "tight",
+      "tracking-normal": tracking === "normal",
     });
 
     if (as === "p") {

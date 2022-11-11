@@ -1,148 +1,15 @@
-import { addYears, compareDesc, format, formatDistance, max } from "date-fns";
-
 import { Heading, Link, Section, Stack } from "~/design-system";
 
-type Positions = {
-  endDate?: string;
-  location: string;
-  startDate: string;
-  title: string;
-};
-
-type Experience = {
-  company: {
-    name: string;
-    website: string;
-  };
-  positions: Positions[];
-};
-
-const experience: Experience[] = [
-  {
-    company: {
-      name: "uButler",
-      website: "https://ubutler.nl",
-    },
-    positions: [
-      {
-        endDate: "2022/12/31",
-        location: "Amsterdam",
-        startDate: "2022/03/01",
-        title: "Lead Software Engineer",
-      },
-    ],
-  },
-  {
-    company: {
-      name: "Productboard",
-      website: "https://productboard.com",
-    },
-    positions: [
-      {
-        endDate: "2021/11/01",
-        location: "Remote",
-        startDate: "2019/07/01",
-        title: "Engineering Manager",
-      },
-      {
-        endDate: "2019/07/01",
-        location: "Prague, Czech Republic",
-        startDate: "2019/01/01",
-        title: "Frontend Engineer",
-      },
-    ],
-  },
-  {
-    company: {
-      name: "Freelance",
-      website: "https://mauricekleine.com",
-    },
-    positions: [
-      {
-        location: "Remote",
-        startDate: "2013/08/01",
-        title: "Full-stack Engineer",
-      },
-    ],
-  },
-  {
-    company: {
-      name: "Aeon",
-      website: "https://aeon.co",
-    },
-    positions: [
-      {
-        endDate: "2018/09/01",
-        location: "Remote",
-        startDate: "2017/11/01",
-        title: "Mobile App Developer (Volunteer)",
-      },
-    ],
-  },
-  {
-    company: {
-      name: "Goodup",
-      website: "https://goodup.com",
-    },
-    positions: [
-      {
-        endDate: "2018/10/01",
-        location: "Amsterdam, The Netherlands",
-        startDate: "2018/01/01",
-        title: "Product Manager",
-      },
-      {
-        endDate: "2018/01/01",
-        location: "Amsterdam, The Netherlands",
-        startDate: "2017/03/01",
-        title: "Javascript Engineer",
-      },
-    ],
-  },
-  {
-    company: {
-      name: "Klippa",
-      website: "https://klippa.com",
-    },
-    positions: [
-      {
-        endDate: "2017/03/01",
-        location: "Groningen, The Netherlands",
-        startDate: "2015/01/01",
-        title: "Frontend Engineer",
-      },
-    ],
-  },
-  {
-    company: {
-      name: "Storm Digital",
-      website: "https://www.stormdigital.nl/",
-    },
-    positions: [
-      {
-        endDate: "2016/12/01",
-        location: "Groningen, The Netherlands",
-        startDate: "2016/05/01",
-        title: "Interim UX Designer",
-      },
-    ],
-  },
-];
-
-const getLastEndDate = (experience: Experience) => {
-  const endDates = experience.positions.map(({ endDate }) =>
-    endDate ? new Date(endDate) : addYears(new Date(), 99)
-  );
-
-  return max(endDates);
-};
-
-const experienceSortedByEndDate = experience.sort((exp1, exp2) => {
-  const exp1EndDate = getLastEndDate(exp1);
-  const exp2EndDate = getLastEndDate(exp2);
-
-  return compareDesc(exp1EndDate, exp2EndDate);
-});
+import {
+  AeonLogo,
+  GoodupLogo,
+  KlippaLogo,
+  MauriceKleineLogo,
+  ProductboardLogo,
+  StormDigitalLogo,
+  UButlerLogo,
+} from "~/marketing/client-logos";
+import { Company } from "~/resume";
 
 export default function ResumePage() {
   return (
@@ -164,44 +31,91 @@ export default function ResumePage() {
             <Stack gap={8}>
               <Heading as="h2">👨‍💻 Experience</Heading>
 
-              <Stack gap={8}>
-                {experienceSortedByEndDate.map(({ company, positions }) => (
-                  <div className="pl-2" key={company.name}>
-                    <div className="flex items-center">
-                      <div className="mr-1.5 -ml-1.5 inline-block h-3.5 w-3.5 rounded-full border-2 border-slate-300"></div>
+              <Stack gap={16}>
+                <Company
+                  logo={MauriceKleineLogo}
+                  website="https://mauricekleine.com"
+                >
+                  <Company.Position
+                    location="Remote"
+                    startDate="2013/08/01"
+                    title="Full-stack Engineer"
+                  />
+                </Company>
 
-                      <Link href={company.website}>{company.name}</Link>
-                    </div>
+                <Company logo={UButlerLogo} website="https://ubutler.nl">
+                  <Company.Position
+                    endDate="2022/12/31"
+                    location="Amsterdam"
+                    startDate="2022/03/01"
+                    title="Lead Software Engineer"
+                  />
+                </Company>
 
-                    <div className="border-l-2 border-slate-400 pl-3 pt-1">
-                      <Stack gap={4}>
-                        {positions.map(
-                          ({ endDate, location, startDate, title }) => {
-                            const start = new Date(startDate);
-                            const end = endDate
-                              ? new Date(endDate)
-                              : new Date();
+                <Company
+                  logo={ProductboardLogo}
+                  website="https://productboard.com"
+                >
+                  <Company.Position
+                    endDate="2021/11/01"
+                    location="Remote"
+                    startDate="2019/07/01"
+                    title="Engineering Manager"
+                  />
 
-                            const tenureString = `
-                            ${format(start, "MMM yyyy")} -
-                            ${endDate ? format(end, "MMM yyyy") : "Present"} ·
-                            ${formatDistance(start, end)}`;
+                  <Company.Position
+                    endDate="2019/07/01"
+                    location="Prague, Czech Republic"
+                    startDate="2019/01/01"
+                    title="Frontend Engineer"
+                  />
+                </Company>
 
-                            return (
-                              <div key={title}>
-                                <Heading as="h3">{title}</Heading>
+                <Company logo={AeonLogo} website="https://aeon.co">
+                  <Company.Position
+                    endDate="2018/09/01"
+                    location="Remote"
+                    startDate="2017/11/01"
+                    title="Mobile App Developer (Volunteer)"
+                  />
+                </Company>
 
-                                <p>{tenureString}</p>
+                <Company logo={GoodupLogo} website="https://goodup.com">
+                  <Company.Position
+                    endDate="2018/10/01"
+                    location="Amsterdam, The Netherlands"
+                    startDate="2018/01/01"
+                    title="Product Manager"
+                  />
 
-                                <p>{location}</p>
-                              </div>
-                            );
-                          }
-                        )}
-                      </Stack>
-                    </div>
-                  </div>
-                ))}
+                  <Company.Position
+                    endDate="2018/01/01"
+                    location="Amsterdam, The Netherlands"
+                    startDate="2017/03/01"
+                    title="Javascript Engineer"
+                  />
+                </Company>
+
+                <Company logo={KlippaLogo} website="https://aeon.co">
+                  <Company.Position
+                    endDate="2017/03/01"
+                    location="Groningen, The Netherlands"
+                    startDate="2015/01/01"
+                    title="Frontend Engineer"
+                  />
+                </Company>
+
+                <Company
+                  logo={StormDigitalLogo}
+                  website="https://www.stormdigital.nl/"
+                >
+                  <Company.Position
+                    endDate="2016/12/01"
+                    location="Groningen, The Netherlands"
+                    startDate="2016/05/01"
+                    title="Interim UX Designer"
+                  />
+                </Company>
               </Stack>
             </Stack>
           </div>

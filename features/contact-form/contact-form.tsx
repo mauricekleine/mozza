@@ -47,7 +47,7 @@ export function ContactForm({ onSubmitted }: Props) {
 
         <Form.Button>Submit</Form.Button>
 
-        <div className="border-t border-white/10 pt-6">
+        <div className="border-t border-slate-200/10 pt-6">
           <InputGroup>
             <div className="text-center">
               <Label htmlFor="">Spam protection</Label>

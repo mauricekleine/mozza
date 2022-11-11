@@ -1,33 +1,96 @@
-import { Grid, Heading, Package, Section, Stack } from "~/design-system";
+import { Grid, Heading, Section, Stack, Text } from "~/design-system";
+import {
+  Atom,
+  Boat,
+  Database,
+  RocketLaunch,
+  Stack as StackIcon,
+  UsersThree,
+} from "~/design-system/icon";
+
+import { ServicesCard } from "./services-card";
 
 export function ServicesSection() {
   return (
     <Section size="lg">
       <Stack gap={8} justifyContent="center" textAlign="center">
-        <Heading as="h2">My services</Heading>
+        <Stack gap={4}>
+          <Heading as="h2">Expertise</Heading>
+
+          <Section>
+            <Text color={300}>
+              I like to solve problems, in product teams with a strong vision.
+              Sometimes I do this with code, other times by coaching and
+              mentoring the people in those teams. I understand that fast
+              iteration is the key to building amazing products.
+            </Text>
+          </Section>
+        </Stack>
 
         <Grid
-          columns={{ base: 1, sm: 2, md: 3 }}
+          columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
           gap={4}
-          rows={{ base: 9, sm: 5, md: 3 }}
+          rows={{ base: 6, sm: 3, md: 3, lg: 2 }}
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
-            <div
-              className="rounded-lg border border-slate-200/10 bg-gradient-to-br from-white/10 via-black to-black px-8 py-8 text-left"
-              key={i}
-            >
-              <Stack gap={2}>
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40">
-                  <Package className="h-8 w-8" />
-                </div>
+          <ServicesCard>
+            <ServicesCard.Icon icon={Boat} />
 
-                <div>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Earum aliquid dolores explicabo ratione fugit recusandae.
-                </div>
-              </Stack>
-            </div>
-          ))}
+            <ServicesCard.Title>Ship Features</ServicesCard.Title>
+
+            <ServicesCard.Description>
+              The backlog is never-ending and speed is of the essence; if
+              you&apos;re looking to increase your team&apos;s velocity by
+              releasing features faster, look no further.
+            </ServicesCard.Description>
+          </ServicesCard>
+
+          <ServicesCard>
+            <ServicesCard.Icon icon={Atom} />
+
+            <ServicesCard.Title>Developer Experience</ServicesCard.Title>
+
+            <ServicesCard.Description>
+              Slow build times? Pipelines that are still running after you get a
+              coffee, twice? Untyped codebase causing easily avoidable bugs?
+              Monorepos? I got you.
+            </ServicesCard.Description>
+          </ServicesCard>
+
+          <ServicesCard>
+            <ServicesCard.Icon icon={StackIcon} />
+
+            <ServicesCard.Title>Design Systems</ServicesCard.Title>
+
+            <ServicesCard.Description>
+              At the core of a a great UX sits a well-implemented design system:
+              composable, consistent, and with accessibility always in mind. I
+              can help you with that.
+            </ServicesCard.Description>
+          </ServicesCard>
+
+          <ServicesCard>
+            <ServicesCard.Icon icon={Database} />
+
+            <ServicesCard.Title>DevOps & Infrastructure</ServicesCard.Title>
+
+            <ServicesCard.Description>TODO</ServicesCard.Description>
+          </ServicesCard>
+
+          <ServicesCard>
+            <ServicesCard.Icon icon={RocketLaunch} />
+
+            <ServicesCard.Title>Product Management</ServicesCard.Title>
+
+            <ServicesCard.Description>TODO</ServicesCard.Description>
+          </ServicesCard>
+
+          <ServicesCard>
+            <ServicesCard.Icon icon={UsersThree} />
+
+            <ServicesCard.Title>Engineering Management</ServicesCard.Title>
+
+            <ServicesCard.Description>TODO</ServicesCard.Description>
+          </ServicesCard>
         </Grid>
       </Stack>
     </Section>

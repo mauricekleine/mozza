@@ -4,48 +4,23 @@ type Props = {
   className?: string;
 };
 
-export function LinkedinLogo({ className }: Props) {
+export function Database({ className }: Props) {
   return (
     <IconBase className={className}>
-      <rect
-        x="36"
-        y="36"
-        width="184"
-        height="184"
-        rx="8"
+      <ellipse
+        cx="128"
+        cy="80"
+        rx="88"
+        ry="48"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></rect>
-
-      <line
-        x1="120"
-        y1="112"
-        x2="120"
-        y2="176"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      ></line>
-
-      <line
-        x1="88"
-        y1="112"
-        x2="88"
-        y2="176"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      ></line>
+      ></ellipse>
 
       <path
-        d="M120,140a28,28,0,0,1,56,0v36"
+        d="M40,80v48c0,26.5,39.4,48,88,48s88-21.5,88-48V80"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
@@ -53,7 +28,14 @@ export function LinkedinLogo({ className }: Props) {
         strokeWidth="16"
       ></path>
 
-      <circle cx="88" cy="80" r="12"></circle>
+      <path
+        d="M40,128v48c0,26.5,39.4,48,88,48s88-21.5,88-48V128"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
+      ></path>
     </IconBase>
   );
 }

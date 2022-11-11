@@ -48,11 +48,12 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
     }
 
     const className = classNames("rounded-full transition-colors", {
-      "py-2 px-6 text-sm": size === "sm",
-      "py-3 px-8": size === "md",
+      "text-sm": size === "sm",
+      "py-2 px-6": size === "sm" && variant !== "link",
+      "py-3 px-8": size === "md" && variant !== "link",
       "hover:underline": variant === "link",
       "border border-slate-400 hover:border-slate-200": variant === "outline",
-      "bg-slate-200 text-slate-800 hover:bg-slate-300 hover:text-slate-900":
+      "border border-transparent bg-slate-200 text-slate-800 hover:bg-slate-300 hover:text-slate-900":
         variant === "solid",
     });
 

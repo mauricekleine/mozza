@@ -1,4 +1,4 @@
-import { Grid, Heading, Section, Stack } from "~/design-system";
+import { Grid, Heading, Section, Stack, Text } from "~/design-system";
 
 import {
   DistriversLogo,
@@ -12,13 +12,23 @@ import {
   VacanceSelectLogo,
 } from "./client-logos";
 
-export function ClientsSection() {
+export function PastProjectsSection() {
   return (
-    <div className="border-b border-t border-slate-200/10 bg-black bg-gradient-to-r from-black via-slate-900/50 to-black px-8 py-8 sm:px-0">
-      <Section size="lg">
-        <Stack gap={8} textAlign="center">
-          <Heading as="h4">Past projects</Heading>
+    <Stack gap={8} justifyContent="center" textAlign="center">
+      <Section>
+        <Stack gap={4}>
+          <Heading as="h2">Past Projects</Heading>
 
+          <Section>
+            <Text color={300}>
+              From start-up, to scale-up, across all kinds of industries
+            </Text>
+          </Section>
+        </Stack>
+      </Section>
+
+      <div className="border-b border-t border-slate-200/10 bg-black bg-gradient-to-r from-black via-slate-900/50 to-black px-8 py-8 sm:px-0">
+        <Section size="lg">
           <Grid
             alignItems="center"
             columns={{ base: 2, md: 4 }}
@@ -48,8 +58,8 @@ export function ClientsSection() {
 
             <LogoLink href="https://distrivers.nl/" logo={DistriversLogo} />
           </Grid>
-        </Stack>
-      </Section>
-    </div>
+        </Section>
+      </div>
+    </Stack>
   );
 }

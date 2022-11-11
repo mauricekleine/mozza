@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-import { Card, HandWaving, Link, Section, Stack, Text } from "~/design-system";
+import { Card, Link, Section, Stack, Text } from "~/design-system";
+import { HandWaving } from "~/design-system/icon";
 
 export function IntroSection() {
   return (

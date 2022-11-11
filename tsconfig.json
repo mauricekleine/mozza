@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "~/design-system": ["./design-system"],
+      "~/design-system/icon": ["./design-system/icon"],
       "~/lib": ["./lib"],
       "~/*": ["./features/*"]
     },

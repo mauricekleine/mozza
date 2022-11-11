@@ -4,29 +4,36 @@ type Props = {
   className?: string;
 };
 
-export function ArrowUpRight({ className }: Props) {
+export function Atom({ className }: Props) {
   return (
     <IconBase className={className}>
-      <line
-        x1="64"
-        y1="192"
-        x2="192"
-        y2="64"
+      <ellipse
+        cx="128"
+        cy="128"
+        rx="44"
+        ry="116"
+        transform="translate(-53 128) rotate(-45)"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></line>
+      ></ellipse>
 
-      <polyline
-        points="88 64 192 64 192 168"
+      <ellipse
+        cx="128"
+        cy="128"
+        rx="116"
+        ry="44"
+        transform="translate(-53 128) rotate(-45)"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></polyline>
+      ></ellipse>
+
+      <circle cx="128" cy="128" r="12"></circle>
     </IconBase>
   );
 }

@@ -1,24 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
-import {
-  Button,
-  ButtonProps,
-  Card,
-  Dialog,
-  PaperPlaneTilt,
-  Toast,
-} from "~/design-system";
+import { Card, Dialog, Toast } from "~/design-system";
 
 import { ContactForm } from "~/contact-form";
 
 type Props = {
-  buttonSize?: ButtonProps["size"];
-  buttonVariant?: ButtonProps["variant"];
+  children: ReactNode;
 };
 
-export function ContactFormDialog({ buttonSize, buttonVariant }: Props) {
+export function ContactFormDialog({ children }: Props) {
   const [hasErrors, setHasErrors] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isToastOpen, setIsToastOpen] = useState(false);
@@ -33,21 +25,14 @@ export function ContactFormDialog({ buttonSize, buttonVariant }: Props) {
       setIsDialogOpen(false);
     }
   };
+
   return (
     <>
       <Dialog
         isOpen={isDialogOpen}
         onOpenChange={(open) => setIsDialogOpen(open)}
       >
-        <Dialog.Trigger asChild>
-          <Button
-            iconLeft={PaperPlaneTilt}
-            size={buttonSize}
-            variant={buttonVariant}
-          >
-            Contact
-          </Button>
-        </Dialog.Trigger>
+        <Dialog.Trigger asChild>{children}</Dialog.Trigger>
 
         <Dialog.Content isOpen={isDialogOpen}>
           <Card>

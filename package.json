@@ -14,7 +14,7 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "lint:fix": "eslint ./app --fix && prettier ./app --write",
+    "lint:fix": "eslint . --fix && prettier . --write",
     "prepare": "husky install",
     "start": "next start",
     "typecheck": "tsc -b"

@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { ReactNode } from "react";
 
 import { CircleNotch, Icon } from "../icon";
 import { Stack } from "../layout";
@@ -6,7 +7,7 @@ import { Stack } from "../layout";
 import { ButtonSize } from "./button";
 
 export type Props = {
-  children: string;
+  children: ReactNode;
   iconLeft?: Icon;
   iconRight?: Icon;
   isLoading?: boolean;

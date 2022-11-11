@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { Text } from "./text";
+
 const ERASE_SPEED = 75;
 const WRITE_SPEED = 300;
 
@@ -76,10 +78,12 @@ export function Typewriter({ text }: Props) {
   }, [cursorSpeed, isErasing, text, textToRender]);
 
   return (
-    <div className="inline-block">
-      <span>{textToRender}</span>
+    <>
+      <Text color={300} serif size="2xl" weight="bold">
+        {textToRender}
+      </Text>
 
-      <span className="animate-blink border-r border-r-slate-200"></span>
-    </div>
+      <span className="-ml-1 animate-blink border-r border-r-slate-200"></span>
+    </>
   );
 }

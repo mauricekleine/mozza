@@ -30,7 +30,10 @@ module.exports = {
           {
             pattern: "~/design-system",
             group: "internal",
-            position: "after",
+          },
+          {
+            pattern: "~/design-system/icon",
+            group: "internal",
           },
           {
             pattern: "~/lib",

@@ -7,8 +7,6 @@ type Props = {
 export function GithubLogo({ className }: Props) {
   return (
     <IconBase className={className}>
-      <rect width="256" height="256" fill="none"></rect>
-
       <path
         d="M84,240a23.9,23.9,0,0,0,24-24V168"
         fill="none"

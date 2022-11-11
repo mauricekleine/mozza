@@ -4,68 +4,64 @@ type Props = {
   className?: string;
 };
 
-export function SmileyXEyes({ className }: Props) {
+export function UsersThree({ className }: Props) {
   return (
     <IconBase className={className}>
       <circle
         cx="128"
-        cy="128"
-        r="96"
+        cy="140"
+        r="40"
         fill="none"
         stroke="currentColor"
-        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         strokeWidth="16"
       ></circle>
 
-      <line
-        x1="184"
-        y1="96"
-        x2="152"
-        y2="128"
+      <path
+        d="M196,116a59.8,59.8,0,0,1,48,24"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></line>
+      ></path>
 
-      <line
-        x1="184"
-        y1="128"
-        x2="152"
-        y2="96"
+      <path
+        d="M12,140a59.8,59.8,0,0,1,48-24"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></line>
+      ></path>
 
-      <line
-        x1="104"
-        y1="96"
-        x2="72"
-        y2="128"
+      <path
+        d="M70.4,216a64.1,64.1,0,0,1,115.2,0"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></line>
+      ></path>
 
-      <line
-        x1="104"
-        y1="128"
-        x2="72"
-        y2="96"
+      <path
+        d="M60,116A32,32,0,1,1,91.4,78"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></line>
+      ></path>
 
-      <circle cx="128" cy="180" r="12"></circle>
+      <path
+        d="M164.6,78A32,32,0,1,1,196,116"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
+      ></path>
     </IconBase>
   );
 }

@@ -5,7 +5,9 @@ import classNames from "classnames";
 import { MotionConfig } from "framer-motion";
 import Script from "next/script";
 
-import { Navigation, ToastProvider, ToastViewport } from "~/design-system";
+import { Footer, ToastProvider, ToastViewport } from "~/design-system";
+
+import { Navigation } from "~/navigation";
 
 import "./global.css";
 
@@ -77,6 +79,8 @@ export default function RootLayout({
             <ToastViewport />
           </ToastProvider>
         </MotionConfig>
+
+        <Footer />
       </body>
     </html>
   );

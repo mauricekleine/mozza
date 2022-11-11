@@ -25,7 +25,7 @@ export function ToastRoot({ children, isOpen, onOpenChange, variant }: Props) {
         <RootPrimitive
           asChild
           className={classNames(
-            "pointer-events-auto w-full max-w-md overflow-hidden rounded-lg border border-b-4 border-white/10 bg-black shadow-lg",
+            "pointer-events-auto w-full max-w-md overflow-hidden rounded-lg border border-b-4 border-slate-200/10 bg-black shadow-lg",
             { "border-b-red-900": variant === "error" },
             { "border-b-green-900": variant === "success" }
           )}

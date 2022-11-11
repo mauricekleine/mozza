@@ -1,24 +1,25 @@
 import { Stack } from "~/design-system";
 
 import {
-  ClientsSection,
   HeroSection,
   IntroSection,
-  ProjectsSection,
+  PastProjectsSection,
+  PetProjectsSection,
+  ServicesSection,
 } from "~/marketing";
 
 export default function HomePage() {
   return (
-    <Stack gap={32}>
+    <Stack gap={{ base: 32, md: 64 }}>
       <HeroSection />
 
       <IntroSection />
 
-      {/* <ServicesSection /> */}
+      <ServicesSection />
 
-      <ClientsSection />
+      <PastProjectsSection />
 
-      <ProjectsSection />
+      <PetProjectsSection />
     </Stack>
   );
 }

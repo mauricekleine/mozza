@@ -4,29 +4,26 @@ type Props = {
   className?: string;
 };
 
-export function ArrowUpRight({ className }: Props) {
+export function BracketsCurly({ className }: Props) {
   return (
     <IconBase className={className}>
-      <line
-        x1="64"
-        y1="192"
-        x2="192"
-        y2="64"
+      <path
+        d="M80,40c-64,0,0,88-64,88,64,0,0,88,64,88"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></line>
+      ></path>
 
-      <polyline
-        points="88 64 192 64 192 168"
+      <path
+        d="M176,40c64,0,0,88,64,88-64,0,0,88-64,88"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></polyline>
+      ></path>
     </IconBase>
   );
 }

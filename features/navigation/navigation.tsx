@@ -1,11 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ContactFormDialog } from "~/contact-form/contact-form-dialog";
+import { Section, Stack, Text } from "~/design-system";
 
-import { GithubLogo, LinkedinLogo } from "../icon";
-import { Section, Stack } from "../layout";
-import { Text } from "../typography";
+import { NavigationContactButton } from "./navigation-contact-button";
 
 export function Navigation() {
   return (
@@ -31,22 +29,7 @@ export function Navigation() {
           </Link>
 
           <Stack alignItems="center" direction="horizontal" gap={4}>
-            <Stack alignItems="center" direction="horizontal" gap={2}>
-              <Link className="p-1" href="https://github.com/mauricekleine">
-                <GithubLogo className="h-4 w-4 fill-white" />
-              </Link>
-
-              <Link
-                className="-mr-1 p-1"
-                href="https://www.linkedin.com/in/mauricekleine/"
-              >
-                <LinkedinLogo className="h-4 w-4 fill-white" />
-              </Link>
-            </Stack>
-
-            <div className="h-8 border-r border-slate-200/40" />
-
-            <ContactFormDialog buttonSize="sm" buttonVariant="outline" />
+            <NavigationContactButton />
           </Stack>
         </div>
       </Section>

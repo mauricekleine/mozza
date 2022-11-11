@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 
 import {
-  ArrowUpRight,
   Button,
   Heading,
   Section,
@@ -11,13 +10,14 @@ import {
   Text,
   Typewriter,
 } from "~/design-system";
+import { ArrowUpRight, PaperPlaneTilt } from "~/design-system/icon";
 
 import { ContactFormDialog } from "~/contact-form";
 
 export function HeroSection() {
   return (
     <Section>
-      <div className="my-16 sm:my-32">
+      <div className="mt-16 sm:mt-32">
         <Stack gap={16}>
           <motion.div
             animate={{ opacity: 1, y: 0 }}
@@ -31,24 +31,26 @@ export function HeroSection() {
             >
               <Heading as="h1">Maurice Kleine</Heading>
 
-              <Heading as="h3">
-                <Stack direction="horizontal" gap={1}>
-                  <Text>Freelance</Text>
+              <Stack direction="horizontal" gap={1}>
+                <Text color={300} serif size="2xl" weight="bold">
+                  Freelance
+                </Text>
 
-                  <Typewriter
-                    text={[
-                      "Software",
-                      "Frontend",
-                      "Backend",
-                      "Full-stack",
-                      "Product",
-                      "UX/UI",
-                    ]}
-                  />
+                <Typewriter
+                  text={[
+                    "Software",
+                    "Frontend",
+                    "Backend",
+                    "Full-stack",
+                    "Product",
+                    "UX/UI",
+                  ]}
+                />
 
-                  <Text>Engineer</Text>
-                </Stack>
-              </Heading>
+                <Text color={300} serif size="2xl" weight="bold">
+                  Engineer
+                </Text>
+              </Stack>
             </Stack>
           </motion.div>
 
@@ -63,7 +65,11 @@ export function HeroSection() {
               gap={2}
               justifyContent="center"
             >
-              <ContactFormDialog buttonVariant="solid" />
+              <ContactFormDialog>
+                <Button iconLeft={PaperPlaneTilt} variant="solid">
+                  Contact
+                </Button>
+              </ContactFormDialog>
 
               <Button
                 as="a"

@@ -7,8 +7,6 @@ type Props = {
 export function Confetti({ className }: Props) {
   return (
     <IconBase className={className}>
-      <rect width="256" height="256" fill="none"></rect>
-
       <path
         d="M37.9,207.9,91.7,59.8a8,8,0,0,1,13.2-2.9l94.2,94.2a8,8,0,0,1-2.9,13.2L48.1,218.1A7.9,7.9,0,0,1,37.9,207.9Z"
         fill="none"

@@ -7,8 +7,6 @@ type Props = {
 export function HandWaving({ className }: Props) {
   return (
     <IconBase className={className}>
-      <rect width="256" height="256" fill="none"></rect>
-
       <path
         d="M94,61.4a20,20,0,0,1,34.6-20l30,51.9"
         fill="none"

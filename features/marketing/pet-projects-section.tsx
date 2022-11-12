@@ -39,7 +39,7 @@ const petProjects: PetProject[] = [
   {
     description: "Yep, the website you're looking at right now.",
     name: "🤙 This website",
-    repo: "https://github.com/mauricekleine/personal-website",
+    repo: "https://github.com/mauricekleine/mauricekleine.com",
     url: "https://mauricekleine.com/",
   },
 ];

@@ -19,13 +19,13 @@ const sans = Inter({
 
 const serif = localFont({
   src: [
-    { path: "../design-system/fonts/recoleta-thin.otf", weight: "100" },
-    { path: "../design-system/fonts/recoleta-light.otf", weight: "300" },
-    { path: "../design-system/fonts/recoleta-regular.otf", weight: "400" },
-    { path: "../design-system/fonts/recoleta-medium.otf", weight: "500" },
-    { path: "../design-system/fonts/recoleta-semibold.otf", weight: "600" },
-    { path: "../design-system/fonts/recoleta-bold.otf", weight: "700" },
-    { path: "../design-system/fonts/recoleta-black.otf", weight: "900" },
+    { path: "./fonts/recoleta-thin.otf", weight: "100" },
+    { path: "./fonts/recoleta-light.otf", weight: "300" },
+    { path: "./fonts/recoleta-regular.otf", weight: "400" },
+    { path: "./fonts/recoleta-medium.otf", weight: "500" },
+    { path: "./fonts/recoleta-semibold.otf", weight: "600" },
+    { path: "./fonts/recoleta-bold.otf", weight: "700" },
+    { path: "./fonts/recoleta-black.otf", weight: "900" },
   ],
   variable: "--font-serif",
 });

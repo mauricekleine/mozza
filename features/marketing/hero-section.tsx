@@ -37,7 +37,7 @@ export function HeroSection() {
                   serif
                   size="2xl"
                   tracking="tight"
-                  weight="bold"
+                  weight="semibold"
                 >
                   Freelance
                 </Text>
@@ -58,7 +58,7 @@ export function HeroSection() {
                   serif
                   size="2xl"
                   tracking="tight"
-                  weight="bold"
+                  weight="semibold"
                 >
                   Engineer
                 </Text>

@@ -22,7 +22,7 @@ const serif = localFont({
     { path: "../design-system/fonts/Recoleta-Thin.otf", weight: "100" },
     { path: "../design-system/fonts/Recoleta-Light.otf", weight: "300" },
     { path: "../design-system/fonts/Recoleta-Regular.otf", weight: "400" },
-    { path: "../design-system/fonts/Recoleta-<edium.otf", weight: "500" },
+    { path: "../design-system/fonts/Recoleta-Medium.otf", weight: "500" },
     { path: "../design-system/fonts/Recoleta-SemiBold.otf", weight: "600" },
     { path: "../design-system/fonts/Recoleta-Bold.otf", weight: "700" },
     { path: "../design-system/fonts/Recoleta-Black.otf", weight: "900" },

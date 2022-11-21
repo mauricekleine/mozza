@@ -15,7 +15,7 @@ export function NavigationContactButton() {
     const scrollTop = document.scrollingElement?.scrollTop ?? 0;
 
     setScrollPercentage(scrollTop / scrollHeight);
-  }, [setScrollPercentage]);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", scrollListener);

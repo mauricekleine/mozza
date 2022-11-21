@@ -13,8 +13,8 @@ import { ServicesCard } from "./services-card";
 export function ServicesSection() {
   return (
     <Section size="lg">
-      <Stack gap={8} justifyContent="center" textAlign="center">
-        <Stack gap={4}>
+      <Stack gap={8} justifyContent="center">
+        <Stack gap={4} textAlign="center">
           <Heading as="h2">Expertise</Heading>
 
           <Section>
@@ -28,14 +28,12 @@ export function ServicesSection() {
         </Stack>
 
         <Grid
-          columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
+          columns={{ base: 1, sm: 2, md: 2 }}
           gap={4}
-          rows={{ base: 6, sm: 3, md: 3, lg: 2 }}
+          rows={{ base: 6, sm: 3, md: 3 }}
         >
           <ServicesCard>
-            <ServicesCard.Icon icon={Boat} />
-
-            <ServicesCard.Title>Ship Features</ServicesCard.Title>
+            <ServicesCard.Title icon={Boat}>Ship Features</ServicesCard.Title>
 
             <ServicesCard.Description>
               The backlog is never-ending and speed is of the essence; if
@@ -45,9 +43,9 @@ export function ServicesSection() {
           </ServicesCard>
 
           <ServicesCard>
-            <ServicesCard.Icon icon={Atom} />
-
-            <ServicesCard.Title>Developer Experience</ServicesCard.Title>
+            <ServicesCard.Title icon={Atom}>
+              Developer Experience
+            </ServicesCard.Title>
 
             <ServicesCard.Description>
               Slow build times? Pipelines that are still running after you get a
@@ -57,9 +55,9 @@ export function ServicesSection() {
           </ServicesCard>
 
           <ServicesCard>
-            <ServicesCard.Icon icon={StackIcon} />
-
-            <ServicesCard.Title>Design Systems</ServicesCard.Title>
+            <ServicesCard.Title icon={StackIcon}>
+              Design Systems
+            </ServicesCard.Title>
 
             <ServicesCard.Description>
               At the core of a a great UX sits a well-implemented design system:
@@ -69,9 +67,9 @@ export function ServicesSection() {
           </ServicesCard>
 
           <ServicesCard>
-            <ServicesCard.Icon icon={Database} />
-
-            <ServicesCard.Title>DevOps & Infrastructure</ServicesCard.Title>
+            <ServicesCard.Title icon={Database}>
+              DevOps & Infrastructure
+            </ServicesCard.Title>
 
             <ServicesCard.Description>
               From setting up software workflows, to creating and maintaining
@@ -81,9 +79,9 @@ export function ServicesSection() {
           </ServicesCard>
 
           <ServicesCard>
-            <ServicesCard.Icon icon={RocketLaunch} />
-
-            <ServicesCard.Title>Product Management</ServicesCard.Title>
+            <ServicesCard.Title icon={RocketLaunch}>
+              Product Management
+            </ServicesCard.Title>
 
             <ServicesCard.Description>
               Nothing is as frustrating as shipping features that are not used.
@@ -93,9 +91,9 @@ export function ServicesSection() {
           </ServicesCard>
 
           <ServicesCard>
-            <ServicesCard.Icon icon={UsersThree} />
-
-            <ServicesCard.Title>Engineering Management</ServicesCard.Title>
+            <ServicesCard.Title icon={UsersThree}>
+              Engineering Management
+            </ServicesCard.Title>
 
             <ServicesCard.Description>
               Coaching teams and team members, hiring and onboarding processes,

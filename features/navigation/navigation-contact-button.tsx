@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useScroll } from "framer-motion";
+import { useEffect, useState } from "react";
 
 import { Button } from "~/design-system";
 import { PaperPlaneTilt } from "~/design-system/icon";
@@ -8,29 +9,23 @@ import { PaperPlaneTilt } from "~/design-system/icon";
 import { ContactFormDialog } from "~/contact-form/contact-form-dialog";
 
 export function NavigationContactButton() {
-  const [scrollPercentage, setScrollPercentage] = useState(0);
-
-  const scrollListener = useCallback(() => {
-    const scrollHeight = document.scrollingElement?.scrollHeight ?? 1;
-    const scrollTop = document.scrollingElement?.scrollTop ?? 0;
-
-    setScrollPercentage(scrollTop / scrollHeight);
-  }, []);
+  const { scrollYProgress } = useScroll();
+  const [isHalfwayPage, setIsHalfwayPage] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", scrollListener);
-
-    return () => {
-      window.removeEventListener("scroll", scrollListener);
-    };
-  }, [scrollListener]);
+    return scrollYProgress.onChange((latest) => {
+      if (latest > 0.5) {
+        setIsHalfwayPage(true);
+      }
+    });
+  }, []);
 
   return (
     <ContactFormDialog>
       <Button
         iconLeft={PaperPlaneTilt}
         size="sm"
-        variant={scrollPercentage > 0.5 ? "solid" : "outline"}
+        variant={isHalfwayPage ? "solid" : "outline"}
       >
         Contact
       </Button>

@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import { Stack } from "~/design-system";
 
 import {
@@ -10,16 +14,39 @@ import {
 
 export default function HomePage() {
   return (
-    <Stack gap={{ base: 32, md: 64 }}>
+    <>
       <HeroSection />
 
-      <IntroSection />
+      <Stack gap={{ base: 64 }}>
+        <motion.div
+          initial={{ opacity: 0, y: 75 }}
+          transition={{ ease: "easeOut", duration: 1.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <PastProjectsSection />
+        </motion.div>
 
-      <ServicesSection />
+        <motion.div
+          initial={{ opacity: 0, y: 75 }}
+          transition={{ ease: "easeOut", duration: 1.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <ServicesSection />
+        </motion.div>
 
-      <PastProjectsSection />
+        <motion.div
+          initial={{ opacity: 0, y: 75 }}
+          transition={{ ease: "easeOut", duration: 1.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <IntroSection />
+        </motion.div>
 
-      <PetProjectsSection />
-    </Stack>
+        <PetProjectsSection />
+      </Stack>
+    </>
   );
 }

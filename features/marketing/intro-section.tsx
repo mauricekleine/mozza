@@ -83,16 +83,13 @@ export function IntroSection() {
 
                 <Link href="https://github.com/mauricekleine/">GitHub</Link>
 
-                <Text>, browse my experience and skills on </Text>
+                <Text>, or browse my experience and skills on </Text>
 
                 <Link href="https://www.linkedin.com/in/mauricekleine/">
                   LinkedIn
                 </Link>
 
-                <Text>
-                  , or keep scrolling if you want to learn what value I can add
-                  to your company or project.
-                </Text>
+                <Text>.</Text>
               </Text>
             </Stack>
 

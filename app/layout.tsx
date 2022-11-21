@@ -83,7 +83,7 @@ export default function RootLayout({
           <ToastProvider>
             <Navigation />
 
-            <main className="mt-32 mb-16">{children}</main>
+            <main>{children}</main>
 
             <ToastViewport />
           </ToastProvider>

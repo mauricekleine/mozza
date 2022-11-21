@@ -4,16 +4,16 @@ import { ResponsiveProp, toResponsiveObject } from "../responsive-utils";
 
 import { Root, RootProps } from "./root";
 
-type Direction = "horizontal" | "vertical";
-
 type Props = {
-  direction?: ResponsiveProp<Direction>;
+  direction?: ResponsiveProp<"horizontal" | "vertical">;
+  height?: "screen";
   wrap?: boolean;
 } & Omit<RootProps, "className">;
 
 export function Stack({
   children,
   direction: directionProp = { base: "vertical" },
+  height,
   wrap,
   ...props
 }: Props) {
@@ -31,6 +31,7 @@ export function Stack({
         "md:flex-row": direction.md === "horizontal",
         "lg:flex-row": direction.lg === "horizontal",
         "flex-wrap": wrap === true,
+        "h-screen": height === "screen",
       })}
       {...props}
     >

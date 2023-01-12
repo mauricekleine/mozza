@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 import { z } from "zod";
 
-import { todoist, turnstile } from "~/lib";
+import { turnstile } from "~/lib";
 
 export const config = {
   runtime: "experimental-edge",
@@ -34,11 +34,34 @@ export default async function handler(request: NextRequest) {
   const result = schema.safeParse(Object.fromEntries(formData));
 
   if (result.success) {
-    await todoist.createTask({
-      content: `New inquiry from ${result.data.email}`,
-      description: `**Inquiry**: ${result.data.inquiry}\n**Email**: ${result.data.email}\n**Phone**: ${result.data.phone}`,
-      dueString: "in 181 minutes", // 3 hours + 1 minute to trigger notifications
-      priority: 4,
+    await fetch(process.env.SLACK_WAITINGLIST_WEBHOOK_URL as string, {
+      body: JSON.stringify({
+        blocks: [
+          {
+            type: "section",
+            text: {
+              type: "plain_text",
+              text: `New inquiry from ${result.data.email}${
+                result.data.phone ? ` (${result.data.phone})` : ""
+              }`,
+            },
+          },
+          {
+            type: "divider",
+          },
+          {
+            type: "section",
+            text: {
+              type: "plain_text",
+              text: result.data.inquiry,
+            },
+          },
+        ],
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
     });
 
     return new Response(JSON.stringify({ data: result.data }), {

@@ -4,7 +4,7 @@ import { z } from "zod";
 import { turnstile } from "~/lib";
 
 export const config = {
-  runtime: "experimental-edge",
+  runtime: "edge",
 };
 
 export default async function handler(request: NextRequest) {

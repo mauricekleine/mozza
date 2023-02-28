@@ -1,9 +1,9 @@
 "use client";
 
-import { Inter } from "@next/font/google";
-import localFont from "@next/font/local";
 import classNames from "classnames";
 import { MotionConfig } from "framer-motion";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 
 import { Footer, ToastProvider, ToastViewport } from "~/design-system";

@@ -12,7 +12,6 @@ const petProjects: PetProject[] = [
     description: "A powerful and modern RSS feed reader ",
     name: "📖 RSS Power",
     repo: "https://github.com/mauricekleine/rss-power",
-    url: "https://rsspower.com",
   },
   {
     description:

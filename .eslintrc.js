@@ -1,15 +1,26 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: ["next/core-web-vitals", "prettier"],
+  extends: [
+    "next/core-web-vitals",
+    "plugin:storybook/recommended",
+    "plugin:unicorn/all",
+    "prettier",
+  ],
   overrides: [
     {
-      files: ["./design-system/**/*", "./**/index.ts"],
+      files: ["./src/**/*.{ts,tsx}"],
+      rules: {
+        "unicorn/prefer-module": "error",
+      },
+    },
+    {
+      files: ["./src/design-system/**/*", "./src/**/index.ts"],
       rules: {
         "no-restricted-imports": "off",
       },
     },
   ],
-  plugins: ["import", "unused-imports"],
+  plugins: ["sort", "unused-imports"],
   rules: {
     "import/order": [
       "error",
@@ -17,32 +28,12 @@ module.exports = {
         alphabetize: {
           order: "asc",
         },
-        groups: [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index",
-        ],
+        groups: ["builtin", "external", "parent", "sibling", "index"],
         "newlines-between": "always",
         pathGroups: [
           {
-            pattern: "~/design-system",
-            group: "internal",
-          },
-          {
-            pattern: "~/design-system/icon",
-            group: "internal",
-          },
-          {
-            pattern: "~/lib",
-            group: "internal",
-            position: "after",
-          },
-          {
-            pattern: "~/**",
-            group: "internal",
+            group: "external",
+            pattern: "@mk/**",
             position: "after",
           },
         ],
@@ -60,7 +51,16 @@ module.exports = {
         ],
       },
     ],
-    "react/jsx-newline": [1, { prevent: false }],
+    "react/jsx-newline": ["warn", { prevent: false }],
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        ignoreCase: true,
+      },
+    ],
+    "sort/destructuring-properties": "error",
+    "sort/object-properties": "error",
+    "sort/type-properties": "error",
     "sort-imports": [
       "error",
       {
@@ -70,6 +70,16 @@ module.exports = {
         memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
       },
     ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        case: "kebabCase",
+      },
+    ],
+    "unicorn/no-keyword-prefix": "off",
+    "unicorn/no-null": "off",
+    "unicorn/prefer-module": "off",
+    "unicorn/prevent-abbreviations": "off",
     "unused-imports/no-unused-imports": "error",
   },
 };

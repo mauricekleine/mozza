@@ -1,8 +1,8 @@
 const path = require("path");
 
-const buildEslintCommand = filenames =>
+const buildEslintCommand = (filenames) =>
   `next lint --fix --file ${filenames
-    .map(f => path.relative(process.cwd(), f))
+    .map((f) => path.relative(process.cwd(), f))
     .join(" --file ")}`;
 
 module.exports = {

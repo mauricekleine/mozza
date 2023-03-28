@@ -12,5 +12,6 @@ module.exports = (phase) => {
     },
     reactStrictMode: true,
     swcMinify: true,
+    transpilePackages: ["clsx-variants"],
   };
 };

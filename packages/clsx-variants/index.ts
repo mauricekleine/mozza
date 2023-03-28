@@ -36,7 +36,7 @@ export function clsxVariants<C extends Config>(outerArgs: OuterArgs<C>) {
 
       const compoundVariantsMatch = Object.keys(variants).every((variant) => {
         const compoundVariantValue = variants[variant];
-        const variantValue = args[variant];
+        const variantValue = args[variant] ?? defaultVariants?.[variant];
 
         return compoundVariantValue === variantValue;
       });

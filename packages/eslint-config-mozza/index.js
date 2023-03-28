@@ -9,7 +9,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ["./src/**/*.{ts,tsx}"],
+      files: ["./src/**/*.{js,jsx,ts,tsx}"],
       rules: {
         "unicorn/prefer-module": "error",
       },
@@ -20,9 +20,30 @@ module.exports = {
         "no-restricted-imports": "off",
       },
     },
+    {
+      extends: [
+        "plugin:jest/recommended",
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react",
+      ],
+      files: ["./**/*.test.{js,jsx,ts,tsx}"],
+      plugins: ["jest", "jest-dom", "testing-library"],
+      rules: {
+        "jest/consistent-test-it": "error",
+        "jest/prefer-lowercase-title": ["error", { ignore: ["describe"] }],
+        "jest/require-top-level-describe": "error",
+        "jest/valid-title": ["error", { mustMatch: { it: "^should " } }],
+      },
+    },
   ],
+  parserOptions: {
+    babelOptions: {
+      presets: [require.resolve("next/babel")],
+    },
+  },
   plugins: ["sort", "unused-imports"],
   rules: {
+    "@next/next/no-html-link-for-pages": "off",
     "import/order": [
       "error",
       {

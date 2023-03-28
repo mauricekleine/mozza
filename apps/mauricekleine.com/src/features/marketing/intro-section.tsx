@@ -71,7 +71,6 @@ export function IntroSection() {
                   <Text>
                     {" "}
                     about my time at Productboard; by listening to a podcast in
-
                     which{" "}
                   </Text>
 

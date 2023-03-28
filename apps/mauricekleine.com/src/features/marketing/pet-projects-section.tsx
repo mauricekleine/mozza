@@ -1,4 +1,6 @@
-import { Grid, Heading, Link, Section, Stack, Text } from "@mk/ui";
+import { Grid, Stack } from "@mozza-ui/react";
+
+import { Heading, Link, Section, Text } from "@mk/ui";
 
 type PetProject = {
   description: string;

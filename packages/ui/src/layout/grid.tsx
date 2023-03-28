@@ -1,18 +1,16 @@
 import { clsx } from "clsx";
 
-import { ResponsiveProp, toResponsiveObject } from "../responsive-utils";
+import { ResponsiveProp, toResponsiveObject } from "../utils/responsive-utils";
 
-import { Root, RootProps } from "./root";
+import { Base, BaseProps } from "./base";
 
 type Columns = "auto" | "none" | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 type Rows = "auto" | "none" | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 
 type Props = {
-  autoColumns?: boolean;
-  autoRows?: boolean;
   columns?: ResponsiveProp<Columns>;
   rows?: ResponsiveProp<Rows>;
-} & Omit<RootProps, "className">;
+} & Omit<BaseProps, "className">;
 
 export function Grid({
   children,
@@ -24,7 +22,7 @@ export function Grid({
   const rows = rowsProp ? toResponsiveObject(rowsProp) : undefined;
 
   return (
-    <Root
+    <Base
       className={clsx("grid", {
         "grid-cols-1": columns?.base === 1,
         "grid-cols-2": columns?.base === 2,
@@ -118,6 +116,6 @@ export function Grid({
       {...props}
     >
       {children}
-    </Root>
+    </Base>
   );
 }

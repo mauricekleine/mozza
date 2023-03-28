@@ -1,8 +1,9 @@
+import { CircleNotch } from "@mozza-icons/react";
+import { Stack } from "@mozza-ui/react";
 import { clsx } from "clsx";
 import { ReactNode } from "react";
 
-import { CircleNotch, Icon } from "../icon";
-import { Stack } from "../layout";
+import { Icon } from "../icon";
 
 import { ButtonSize } from "./button";
 
@@ -25,7 +26,7 @@ export function ButtonContent({
   const IconRight = iconRight;
 
   return (
-    <Stack alignItems="center" direction="horizontal" gap={2}>
+    <Stack direction="horizontal" gap={2} items="center">
       {IconLeft ? (
         <IconLeft
           className={clsx({

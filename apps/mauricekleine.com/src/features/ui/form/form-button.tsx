@@ -1,7 +1,8 @@
 "use client";
 
+import { Stack } from "@mozza-ui/react";
+
 import { Button } from "../button";
-import { Stack } from "../layout";
 
 import { useForm } from "./use-form";
 
@@ -13,7 +14,7 @@ export function FormButton({ children }: Props) {
   const { isDisabled, isSubmitting } = useForm();
 
   return (
-    <Stack direction="horizontal" justifyContent="end">
+    <Stack direction="horizontal" justify="end">
       <Button isDisabled={isDisabled} isLoading={isSubmitting} type="submit">
         {children}
       </Button>

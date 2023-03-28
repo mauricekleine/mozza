@@ -1,26 +1,23 @@
 "use client";
 
+import { ArrowUpRight } from "@mozza-icons/react";
+import { Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 
 import { ContactFormDialog } from "@mk/contact-form";
-import { Button, Heading, Section, Stack, Text, Typewriter } from "@mk/ui";
-import { ArrowUpRight, PaperPlaneTilt } from "@mk/ui/icon";
+import { Button, Heading, Section, Text, Typewriter } from "@mk/ui";
+import { PaperPlaneTilt } from "@mk/ui/icon";
 
 export function HeroSection() {
   return (
     <Section>
-      <Stack
-        alignItems="center"
-        gap={16}
-        height="screen"
-        justifyContent="center"
-      >
+      <Stack gap={16} height="screen" items="center" justify="center">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 75 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <Stack alignItems="center" justifyContent="center" textAlign="center">
+          <Stack items="center" justify="center" textAlign="center">
             <Heading as="h1">Maurice Kleine</Heading>
 
             <Stack direction="horizontal" gap={1}>
@@ -63,12 +60,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 100 }}
           transition={{ delay: 0.3, duration: 2, ease: "easeOut" }}
         >
-          <Stack
-            alignItems="center"
-            direction="horizontal"
-            gap={2}
-            justifyContent="center"
-          >
+          <Stack direction="horizontal" gap={2} items="center" justify="center">
             <ContactFormDialog>
               <Button iconLeft={PaperPlaneTilt} variant="solid">
                 Contact

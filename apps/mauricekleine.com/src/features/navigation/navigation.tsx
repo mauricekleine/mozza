@@ -1,7 +1,8 @@
+import { Stack } from "@mozza-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Section, Stack, Text } from "@mk/ui";
+import { Section, Text } from "@mk/ui";
 
 import { NavigationContactButton } from "./navigation-contact-button";
 
@@ -11,7 +12,7 @@ export function Navigation() {
       <Section>
         <div className="flex h-16 items-center justify-between">
           <Link href="/">
-            <Stack alignItems="center" direction="horizontal" gap={2}>
+            <Stack direction="horizontal" gap={2} items="center">
               <div className="h-10 w-10 rounded-full bg-white p-0.5">
                 <Image
                   alt="Maurice Kleine"
@@ -28,7 +29,7 @@ export function Navigation() {
             </Stack>
           </Link>
 
-          <Stack alignItems="center" direction="horizontal" gap={4}>
+          <Stack direction="horizontal" gap={4} items="center">
             <NavigationContactButton />
           </Stack>
         </div>

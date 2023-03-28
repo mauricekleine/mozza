@@ -1,13 +1,13 @@
 {
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "~29.4.1",
+    "@types/react": "~18.0.30",
+    "@types/react-dom": "~18.0.11",
     "clsx": "~1.2.1",
     "eslint": "~8.36.0",
     "eslint-config-mozza": "workspace:*",
-    "jest": "~29.5.0",
     "prettier": "~2.8.7",
-    "ts-jest": "~29.0.5",
+    "react": "~18.2.0",
     "tsconfig": "workspace:*",
     "typescript": "~5.0.2"
   },
@@ -15,13 +15,12 @@
     "node": "^18.0.0"
   },
   "main": "src/index.ts",
-  "name": "clsx-variants",
+  "name": "@mozza-icons/react",
   "private": true,
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "jest",
     "typecheck": "tsc -b"
   },
   "types": "src/index.ts",

@@ -12,6 +12,10 @@ module.exports = (phase) => {
     },
     reactStrictMode: true,
     swcMinify: true,
-    transpilePackages: ["clsx-variants"],
+    transpilePackages: [
+      "@mozza-icons/react",
+      "@mozza-ui/react",
+      "clsx-variants",
+    ],
   };
 };

@@ -1,8 +1,9 @@
 "use client";
 
+import { Grid, Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 
-import { Card, Grid, Heading, Section, Stack, Text } from "@mk/ui";
+import { Card, Heading, Section, Text } from "@mk/ui";
 
 import {
   AeonLogo,
@@ -26,7 +27,7 @@ export function PastProjectsSection() {
       viewport={{ once: true }}
       whileInView={{ opacity: 1, y: 0 }}
     >
-      <Stack gap={8} justifyContent="center" textAlign="center">
+      <Stack gap={8} justify="center" textAlign="center">
         <Section>
           <Stack gap={2}>
             <Heading as="h2">Past Projects</Heading>
@@ -40,10 +41,10 @@ export function PastProjectsSection() {
         <Section>
           <Card>
             <Grid
-              alignItems="center"
               columns={{ base: 2, lg: 5, sm: 3 }}
               gap={8}
-              justifyItems="center"
+              items="center"
+              justify="center"
               rows={{ base: "none", md: 2 }}
             >
               <LogoLink href="https://ubutler.nl/" logo={UButlerLogo} />

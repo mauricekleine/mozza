@@ -3,12 +3,10 @@ import { FC } from "react";
 export type Icon = FC<{ className?: string }>;
 
 // All icons provided by https://phosphoricons.com/
-export { ArrowUpRight } from "./arrow-up-right";
 export { Atom } from "./atom";
 export { Boat } from "./boat";
 export { BracketsCurly } from "./brackets-curly";
 export { Cat } from "./cat";
-export { CircleNotch } from "./circle-notch";
 export { Confetti } from "./confetti";
 export { Database } from "./database";
 export { GithubLogo } from "./github-logo";

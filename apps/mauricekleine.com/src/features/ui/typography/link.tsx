@@ -1,7 +1,6 @@
+import { ArrowUpRight } from "@mozza-icons/react";
 import NextLink from "next/link";
 import type { HTMLAttributes, ReactNode } from "react";
-
-import { ArrowUpRight } from "../icon";
 
 type Props = {
   children: ReactNode;

@@ -1,3 +1,4 @@
+import { Grid, Stack } from "@mozza-ui/react";
 import { Metadata } from "next";
 
 import {
@@ -10,7 +11,7 @@ import {
   UButlerLogo,
 } from "@mk/marketing/client-logos";
 import { Company } from "@mk/resume";
-import { Grid, Heading, Link, Section, Stack } from "@mk/ui";
+import { Heading, Link, Section } from "@mk/ui";
 
 export const metadata: Metadata = {
   robots: { follow: false, index: false },
@@ -142,7 +143,7 @@ export default function ResumePage() {
                 </div>
 
                 <div>
-                  <Heading as="h3">Information​ S​cience</Heading>
+                  <Heading as="h3">Information Science</Heading>
 
                   <p>Bachelor of Arts (BA) · Average grade: 8.0</p>
 

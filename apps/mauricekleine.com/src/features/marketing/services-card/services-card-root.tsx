@@ -1,6 +1,5 @@
+import { Stack } from "@mozza-ui/react";
 import { ReactNode } from "react";
-
-import { Stack } from "@mk/ui";
 
 export function ServicesCardRoot({
   children,

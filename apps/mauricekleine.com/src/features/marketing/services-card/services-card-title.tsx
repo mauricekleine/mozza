@@ -1,4 +1,6 @@
-import { Heading, Stack } from "@mk/ui";
+import { Stack } from "@mozza-ui/react";
+
+import { Heading } from "@mk/ui";
 import { Icon } from "@mk/ui/icon";
 
 type Props = {
@@ -10,7 +12,7 @@ export function ServicesCardTitle({ children, icon }: Props) {
   const Icon = icon;
 
   return (
-    <Stack alignItems="center" direction="horizontal" gap={2}>
+    <Stack direction="horizontal" gap={2} items="center">
       <Icon className="h-8 w-8 text-slate-200" />
 
       <Heading as="h3">{children}</Heading>

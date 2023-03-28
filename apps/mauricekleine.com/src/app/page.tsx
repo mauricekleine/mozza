@@ -1,3 +1,5 @@
+import { Stack } from "@mozza-ui/react";
+
 import {
   HeroSection,
   IntroSection,
@@ -5,7 +7,6 @@ import {
   PetProjectsSection,
   ServicesSection,
 } from "@mk/marketing";
-import { Stack } from "@mk/ui";
 
 export default function Page() {
   return (

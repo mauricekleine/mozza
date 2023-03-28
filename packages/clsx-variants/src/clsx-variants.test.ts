@@ -1,4 +1,4 @@
-import { clsxVariants } from ".";
+import { clsxVariants } from "./clsx-variants";
 
 const variants = {
   color: {

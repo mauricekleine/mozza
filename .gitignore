@@ -32,5 +32,8 @@ yarn-error.log*
 # turbo
 .turbo
 
+# ts
+tsconfig.tsbuildinfo
+
 # vercel
 .vercel

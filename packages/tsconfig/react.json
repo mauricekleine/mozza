@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext"
+  },
+  "exclude": ["node_modules"],
+  "extends": "./base.json",
+  "include": ["**/*.ts", "**/*.tsx"]
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import { Stack } from "@mozza-ui/react";
 import {
   Close as ClosePrimitive,
   Root as RootPrimitive,
@@ -9,7 +10,6 @@ import { clsx } from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { Confetti, SmileyXEyes, X } from "../icon";
-import { Stack } from "../layout";
 
 type Props = {
   children: ToastProps["children"];
@@ -45,7 +45,7 @@ export function ToastRoot({ children, isOpen, onOpenChange, variant }: Props) {
             }}
             initial={{ opacity: 0, translateX: "100%" }}
           >
-            <Stack alignItems="start" direction="horizontal" gap={4}>
+            <Stack direction="horizontal" gap={4} items="start">
               <div className={clsx("my-auto flex items-center rounded-full")}>
                 {variant === "success" ? (
                   <Confetti className="h-8 w-8 text-green-800" />

@@ -1,9 +1,10 @@
 "use client";
 
+import { Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import { Card, Link, Section, Stack, Text } from "@mk/ui";
+import { Card, Link, Section, Text } from "@mk/ui";
 import { HandWaving } from "@mk/ui/icon";
 
 export function IntroSection() {
@@ -29,9 +30,9 @@ export function IntroSection() {
             </Text>
 
             <Stack
-              alignItems="center"
               direction={{ base: "vertical", lg: "horizontal" }}
               gap={{ base: 8, md: 16 }}
+              items="center"
             >
               <Stack gap={4}>
                 <Text as="p">

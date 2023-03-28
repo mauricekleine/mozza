@@ -1,6 +1,8 @@
+import { Stack } from "@mozza-ui/react";
+
 import { Button } from "../button";
 import { GithubLogo, Heart, LinkedinLogo } from "../icon";
-import { Section, Stack } from "../layout";
+import { Section } from "../layout";
 import { Text } from "../typography";
 
 export function Footer() {
@@ -8,8 +10,8 @@ export function Footer() {
     <div className="bottom-0 z-30 w-full border-t border-slate-200/10 bg-black">
       <Section>
         <div className="flex items-center justify-center py-4">
-          <Stack alignItems="center" direction="vertical" gap={4}>
-            <Stack alignItems="center" direction="horizontal" gap={16}>
+          <Stack direction="vertical" gap={4} items="center">
+            <Stack direction="horizontal" gap={16} items="center">
               <Button
                 as="a"
                 href="https://github.com/mauricekleine/"

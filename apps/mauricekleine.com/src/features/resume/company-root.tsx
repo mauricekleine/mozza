@@ -1,7 +1,7 @@
 import { ComponentType, ReactNode } from "react";
 
-import { Stack } from "@mk/design-system";
 import { LogoLink } from "@mk/marketing/client-logos";
+import { Stack } from "@mk/ui";
 
 type Props = {
   children: ReactNode | ReactNode[];

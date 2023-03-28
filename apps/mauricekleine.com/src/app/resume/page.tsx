@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 
-import { Grid, Heading, Link, Section, Stack } from "@mk/design-system";
 import {
   AeonLogo,
   GoodupLogo,
@@ -11,6 +10,7 @@ import {
   UButlerLogo,
 } from "@mk/marketing/client-logos";
 import { Company } from "@mk/resume";
+import { Grid, Heading, Link, Section, Stack } from "@mk/ui";
 
 export const metadata: Metadata = {
   robots: { follow: false, index: false },

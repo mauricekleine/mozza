@@ -1,5 +1,5 @@
-import { Heading, Stack } from "@mk/design-system";
-import { Icon } from "@mk/design-system/icon";
+import { Heading, Stack } from "@mk/ui";
+import { Icon } from "@mk/ui/icon";
 
 type Props = {
   children: string;

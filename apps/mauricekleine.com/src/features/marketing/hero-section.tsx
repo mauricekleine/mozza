@@ -3,15 +3,8 @@
 import { motion } from "framer-motion";
 
 import { ContactFormDialog } from "@mk/contact-form";
-import {
-  Button,
-  Heading,
-  Section,
-  Stack,
-  Text,
-  Typewriter,
-} from "@mk/design-system";
-import { ArrowUpRight, PaperPlaneTilt } from "@mk/design-system/icon";
+import { Button, Heading, Section, Stack, Text, Typewriter } from "@mk/ui";
+import { ArrowUpRight, PaperPlaneTilt } from "@mk/ui/icon";
 
 export function HeroSection() {
   return (

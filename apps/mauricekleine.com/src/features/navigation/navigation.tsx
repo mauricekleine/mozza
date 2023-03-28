@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Section, Stack, Text } from "@mk/design-system";
+import { Section, Stack, Text } from "@mk/ui";
 
 import { NavigationContactButton } from "./navigation-contact-button";
 

@@ -19,9 +19,9 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "paths": {
-      "@mk/design-system": ["./src/design-system"],
-      "@mk/design-system/icon": ["./src/design-system/icon"],
       "@mk/lib": ["./src/lib"],
+      "@mk/ui": ["./src/features/ui"],
+      "@mk/ui/icon": ["./src/features/ui/icon"],
       "@mk/*": ["./src/features/*"]
     },
     "plugins": [

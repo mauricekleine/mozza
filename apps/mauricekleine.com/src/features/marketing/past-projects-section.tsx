@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { Card, Grid, Heading, Section, Stack, Text } from "@mk/design-system";
+import { Card, Grid, Heading, Section, Stack, Text } from "@mk/ui";
 
 import {
   AeonLogo,

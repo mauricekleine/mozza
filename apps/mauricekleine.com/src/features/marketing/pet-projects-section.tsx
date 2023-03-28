@@ -1,4 +1,4 @@
-import { Grid, Heading, Link, Section, Stack, Text } from "@mk/design-system";
+import { Grid, Heading, Link, Section, Stack, Text } from "@mk/ui";
 
 type PetProject = {
   description: string;

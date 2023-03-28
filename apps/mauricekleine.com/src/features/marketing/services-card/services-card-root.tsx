@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { Stack } from "@mk/design-system";
+import { Stack } from "@mk/ui";
 
 export function ServicesCardRoot({
   children,

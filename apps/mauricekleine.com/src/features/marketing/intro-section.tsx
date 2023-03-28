@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import { Card, Link, Section, Stack, Text } from "@mk/design-system";
-import { HandWaving } from "@mk/design-system/icon";
+import { Card, Link, Section, Stack, Text } from "@mk/ui";
+import { HandWaving } from "@mk/ui/icon";
 
 export function IntroSection() {
   return (

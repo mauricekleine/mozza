@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { Grid, Heading, Section, Stack, Text } from "@mk/design-system";
+import { Grid, Heading, Section, Stack, Text } from "@mk/ui";
 import {
   Atom,
   Boat,
@@ -10,7 +10,7 @@ import {
   RocketLaunch,
   Stack as StackIcon,
   UsersThree,
-} from "@mk/design-system/icon";
+} from "@mk/ui/icon";
 
 import { ServicesCard } from "./services-card";
 

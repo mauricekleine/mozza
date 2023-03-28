@@ -4,8 +4,8 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
 
-import { Footer, ToastProvider, ToastViewport } from "@mk/design-system";
 import { Navigation } from "@mk/navigation";
+import { Footer, ToastProvider, ToastViewport } from "@mk/ui";
 
 import "./layout.css";
 

@@ -1,15 +1,25 @@
 {
-  "name": "mozza",
-  "private": true,
+  "dependencies": {},
   "description": "",
-  "license": "",
-  "sideEffects": false,
+  "devDependencies": {
+    "husky": "~8.0.3",
+    "lint-staged": "~13.2.0",
+    "prettier": "~2.8.7",
+    "turbo": "~1.8.6",
+    "typescript": "~5.0.2"
+  },
+  "engines": {
+    "node": "^18.0.0"
+  },
   "homepage": "https://mauricekleine.com",
+  "license": "",
+  "name": "mozza",
+  "packageManager": "pnpm@8.0.0",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/mauricekleine/mozza"
   },
-  "version": "0.1.0",
   "scripts": {
     "build": "turbo build",
     "build:storybook": "turbo build:storybook",
@@ -27,16 +37,6 @@
     "update:major": "pnpm dlx taze -r major -w",
     "update:minor": "pnpm dlx taze -r minor -w"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "husky": "~8.0.3",
-    "lint-staged": "~13.2.0",
-    "prettier": "~2.8.7",
-    "typescript": "~5.0.2",
-    "turbo": "~1.8.6"
-  },
-  "engines": {
-    "node": "^18.0.0"
-  },
-  "packageManager": "pnpm@8.0.0"
+  "sideEffects": false,
+  "version": "0.1.0"
 }

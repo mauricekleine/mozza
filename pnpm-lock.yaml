@@ -4,35 +4,16 @@ importers:
 
   .:
     specifiers:
-      eslint: ~8.36.0
-      eslint-config-next: ~13.2.4
-      eslint-config-prettier: ~8.8.0
-      eslint-plugin-import: ~2.27.5
-      eslint-plugin-sort: ~2.7.1
-      eslint-plugin-storybook: ~0.6.11
-      eslint-plugin-unicorn: ~46.0.0
-      eslint-plugin-unused-imports: ~2.0.0
       husky: ~8.0.3
       lint-staged: ~13.2.0
       prettier: ~2.8.7
-      prettier-plugin-tailwindcss: ~0.2.5
       turbo: ~1.8.6
       typescript: ~5.0.2
-    dependencies:
-      turbo: 1.8.6
     devDependencies:
-      eslint: 8.36.0
-      eslint-config-next: 13.2.4_j4766f7ecgqbon3u7zlxn5zszu
-      eslint-config-prettier: 8.8.0_eslint@8.36.0
-      eslint-plugin-import: 2.27.5_eslint@8.36.0
-      eslint-plugin-sort: 2.7.1_j4766f7ecgqbon3u7zlxn5zszu
-      eslint-plugin-storybook: 0.6.11_j4766f7ecgqbon3u7zlxn5zszu
-      eslint-plugin-unicorn: 46.0.0_eslint@8.36.0
-      eslint-plugin-unused-imports: 2.0.0_eslint@8.36.0
       husky: 8.0.3
       lint-staged: 13.2.0
       prettier: 2.8.7
-      prettier-plugin-tailwindcss: 0.2.5_prettier@2.8.7
+      turbo: 1.8.6
       typescript: 5.0.2
 
   apps/mauricekleine.com:
@@ -9757,7 +9738,7 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /turbo-darwin-arm64/1.8.6:
@@ -9765,7 +9746,7 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /turbo-linux-64/1.8.6:
@@ -9773,7 +9754,7 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /turbo-linux-arm64/1.8.6:
@@ -9781,7 +9762,7 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /turbo-windows-64/1.8.6:
@@ -9789,7 +9770,7 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /turbo-windows-arm64/1.8.6:
@@ -9797,7 +9778,7 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /turbo/1.8.6:
@@ -9811,7 +9792,7 @@ packages:
       turbo-linux-arm64: 1.8.6
       turbo-windows-64: 1.8.6
       turbo-windows-arm64: 1.8.6
-    dev: false
+    dev: true
 
   /type-check/0.3.2:
     resolution: {integrity: sha512-ZCmOJdvOWDBYJlzAoFkC+Q0+bUyEOS1ltgp1MGU03fqHG+dbi9tBFU2Rd9QKiDZFAYrhPh2JUf7rZRIuHRKtOg==}

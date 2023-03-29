@@ -1,4 +1,5 @@
 import { clsx } from "clsx";
+import { Icon } from "@mozza-icons/react";
 import {
   ComponentProps,
   ForwardedRef,
@@ -7,7 +8,6 @@ import {
   forwardRef,
 } from "react";
 
-import { Icon } from "../icons";
 import { LinkBase, LinkBaseProps } from "../typography/link-base";
 
 import { ButtonContent } from "./button-content";

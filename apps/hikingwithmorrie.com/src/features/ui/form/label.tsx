@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { ReactNode } from "react";
 
-import { Color, getTextColorClassName } from "../theme/color-utils";
+import { Color, textColorVariants } from "../theme/color-utils";
 
 type Props = {
   children: ReactNode;
@@ -10,7 +10,7 @@ type Props = {
 };
 
 export function Label({ children, color, htmlFor }: Props) {
-  const textColorClassName = getTextColorClassName(color);
+  const textColorClassName = textColorVariants({ color });
 
   return (
     <label

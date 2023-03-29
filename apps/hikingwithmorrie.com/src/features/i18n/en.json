@@ -1,0 +1,23 @@
+{
+  "homepage": {
+    "hero": {
+      "title": "Hiking with Morrie",
+      "subtitle": "Go get your blues and your greens!"
+    }
+  },
+  "meta": {
+    "description": "Go get your blues and your greens!",
+    "logo": {
+      "alt": "Hiking with Morrie"
+    },
+    "title": "Hiking with Morrie"
+  },
+  "navigation": {
+    "about": "about",
+    "blog": "blog",
+    "cta": "book",
+    "contact": "contact",
+    "hikes": "hikes",
+    "home": "home"
+  }
+}

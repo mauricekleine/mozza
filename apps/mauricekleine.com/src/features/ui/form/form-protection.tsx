@@ -39,7 +39,7 @@ export function FormProtection() {
   return (
     <div className="relative h-16">
       <div
-        className="absolute top-0 left-0 z-50 flex w-full items-center justify-center"
+        className="absolute left-0 top-0 z-50 flex w-full items-center justify-center"
         id="cf-turnstile"
       />
     </div>

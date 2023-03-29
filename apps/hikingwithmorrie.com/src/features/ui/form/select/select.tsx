@@ -1,5 +1,6 @@
 "use client";
 
+import { CaretDown, CaretUp } from "@mozza-icons/react";
 import {
   Content,
   Portal,
@@ -15,8 +16,6 @@ import { ReactNode } from "react";
 import { useFormContext } from "react-hook-form";
 
 import { Text } from "@/ui/typography";
-
-import { CaretDown, CaretUp } from "@mozza-icons/react";
 
 type Props = {
   children: ReactNode;

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <div className="mt-32 mb-16">
+    <div className="mb-16 mt-32">
       <Section>
         <Stack gap={16}>
           <Stack gap={4}>

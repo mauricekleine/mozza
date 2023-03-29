@@ -1,9 +1,8 @@
 "use client";
 
+import { Check } from "@mozza-icons/react";
 import { Item, ItemIndicator, ItemText } from "@radix-ui/react-select";
 import { ReactNode, forwardRef } from "react";
-
-import { Check } from "@mozza-icons/react";
 
 type Props = {
   children: ReactNode;

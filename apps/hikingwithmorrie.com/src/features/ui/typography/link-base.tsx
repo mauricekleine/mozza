@@ -1,9 +1,8 @@
+import { ArrowUpRight } from "@mozza-icons/react";
 import clsx from "clsx";
 import type { Route } from "next";
 import NextLink from "next/link";
 import { ReactNode, Ref, forwardRef } from "react";
-
-import { ArrowUpRight } from "@mozza-icons/react";
 
 declare module "react" {
   function forwardRef<T, P = {}>(

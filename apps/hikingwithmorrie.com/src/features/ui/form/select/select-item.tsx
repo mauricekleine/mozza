@@ -3,7 +3,7 @@
 import { Item, ItemIndicator, ItemText } from "@radix-ui/react-select";
 import { ReactNode, forwardRef } from "react";
 
-import { Check } from "../../icons";
+import { Check } from "@mozza-icons/react";
 
 type Props = {
   children: ReactNode;
@@ -21,7 +21,7 @@ const SelectItem = forwardRef<HTMLDivElement, Props>(
         <ItemText>{children}</ItemText>
 
         <ItemIndicator>
-          <Check color="green.dark" />
+          <Check className="h-5 w-5 text-green-dark" />
         </ItemIndicator>
       </Item>
     );

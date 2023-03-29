@@ -1,4 +1,6 @@
-import { Container, Grid, Stack } from "@/ui/layout";
+import { Grid, Stack } from "@mozza-ui/react";
+
+import { Container } from "@/ui/layout";
 import { Header, Text } from "@/ui/typography";
 
 export function Footer() {

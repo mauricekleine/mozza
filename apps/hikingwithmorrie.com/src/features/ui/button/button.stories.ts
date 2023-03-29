@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ArrowUpRight } from "../icons";
+import { ArrowUpRight } from "@mozza-icons/react";
 
 import { Button } from "./button";
 

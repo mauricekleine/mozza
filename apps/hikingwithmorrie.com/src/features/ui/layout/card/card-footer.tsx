@@ -1,4 +1,4 @@
-import { CaretRight } from "../../icons";
+import { CaretRight } from "@mozza-icons/react";
 import { Text } from "../../typography";
 
 type Props = {

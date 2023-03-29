@@ -1,8 +1,8 @@
+import { Stack } from "@mozza-ui/react";
 import { clsx } from "clsx";
 import { ReactNode } from "react";
 
-import { CircleNotch, Icon } from "../icons";
-import { Stack } from "../layout";
+import { CircleNotch, Icon } from "@mozza-icons/react";
 
 import { ButtonSize } from "./button";
 

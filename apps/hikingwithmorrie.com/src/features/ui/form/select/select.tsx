@@ -16,7 +16,7 @@ import { useFormContext } from "react-hook-form";
 
 import { Text } from "@/ui/typography";
 
-import { CaretDown, CaretUp } from "../../icons";
+import { CaretDown, CaretUp } from "@mozza-icons/react";
 
 type Props = {
   children: ReactNode;

@@ -1,9 +1,9 @@
 "use client";
 
+import { Stack } from "@mozza-ui/react";
 import { usePathname } from "next/navigation";
 
 import { NavbarLink } from "@/navigation/navbar-link";
-import { Stack } from "@/ui/layout";
 
 import { Locale } from ".";
 

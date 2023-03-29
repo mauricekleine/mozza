@@ -17,12 +17,10 @@ export function LanguageSwitcher({ locale }: Props) {
 
   return (
     <Stack direction="horizontal" gap={4}>
-      {/* @ts-expect-error */}
       <NavbarLink href={`/en/${barePath}`} isActive={locale === "en"} size="sm">
         English
       </NavbarLink>
 
-      {/* @ts-expect-error */}
       <NavbarLink href={`/nl/${barePath}`} isActive={locale === "nl"} size="sm">
         Nederlands
       </NavbarLink>

@@ -75,7 +75,6 @@ export const ExternalLink: Story = {
 export const InternalLink: Story = {
   args: {
     children: "Internal link",
-    // @ts-expect-error
     href: "/en/blog",
   },
 };

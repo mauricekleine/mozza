@@ -3,7 +3,7 @@
   "devDependencies": {
     "@types/jest": "~29.5.0",
     "clsx": "~1.2.1",
-    "eslint": "~8.36.0",
+    "eslint": "~8.37.0",
     "eslint-config-mozza": "workspace:*",
     "jest": "~29.5.0",
     "prettier": "~2.8.7",

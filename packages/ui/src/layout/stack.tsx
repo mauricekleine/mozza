@@ -2,14 +2,14 @@ import { clsx } from "clsx";
 
 import { ResponsiveProp, toResponsiveObject } from "../utils/responsive-utils";
 
-import { Base, BaseProps } from "./base";
+import { Base, BaseProps } from "./_base";
 
-type Props = {
+type Props = BaseProps & {
   direction?: ResponsiveProp<
     "horizontal" | "vertical" | "horizontal-reverse" | "vertical-reverse"
   >;
   wrap?: boolean;
-} & Omit<BaseProps, "className">;
+};
 
 export function Stack({
   children,

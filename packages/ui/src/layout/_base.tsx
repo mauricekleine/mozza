@@ -133,4 +133,4 @@ export function Base({
   );
 }
 
-export type { Props as BaseProps };
+export type BaseProps = Omit<Props, "className">;

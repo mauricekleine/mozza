@@ -2,15 +2,15 @@ import { clsx } from "clsx";
 
 import { ResponsiveProp, toResponsiveObject } from "../utils/responsive-utils";
 
-import { Base, BaseProps } from "./base";
+import { Base, BaseProps } from "./_base";
 
 type Columns = "auto" | "none" | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 type Rows = "auto" | "none" | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 
-type Props = {
+type Props = BaseProps & {
   columns?: ResponsiveProp<Columns>;
   rows?: ResponsiveProp<Rows>;
-} & Omit<BaseProps, "className">;
+};
 
 export function Grid({
   children,

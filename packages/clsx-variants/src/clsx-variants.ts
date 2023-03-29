@@ -6,21 +6,31 @@ type Variants<C extends Config> = {
   [name in keyof C]?: keyof C[name];
 };
 
-type CompoundVariant<C extends Config> = Variants<C> & { className: string };
-type DefaultVariants<C extends Config> = Variants<C>;
-
 type OuterArgs<C extends Config> = {
-  compoundVariants?: CompoundVariant<C>[];
-  defaultVariants?: DefaultVariants<C>;
+  compoundVariants?: (Variants<C> & { className: string })[];
+  defaultVariants?: Variants<C>;
   variants: C;
 };
 
 type InnerArgs<C extends Config> = Variants<C>;
 
-export function clsxVariants<C extends Config>(outerArgs: OuterArgs<C>) {
-  return (innerArgs: InnerArgs<C>): string => {
-    const { compoundVariants, defaultVariants, variants } = outerArgs;
-    const { className, ...args } = innerArgs;
+export function clsxVariants<C extends Config>({
+  compoundVariants,
+  defaultVariants,
+  variants,
+}: OuterArgs<C>) {
+  function generateClassNames(input: InnerArgs<C>): string;
+  function generateClassNames(className: string, args: InnerArgs<C>): string;
+  function generateClassNames(
+    inputOrClassName: InnerArgs<C> | string,
+    input?: InnerArgs<C>
+  ): string {
+    const args =
+      typeof inputOrClassName === "string"
+        ? (input as InnerArgs<C>)
+        : inputOrClassName;
+    const className =
+      typeof inputOrClassName === "string" ? inputOrClassName : undefined;
 
     const variantClasses = Object.keys(variants).map((variant) => {
       const variantConfig = variants[variant];
@@ -46,6 +56,19 @@ export function clsxVariants<C extends Config>(outerArgs: OuterArgs<C>) {
       }
     });
 
-    return clsx(...variantClasses, ...(compoundVariantClasses ?? []));
-  };
+    return clsx(
+      className,
+      ...variantClasses,
+      ...(compoundVariantClasses ?? [])
+    );
+  }
+
+  return generateClassNames;
 }
+
+export type VariantProps<C> = C extends (
+  className: string,
+  args: infer A
+) => string
+  ? A
+  : never;

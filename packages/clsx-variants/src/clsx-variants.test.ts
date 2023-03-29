@@ -79,4 +79,27 @@ describe("clsxVariants", () => {
     expect(classes).toContain("text-sm");
     expect(classes).toContain("green-small");
   });
+
+  it("should return a base class name when it's passed as the first argument", () => {
+    const clsx = clsxVariants({
+      compoundVariants: [
+        {
+          className: "green-small",
+          color: "green",
+          size: "small",
+        },
+      ],
+      defaultVariants: {
+        size: "small",
+      },
+      variants,
+    });
+
+    const classes = clsx("flex", { color: "green" });
+
+    expect(classes).toContain("flex");
+    expect(classes).toContain("text-green-500");
+    expect(classes).toContain("text-sm");
+    expect(classes).toContain("green-small");
+  });
 });

@@ -21,19 +21,8 @@ module.exports = {
       },
     },
     {
-      extends: [
-        "plugin:jest/recommended",
-        "plugin:jest-dom/recommended",
-        "plugin:testing-library/react",
-      ],
+      extends: ["plugin:testing-library/react"],
       files: ["./**/*.test.{js,jsx,ts,tsx}"],
-      plugins: ["jest", "jest-dom", "testing-library"],
-      rules: {
-        "jest/consistent-test-it": "error",
-        "jest/prefer-lowercase-title": ["error", { ignore: ["describe"] }],
-        "jest/require-top-level-describe": "error",
-        "jest/valid-title": ["error", { mustMatch: { it: "^should " } }],
-      },
     },
   ],
   parserOptions: {

@@ -23,19 +23,21 @@ export function clsxVariants<C extends Config>({
     input: InnerArgs<C>
   ): Output;
   function generateClassNames<Output extends string>(
-    className: string,
+    className: string | string[],
     args: InnerArgs<C>
   ): Output;
   function generateClassNames<Output extends string>(
-    inputOrClassName: InnerArgs<C> | string,
+    inputOrClassName: InnerArgs<C> | string | string[],
     input?: InnerArgs<C>
   ): Output {
-    const args =
-      typeof inputOrClassName === "string"
-        ? (input as InnerArgs<C>)
-        : inputOrClassName;
-    const className =
-      typeof inputOrClassName === "string" ? inputOrClassName : undefined;
+    const inputOrClassNameIsClassName =
+      typeof inputOrClassName === "string" || Array.isArray(inputOrClassName);
+    const args = inputOrClassNameIsClassName
+      ? (input as InnerArgs<C>)
+      : inputOrClassName;
+    const className = inputOrClassNameIsClassName
+      ? inputOrClassName
+      : undefined;
 
     const variantClasses = Object.keys(variants).map((variant) => {
       const variantConfig = variants[variant];

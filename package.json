@@ -23,7 +23,7 @@
     "prepare": "husky install",
     "start": "turbo start",
     "test": "turbo test",
-    "test:watch": "turbo test:watch",
+    "test:watch": "turbo test:watch --",
     "typecheck": "turbo typecheck",
     "update:major": "taze -r major -w",
     "update:minor": "taze -r minor -w"

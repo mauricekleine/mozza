@@ -1,7 +1,7 @@
-import type { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     "./src/**/*.{ts,tsx}",
     "../../packages/icons/src/**/*.{ts,tsx}",
@@ -25,4 +25,4 @@ export default {
       },
     },
   },
-} satisfies Config;
+};

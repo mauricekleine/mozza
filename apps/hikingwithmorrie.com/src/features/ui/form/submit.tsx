@@ -1,10 +1,11 @@
 "use client";
 
+import { ComponentProps } from "react";
 import { useFormContext } from "react-hook-form";
 
-import { Button, ButtonProps } from "../button/button";
+import { Button } from "../button/button";
 
-type Props = Omit<ButtonProps, "as" | "onClick" | "type">;
+type Props = Omit<ComponentProps<typeof Button>, "as" | "onClick" | "type">;
 
 export function Submit({ children, isDisabled, isLoading, ...props }: Props) {
   const {

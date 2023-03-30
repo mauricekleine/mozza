@@ -1,11 +1,10 @@
 "use client";
 
-import { useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
-
 import { ContactFormDialog } from "@mk/contact-form/contact-form-dialog";
 import { Button } from "@mk/ui";
 import { PaperPlaneTilt } from "@mk/ui/icon";
+import { useScroll } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export function NavigationContactButton() {
   const { scrollYProgress } = useScroll();
@@ -24,7 +23,7 @@ export function NavigationContactButton() {
       <Button
         iconLeft={PaperPlaneTilt}
         size="sm"
-        variant={isHalfwayPage ? "solid" : "outline"}
+        variant={isHalfwayPage ? "primary" : "secondary"}
       >
         Contact
       </Button>

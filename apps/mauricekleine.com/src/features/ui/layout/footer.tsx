@@ -17,7 +17,7 @@ export function Footer() {
                 href="https://github.com/mauricekleine/"
                 iconLeft={GithubLogo}
                 size="sm"
-                variant="link"
+                variant="tertiary"
               >
                 Github
               </Button>
@@ -27,7 +27,7 @@ export function Footer() {
                 href="https://www.linkedin.com/in/mauricekleine/"
                 iconLeft={LinkedinLogo}
                 size="sm"
-                variant="link"
+                variant="tertiary"
               >
                 LinkedIn
               </Button>

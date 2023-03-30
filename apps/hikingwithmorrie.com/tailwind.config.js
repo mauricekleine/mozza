@@ -1,8 +1,8 @@
-import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
-import defaultTheme from "tailwindcss/defaultTheme";
+const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     "./src/**/*.{ts,tsx}",
     "../../packages/icons/src/**/*.{ts,tsx}",
@@ -34,4 +34,4 @@ export default {
       },
     },
   },
-} satisfies Config;
+};

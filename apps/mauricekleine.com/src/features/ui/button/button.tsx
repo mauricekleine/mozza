@@ -1,148 +1,105 @@
-import { clsx } from "clsx";
-import { clsxVariants } from "clsx-variants";
-import { ComponentProps, ForwardedRef, forwardRef } from "react";
-
-import { ButtonContent } from "./button-content";
-import type { Props as ButtonContentProps } from "./button-content";
-
-export type ButtonSize = "sm" | "md";
-
-type IntrinsicAnchorProps = ComponentProps<"a">;
-type IntrinsicButtonProps = ComponentProps<"button">;
-
-type CommonProps = {
-  variant?: "link" | "outline" | "solid";
-} & ButtonContentProps;
-
-type AnchorProps = {
-  as: "a";
-  href: IntrinsicAnchorProps["href"];
-} & CommonProps;
-
-type ButtonProps = {
-  as?: "button";
-  href?: never;
-  isDisabled?: boolean;
-  isLoading?: boolean;
-  onClick?: IntrinsicButtonProps["onClick"];
-  type?: IntrinsicButtonProps["type"];
-} & CommonProps;
-
-function isAnchor(props: Props): props is AnchorProps {
-  return (props as AnchorProps).as === "a";
-}
+import { CircleNotch, Icon } from "@mozza-icons/react";
+import { Button as ButtonBase, ButtonProps, Stack } from "@mozza-ui/react";
+import clsx from "clsx";
+import { VariantProps, clsxVariants } from "clsx-variants";
+import { forwardRef } from "react";
 
 const variants = clsxVariants({
   compoundVariants: [
     {
-      className: "py-2 px-6",
+      class: "py-2 px-6",
       size: "sm",
-      variant: "outline",
+      variant: "secondary",
     },
     {
-      className: "py-2 px-6",
+      class: "py-2 px-6",
       size: "sm",
-      variant: "solid",
+      variant: "primary",
     },
     {
-      className: "py-3 px-8",
+      class: "py-3 px-8",
       size: "md",
-      variant: "outline",
+      variant: "secondary",
     },
     {
-      className: "py-3 px-8",
+      class: "py-3 px-8",
       size: "md",
-      variant: "solid",
+      variant: "primary",
     },
   ],
   defaultVariants: {
     size: "md",
-    variant: "outline",
+    variant: "secondary",
   },
   variants: {
+    isDisabled: {
+      true: "opacity-75",
+    },
+    isLoading: {
+      true: "animate-pulse",
+    },
     size: {
       md: "text-base",
       sm: "text-sm",
     },
     variant: {
-      link: "hover:underline",
-      outline:
-        "border border-slate-400 text-slate-200 hover:border-slate-100 hover:text-slate-100",
-      solid:
+      primary:
         "relative z-10 border border-transparent bg-slate-200 text-slate-800 before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-slate-200 before:opacity-0 before:blur before:transition-opacity before:duration-300 hover:text-slate-900 hover:before:opacity-100 hover:text-slate-900",
+      secondary:
+        "border border-slate-400 text-slate-200 hover:border-slate-100 hover:text-slate-100",
+      tertiary: "hover:underline",
     },
   },
 });
 
-export type Props = AnchorProps | ButtonProps;
+type Props = ButtonProps &
+  VariantProps<typeof variants> & {
+    iconLeft?: Icon;
+    iconRight?: Icon;
+  };
 
 export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
-  function Button({ ...props }, ref) {
-    const {
-      children,
-      iconLeft,
-      iconRight,
-      size = "md",
-      variant = "outline",
-    } = props;
-
-    if (!("as" in props)) {
-      props.as = "button";
-    }
-
-    const className = clsx(
-      "rounded-full transition-colors",
-      variants({
-        size,
-        variant,
-      })
-    );
-
-    if (isAnchor(props)) {
-      const { href } = props;
-      const isExternalLink = href?.startsWith("http");
-
-      const anchorProps: IntrinsicAnchorProps = {
-        className,
-        href,
-      };
-
-      if (isExternalLink) {
-        anchorProps["rel"] = "noopener noreferrer";
-        anchorProps["target"] = "_blank";
-      }
-
-      return (
-        <a {...anchorProps} ref={ref as ForwardedRef<HTMLAnchorElement>}>
-          <ButtonContent iconLeft={iconLeft} iconRight={iconRight} size={size}>
-            {children}
-          </ButtonContent>
-        </a>
-      );
-    }
-
-    const { isDisabled, isLoading, onClick, type = "button" } = props;
+  function ButtonWithForwardedRef(
+    { children, iconLeft, iconRight, size, variant, ...props },
+    ref
+  ) {
+    const IconLeft = props.isLoading ? CircleNotch : iconLeft;
+    const IconRight = iconRight;
 
     return (
-      <button
-        className={clsx(className, {
-          "animate-pulse": isLoading,
-          "opacity-75": isDisabled,
+      <ButtonBase
+        className={variants("rounded-full transition-colors", {
+          isDisabled: props.isDisabled,
+          isLoading: props.isLoading,
+          size,
+          variant,
         })}
-        disabled={isDisabled || isLoading}
-        onClick={onClick}
-        ref={ref as ForwardedRef<HTMLButtonElement>}
-        type={type}
+        ref={ref}
+        {...props}
       >
-        <ButtonContent
-          iconLeft={iconLeft}
-          iconRight={iconRight}
-          isLoading={isLoading}
-          size={size}
-        >
+        <Stack direction="horizontal" gap={2} items="center" justify="center">
+          {IconLeft ? (
+            <IconLeft
+              className={clsx({
+                "animate-spin": props.isLoading,
+                "h-4 w-4": size === "sm",
+                "h-5 w-5": size === "md" || size === undefined,
+              })}
+            />
+          ) : undefined}
+
           {children}
-        </ButtonContent>
-      </button>
+
+          {IconRight ? (
+            <IconRight
+              className={clsx({
+                "h-4 w-4": size === "sm",
+                "h-5 w-5": size === "md" || size === undefined,
+              })}
+            />
+          ) : undefined}
+        </Stack>
+      </ButtonBase>
     );
   }
 );

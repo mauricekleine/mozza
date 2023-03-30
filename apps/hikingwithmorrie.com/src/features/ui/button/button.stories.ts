@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "@mozza-icons/react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Route } from "next";
 
 import { Button } from "./button";
 
@@ -75,7 +74,7 @@ export const ExternalLink: Story = {
 export const InternalLink: Story = {
   args: {
     children: "Internal link",
-    href: "/en/blog" as Route<`/en/${string}`>,
+    href: "/en/blog",
   },
 };
 

@@ -3,11 +3,13 @@ import clsx from "clsx";
 type Config = Record<string, Record<string, string>>;
 
 type Variants<C extends Config> = {
-  [name in keyof C]?: keyof C[name];
+  [name in keyof C]?: keyof C[name] extends "false" | "true"
+    ? boolean
+    : keyof C[name];
 };
 
 type OuterArgs<C extends Config> = {
-  compoundVariants?: (Variants<C> & { className: string })[];
+  compoundVariants?: (Variants<C> & { class: string })[];
   defaultVariants?: Variants<C>;
   variants: C;
 };
@@ -19,41 +21,35 @@ export function clsxVariants<C extends Config>({
   defaultVariants,
   variants,
 }: OuterArgs<C>) {
-  function generateClassNames<Output extends string>(
-    input: InnerArgs<C>
+  function generateClasses<Output extends string>(input?: InnerArgs<C>): Output;
+  function generateClasses<Output extends string>(
+    className?: string | string[],
+    args?: InnerArgs<C>
   ): Output;
-  function generateClassNames<Output extends string>(
-    className: string | string[],
-    args: InnerArgs<C>
-  ): Output;
-  function generateClassNames<Output extends string>(
-    inputOrClassName: InnerArgs<C> | string | string[],
+  function generateClasses<Output extends string>(
+    inputOrClass?: InnerArgs<C> | string | string[],
     input?: InnerArgs<C>
   ): Output {
-    const inputOrClassNameIsClassName =
-      typeof inputOrClassName === "string" || Array.isArray(inputOrClassName);
-    const args = inputOrClassNameIsClassName
-      ? (input as InnerArgs<C>)
-      : inputOrClassName;
-    const className = inputOrClassNameIsClassName
-      ? inputOrClassName
-      : undefined;
+    const inputOrClassIsClass =
+      typeof inputOrClass === "string" || Array.isArray(inputOrClass);
+    const args = inputOrClassIsClass ? (input as InnerArgs<C>) : inputOrClass;
+    const className = inputOrClassIsClass ? inputOrClass : undefined;
 
     const variantClasses = Object.keys(variants).map((variant) => {
       const variantConfig = variants[variant];
-      const variantValue = args[variant] ?? defaultVariants?.[variant];
+      const variantValue = args?.[variant] ?? defaultVariants?.[variant];
 
-      if (variantValue) {
-        return variantConfig[variantValue as string];
+      if (variantValue !== undefined) {
+        return variantConfig[String(variantValue)];
       }
     });
 
     const compoundVariantClasses = compoundVariants?.map((compoundVariant) => {
-      const { className, ...variants } = compoundVariant;
+      const { class: className, ...variants } = compoundVariant;
 
       const compoundVariantsMatch = Object.keys(variants).every((variant) => {
         const compoundVariantValue = variants[variant];
-        const variantValue = args[variant] ?? defaultVariants?.[variant];
+        const variantValue = args?.[variant] ?? defaultVariants?.[variant];
 
         return compoundVariantValue === variantValue;
       });
@@ -70,7 +66,7 @@ export function clsxVariants<C extends Config>({
     ) as Output;
   }
 
-  return generateClassNames;
+  return generateClasses;
 }
 
 export type VariantProps<C> = C extends (

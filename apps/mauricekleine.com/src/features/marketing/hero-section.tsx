@@ -1,12 +1,10 @@
 "use client";
 
-import { ArrowUpRight } from "@mozza-icons/react";
-import { Stack } from "@mozza-ui/react";
-import { motion } from "framer-motion";
-
 import { ContactFormDialog } from "@mk/contact-form";
 import { Button, Heading, Section, Text, Typewriter } from "@mk/ui";
 import { PaperPlaneTilt } from "@mk/ui/icon";
+import { Stack } from "@mozza-ui/react";
+import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
@@ -62,16 +60,12 @@ export function HeroSection() {
         >
           <Stack direction="horizontal" gap={2} items="center" justify="center">
             <ContactFormDialog>
-              <Button iconLeft={PaperPlaneTilt} variant="solid">
+              <Button iconLeft={PaperPlaneTilt} variant="primary">
                 Contact
               </Button>
             </ContactFormDialog>
 
-            <Button
-              as="a"
-              href="https://www.linkedin.com/in/mauricekleine/"
-              iconRight={ArrowUpRight}
-            >
+            <Button as="a" href="https://www.linkedin.com/in/mauricekleine/">
               LinkedIn
             </Button>
           </Stack>

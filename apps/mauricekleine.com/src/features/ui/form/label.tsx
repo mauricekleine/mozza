@@ -1,20 +1,14 @@
-import { ComponentProps } from "react";
-
-type IntrinsicLabelProps = ComponentProps<"label">;
+import { Label as BaseLabel } from "@mozza-ui/react";
 
 type Props = {
   children: string;
-  htmlFor: IntrinsicLabelProps["htmlFor"];
+  htmlFor: string;
 };
 
-export function Label({ children, htmlFor, ...props }: Props) {
+export function Label({ children, htmlFor }: Props) {
   return (
-    <label
-      className="block text-sm font-medium text-slate-300"
-      htmlFor={htmlFor}
-      {...props}
-    >
+    <BaseLabel color="text-slate-300" htmlFor={htmlFor} size="sm" weight="bold">
       {children}
-    </label>
+    </BaseLabel>
   );
 }

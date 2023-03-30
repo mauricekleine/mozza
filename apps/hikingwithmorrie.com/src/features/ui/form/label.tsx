@@ -1,7 +1,7 @@
-import clsx from "clsx";
+import { Label as BaseLabel } from "@mozza-ui/react";
 import { ReactNode } from "react";
 
-import { Color, textColorVariants } from "../theme/color-utils";
+import { Color, textColorVariants } from "../theme/text-color-utils";
 
 type Props = {
   children: ReactNode;
@@ -13,11 +13,14 @@ export function Label({ children, color, htmlFor }: Props) {
   const textColorClassName = textColorVariants({ color });
 
   return (
-    <label
-      className={clsx(textColorClassName, "text-xs font-bold tracking-tight")}
+    <BaseLabel
+      color={textColorClassName}
       htmlFor={htmlFor}
+      size="xs"
+      tracking="tight"
+      weight="bold"
     >
       {children}
-    </label>
+    </BaseLabel>
   );
 }

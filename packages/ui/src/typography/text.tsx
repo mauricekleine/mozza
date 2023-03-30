@@ -13,8 +13,8 @@ const variants = clsxVariants({
     },
     size: {
       base: "text-base",
-      xs: "text-xs",
       sm: "text-sm",
+      xs: "text-xs",
     },
     tracking: {
       normal: "tracking-normal",
@@ -48,10 +48,10 @@ type Props = VariantProps<typeof variants> &
 export function Text({
   as,
   children,
-  className: classNameProp = "",
+  color,
   ...props
-}: Props & { className?: string }) {
-  const className = variants(classNameProp, props);
+}: Props & { color?: `text-${string}` }) {
+  const className = variants(color ?? "", props);
 
   switch (as) {
     case "span": {
@@ -64,4 +64,5 @@ export function Text({
   }
 }
 
+export { variants as textVariants };
 export type { Props as TextProps };

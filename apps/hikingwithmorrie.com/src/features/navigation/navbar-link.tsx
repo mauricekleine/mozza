@@ -3,11 +3,12 @@
 import { usePathname } from "next/navigation";
 import { forwardRef } from "react";
 
-import { Link, LinkProps, LinkRef, Text, TextSize } from "@/ui/typography";
+import { Link, LinkProps, LinkRef, Text } from "@/ui/typography";
+import { TextProps } from "@mozza-ui/react";
 
 type Props<T extends string> = LinkProps<T> & {
   children: string | string[];
-  size?: TextSize;
+  size?: TextProps["size"];
 };
 
 export const NavbarLink = forwardRef(function NavbarLinkWithForwardedRef<

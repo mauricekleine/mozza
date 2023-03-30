@@ -1,6 +1,6 @@
 import { Text as TextBase, TextProps } from "@mozza-ui/react";
 
-import { Color, textColorVariants } from "../theme/color-utils";
+import { Color, textColorVariants } from "../theme/text-color-utils";
 
 type Props = TextProps & {
   color?: Color;
@@ -9,5 +9,5 @@ type Props = TextProps & {
 export function Text({ color, ...props }: Props) {
   const className = textColorVariants({ color });
 
-  return <TextBase className={className} {...props} />;
+  return <TextBase color={className} {...props} />;
 }

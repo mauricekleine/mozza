@@ -19,12 +19,17 @@ export function clsxVariants<C extends Config>({
   defaultVariants,
   variants,
 }: OuterArgs<C>) {
-  function generateClassNames(input: InnerArgs<C>): string;
-  function generateClassNames(className: string, args: InnerArgs<C>): string;
-  function generateClassNames(
+  function generateClassNames<Output extends string>(
+    input: InnerArgs<C>
+  ): Output;
+  function generateClassNames<Output extends string>(
+    className: string,
+    args: InnerArgs<C>
+  ): Output;
+  function generateClassNames<Output extends string>(
     inputOrClassName: InnerArgs<C> | string,
     input?: InnerArgs<C>
-  ): string {
+  ): Output {
     const args =
       typeof inputOrClassName === "string"
         ? (input as InnerArgs<C>)
@@ -60,7 +65,7 @@ export function clsxVariants<C extends Config>({
       className,
       ...variantClasses,
       ...(compoundVariantClasses ?? [])
-    );
+    ) as Output;
   }
 
   return generateClassNames;

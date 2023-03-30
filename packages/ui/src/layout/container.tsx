@@ -1,4 +1,3 @@
-import { clsx } from "clsx";
 import { clsxVariants } from "clsx-variants";
 import { ReactNode } from "react";
 
@@ -13,8 +12,8 @@ const variants = clsxVariants({
   },
   variants: {
     size: {
-      md: "w-11/12 px-4 sm:w-10/12 sm:px-0 md:w-9/12 lg:w-8/12",
       lg: "w-11/12 px-4 sm:w-11/12 sm:px-0 md:w-10/12 lg:w-10/12",
+      md: "w-11/12 px-4 sm:w-10/12 sm:px-0 md:w-9/12 lg:w-8/12",
     },
   },
 });

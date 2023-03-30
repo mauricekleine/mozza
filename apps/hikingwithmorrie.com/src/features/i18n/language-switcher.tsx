@@ -1,12 +1,12 @@
 "use client";
 
 import { Stack } from "@mozza-ui/react";
+import { Route } from "next";
 import { usePathname } from "next/navigation";
 
 import { NavbarLink } from "@/navigation/navbar-link";
 
 import { Locale } from ".";
-import { Route } from "next";
 
 type Props = {
   locale: Locale;

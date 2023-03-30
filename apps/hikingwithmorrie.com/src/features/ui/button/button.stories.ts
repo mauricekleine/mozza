@@ -1,8 +1,8 @@
 import { ArrowUpRight } from "@mozza-icons/react";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Route } from "next";
 
 import { Button } from "./button";
-import { Route } from "next";
 
 const meta = {
   argTypes: {

@@ -1,4 +1,4 @@
-import { Fieldset, Form, Input, InputGroup, Label, Textarea } from "@mk/ui";
+import { Fieldset, Form, Input, InputGroup, Label, Textarea } from "~/ui";
 
 type Props = {
   onSubmitted: ({ success }: { success: boolean }) => void;

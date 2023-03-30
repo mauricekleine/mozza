@@ -10,7 +10,7 @@ type Props = {
 
 function Card({ children }: Props) {
   return (
-    <div className="group cursor-pointer divide-y divide-grey-light rounded-lg border border-grey-light bg-white shadow transition-all hover:translate-y-0.5 hover:transform hover:border-green-dark hover:shadow-none">
+    <div className="divide-grey-light border-grey-light hover:border-green-dark group cursor-pointer divide-y rounded-lg border bg-white shadow transition-all hover:translate-y-0.5 hover:transform hover:shadow-none">
       {children}
     </div>
   );

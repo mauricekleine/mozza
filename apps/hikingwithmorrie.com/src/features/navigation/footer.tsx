@@ -1,11 +1,11 @@
 import { Grid, Stack } from "@mozza-ui/react";
 
-import { Container } from "@/ui/layout";
-import { Header, Text } from "@/ui/typography";
+import { Container } from "~/ui/layout";
+import { Header, Text } from "~/ui/typography";
 
 export function Footer() {
   return (
-    <footer className="bg-black py-8 text-grey-light">
+    <footer className="text-grey-light bg-black py-8">
       <Container>
         <Stack gap={4}>
           <Grid columns={4} gap={16}>

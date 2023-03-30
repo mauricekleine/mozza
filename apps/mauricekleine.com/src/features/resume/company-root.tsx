@@ -1,7 +1,7 @@
 import { Stack } from "@mozza-ui/react";
 import { ComponentType, ReactNode } from "react";
 
-import { LogoLink } from "@mk/marketing/client-logos";
+import { LogoLink } from "~/marketing/client-logos";
 
 type Props = {
   children: ReactNode | ReactNode[];

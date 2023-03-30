@@ -1,4 +1,4 @@
-import { serverConfig } from "@mk/config/server";
+import { serverConfig } from "~/config/server";
 
 export const turnstile = {
   verify: async function verify(formData: FormData, headers: Headers) {

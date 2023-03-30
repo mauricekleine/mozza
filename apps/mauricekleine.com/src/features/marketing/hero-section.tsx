@@ -1,10 +1,11 @@
 "use client";
 
-import { ContactFormDialog } from "@mk/contact-form";
-import { Button, Heading, Section, Text, Typewriter } from "@mk/ui";
-import { PaperPlaneTilt } from "@mk/ui/icon";
 import { Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
+
+import { ContactFormDialog } from "~/contact-form";
+import { Button, Heading, Section, Text, Typewriter } from "~/ui";
+import { PaperPlaneTilt } from "~/ui/icon";
 
 export function HeroSection() {
   return (

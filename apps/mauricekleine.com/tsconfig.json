@@ -2,10 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@mk/lib": ["./src/lib"],
-      "@mk/ui": ["./src/features/ui"],
-      "@mk/ui/icon": ["./src/features/ui/icon"],
-      "@mk/*": ["./src/features/*"]
+      "~/lib": ["./src/lib/*"],
+      "~/*": ["./src/features/*"]
     },
     "plugins": [
       {

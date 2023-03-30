@@ -2,7 +2,7 @@ import { Stack } from "@mozza-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Section, Text } from "@mk/ui";
+import { Section, Text } from "~/ui";
 
 import { NavigationContactButton } from "./navigation-contact-button";
 

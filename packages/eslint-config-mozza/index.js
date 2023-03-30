@@ -39,7 +39,13 @@ module.exports = {
         },
         groups: ["builtin", "external", "parent", "sibling", "index"],
         "newlines-between": "always",
-        pathGroups: [],
+        pathGroups: [
+          {
+            group: "external",
+            pattern: "~/**",
+            position: "after",
+          },
+        ],
       },
     ],
     "no-restricted-imports": [

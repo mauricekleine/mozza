@@ -1,7 +1,7 @@
 import { Stack } from "@mozza-ui/react";
 
-import { Heading } from "@mk/ui";
-import { Icon } from "@mk/ui/icon";
+import { Heading } from "~/ui";
+import { Icon } from "~/ui/icon";
 
 type Props = {
   children: string;

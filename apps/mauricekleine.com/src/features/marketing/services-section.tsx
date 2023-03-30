@@ -3,7 +3,7 @@
 import { Grid, Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 
-import { Heading, Section, Text } from "@mk/ui";
+import { Heading, Section, Text } from "~/ui";
 import {
   Atom,
   Boat,
@@ -11,7 +11,7 @@ import {
   RocketLaunch,
   Stack as StackIcon,
   UsersThree,
-} from "@mk/ui/icon";
+} from "~/ui/icon";
 
 import { ServicesCard } from "./services-card";
 

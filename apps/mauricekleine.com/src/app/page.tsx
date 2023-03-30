@@ -6,7 +6,7 @@ import {
   PastProjectsSection,
   PetProjectsSection,
   ServicesSection,
-} from "@mk/marketing";
+} from "~/marketing";
 
 export default function Page() {
   return (

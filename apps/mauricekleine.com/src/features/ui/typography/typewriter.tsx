@@ -78,7 +78,7 @@ export function Typewriter({ text }: Props) {
         {textToRender}
       </Text>
 
-      <span className="-ml-1 animate-blink border-r border-r-slate-200"></span>
+      <span className="animate-blink -ml-1 border-r border-r-slate-200"></span>
     </>
   );
 }

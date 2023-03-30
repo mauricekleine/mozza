@@ -2,8 +2,8 @@
 
 import { ReactNode, useState } from "react";
 
-import { ContactForm } from "@mk/contact-form";
-import { Card, Dialog, Toast } from "@mk/ui";
+import { ContactForm } from "~/contact-form";
+import { Card, Dialog, Toast } from "~/ui";
 
 type Props = {
   children: ReactNode;

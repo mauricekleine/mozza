@@ -9,9 +9,9 @@ import {
   ProductboardLogo,
   StormDigitalLogo,
   UButlerLogo,
-} from "@mk/marketing/client-logos";
-import { Company } from "@mk/resume";
-import { Heading, Link, Section } from "@mk/ui";
+} from "~/marketing/client-logos";
+import { Company } from "~/resume";
+import { Heading, Link, Section } from "~/ui";
 
 export const metadata: Metadata = {
   robots: { follow: false, index: false },

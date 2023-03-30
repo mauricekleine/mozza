@@ -1,10 +1,10 @@
 import { Stack } from "@mozza-ui/react";
 
-import { Dictionary, Locale } from "@/i18n";
-import { LanguageSwitcher } from "@/i18n/language-switcher";
-import { Button } from "@/ui/button";
-import { Container } from "@/ui/layout";
-import { Text } from "@/ui/typography";
+import { Dictionary, Locale } from "~/i18n";
+import { LanguageSwitcher } from "~/i18n/language-switcher";
+import { Button } from "~/ui/button";
+import { Container } from "~/ui/layout";
+import { Text } from "~/ui/typography";
 
 import { Logo } from "./logo";
 import { NavbarLink } from "./navbar-link";

@@ -3,7 +3,7 @@
 import { Grid, Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 
-import { Card, Heading, Section, Text } from "@mk/ui";
+import { Card, Heading, Section, Text } from "~/ui";
 
 import {
   AeonLogo,

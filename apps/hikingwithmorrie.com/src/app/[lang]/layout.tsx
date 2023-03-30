@@ -3,9 +3,9 @@ import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
-import { Locale, getDictionary } from "@/i18n";
-import { Footer } from "@/navigation/footer";
-import { Navbar } from "@/navigation/navbar";
+import { Locale, getDictionary } from "~/i18n";
+import { Footer } from "~/navigation/footer";
+import { Navbar } from "~/navigation/navbar";
 
 import "./layout.css";
 

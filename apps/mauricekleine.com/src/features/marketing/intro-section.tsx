@@ -4,8 +4,8 @@ import { Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import { Card, Link, Section, Text } from "@mk/ui";
-import { HandWaving } from "@mk/ui/icon";
+import { Card, Link, Section, Text } from "~/ui";
+import { HandWaving } from "~/ui/icon";
 
 export function IntroSection() {
   return (
@@ -72,6 +72,7 @@ export function IntroSection() {
                   <Text>
                     {" "}
                     about my time at Productboard; by listening to a podcast in
+
                     which{" "}
                   </Text>
 

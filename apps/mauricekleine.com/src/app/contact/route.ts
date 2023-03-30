@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-import { serverConfig } from "@mk/config/server";
-import { turnstile } from "@mk/lib";
+import { serverConfig } from "~/config/server";
+import { turnstile } from "~/lib";
 
 export async function POST(request: Request) {
   const formData = await request.formData();

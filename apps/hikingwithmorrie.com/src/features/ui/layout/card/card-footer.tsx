@@ -8,7 +8,7 @@ type Props = {
 
 export function CardFooter({ children }: Props) {
   return (
-    <div className="flex items-center justify-end p-4 transition-colors group-hover:text-green-dark sm:px-6">
+    <div className="group-hover:text-green-dark flex items-center justify-end p-4 transition-colors sm:px-6">
       <Text as="span" size="sm">
         {children}
       </Text>

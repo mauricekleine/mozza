@@ -15,7 +15,7 @@ export const Link = forwardRef(function LinkWithForwardedRef<T extends string>(
     <LinkBase
       className={clsx("-mb-0.5 border-b-2 transition-colors", {
         "border-b-green-dark text-green-dark": isActive,
-        "border-b-transparent text-grey-dark transition-transform hover:text-green-dark":
+        "text-grey-dark hover:text-green-dark border-b-transparent transition-transform":
           !isActive,
       })}
       ref={ref}

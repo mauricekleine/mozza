@@ -1,10 +1,11 @@
 "use client";
 
-import { ContactFormDialog } from "@mk/contact-form/contact-form-dialog";
-import { Button } from "@mk/ui";
-import { PaperPlaneTilt } from "@mk/ui/icon";
 import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
+
+import { ContactFormDialog } from "~/contact-form/contact-form-dialog";
+import { Button } from "~/ui";
+import { PaperPlaneTilt } from "~/ui/icon";
 
 export function NavigationContactButton() {
   const { scrollYProgress } = useScroll();

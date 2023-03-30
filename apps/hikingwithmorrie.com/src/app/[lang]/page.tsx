@@ -1,9 +1,9 @@
 import { Grid } from "@mozza-ui/react";
 
-import { Locale, getDictionary } from "@/i18n";
-import { HeroSection } from "@/sections/hero-section";
-import { Card, Container } from "@/ui/layout";
-import { Header } from "@/ui/typography";
+import { Locale, getDictionary } from "~/i18n";
+import { HeroSection } from "~/sections/hero-section";
+import { Card, Container } from "~/ui/layout";
+import { Header } from "~/ui/typography";
 
 export default async function Page({
   params: { lang: locale },

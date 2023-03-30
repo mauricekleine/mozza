@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/features/*"]
+      "~/*": ["./src/features/*"]
     },
     "plugins": [
       {

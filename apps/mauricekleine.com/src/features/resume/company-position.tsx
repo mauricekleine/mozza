@@ -1,7 +1,7 @@
 import { format, formatDistance } from "date-fns";
 import { useMemo } from "react";
 
-import { Heading, Text } from "@mk/ui";
+import { Heading, Text } from "~/ui";
 
 type Props = {
   endDate?: string;

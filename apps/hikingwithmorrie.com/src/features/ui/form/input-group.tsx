@@ -25,7 +25,7 @@ export function InputGroup({ children, label, name }: Props) {
 
       {children}
 
-      {error && <p className="text-sm text-red">{error?.message as string}</p>}
+      {error && <p className="text-red text-sm">{error?.message as string}</p>}
     </div>
   );
 }

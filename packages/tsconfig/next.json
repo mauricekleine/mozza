@@ -5,10 +5,10 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "paths": {
-      "@mk/*": ["./src/features/*"],
-      "@mk/lib": ["./src/lib"],
-      "@mk/ui": ["./src/features/ui"],
-      "@mk/ui/icon": ["./src/features/ui/icon"]
+      "~/*": ["./src/features/*"],
+      "~/lib": ["./src/lib"],
+      "~/ui": ["./src/features/ui"],
+      "~/ui/icon": ["./src/features/ui/icon"]
     },
     "plugins": [
       {

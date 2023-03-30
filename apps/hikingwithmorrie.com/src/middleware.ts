@@ -3,7 +3,7 @@ import Negotiator from "negotiator";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-import { config as i18nConfig } from "@/i18n";
+import { config as i18nConfig } from "~/i18n";
 
 function getLocale(request: NextRequest): string | undefined {
   const negotiatorHeaders: Record<string, string> = {};

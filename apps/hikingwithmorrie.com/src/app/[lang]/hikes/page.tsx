@@ -1,4 +1,4 @@
-import { Header } from "@/ui/typography";
+import { Header } from "~/ui/typography";
 
 export default function Page() {
   return (

@@ -1,5 +1,4 @@
 import { Stack } from "@mozza-ui/react";
-import Image from "next/image";
 
 import { Dictionary, Locale } from "@/i18n";
 import { LanguageSwitcher } from "@/i18n/language-switcher";

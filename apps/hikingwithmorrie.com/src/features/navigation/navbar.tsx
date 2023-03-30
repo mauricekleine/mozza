@@ -7,7 +7,7 @@ import { Button } from "@/ui/button";
 import { Container } from "@/ui/layout";
 import { Text } from "@/ui/typography";
 
-import Logo from "./logo.svg";
+import { Logo } from "./logo";
 import { NavbarLink } from "./navbar-link";
 
 type Props = {
@@ -22,13 +22,7 @@ export function Navbar({ dictionary, locale }: Props) {
         <div className="flex h-16 items-center justify-between">
           <Stack direction="horizontal" gap={8}>
             <div className="flex-shrink-0">
-              <Image
-                alt={dictionary.meta.logo.alt}
-                className="h-9 w-9"
-                height={32}
-                src={Logo}
-                width={32}
-              />
+              <Logo className="h-9 w-9" />
             </div>
 
             <Stack direction="horizontal" gap={4} items="center">

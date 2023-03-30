@@ -10,10 +10,8 @@ type Props = {
 
 export function ToastTitle({ children }: Props) {
   return (
-    <TitlePrimitive asChild>
-      <Text as="p" weight="bold">
-        {children}
-      </Text>
+    <TitlePrimitive>
+      <Text weight="bold">{children}</Text>
     </TitlePrimitive>
   );
 }

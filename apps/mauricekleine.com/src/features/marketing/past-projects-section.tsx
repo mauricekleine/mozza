@@ -3,7 +3,7 @@
 import { Grid, Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 
-import { Card, Heading, Section, Text } from "~/ui";
+import { Card, Header, Section, Text } from "~/ui";
 
 import {
   AeonLogo,
@@ -30,7 +30,7 @@ export function PastProjectsSection() {
       <Stack gap={8} justify="center" textAlign="center">
         <Section>
           <Stack gap={2}>
-            <Heading as="h2">Past Projects</Heading>
+            <Header as="h2">Past Projects</Header>
 
             <Text color={300}>
               From start-up, to scale-up, across all kinds of industries

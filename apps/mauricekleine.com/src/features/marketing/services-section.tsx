@@ -3,7 +3,7 @@
 import { Grid, Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 
-import { Heading, Section, Text } from "~/ui";
+import { Header, Section, Text } from "~/ui";
 import {
   Atom,
   Boat,
@@ -26,7 +26,7 @@ export function ServicesSection() {
       <Section size="lg">
         <Stack gap={8} justify="center">
           <Stack gap={4} textAlign="center">
-            <Heading as="h2">Expertise</Heading>
+            <Header as="h2">Expertise</Header>
 
             <Section>
               <Text color={300}>

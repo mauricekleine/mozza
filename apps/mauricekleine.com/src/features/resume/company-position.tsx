@@ -1,7 +1,7 @@
 import { format, formatDistance } from "date-fns";
 import { useMemo } from "react";
 
-import { Heading, Text } from "~/ui";
+import { Header, Text } from "~/ui";
 
 type Props = {
   endDate?: string;
@@ -27,11 +27,11 @@ export function CompanyPosition({
 
   return (
     <div>
-      <Heading as="h3">{title}</Heading>
+      <Header as="h3">{title}</Header>
 
-      <Text as="p">{tenureString}</Text>
+      <Text>{tenureString}</Text>
 
-      <Text as="p">{location}</Text>
+      <Text>{location}</Text>
     </div>
   );
 }

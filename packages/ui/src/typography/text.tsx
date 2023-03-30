@@ -1,6 +1,8 @@
 import { VariantProps, clsxVariants } from "clsx-variants";
 import { ReactNode } from "react";
 
+import { As } from "../system";
+
 const variants = clsxVariants({
   defaultVariants: {
     family: "sans",
@@ -45,24 +47,17 @@ type SpanProps = {
 
 type Props = VariantProps<typeof variants> & (ParagraphProps | SpanProps);
 
-function isSpan(props: Props): props is SpanProps {
-  return props.as === "span";
-}
-
-export function Text(props: Props & { color?: `text-${string}` }) {
-  const className = variants(props.color ?? "", {
-    family: props.family,
-    size: props.size,
-    tracking: props.tracking,
-    transform: props.transform,
-    weight: props.weight,
-  });
-
-  if (isSpan(props)) {
-    return <span className={className}>{props.children}</span>;
-  }
-
-  return <p className={className}>{props.children}</p>;
+export function Text({
+  as = "p",
+  children,
+  color,
+  ...props
+}: Props & { color?: `text-${string}` }) {
+  return (
+    <As as={as} className={color} variants={variants} {...props}>
+      {children}
+    </As>
+  );
 }
 
 export { variants as textVariants };

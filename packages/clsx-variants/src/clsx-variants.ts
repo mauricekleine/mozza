@@ -69,9 +69,8 @@ export function clsxVariants<C extends Config>({
   return generateClasses;
 }
 
-export type VariantProps<C> = C extends (
-  className: string,
-  args: infer A
-) => string
-  ? A
-  : never;
+export type VariantProps<
+  C extends ReturnType<typeof clsxVariants>,
+  R extends keyof NonNullable<Parameters<C>[1]> = never
+> = Omit<NonNullable<Parameters<C>[1]>, R> &
+  Required<Pick<NonNullable<Parameters<C>[1]>, R>>;

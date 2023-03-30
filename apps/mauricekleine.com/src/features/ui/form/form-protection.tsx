@@ -34,7 +34,7 @@ export function FormProtection() {
 
       mounted.current = true;
     }
-  }, []);
+  }, [setVerificationToken]);
 
   return (
     <div className="relative h-16">

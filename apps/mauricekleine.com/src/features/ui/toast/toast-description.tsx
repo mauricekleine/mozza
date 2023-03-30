@@ -11,7 +11,7 @@ type Props = {
 export function ToastDescription({ children }: Props) {
   return (
     <DescriptionPrimitive asChild>
-      <Text as="p">{children}</Text>
+      <Text>{children}</Text>
     </DescriptionPrimitive>
   );
 }

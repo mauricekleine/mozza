@@ -34,7 +34,7 @@ export function Footer() {
             </Stack>
 
             <div className="border-t border-white/5 px-8 pt-2">
-              <Text serif size="xs">
+              <Text family="serif" size="xs">
                 Made with <Heart className="h-4 w-4 text-pink-600" /> in
                 Amsterdam
               </Text>

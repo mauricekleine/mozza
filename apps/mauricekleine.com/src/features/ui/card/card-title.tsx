@@ -1,4 +1,4 @@
-import { Heading } from "../typography";
+import { Header } from "../typography";
 
 type Props = {
   children: string;
@@ -7,7 +7,7 @@ type Props = {
 export function CardTitle({ children }: Props) {
   return (
     <div>
-      <Heading as="h2">{children}</Heading>
+      <Header as="h2">{children}</Header>
     </div>
   );
 }

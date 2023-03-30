@@ -35,8 +35,8 @@ export function IntroSection() {
               items="center"
             >
               <Stack gap={4}>
-                <Text as="p">
-                  <Text>
+                <Text>
+                  <Text as="span">
                     You can find out more about me by reading articles I wrote
                     about{" "}
                   </Text>
@@ -45,31 +45,31 @@ export function IntroSection() {
                     remote work
                   </Link>
 
-                  <Text>, </Text>
+                  <Text as="span">, </Text>
 
                   <Link href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
                     comfort zones
                   </Link>
 
-                  <Text> and </Text>
+                  <Text as="span"> and </Text>
 
                   <Link href="https://www.productboard.com/blog/supporting-mental-health/">
                     mental health in the work place
                   </Link>
 
-                  <Text>; by reading </Text>
+                  <Text as="span">; by reading </Text>
 
                   <Link href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
                     this article
                   </Link>
 
-                  <Text> or listening to </Text>
+                  <Text as="span"> or listening to </Text>
 
                   <Link href="https://soundcloud.com/people-of-productboard/1-maurice/">
                     this podcast
                   </Link>
 
-                  <Text>
+                  <Text as="span">
                     {" "}
                     about my time at Productboard; by listening to a podcast in
 
@@ -80,27 +80,29 @@ export function IntroSection() {
                     I get interviewed about remote work
                   </Link>
 
-                  <Text>; or by watching the recording of </Text>
+                  <Text as="span">; or by watching the recording of </Text>
 
                   <Link href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
                     a meetup I organized about remote work
                   </Link>
 
-                  <Text>.</Text>
+                  <Text as="span">.</Text>
                 </Text>
 
-                <Text as="p">
-                  <Text>You can find my open source work on </Text>
+                <Text>
+                  <Text as="span">You can find my open source work on </Text>
 
                   <Link href="https://github.com/mauricekleine/">GitHub</Link>
 
-                  <Text>, or browse my experience and skills on </Text>
+                  <Text as="span">
+                    , or browse my experience and skills on{" "}
+                  </Text>
 
                   <Link href="https://www.linkedin.com/in/mauricekleine/">
                     LinkedIn
                   </Link>
 
-                  <Text>.</Text>
+                  <Text as="span">.</Text>
                 </Text>
               </Stack>
 

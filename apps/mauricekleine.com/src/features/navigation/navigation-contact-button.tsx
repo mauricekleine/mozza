@@ -17,7 +17,7 @@ export function NavigationContactButton() {
         setIsHalfwayPage(true);
       }
     });
-  }, []);
+  }, [scrollYProgress]);
 
   return (
     <ContactFormDialog>

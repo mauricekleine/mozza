@@ -11,7 +11,7 @@ import {
   UButlerLogo,
 } from "~/marketing/client-logos";
 import { Company } from "~/resume";
-import { Heading, Link, Section } from "~/ui";
+import { Header, Link, Section } from "~/ui";
 
 export const metadata: Metadata = {
   robots: { follow: false, index: false },
@@ -24,18 +24,18 @@ export default function ResumePage() {
       <Section>
         <Stack gap={16}>
           <Stack gap={4}>
-            <Heading as="h1">Maurice Kleine</Heading>
+            <Header as="h1">Maurice Kleine</Header>
 
-            <Heading as="h3">
+            <Header as="h3">
               To me, the most important goal in life is to learn new things -
               whether that be professionally in my career, or in my personal
               life while meeting new people, discovering new places and trying
               new things.
-            </Heading>
+            </Header>
           </Stack>
 
           <Stack gap={8}>
-            <Heading as="h2">👨‍💻 Experience</Heading>
+            <Header as="h2">👨‍💻 Experience</Header>
 
             <Grid
               columns={{ base: 1, sm: 2 }}
@@ -131,11 +131,11 @@ export default function ResumePage() {
 
           <Grid columns={2} gap={16}>
             <Stack gap={8}>
-              <Heading as="h2">📚 Education</Heading>
+              <Header as="h2">📚 Education</Header>
 
               <Stack gap={8}>
                 <div>
-                  <Heading as="h3">Psychology</Heading>
+                  <Header as="h3">Psychology</Header>
 
                   <p>Bachelor of Science (BSc)</p>
 
@@ -143,7 +143,7 @@ export default function ResumePage() {
                 </div>
 
                 <div>
-                  <Heading as="h3">Information Science</Heading>
+                  <Header as="h3">Information Science</Header>
 
                   <p>Bachelor of Arts (BA) · Average grade: 8.0</p>
 
@@ -151,7 +151,7 @@ export default function ResumePage() {
                 </div>
 
                 <div>
-                  <Heading as="h3">Bachelor Honours Programme</Heading>
+                  <Header as="h3">Bachelor Honours Programme</Header>
 
                   <p>University of Groningen · 2011 - 2015</p>
                 </div>
@@ -160,17 +160,17 @@ export default function ResumePage() {
 
             <Stack gap={16}>
               <Stack gap={8}>
-                <Heading as="h2">📜 Certifications</Heading>
+                <Header as="h2">📜 Certifications</Header>
 
                 <div>
-                  <Heading as="h3">Professional Scrum Master I</Heading>
+                  <Header as="h3">Professional Scrum Master I</Header>
 
                   <p>Scrum.org · Aug 2017</p>
                 </div>
               </Stack>
 
               <Stack gap={8}>
-                <Heading as="h2">🧔‍♂️ Random facts</Heading>
+                <Header as="h2">🧔‍♂️ Random facts</Header>
 
                 <ul className="ml-6 list-disc">
                   <li>

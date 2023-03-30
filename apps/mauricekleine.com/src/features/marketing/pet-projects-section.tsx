@@ -1,6 +1,6 @@
 import { Grid, Stack } from "@mozza-ui/react";
 
-import { Heading, Link, Section, Text } from "~/ui";
+import { Header, Link, Section, Text } from "~/ui";
 
 type PetProject = {
   description: string;
@@ -39,13 +39,13 @@ export function PetProjectsSection() {
     <div className="border-t border-slate-200/10 bg-black bg-gradient-to-r from-black via-slate-900/50 to-black px-8 py-16 sm:px-0">
       <Section>
         <Stack gap={8}>
-          <Heading as="h2">Passion Projects</Heading>
+          <Header as="h2">Passion Projects</Header>
 
           <Stack gap={1}>
-            <Heading as="h3">SEDS</Heading>
+            <Header as="h3">SEDS</Header>
 
             <div>
-              <Text>
+              <Text as="span">
                 The Social Education and Development Society (SEDS) is a NGO
                 that has been actively involved in socially transforming
                 initiatives and rural development for over 38 years near the
@@ -54,15 +54,9 @@ export function PetProjectsSection() {
               </Text>
 
               <Stack direction="horizontal" gap={2}>
-                <Text>
-                  <Link href="https://sedsngo.org">website</Link>
-                </Text>
+                <Link href="https://sedsngo.org">website</Link>
 
-                <Text>
-                  <Link href="https://github.com/mauricekleine/seds">
-                    source
-                  </Link>
-                </Text>
+                <Link href="https://github.com/mauricekleine/seds">source</Link>
               </Stack>
             </div>
           </Stack>
@@ -70,21 +64,17 @@ export function PetProjectsSection() {
           <Grid columns={{ base: 1, md: 2 }} gap={8}>
             {petProjects.map((project) => (
               <Stack gap={1} key={project.name}>
-                <Heading as="h3">{project.name}</Heading>
+                <Header as="h3">{project.name}</Header>
 
                 <div>
-                  <Text>{project.description}</Text>
+                  <Text as="span">{project.description}</Text>
 
                   <Stack direction="horizontal" gap={2}>
                     {project.url ? (
-                      <Text>
-                        <Link href={project.url}>website</Link>
-                      </Text>
+                      <Link href={project.url}>website</Link>
                     ) : null}
 
-                    <Text>
-                      <Link href={project.repo}>source</Link>
-                    </Text>
+                    <Link href={project.repo}>source</Link>
                   </Stack>
                 </div>
               </Stack>

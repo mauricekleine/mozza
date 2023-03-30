@@ -2,7 +2,7 @@
 
 import { Title as TitlePrimitive } from "@radix-ui/react-dialog";
 
-import { Heading } from "../typography";
+import { Header } from "../typography";
 
 type Props = {
   children: string;
@@ -11,7 +11,7 @@ type Props = {
 export function DialogTitle({ children }: Props) {
   return (
     <TitlePrimitive asChild>
-      <Heading as="h3">{children}</Heading>
+      <Header as="h3">{children}</Header>
     </TitlePrimitive>
   );
 }

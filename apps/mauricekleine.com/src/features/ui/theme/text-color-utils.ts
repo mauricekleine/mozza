@@ -1,15 +1,12 @@
 import { clsxVariants } from "clsx-variants";
 
 export const textColorClassMap = {
-  black: "text-black",
-  green: "text-green-base",
-  "green.dark": "text-green-dark",
-  "green.light": "text-green-light",
-  grey: "text-grey-base",
-  "grey.dark": "text-grey-dark",
-  "grey.light": "text-grey-light",
-  red: "text-red",
-  white: "text-white",
+  0: "text-white",
+  50: "text-slate-50",
+  100: "text-slate-100",
+  200: "text-slate-200",
+  300: "text-slate-300",
+  400: "text-slate-400",
 } as const;
 
 type Color = keyof typeof textColorClassMap;

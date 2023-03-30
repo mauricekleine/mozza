@@ -10,8 +10,8 @@ type Props = {
 
 export function DialogDescription({ children }: Props) {
   return (
-    <DescriptionPrimitive asChild>
-      <Text as="p">{children}</Text>
+    <DescriptionPrimitive>
+      <Text>{children}</Text>
     </DescriptionPrimitive>
   );
 }

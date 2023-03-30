@@ -4,7 +4,7 @@ import { Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 
 import { ContactFormDialog } from "~/contact-form";
-import { Button, Heading, Section, Text, Typewriter } from "~/ui";
+import { Button, Header, Section } from "~/ui";
 import { PaperPlaneTilt } from "~/ui/icon";
 
 export function HeroSection() {
@@ -17,40 +17,11 @@ export function HeroSection() {
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <Stack items="center" justify="center" textAlign="center">
-            <Heading as="h1">Maurice Kleine</Heading>
+            <Header as="h1">Maurice Kleine</Header>
 
-            <Stack direction="horizontal" gap={1}>
-              <Text
-                color={400}
-                serif
-                size="2xl"
-                tracking="tight"
-                weight="semibold"
-              >
-                Freelance
-              </Text>
-
-              <Typewriter
-                text={[
-                  "Software",
-                  "Frontend",
-                  "Backend",
-                  "Full-stack",
-                  "Product",
-                  "UX/UI",
-                ]}
-              />
-
-              <Text
-                color={400}
-                serif
-                size="2xl"
-                tracking="tight"
-                weight="semibold"
-              >
-                Engineer
-              </Text>
-            </Stack>
+            <Header as="h3" color={400}>
+              Freelance Frontend Engineer
+            </Header>
           </Stack>
         </motion.div>
 

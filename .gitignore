@@ -9,7 +9,10 @@ node_modules
 coverage
 
 # next.js
-.next/
+/.next/*
+!/.next/types
+/.next/types/*
+!/.next/types/link.d.ts
 out/
 build
 

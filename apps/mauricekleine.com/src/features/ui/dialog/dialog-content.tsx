@@ -1,10 +1,9 @@
 "use client";
 
+import { X } from "@mozza-icons/react";
 import { Close, Content, Overlay, Portal } from "@radix-ui/react-dialog";
 import { AnimatePresence, motion } from "framer-motion";
 import { ReactNode } from "react";
-
-import { X } from "../icon";
 
 type Props = {
   children: ReactNode | ReactNode[];

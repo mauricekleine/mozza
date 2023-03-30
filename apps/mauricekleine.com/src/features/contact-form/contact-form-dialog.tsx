@@ -1,9 +1,12 @@
 "use client";
 
+import { Confetti, SmileyXEyes } from "@mozza-icons/react";
+import { Stack, Toast } from "@mozza-ui/react";
+import clsx from "clsx";
 import { ReactNode, useState } from "react";
 
 import { ContactForm } from "~/contact-form";
-import { Card, Dialog, Toast } from "~/ui";
+import { Card, Dialog, Text } from "~/ui";
 
 type Props = {
   children: ReactNode;
@@ -48,21 +51,39 @@ export function ContactFormDialog({ children }: Props) {
       </Dialog>
 
       <Toast
+        className={clsx(
+          "pointer-events-auto w-full max-w-md overflow-hidden rounded-lg border border-b-4 border-slate-200/10 bg-black shadow-lg",
+          { "border-b-red-900": hasErrors },
+          { "border-b-green-900": !hasErrors }
+        )}
         isOpen={isToastOpen}
         onOpenChange={(open) => {
           setIsToastOpen(open);
         }}
-        variant={hasErrors ? "error" : "success"}
       >
-        <Toast.Title>
-          {hasErrors ? "Something went wrong" : "Inquiry submitted"}
-        </Toast.Title>
+        <div className={clsx("my-auto flex items-center rounded-full")}>
+          {hasErrors ? (
+            <SmileyXEyes className="h-8 w-8 text-red-800" />
+          ) : (
+            <Confetti className="h-8 w-8 text-green-800" />
+          )}
+        </div>
 
-        <Toast.Description>
-          {hasErrors
-            ? "Please try again"
-            : "Your inquiry was received and will be answered as soon as possible"}
-        </Toast.Description>
+        <Stack gap={1}>
+          <Toast.Title>
+            <Text weight="bold">
+              {hasErrors ? "Something went wrong" : "Inquiry submitted"}
+            </Text>
+          </Toast.Title>
+
+          <Toast.Description>
+            <Text>
+              {hasErrors
+                ? "Please try again"
+                : "Your inquiry was received and will be answered as soon as possible"}
+            </Text>
+          </Toast.Description>
+        </Stack>
       </Toast>
     </>
   );

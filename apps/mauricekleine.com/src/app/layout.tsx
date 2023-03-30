@@ -1,3 +1,4 @@
+import { ToastProvider, ToastViewport } from "@mozza-ui/react";
 import { clsx } from "clsx";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -5,7 +6,7 @@ import localFont from "next/font/local";
 import Script from "next/script";
 
 import { Navigation } from "~/navigation";
-import { Footer, ToastProvider, ToastViewport } from "~/ui";
+import { Footer } from "~/ui";
 
 import "./layout.css";
 

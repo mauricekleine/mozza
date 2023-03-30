@@ -1,4 +1,4 @@
-import { IconBase, IconBaseProps } from "./icon-base";
+import { IconBase, IconBaseProps } from "./_base";
 
 export function CaretRight(props: IconBaseProps) {
   return (

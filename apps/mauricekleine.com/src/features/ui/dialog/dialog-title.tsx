@@ -10,7 +10,7 @@ type Props = {
 
 export function DialogTitle({ children }: Props) {
   return (
-    <TitlePrimitive asChild>
+    <TitlePrimitive>
       <Header as="h3">{children}</Header>
     </TitlePrimitive>
   );

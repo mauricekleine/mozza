@@ -1,17 +1,12 @@
 "use client";
 
 import { Description as DescriptionPrimitive } from "@radix-ui/react-toast";
-
-import { Text } from "../typography";
+import { ReactNode } from "react";
 
 type Props = {
-  children: string;
+  children: ReactNode;
 };
 
 export function ToastDescription({ children }: Props) {
-  return (
-    <DescriptionPrimitive asChild>
-      <Text>{children}</Text>
-    </DescriptionPrimitive>
-  );
+  return <DescriptionPrimitive>{children}</DescriptionPrimitive>;
 }

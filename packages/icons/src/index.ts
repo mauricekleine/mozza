@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 
-import { IconBaseProps } from "./icon-base";
+import { IconBaseProps } from "./_base";
 
 export type Icon = FunctionComponent<IconBaseProps>;
 
@@ -12,3 +12,6 @@ export * from "./caret-right";
 export * from "./caret-up";
 export * from "./check";
 export * from "./circle-notch";
+export * from "./confetti";
+export * from "./smiley-x-eyes";
+export * from "./x";

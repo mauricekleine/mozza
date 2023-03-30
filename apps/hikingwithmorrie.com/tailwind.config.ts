@@ -1,9 +1,8 @@
-/* eslint-disable unicorn/prefer-module */
-const colors = require("tailwindcss/colors");
-const defaultTheme = require("tailwindcss/defaultTheme");
+import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
+import defaultTheme from "tailwindcss/defaultTheme";
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./src/**/*.{ts,tsx}",
     "../../packages/icons/src/**/*.{ts,tsx}",
@@ -35,4 +34,4 @@ module.exports = {
       },
     },
   },
-};
+} satisfies Config;

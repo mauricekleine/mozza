@@ -1,36 +1,25 @@
 {
-  "description": "",
-  "devDependencies": {
-    "eslint": "~8.37.0",
-    "eslint-config-mozza": "workspace:*",
-    "husky": "~8.0.3",
-    "lint-staged": "~13.2.0",
-    "prettier": "~2.8.7",
-    "turbo": "~1.8.8",
-    "typescript": "~5.0.2"
-  },
-  "engines": {
-    "node": "^18.0.0"
-  },
-  "homepage": "https://mauricekleine.com",
-  "license": "",
   "name": "mozza",
-  "packageManager": "pnpm@8.1.0",
+  "version": "0.1.0",
   "private": true,
+  "description": "",
+  "homepage": "https://mauricekleine.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/mauricekleine/mozza"
   },
+  "license": "",
+  "sideEffects": false,
   "scripts": {
     "build": "turbo build",
     "build:storybook": "turbo build:storybook",
     "dev": "turbo dev",
     "dev:storybook": "turbo dev:storybook",
     "format": "turbo format",
+    "preinstall": "npx only-allow pnpm",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "precommit": "lint-staged",
-    "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "start": "turbo start",
     "test": "turbo test",
@@ -39,6 +28,19 @@
     "update:major": "pnpm dlx taze -r major -w",
     "update:minor": "pnpm dlx taze -r minor -w"
   },
-  "sideEffects": false,
-  "version": "0.1.0"
+  "devDependencies": {
+    "eslint": "~8.37.0",
+    "eslint-config-mozza": "workspace:*",
+    "husky": "~8.0.3",
+    "lint-staged": "~13.2.0",
+    "prettier": "~2.8.7",
+    "prettier-plugin-tailwindcss": "~0.2.6",
+    "sort-package-json": "~2.4.1",
+    "turbo": "~1.8.8",
+    "typescript": "~5.0.2"
+  },
+  "packageManager": "pnpm@8.1.0",
+  "engines": {
+    "node": "^18.0.0"
+  }
 }

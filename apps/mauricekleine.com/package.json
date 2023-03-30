@@ -1,4 +1,24 @@
 {
+  "name": "mauricekleine.com",
+  "version": "0.1.0",
+  "private": true,
+  "description": "",
+  "homepage": "https://mauricekleine.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauricekleine/mozza"
+  },
+  "license": "",
+  "sideEffects": false,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "format": "prettier --write \"./src/**/*.{ts,tsx}\"",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix && pnpm format",
+    "start": "next start",
+    "typecheck": "tsc -b"
+  },
   "dependencies": {
     "@mozza-icons/react": "workspace:*",
     "@mozza-ui/react": "workspace:*",
@@ -13,7 +33,6 @@
     "react-dom": "~18.2.0",
     "zod": "~3.21.4"
   },
-  "description": "",
   "devDependencies": {
     "@tailwindcss/forms": "~0.5.3",
     "@types/node": "~18.15.11",
@@ -23,32 +42,11 @@
     "eslint": "~8.37.0",
     "eslint-config-mozza": "workspace:*",
     "postcss": "~8.4.21",
-    "prettier": "~2.8.7",
-    "prettier-plugin-tailwindcss": "~0.2.6",
     "tailwindcss": "~3.3.0",
     "tsconfig": "workspace:*",
     "typescript": "~5.0.2"
   },
   "engines": {
     "node": "^18.0.0"
-  },
-  "homepage": "https://mauricekleine.com",
-  "license": "",
-  "name": "mauricekleine.com",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mauricekleine/mozza"
-  },
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "format": "prettier --write \"./src/**/*.{ts,tsx}\"",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix && pnpm format",
-    "start": "next start",
-    "typecheck": "tsc -b"
-  },
-  "sideEffects": false,
-  "version": "0.1.0"
+  }
 }

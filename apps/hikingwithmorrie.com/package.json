@@ -1,4 +1,18 @@
 {
+  "name": "hikingwithmorrie.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "build:storybook": "storybook build",
+    "dev": "next dev",
+    "dev:storybook": "storybook dev -p 6006",
+    "format": "prettier --write \"./src/**/*.{ts,tsx}\"",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix && pnpm format",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
     "@formatjs/intl-localematcher": "~0.2.32",
     "@hookform/resolvers": "~3.0.0",
@@ -33,8 +47,6 @@
     "eslint": "~8.37.0",
     "eslint-config-mozza": "workspace:*",
     "postcss-loader": "~7.1.0",
-    "prettier": "~2.8.7",
-    "prettier-plugin-tailwindcss": "~0.2.6",
     "storybook": "~7.0.0-rc.10",
     "style-loader": "~3.3.2",
     "tailwindcss": "~3.3.0",
@@ -43,19 +55,5 @@
   },
   "engines": {
     "node": "^18.0.0"
-  },
-  "name": "hikingwithmorrie.com",
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "build:storybook": "storybook build",
-    "dev": "next dev",
-    "dev:storybook": "storybook dev -p 6006",
-    "format": "prettier --write \"./src/**/*.{ts,tsx}\"",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix && pnpm format",
-    "start": "next start",
-    "typecheck": "tsc --noEmit"
-  },
-  "version": "0.1.0"
+  }
 }

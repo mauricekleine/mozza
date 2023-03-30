@@ -1,12 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: [
-    "next/core-web-vitals",
-    "plugin:storybook/recommended",
-    "plugin:unicorn/all",
-    "turbo",
-    "prettier",
-  ],
+  extends: ["next/core-web-vitals", "plugin:unicorn/all", "turbo", "prettier"],
   overrides: [
     {
       files: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -19,6 +13,10 @@ module.exports = {
       rules: {
         "no-restricted-imports": "off",
       },
+    },
+    {
+      extends: ["plugin:storybook/recommended"],
+      files: ["./**/*.stories.{js,jsx,ts,tsx}"],
     },
     {
       extends: ["plugin:testing-library/react"],
@@ -86,5 +84,10 @@ module.exports = {
     "unicorn/prefer-module": "off",
     "unicorn/prevent-abbreviations": "off",
     "unused-imports/no-unused-imports": "error",
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
   },
 };

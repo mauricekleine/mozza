@@ -25,8 +25,8 @@
     "test": "turbo test",
     "test:watch": "turbo test:watch",
     "typecheck": "turbo typecheck",
-    "update:major": "pnpm dlx taze -r major -w",
-    "update:minor": "pnpm dlx taze -r minor -w"
+    "update:major": "taze -r major -w",
+    "update:minor": "taze -r minor -w"
   },
   "devDependencies": {
     "eslint": "~8.37.0",
@@ -36,6 +36,7 @@
     "prettier": "~2.8.7",
     "prettier-plugin-tailwindcss": "~0.2.6",
     "sort-package-json": "~2.4.1",
+    "taze": "~0.9.1",
     "turbo": "~1.8.8",
     "typescript": "~5.0.2"
   },

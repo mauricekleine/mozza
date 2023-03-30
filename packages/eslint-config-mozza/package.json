@@ -1,4 +1,12 @@
 {
+  "name": "eslint-config-mozza",
+  "version": "0.1.0",
+  "private": true,
+  "description": "",
+  "license": "",
+  "sideEffects": false,
+  "main": "index.js",
+  "scripts": {},
   "dependencies": {
     "eslint": "~8.37.0",
     "eslint-config-next": "~13.2.4",
@@ -12,13 +20,5 @@
     "eslint-plugin-unused-imports": "~2.0.0",
     "next": "~13.2.4",
     "typescript": "~5.0.2"
-  },
-  "description": "",
-  "license": "",
-  "main": "index.js",
-  "name": "eslint-config-mozza",
-  "private": true,
-  "scripts": {},
-  "sideEffects": false,
-  "version": "0.1.0"
+  }
 }

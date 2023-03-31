@@ -1,11 +1,11 @@
 "use client";
 
+import { HandWaving } from "@mozza-icons/react";
 import { Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 import { Card, Link, Section, Text } from "~/ui";
-import { HandWaving } from "~/ui/icon";
 
 export function IntroSection() {
   return (

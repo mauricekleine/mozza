@@ -1,11 +1,11 @@
 "use client";
 
+import { PaperPlaneTilt } from "@mozza-icons/react";
 import { Stack } from "@mozza-ui/react";
 import { motion } from "framer-motion";
 
 import { ContactFormDialog } from "~/contact-form";
 import { Button, Header, Section } from "~/ui";
-import { PaperPlaneTilt } from "~/ui/icon";
 
 export function HeroSection() {
   return (

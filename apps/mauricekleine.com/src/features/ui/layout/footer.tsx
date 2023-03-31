@@ -1,7 +1,7 @@
+import { GithubLogo, Heart, LinkedinLogo } from "@mozza-icons/react";
 import { Stack } from "@mozza-ui/react";
 
 import { Button } from "../button";
-import { GithubLogo, Heart, LinkedinLogo } from "../icon";
 import { Section } from "../layout";
 import { Text } from "../typography";
 

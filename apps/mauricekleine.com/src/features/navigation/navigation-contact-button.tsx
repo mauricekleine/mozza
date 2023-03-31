@@ -1,11 +1,11 @@
 "use client";
 
+import { PaperPlaneTilt } from "@mozza-icons/react";
 import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { ContactFormDialog } from "~/contact-form/contact-form-dialog";
 import { Button } from "~/ui";
-import { PaperPlaneTilt } from "~/ui/icon";
 
 export function NavigationContactButton() {
   const { scrollYProgress } = useScroll();

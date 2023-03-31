@@ -3,12 +3,7 @@
     "baseUrl": "./",
     "paths": {
       "~/*": ["./src/features/*"]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    }
   },
   "exclude": ["node_modules"],
   "extends": "tsconfig/next.json",

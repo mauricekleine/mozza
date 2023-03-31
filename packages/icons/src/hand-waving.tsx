@@ -1,4 +1,4 @@
-import { IconBase } from "./icon-base";
+import { IconBase } from "./_base";
 
 type Props = {
   className?: string;

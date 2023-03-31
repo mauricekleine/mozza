@@ -1,4 +1,4 @@
-import { Icon } from "../icon";
+import { Icon } from "@mozza-icons/react";
 
 type Props = {
   icon: Icon;

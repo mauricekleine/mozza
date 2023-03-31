@@ -1,9 +1,5 @@
 "use client";
 
-import { Grid, Stack } from "@mozza-ui/react";
-import { motion } from "framer-motion";
-
-import { Header, Section, Text } from "~/ui";
 import {
   Atom,
   Boat,
@@ -11,7 +7,11 @@ import {
   RocketLaunch,
   Stack as StackIcon,
   UsersThree,
-} from "~/ui/icon";
+} from "@mozza-icons/react";
+import { Grid, Stack } from "@mozza-ui/react";
+import { motion } from "framer-motion";
+
+import { Header, Section, Text } from "~/ui";
 
 import { ServicesCard } from "./services-card";
 

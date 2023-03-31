@@ -1,25 +1,14 @@
-import { IconBase } from "./icon-base";
+import { IconBase } from "./_base";
 
 type Props = {
   className?: string;
 };
 
-export function UsersThree({ className }: Props) {
+export function RocketLaunch({ className }: Props) {
   return (
     <IconBase className={className}>
-      <circle
-        cx="128"
-        cy="140"
-        fill="none"
-        r="40"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      ></circle>
-
       <path
-        d="M196,116a59.8,59.8,0,0,1,48,24"
+        d="M94.1,184.6c-11.4,33.9-56.6,33.9-56.6,33.9s0-45.2,33.9-56.6"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
@@ -28,7 +17,7 @@ export function UsersThree({ className }: Props) {
       ></path>
 
       <path
-        d="M12,140a59.8,59.8,0,0,1,48-24"
+        d="M195.9,105.4,128,173.3,82.7,128l67.9-67.9C176.3,34.4,202,34.7,213,36.3a7.8,7.8,0,0,1,6.7,6.7C221.3,54,221.6,79.7,195.9,105.4Z"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
@@ -37,7 +26,7 @@ export function UsersThree({ className }: Props) {
       ></path>
 
       <path
-        d="M70.4,216a64.1,64.1,0,0,1,115.2,0"
+        d="M184.6,116.7v64.6a8,8,0,0,1-2.4,5.6l-32.3,32.4a8,8,0,0,1-13.5-4.1L128,173.3"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
@@ -46,16 +35,7 @@ export function UsersThree({ className }: Props) {
       ></path>
 
       <path
-        d="M60,116A32,32,0,1,1,91.4,78"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      ></path>
-
-      <path
-        d="M164.6,78A32,32,0,1,1,196,116"
+        d="M139.3,71.4H74.7a8,8,0,0,0-5.6,2.4L36.7,106.1a8,8,0,0,0,4.1,13.5L82.7,128"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"

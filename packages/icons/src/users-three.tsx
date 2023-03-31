@@ -1,14 +1,25 @@
-import { IconBase } from "./icon-base";
+import { IconBase } from "./_base";
 
 type Props = {
   className?: string;
 };
 
-export function GithubLogo({ className }: Props) {
+export function UsersThree({ className }: Props) {
   return (
     <IconBase className={className}>
+      <circle
+        cx="128"
+        cy="140"
+        fill="none"
+        r="40"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
+      ></circle>
+
       <path
-        d="M84,240a23.9,23.9,0,0,0,24-24V168"
+        d="M196,116a59.8,59.8,0,0,1,48,24"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
@@ -17,7 +28,7 @@ export function GithubLogo({ className }: Props) {
       ></path>
 
       <path
-        d="M172,240a23.9,23.9,0,0,1-24-24V168"
+        d="M12,140a59.8,59.8,0,0,1,48-24"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
@@ -26,7 +37,7 @@ export function GithubLogo({ className }: Props) {
       ></path>
 
       <path
-        d="M152,168h16a23.9,23.9,0,0,1,24,24v8a23.9,23.9,0,0,0,24,24"
+        d="M70.4,216a64.1,64.1,0,0,1,115.2,0"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
@@ -35,7 +46,7 @@ export function GithubLogo({ className }: Props) {
       ></path>
 
       <path
-        d="M104,168H88a23.9,23.9,0,0,0-24,24v8a23.9,23.9,0,0,1-24,24"
+        d="M60,116A32,32,0,1,1,91.4,78"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
@@ -44,7 +55,7 @@ export function GithubLogo({ className }: Props) {
       ></path>
 
       <path
-        d="M111.8,64A52,52,0,0,0,68,40a52,52,0,0,0-3.5,44.7A49.3,49.3,0,0,0,56,112v8a48,48,0,0,0,48,48h48a48,48,0,0,0,48-48v-8a49.3,49.3,0,0,0-8.5-27.3A52,52,0,0,0,188,40a52,52,0,0,0-43.8,24Z"
+        d="M164.6,78A32,32,0,1,1,196,116"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"

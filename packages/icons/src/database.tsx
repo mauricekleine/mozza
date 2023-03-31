@@ -1,38 +1,41 @@
-import { IconBase } from "./icon-base";
+import { IconBase } from "./_base";
 
 type Props = {
   className?: string;
 };
 
-export function Stack({ className }: Props) {
+export function Database({ className }: Props) {
   return (
     <IconBase className={className}>
-      <polyline
+      <ellipse
+        cx="128"
+        cy="80"
         fill="none"
-        points="32 176 128 232 224 176"
+        rx="88"
+        ry="48"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></polyline>
+      ></ellipse>
 
-      <polyline
+      <path
+        d="M40,80v48c0,26.5,39.4,48,88,48s88-21.5,88-48V80"
         fill="none"
-        points="32 128 128 184 224 128"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></polyline>
+      ></path>
 
-      <polygon
+      <path
+        d="M40,128v48c0,26.5,39.4,48,88,48s88-21.5,88-48V128"
         fill="none"
-        points="32 80 128 136 224 80 128 24 32 80"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
-      ></polygon>
+      ></path>
     </IconBase>
   );
 }

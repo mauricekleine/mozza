@@ -2,8 +2,6 @@
 
 import { useEffect, useRef } from "react";
 
-import { useForm } from "./use-form";
-
 declare global {
   interface Window {
     turnstile: {
@@ -18,10 +16,12 @@ declare global {
   }
 }
 
-export function FormProtection() {
-  const mounted = useRef<boolean>();
+type Props = {
+  setVerificationToken: (token: string) => void;
+};
 
-  const { setVerificationToken } = useForm();
+export function FormProtection({ setVerificationToken }: Props) {
+  const mounted = useRef<boolean>();
 
   useEffect(() => {
     if (!mounted.current) {

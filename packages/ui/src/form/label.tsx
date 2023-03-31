@@ -1,3 +1,5 @@
+"use client";
+
 import { VariantProps } from "clsx-variants";
 import { ReactNode } from "react";
 
@@ -10,11 +12,21 @@ type Props = VariantProps<typeof textVariants> & {
 
 export function Label({
   children,
-  color,
+  className: classNameProp,
+  family,
   htmlFor,
-  ...props
-}: Props & { color?: `text-${string}` }) {
-  const className = textVariants(color ?? "", props);
+  size,
+  tracking,
+  transform,
+  weight,
+}: Props & { className?: string }) {
+  const className = textVariants(classNameProp, {
+    family,
+    size,
+    tracking,
+    transform,
+    weight,
+  });
 
   return (
     <label className={className} htmlFor={htmlFor}>

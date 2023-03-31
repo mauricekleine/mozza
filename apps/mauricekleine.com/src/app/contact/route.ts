@@ -5,10 +5,10 @@ import { serverConfig } from "~/config/server";
 import { turnstile } from "~/lib";
 
 export async function POST(request: Request) {
-  const formData = await request.formData();
+  const data = await request.json();
   const headers = request.headers;
 
-  const verification = await turnstile.verify(formData, headers);
+  const verification = await turnstile.verify(data, headers);
 
   if (verification.success === false) {
     return NextResponse.json(
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
   });
 
   try {
-    const parsed = schema.parse(Object.fromEntries(formData));
+    const parsed = schema.parse(data);
 
     await fetch(serverConfig.SLACK_WAITINGLIST_WEBHOOK_URL, {
       body: JSON.stringify({

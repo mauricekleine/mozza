@@ -7,7 +7,12 @@ type Props = {
 
 export function Label({ children, htmlFor }: Props) {
   return (
-    <BaseLabel color="text-slate-300" htmlFor={htmlFor} size="sm" weight="bold">
+    <BaseLabel
+      className="text-slate-300"
+      htmlFor={htmlFor}
+      size="sm"
+      weight="bold"
+    >
       {children}
     </BaseLabel>
   );

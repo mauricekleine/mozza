@@ -30,10 +30,10 @@ declare namespace __next_route_internal_types__ {
   type StaticRoutes = `/../middleware`;
   type DynamicRoutes<T extends string = string> =
     | `/${SafeSlug<T>}`
-    | `/${SafeSlug<T>}/about`
     | `/${SafeSlug<T>}/blog`
-    | `/${SafeSlug<T>}/contact`
-    | `/${SafeSlug<T>}/hikes`;
+    | `/${SafeSlug<T>}/hikes`
+    | `/${SafeSlug<T>}/about`
+    | `/${SafeSlug<T>}/contact`;
 
   type RouteImpl<T> =
     | StaticRoutes

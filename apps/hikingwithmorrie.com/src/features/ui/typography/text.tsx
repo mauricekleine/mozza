@@ -9,5 +9,5 @@ type Props = TextProps & {
 export function Text({ color, ...props }: Props) {
   const colorClass = textColorVariants({ color });
 
-  return <TextBase color={colorClass} {...props} />;
+  return <TextBase className={colorClass} {...props} />;
 }

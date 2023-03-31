@@ -1,4 +1,4 @@
-import { As } from "@mozza-ui/react";
+import { Header as HeaderBase } from "@mozza-ui/react";
 import { VariantProps, clsxVariants } from "clsx-variants";
 import { ReactNode } from "react";
 
@@ -19,11 +19,13 @@ type Props = VariantProps<typeof variants, "as"> & {
   children: ReactNode;
 };
 
-export function Header({ children, ...props }: Props) {
+export function Header({ as, children, color }: Props) {
+  const className = variants({ as, color });
+
   return (
-    <As variants={variants} {...props}>
+    <HeaderBase as={as} className={className}>
       {children}
-    </As>
+    </HeaderBase>
   );
 }
 

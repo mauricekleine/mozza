@@ -1,7 +1,6 @@
 "use client";
 
-import { X } from "@mozza-icons/react";
-import { Close, Content, Overlay, Portal } from "@radix-ui/react-dialog";
+import { Content, Overlay, Portal } from "@radix-ui/react-dialog";
 import { AnimatePresence, motion } from "framer-motion";
 import { ReactNode } from "react";
 
@@ -44,12 +43,6 @@ export function DialogContent({ children, isOpen }: Props) {
                   }}
                   initial={{ opacity: 0, scale: 0.95 }}
                 >
-                  <div className="flex justify-end">
-                    <Close className="-mr-1 p-2">
-                      <X />
-                    </Close>
-                  </div>
-
                   {children}
                 </motion.div>
               </Content>

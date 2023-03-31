@@ -1,37 +1,17 @@
-import { ArrowUpRight } from "@mozza-icons/react";
+import { Link as LinkBase, LinkProps as LinkBaseProps } from "@mozza-ui/react";
+import { Route } from "next";
 import NextLink from "next/link";
-import type { HTMLAttributes, ReactNode } from "react";
 
-type Props = {
-  children: ReactNode;
-  className?: HTMLAttributes<HTMLAnchorElement>["className"];
-  href: string;
-};
+type Props<H extends string> = LinkBaseProps<Route<H> | H>;
 
-export function Link({ children, href }: Props) {
-  const isInternalLink = !href.startsWith("http");
-
-  const className =
-    "text-slate-400 underline transition-colors hover:text-slate-200 hover:no-underline";
-
-  if (isInternalLink) {
-    return (
-      <NextLink className={className} href={href}>
-        {children}
-      </NextLink>
-    );
-  }
-
+export function Link<H extends string>({ as, children, ...props }: Props<H>) {
   return (
-    <a
-      className={className}
-      href={href}
-      rel="noopener noreferrer"
-      target="_blank"
+    <LinkBase
+      as={as ?? NextLink}
+      className="text-slate-400 underline transition-colors hover:text-slate-200 hover:no-underline"
+      {...props}
     >
-      <span>{children}</span>
-
-      <ArrowUpRight />
-    </a>
+      {children}
+    </LinkBase>
   );
 }

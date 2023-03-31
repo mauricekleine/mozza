@@ -1,12 +1,12 @@
 "use client";
 
-import { Confetti, SmileyXEyes } from "@mozza-icons/react";
-import { Stack, Toast } from "@mozza-ui/react";
+import { Confetti, SmileyXEyes, X } from "@mozza-icons/react";
+import { Dialog, Stack, Toast } from "@mozza-ui/react";
 import clsx from "clsx";
 import { ReactNode, useState } from "react";
 
 import { ContactForm } from "~/contact-form";
-import { Card, Dialog, Text } from "~/ui";
+import { Card, Text } from "~/ui";
 
 type Props = {
   children: ReactNode;
@@ -37,6 +37,12 @@ export function ContactFormDialog({ children }: Props) {
         <Dialog.Trigger asChild>{children}</Dialog.Trigger>
 
         <Dialog.Content isOpen={isDialogOpen}>
+          <div className="flex justify-end">
+            <Dialog.Close className="-mr-1 p-2">
+              <X />
+            </Dialog.Close>
+          </div>
+
           <Card>
             <Dialog.Title>Contact me</Dialog.Title>
 
@@ -84,6 +90,12 @@ export function ContactFormDialog({ children }: Props) {
             </Text>
           </Toast.Description>
         </Stack>
+
+        <div className="flex-shrink-0">
+          <Toast.Close className="p-1">
+            <X className="h-3 w-3" />
+          </Toast.Close>
+        </div>
       </Toast>
     </>
   );

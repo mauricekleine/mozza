@@ -48,13 +48,25 @@ type SpanProps = {
 type Props = VariantProps<typeof variants> & (ParagraphProps | SpanProps);
 
 export function Text({
-  as = "p",
+  as,
   children,
-  color,
-  ...props
-}: Props & { color?: `text-${string}` }) {
+  className: classNameProp,
+  family,
+  size,
+  tracking,
+  transform,
+  weight,
+}: Props & { className?: string }) {
+  const className = variants(classNameProp, {
+    family,
+    size,
+    tracking,
+    transform,
+    weight,
+  });
+
   return (
-    <As as={as} className={color} variants={variants} {...props}>
+    <As as={as ?? "p"} className={className}>
       {children}
     </As>
   );

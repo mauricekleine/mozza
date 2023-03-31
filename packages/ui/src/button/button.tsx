@@ -6,50 +6,52 @@ import {
   forwardRef,
 } from "react";
 
-import { LinkBase, LinkBaseProps } from "../typography/_link-base";
+import { Link, LinkProps } from "../typography/link";
 
 type ButtonProps = {
   as?: "button";
+  children: ReactNode;
   isDisabled?: boolean;
   isLoading?: boolean;
   onClick?: ComponentProps<"button">["onClick"];
   type?: ComponentProps<"button">["type"];
 };
 
-type Props = {
-  children: ReactNode;
-} & (ButtonProps | LinkBaseProps);
+type Props = ButtonProps | LinkProps;
 
-function isAnchor(props: Props): props is LinkBaseProps {
-  return props.as === "a" || typeof (props as LinkBaseProps).href === "string";
+function isButton(props: Props): props is ButtonProps {
+  return !props.as || props.as === "button";
 }
 
 export const Button = forwardRef(function ButtonWithForwardedRef(
-  props: Props & { className: string },
+  props: Props & {
+    className?: string;
+  },
   ref: Ref<HTMLAnchorElement | HTMLButtonElement>
 ) {
-  if (isAnchor(props)) {
+  if (isButton(props)) {
     return (
-      <LinkBase
+      <button
         className={props.className}
-        href={props.href}
-        ref={ref as ForwardedRef<HTMLAnchorElement>}
+        disabled={props.isDisabled || props.isLoading}
+        onClick={props.onClick}
+        ref={ref as ForwardedRef<HTMLButtonElement>}
+        type={props.type ?? "button"}
       >
         {props.children}
-      </LinkBase>
+      </button>
     );
   }
 
   return (
-    <button
+    <Link
+      as={props.as}
       className={props.className}
-      disabled={props.isDisabled || props.isLoading}
-      onClick={props.onClick}
-      ref={ref as ForwardedRef<HTMLButtonElement>}
-      type={props.type ?? "button"}
+      href={props.href}
+      ref={ref as ForwardedRef<HTMLAnchorElement>}
     >
       {props.children}
-    </button>
+    </Link>
   );
 });
 

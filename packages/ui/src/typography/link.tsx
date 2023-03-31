@@ -1,27 +1,33 @@
 import { ArrowUpRight } from "@mozza-icons/react";
 import clsx from "clsx";
-import { ReactNode, Ref, forwardRef } from "react";
+import { JSXElementConstructor, ReactNode, Ref, forwardRef } from "react";
 
-function isExternalLink(
-  href: string | `http${string}`
-): href is `http${string}` {
+import { As } from "../system";
+
+function isExternalLink(href: string) {
   return href.startsWith("http");
 }
 
-type Props = {
-  as?: "a";
+type Props<
+  H extends string = string,
+  A extends "a" | JSXElementConstructor<any> = "a"
+> = {
+  as?: A;
   children: ReactNode;
-  href: string | `http${string}`;
+  href: H;
 };
 
-export const LinkBase = forwardRef(function LinkBaseWithForwardedRef(
+export const Link = forwardRef(function LinkWithForwardedRef<
+  H extends string = string,
+  A extends "a" | JSXElementConstructor<any> = "a"
+>(
   {
     as,
     children,
     className,
     href,
-  }: Props & {
-    className: string;
+  }: Props<H, A> & {
+    className?: string;
   },
   ref: LinkRef
 ) {
@@ -41,18 +47,17 @@ export const LinkBase = forwardRef(function LinkBaseWithForwardedRef(
     );
   }
 
-  const Element = as ?? "a";
-
   return (
-    <Element
+    <As
+      as={as ?? "a"}
       className={clsx(className, "inline-flex items-center space-x-2")}
       href={href}
       ref={ref}
     >
       {children}
-    </Element>
+    </As>
   );
 });
 
-export type { Props as LinkBaseProps };
+export type { Props as LinkProps };
 export type LinkRef = Ref<HTMLAnchorElement>;

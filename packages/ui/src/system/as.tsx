@@ -1,23 +1,21 @@
-import { VariantProps, clsxVariants } from "clsx-variants";
-import { ElementType, ReactNode } from "react";
+import { ComponentPropsWithoutRef, ElementType, Ref, forwardRef } from "react";
 
-type Props<V extends ReturnType<typeof clsxVariants>> = VariantProps<V> & {
-  as: ElementType;
-  children: ReactNode;
-  variants: V;
-};
-
-export function As<V extends ReturnType<typeof clsxVariants>>({
-  as,
-  children,
-  className: classNameProp = "",
-  variants,
-  ...props
-}: Props<V> & { className?: string }) {
+export const As = forwardRef(function AsWithForwardedRef<
+  As extends ElementType
+>(
+  {
+    as,
+    ...props
+  }: {
+    as: As;
+  } & ComponentPropsWithoutRef<As>,
+  ref: Ref<unknown>
+) {
   const Element = as;
-  const className = variants(classNameProp, { as: as as string, ...props });
 
-  return <Element className={className}>{children}</Element>;
-}
+  return <Element {...(props as any)} ref={ref} />;
+});
 
-export type { Props as AsProps };
+export type PropsWithAs<As extends ElementType, Props = {}> = Props & {
+  as?: As;
+} & Omit<ComponentPropsWithoutRef<As>, keyof Props>;

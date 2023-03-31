@@ -1,15 +1,11 @@
 "use client";
 
-import { X } from "@mozza-icons/react";
-import {
-  Close as ClosePrimitive,
-  Root as RootPrimitive,
-  ToastProps,
-} from "@radix-ui/react-toast";
+import { Root, ToastProps } from "@radix-ui/react-toast";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { Stack } from "../layout";
 
+import { ToastClose } from "./toast-close";
 import { ToastDescription } from "./toast-description";
 import { ToastTitle } from "./toast-title";
 
@@ -24,7 +20,7 @@ function Toast({ children, className, isOpen, onOpenChange }: Props) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <RootPrimitive
+        <Root
           asChild
           className={className}
           onOpenChange={onOpenChange}
@@ -45,20 +41,15 @@ function Toast({ children, className, isOpen, onOpenChange }: Props) {
           >
             <Stack direction="horizontal" gap={4} items="start">
               {children}
-
-              <div className="flex-shrink-0">
-                <ClosePrimitive className="p-1">
-                  <X className="h-3 w-3" />
-                </ClosePrimitive>
-              </div>
             </Stack>
           </motion.div>
-        </RootPrimitive>
+        </Root>
       )}
     </AnimatePresence>
   );
 }
 
+Toast.Close = ToastClose;
 Toast.Description = ToastDescription;
 Toast.Title = ToastTitle;
 

@@ -1,6 +1,5 @@
-import { As } from "@mozza-ui/react";
+import { Header as HeaderBase, HeaderProps } from "@mozza-ui/react";
 import { VariantProps, clsxVariants } from "clsx-variants";
-import { ReactNode } from "react";
 
 import { textColorClassMap } from "../theme/text-color-utils";
 
@@ -15,16 +14,14 @@ const variants = clsxVariants({
   },
 });
 
-type Props = VariantProps<typeof variants, "as"> & {
-  children: ReactNode;
-};
+type Props = VariantProps<typeof variants, "as"> & HeaderProps;
 
-export function Header({ children, ...props }: Props) {
+export function Header({ as, children, color }: Props) {
+  const className = variants({ as, color });
+
   return (
-    <As variants={variants} {...props}>
+    <HeaderBase as={as} className={className}>
       {children}
-    </As>
+    </HeaderBase>
   );
 }
-
-export type { Props as HeaderProps };

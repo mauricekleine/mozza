@@ -1,6 +1,6 @@
 import { CaretRight } from "@mozza-icons/react";
 
-import { Text } from "../../typography";
+import { Text } from "~/ui";
 
 type Props = {
   children: string | string[];

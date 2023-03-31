@@ -1,4 +1,4 @@
-import { Header } from "~/ui/typography";
+import { Header } from "~/ui";
 
 type Props = {
   children: string;

@@ -3,7 +3,7 @@
 import { ComponentProps } from "react";
 import { useFormContext } from "react-hook-form";
 
-import { Button } from "../button/button";
+import { Button } from "~/ui";
 
 type Props = Omit<ComponentProps<typeof Button>, "as" | "onClick" | "type">;
 

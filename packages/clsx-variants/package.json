@@ -20,7 +20,7 @@
     "eslint-config-mozza": "workspace:*",
     "prettier": "~2.8.7",
     "tsconfig": "workspace:*",
-    "typescript": "~5.0.2",
+    "typescript": "~5.0.3",
     "vitest": "~0.29.8"
   },
   "engines": {

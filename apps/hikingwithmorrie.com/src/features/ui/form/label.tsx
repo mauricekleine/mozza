@@ -1,7 +1,7 @@
 import { Label as BaseLabel } from "@mozza-ui/react";
 import { ReactNode } from "react";
 
-import { Color, textColorVariants } from "../theme/text-color-utils";
+import { Color, textColorVariants } from "~/ui/utils/text-color-utils";
 
 type Props = {
   children: ReactNode;

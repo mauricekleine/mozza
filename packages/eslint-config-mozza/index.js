@@ -9,12 +9,6 @@ module.exports = {
       },
     },
     {
-      files: ["./src/features/ui/**/*", "./src/**/index.ts"],
-      rules: {
-        "no-restricted-imports": "off",
-      },
-    },
-    {
       extends: ["plugin:storybook/recommended"],
       files: ["./**/*.stories.{js,jsx,ts,tsx}"],
     },

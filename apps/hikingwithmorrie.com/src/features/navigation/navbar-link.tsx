@@ -4,7 +4,7 @@ import { TextProps } from "@mozza-ui/react";
 import { Route } from "next";
 import { usePathname } from "next/navigation";
 
-import { Link, LinkProps, Text } from "~/ui/typography";
+import { Link, LinkProps, Text } from "~/ui";
 
 type Props<H extends string = string> = LinkProps<Route<H>> & {
   children: string | string[];

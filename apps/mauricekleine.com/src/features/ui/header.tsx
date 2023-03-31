@@ -2,7 +2,7 @@ import { Header as HeaderBase } from "@mozza-ui/react";
 import { VariantProps, clsxVariants } from "clsx-variants";
 import { ReactNode } from "react";
 
-import { textColorClassMap } from "../theme/text-color-utils";
+import { textColorClassMap } from "./utils/text-color-utils";
 
 const variants = clsxVariants({
   variants: {

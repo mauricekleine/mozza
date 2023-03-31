@@ -1,8 +1,7 @@
 import { Stack } from "@mozza-ui/react";
 
 import { Dictionary } from "~/i18n";
-import { Container } from "~/ui/layout";
-import { Header, Text } from "~/ui/typography";
+import { Container, Header, Text } from "~/ui";
 
 type Props = {
   dictionary: Dictionary;

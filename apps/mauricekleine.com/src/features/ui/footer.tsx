@@ -1,9 +1,7 @@
 import { GithubLogo, Heart, LinkedinLogo } from "@mozza-icons/react";
 import { Stack } from "@mozza-ui/react";
 
-import { Button } from "../button";
-import { Section } from "../layout";
-import { Text } from "../typography";
+import { Button, Section, Text } from "~/ui";
 
 export function Footer() {
   return (

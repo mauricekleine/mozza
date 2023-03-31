@@ -19,6 +19,6 @@
     "eslint-plugin-unicorn": "~46.0.0",
     "eslint-plugin-unused-imports": "~2.0.0",
     "next": "~13.2.4",
-    "typescript": "~5.0.2"
+    "typescript": "~5.0.3"
   }
 }

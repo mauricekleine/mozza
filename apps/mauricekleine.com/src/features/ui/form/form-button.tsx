@@ -2,7 +2,7 @@
 
 import { Stack } from "@mozza-ui/react";
 
-import { Button } from "../button";
+import { Button } from "~/ui";
 
 import { useForm } from "./use-form";
 

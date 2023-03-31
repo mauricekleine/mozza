@@ -9,10 +9,6 @@ module.exports = {
       },
     },
     {
-      extends: ["plugin:storybook/recommended"],
-      files: ["./**/*.stories.{js,jsx,ts,tsx}"],
-    },
-    {
       extends: ["plugin:testing-library/react"],
       files: ["./**/*.test.{js,jsx,ts,tsx}"],
     },

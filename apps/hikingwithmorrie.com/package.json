@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "build:storybook": "storybook build",
     "dev": "next dev",
-    "dev:storybook": "storybook dev -p 6006",
     "format": "prettier --write \"./src/**/*.{ts,tsx}\"",
     "lint": "next lint",
     "lint:fix": "next lint --fix && pnpm format",
@@ -29,13 +27,6 @@
     "zod": "~3.21.4"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "~7.0.0-rc.11",
-    "@storybook/addon-essentials": "~7.0.0-rc.11",
-    "@storybook/addon-interactions": "~7.0.0-rc.11",
-    "@storybook/addon-links": "~7.0.0-rc.11",
-    "@storybook/blocks": "~7.0.0-rc.11",
-    "@storybook/nextjs": "~7.0.0-rc.11",
-    "@storybook/react": "~7.0.0-rc.11",
     "@tailwindcss/forms": "~0.5.3",
     "@tailwindcss/typography": "~0.5.9",
     "@types/negotiator": "~0.6.1",
@@ -43,12 +34,8 @@
     "@types/react": "~18.0.31",
     "@types/react-dom": "~18.0.11",
     "autoprefixer": "~10.4.14",
-    "css-loader": "~6.7.3",
     "eslint": "~8.37.0",
     "eslint-config-mozza": "workspace:*",
-    "postcss-loader": "~7.1.0",
-    "storybook": "~7.0.0-rc.11",
-    "style-loader": "~3.3.2",
     "tailwindcss": "~3.3.1",
     "tsconfig": "workspace:*",
     "typescript": "~5.0.3"

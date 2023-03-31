@@ -12,9 +12,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "turbo build",
-    "build:storybook": "turbo build:storybook",
     "dev": "turbo dev",
-    "dev:storybook": "turbo dev:storybook",
     "format": "turbo format",
     "preinstall": "npx only-allow pnpm",
     "lint": "turbo lint",

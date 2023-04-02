@@ -27,8 +27,9 @@ A tiny utility for constructing `className` variants conditionally. It uses the 
 
 ## Usage
 
-```jsx
-import clsxVariants from "clsx-variants";
+```tsx
+import type { ReactNode } from "react";
+import { clsxVariants, VariantProps } from "clsx-variants";
 
 const buttonVariants = clsxVariants({
   compoundVariants: [
@@ -61,7 +62,9 @@ const buttonVariants = clsxVariants({
   },
 });
 
-const Button = ({ children, outline, size, variant }) => {
+type Props = VariantProps<typeof buttonVariants> & { children: ReactNode };
+
+const Button = ({ children, outline, size, variant }: Props) => {
   return (
     <button
       className={buttonVariants({
@@ -95,4 +98,26 @@ const App = () => {
     </div>
   );
 };
+
+// VariantProps takes a second argument that specifies which of the variants are required
+type AllPropsAreOptional = VariantProps<typeof buttonVariants>;
+/* 
+  {
+    outline?: boolean | undefined;
+    size?: "sm" | "md" | "lg" | undefined;
+    variant?: "primary" | "secondary" | undefined;
+  }
+*/
+
+type SomePropsAreRequired = VariantProps<
+  typeof buttonVariants,
+  "size" | "variant"
+>;
+/* 
+  {
+    outline?: boolean | undefined;
+    size: "sm" | "md" | "lg";
+    variant: "primary" | "secondary";
+  }
+*/
 ```

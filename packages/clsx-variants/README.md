@@ -28,37 +28,37 @@ A tiny utility for constructing `className` variants conditionally. It uses the 
 ## Usage
 
 ```jsx
-import clsxVariants from 'clsx-variants';
+import clsxVariants from "clsx-variants";
 
 const buttonVariants = clsxVariants({
   compoundVariants: [
     {
-      variant: 'primary',
-      size: 'sm',
+      variant: "primary",
+      size: "sm",
       // apply a custom class for any combination of variants
-      className: 'bg-blue-500 text-white px-2 py-1 text-sm',
+      className: "bg-blue-500 text-white px-2 py-1 text-sm",
     },
-  ]
+  ],
   defaultVariant: {
-    size: 'md',
-    variant: 'primary',
-  }
+    size: "md",
+    variant: "primary",
+  },
   variants: {
-   // 'true' and 'false' are reserved for boolean variants. The `false` styles will only be applied if the variant is explicitly set to `false`.
-  outline: {
+    // 'true' and 'false' are reserved for boolean variants. The `false` styles will only be applied if the variant is explicitly set to `false`.
+    outline: {
       false: "border-none",
       true: "border-2 border-blue-500",
-    }
+    },
     size: {
-      sm: 'px-2 py-1 text-sm',
-      md: 'px-4 py-2 text-base',
-      lg: 'px-6 py-3 text-lg',
+      sm: "px-2 py-1 text-sm",
+      md: "px-4 py-2 text-base",
+      lg: "px-6 py-3 text-lg",
     },
     variant: {
-      primary: 'bg-blue-500 text-white',
-      secondary: 'bg-gray-500 text-white',
+      primary: "bg-blue-500 text-white",
+      secondary: "bg-gray-500 text-white",
     },
-  }
+  },
 });
 
 const Button = ({ children, outline, size, variant }) => {
@@ -78,21 +78,21 @@ const Button = ({ children, outline, size, variant }) => {
 const App = () => {
   return (
     <div>
-      {/* { outline: undefined, size: "md", variant: "primary" } */}
+      {/* { outline: undefined, size: 'md', variant: 'primary' } */}
       <Button />
 
-      {/* { outline: undefined, size: "md", variant: "secondary" } */}
+      {/* { outline: undefined, size: 'md', variant: 'secondary' } */}
       <Button variant="secondary" />
 
-      {/* { outline: undefined, size: "lg", variant: "primary" } */}
+      {/* { outline: undefined, size: 'lg', variant: 'primary' } */}
       <Button size="lg" variant="primary" />
 
-      {/* { outline: true, size: "sm", variant: "primary" } */}
+      {/* { outline: true, size: 'sm', variant: 'primary' } */}
       <Button size="sm" variant="primary" outline />
 
-      {/* { outline: false, size: "sm", variant: "primary" } */}
+      {/* { outline: false, size: 'sm', variant: 'primary' } */}
       <Button size="sm" variant="primary" outline={false} />
     </div>
   );
-}
+};
 ```

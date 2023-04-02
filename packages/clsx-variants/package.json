@@ -1,10 +1,18 @@
 {
   "name": "clsx-variants",
   "version": "0.1.0",
-  "private": true,
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "description": "A tiny utility for constructing `className` variants conditionally.",
+  "homepage": "https://github.com/mauricekleine/mozza",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauricekleine/mozza/tree/main/packages/clsx-variants"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts",
+    "dev": "pnpm run build -- --watch",
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -13,7 +21,8 @@
     "typecheck": "tsc -b"
   },
   "dependencies": {
-    "clsx": "~1.2.1"
+    "clsx": "~1.2.1",
+    "tsup": "~6.7.0"
   },
   "devDependencies": {
     "eslint": "~8.37.0",

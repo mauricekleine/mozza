@@ -20,11 +20,13 @@
     "clsx": "~1.2.1",
     "clsx-variants": "workspace:*",
     "framer-motion": "~10.10.0",
-    "react-hook-form": "~7.43.9"
+    "react": "~18.2.0",
+    "react-hook-form": "~7.43.9",
+    "zod": "~3.21.4"
   },
   "devDependencies": {
     "@testing-library/react": "~14.0.0",
-    "@types/react": "~18.0.31",
+    "@types/react": "~18.0.32",
     "@types/react-dom": "~18.0.11",
     "@vitejs/plugin-react": "~3.1.0",
     "eslint": "~8.37.0",
@@ -35,10 +37,7 @@
     "typescript": "~5.0.3",
     "vitest": "~0.29.8"
   },
-  "peerDependencies": {
-    "react": "~18.2.0",
-    "zod": "~3.21.4"
-  },
+  "peerDependencies": {},
   "engines": {
     "node": "^18.0.0"
   }

@@ -1,6 +1,6 @@
 {
   "name": "clsx-variants",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A tiny utility for constructing `className` variants conditionally.",
   "homepage": "https://github.com/mauricekleine/mozza",
   "repository": {

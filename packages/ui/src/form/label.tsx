@@ -1,5 +1,3 @@
-"use client";
-
 import { VariantProps } from "clsx-variants";
 import { ReactNode } from "react";
 

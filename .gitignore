@@ -8,14 +8,6 @@ node_modules
 # testing
 coverage
 
-# next.js
-/.next/*
-!/.next/types
-/.next/types/*
-!/.next/types/link.d.ts
-out/
-build
-
 # output
 dist
 

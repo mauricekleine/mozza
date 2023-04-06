@@ -14,6 +14,8 @@ export default function Page() {
       <HeroSection />
 
       <Stack gap={{ base: 64 }}>
+        {/* <SkillsSection /> */}
+
         <PastProjectsSection />
 
         <ServicesSection />

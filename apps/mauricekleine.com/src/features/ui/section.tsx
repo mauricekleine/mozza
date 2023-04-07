@@ -21,7 +21,7 @@ export function Section({ children, size = "md", subtitle, title }: Props) {
         "w-11/12 sm:w-11/12 md:w-10/12 lg:w-10/12": size === "lg",
       })}
     >
-      <Stack gap={8} justify="center">
+      <Stack gap={8} items="center" justify="center">
         {title || subtitle ? (
           <Stack gap={2} textAlign="center">
             {title ? <Header as="h2">{title}</Header> : undefined}

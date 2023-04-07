@@ -11,13 +11,18 @@ type Props = {
 
 export function Tooltip({ children, className, content }: Props) {
   return (
-    <Root>
+    <Root delayDuration={0}>
       <Trigger>{children}</Trigger>
 
-      <Content align="center" className={className} side="bottom">
+      <Content
+        align="center"
+        className={className}
+        side="bottom"
+        sideOffset={4}
+      >
         {content}
 
-        <Arrow height={5} width={11} />
+        <Arrow className="fill-white/50" height={5} width={11} />
       </Content>
     </Root>
   );

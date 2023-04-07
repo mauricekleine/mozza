@@ -10,6 +10,8 @@ module.exports = (phase) => {
       appDir: true,
       typedRoutes: true,
     },
+    images: { unoptimized: true },
+    output: "export",
     reactStrictMode: true,
     swcMinify: true,
     transpilePackages: [

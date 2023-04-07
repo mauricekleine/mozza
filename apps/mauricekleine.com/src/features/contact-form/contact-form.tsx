@@ -1,3 +1,5 @@
+"use client";
+
 import { Form, Stack, useForm } from "@mozza-ui/react";
 import { useState } from "react";
 import { z } from "zod";

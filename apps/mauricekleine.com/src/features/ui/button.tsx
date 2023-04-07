@@ -44,7 +44,7 @@ const variants = clsxVariants({
     },
     variant: {
       primary:
-        "relative z-10 border border-transparent bg-slate-200 text-slate-800 before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-slate-200 before:opacity-0 before:blur before:transition-opacity before:duration-300 hover:text-slate-900 hover:before:opacity-100 hover:text-slate-900",
+        "relative z-10 border border-transparent bg-slate-200 text-slate-800 before:absolute before:inset-0 before:-z-10 before:rounded-lg before:bg-slate-200 before:opacity-0 before:blur before:transition-opacity before:duration-300 hover:text-slate-900 hover:before:opacity-100 hover:text-slate-900",
       secondary:
         "border border-slate-400 text-slate-200 hover:border-slate-100 hover:text-slate-100",
       tertiary: "hover:underline",
@@ -68,7 +68,7 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
 
     return (
       <ButtonBase
-        className={variants("rounded-full transition-colors", {
+        className={variants("rounded-lg transition-colors", {
           isDisabled: props.isDisabled,
           isLoading: props.isLoading,
           size,

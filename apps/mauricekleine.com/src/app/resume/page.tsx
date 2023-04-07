@@ -9,7 +9,7 @@ import {
   ProductboardLogo,
   StormDigitalLogo,
   UButlerLogo,
-} from "~/marketing/client-logos";
+} from "~/data/client-logos";
 import { Company } from "~/resume";
 import { Header, Link, Section } from "~/ui";
 

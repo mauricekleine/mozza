@@ -15,6 +15,7 @@ const variants = clsxVariants({
     },
     size: {
       base: "text-base",
+      lg: "text-lg",
       sm: "text-sm",
       xs: "text-xs",
     },

@@ -19,7 +19,6 @@ const serif = localFont({
   src: [
     { path: "../../public/fonts/Recoleta-Regular.otf", weight: "400" },
     { path: "../../public/fonts/Recoleta-SemiBold.otf", weight: "600" },
-    { path: "../../public/fonts/Recoleta-Bold.otf", weight: "700" },
   ],
   variable: "--font-serif",
 });

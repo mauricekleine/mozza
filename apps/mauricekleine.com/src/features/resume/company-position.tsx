@@ -1,3 +1,5 @@
+"use client";
+
 import { format, formatDistance } from "date-fns";
 import { useMemo } from "react";
 

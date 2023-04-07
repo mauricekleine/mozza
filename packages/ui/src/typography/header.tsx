@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { As } from "../system";
 
 type Props = {
-  as: "h1" | "h2" | "h3";
+  as: "h1" | "h2" | "h3" | "h4";
   children: ReactNode;
 };
 

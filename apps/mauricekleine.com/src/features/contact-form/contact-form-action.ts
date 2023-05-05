@@ -4,7 +4,7 @@ import { z } from "zod";
 import { zfd } from "zod-form-data";
 
 import { serverConfig } from "~/config/server";
-import { turnstile } from "~/lib";
+import { turnstile } from "~/lib/turnstile";
 
 export async function submitContactForm(data: FormData) {
   "use server";

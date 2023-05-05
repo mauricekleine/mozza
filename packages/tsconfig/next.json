@@ -5,7 +5,8 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "paths": {
-      "~/lib": ["./src/lib"],
+      "~/config/*": ["./src/config/*"],
+      "~/lib/*": ["./src/lib/*"],
       "~/*": ["./src/features/*"]
     },
     "plugins": [

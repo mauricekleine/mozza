@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "~/lib": ["./src/lib"],
-      "~/*": ["./src/features/*"]
-    }
+    "baseUrl": "./"
   },
   "exclude": ["node_modules"],
   "extends": "tsconfig/next.json",

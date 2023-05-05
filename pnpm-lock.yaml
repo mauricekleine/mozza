@@ -46,6 +46,9 @@ importers:
       '@mozza-ui/react':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@vercel/analytics':
+        specifier: ~1.0.1
+        version: 1.0.1
       date-fns:
         specifier: ~2.30.0
         version: 2.30.0
@@ -1411,6 +1414,10 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.59.1
       eslint-visitor-keys: 3.4.0
+    dev: false
+
+  /@vercel/analytics@1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
     dev: false
 
   /@vitest/expect@0.31.0:

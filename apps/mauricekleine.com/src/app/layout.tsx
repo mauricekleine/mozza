@@ -1,4 +1,5 @@
 import { ToastProvider, ToastViewport } from "@mozza-ui/react";
+import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
@@ -68,6 +69,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </ToastProvider>
 
         <Footer />
+
+        <Analytics />
       </body>
     </html>
   );

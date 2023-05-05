@@ -26,6 +26,7 @@
   "dependencies": {
     "@mozza-icons/react": "workspace:*",
     "@mozza-ui/react": "workspace:*",
+    "@vercel/analytics": "~1.0.1",
     "date-fns": "~2.30.0",
     "framer-motion": "~10.12.7",
     "modern-normalize": "~1.1.0",

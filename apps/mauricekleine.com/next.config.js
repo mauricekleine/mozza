@@ -1,3 +1,5 @@
+const path = require("node:path");
+
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
 module.exports = (phase) => {
@@ -7,15 +9,13 @@ module.exports = (phase) => {
       removeConsole: phase !== PHASE_DEVELOPMENT_SERVER,
     },
     experimental: {
-      appDir: true,
+      serverActions: true,
       typedRoutes: true,
     },
     reactStrictMode: true,
-    swcMinify: true,
-    transpilePackages: [
-      "@mozza-icons/react",
-      "@mozza-ui/react",
-      "clsx-variants",
-    ],
+    sassOptions: {
+      includePaths: [path.join(__dirname, "src")],
+    },
+    transpilePackages: ["@mozza-icons/react", "@mozza-ui/react"],
   };
 };

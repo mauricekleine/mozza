@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function Boat({ className }: Props) {
+export function Boat(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <line
         fill="none"
         stroke="currentColor"

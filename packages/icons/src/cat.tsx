@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function Cat({ className }: Props) {
+export function Cat(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <line
         fill="none"
         stroke="currentColor"

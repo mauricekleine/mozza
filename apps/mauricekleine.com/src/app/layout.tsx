@@ -1,18 +1,17 @@
 import { ToastProvider, ToastViewport } from "@mozza-ui/react";
-import { clsx } from "clsx";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
 
 import { Navigation } from "~/navigation";
-import { Footer } from "~/ui";
+import { Footer } from "~/ui/layout";
 
 import "./layout.css";
 
 const sans = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-family-sans",
 });
 
 const serif = localFont({
@@ -20,11 +19,13 @@ const serif = localFont({
     { path: "../../public/fonts/Recoleta-Regular.otf", weight: "400" },
     { path: "../../public/fonts/Recoleta-SemiBold.otf", weight: "600" },
   ],
-  variable: "--font-serif",
+  variable: "--font-family-serif",
 });
 
 export const metadata: Metadata = {
   colorScheme: "light",
+  description:
+    "Freelance Software Engineer based in Amsterdam, The Netherlands. I build web applications with React, TypeScript, Node.js, and GraphQL.",
   icons: {
     apple: [{ sizes: "180x180", url: "/apple-touch-icon.png" }],
     icon: [
@@ -34,16 +35,25 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
+  openGraph: {
+    description:
+      "Freelance Software Engineer based in Amsterdam, The Netherlands. I build web applications with React, TypeScript, Node.js, and GraphQL.",
+    images: [
+      { alt: "Maurice Kleine", height: 630, url: "/og-image.png", width: 1200 },
+    ],
+    locale: "en_US",
+    siteName: "Maurice Kleine",
+    title: "Maurice Kleine - Freelance Software Engineer",
+    type: "website",
+    url: "https://mauricekleine.com",
+  },
   themeColor: "#ffffff",
-  title: "Maurice Kleine - Freelance Full-Stack Engineer",
+  title: "Maurice Kleine - Freelance Software Engineer",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      className={clsx(sans.variable, serif.variable, "bg-black text-slate-200")}
-      lang="en"
-    >
+    <html className={`${sans.variable} ${serif.variable}`} lang="en">
       <head>
         <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" />
       </head>

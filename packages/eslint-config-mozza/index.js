@@ -27,13 +27,20 @@ module.exports = {
         alphabetize: {
           order: "asc",
         },
-        groups: ["builtin", "external", "parent", "sibling", "index"],
+        groups: [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+        ],
         "newlines-between": "always",
         pathGroups: [
           {
-            group: "external",
+            group: "internal",
             pattern: "~/**",
-            position: "after",
+            position: "before",
           },
         ],
       },

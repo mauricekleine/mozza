@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function RocketLaunch({ className }: Props) {
+export function RocketLaunch(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <path
         d="M94.1,184.6c-11.4,33.9-56.6,33.9-56.6,33.9s0-45.2,33.9-56.6"
         fill="none"

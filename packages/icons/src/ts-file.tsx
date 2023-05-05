@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function TSFile({ className }: Props) {
+export function TSFile(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <path
         d="M135.9,153.6s-29.43-7.78-31.8,11,38.43,10.12,35.78,30.72c-2.47,19.16-31.78,11-31.78,11"
         fill="none"

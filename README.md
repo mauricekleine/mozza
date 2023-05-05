@@ -22,7 +22,6 @@ This repository contains my personal websites under the `/app` folder, and share
 
 [![Next][Next.js]][Next-url]
 [![React][React.js]][React-url]
-[![Tailwind CSS][Tailwind]][Tailwind-url]
 [![Turborepo][Turborepo]][Turborepo-url]
 
 <!-- LICENSE -->

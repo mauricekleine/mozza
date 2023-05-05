@@ -6,17 +6,26 @@ import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode | ReactNode[];
+  className?: string;
   isOpen: boolean;
 };
 
-export function DialogContent({ children, isOpen }: Props) {
+export function DialogContent({ children, className, isOpen }: Props) {
   return (
     <AnimatePresence>
       {isOpen && (
         <Portal forceMount>
           <Overlay
             asChild
-            className="fixed inset-0 z-30 grid items-center justify-center overflow-y-auto py-8 backdrop-blur-[1px] backdrop-brightness-[0.3]"
+            style={{
+              alignItems: "center",
+              backdropFilter: "blur(1px) brightness(0.3)",
+              display: "grid",
+              inset: 0,
+              justifyContent: "center",
+              position: "fixed",
+              zIndex: 30,
+            }}
           >
             <motion.div
               animate={{
@@ -29,7 +38,7 @@ export function DialogContent({ children, isOpen }: Props) {
               }}
               initial={{ opacity: 0 }}
             >
-              <Content asChild className="mx-auto w-10/12 sm:w-1/2">
+              <Content asChild className={className}>
                 <motion.div
                   animate={{
                     opacity: 1,

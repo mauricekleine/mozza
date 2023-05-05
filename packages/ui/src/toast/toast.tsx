@@ -3,8 +3,6 @@
 import { Root, ToastProps } from "@radix-ui/react-toast";
 import { AnimatePresence, motion } from "framer-motion";
 
-import { Stack } from "../layout";
-
 import { ToastClose } from "./toast-close";
 import { ToastDescription } from "./toast-description";
 import { ToastTitle } from "./toast-title";
@@ -16,22 +14,16 @@ type Props = {
   onOpenChange: ToastProps["onOpenChange"];
 };
 
-function Toast({ children, className, isOpen, onOpenChange }: Props) {
+function Toast({ children, isOpen, ...props }: Props) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <Root
-          asChild
-          className={className}
-          onOpenChange={onOpenChange}
-          open={isOpen}
-        >
+        <Root asChild open={isOpen} {...props}>
           <motion.div
             animate={{
               opacity: 1,
               translateX: 0,
             }}
-            className="p-4"
             exit={{
               opacity: 0,
               transition: { duration: 0.1, ease: "easeIn" },
@@ -39,9 +31,7 @@ function Toast({ children, className, isOpen, onOpenChange }: Props) {
             }}
             initial={{ opacity: 0, translateX: "100%" }}
           >
-            <Stack direction="horizontal" gap={4} items="start">
-              {children}
-            </Stack>
+            {children}
           </motion.div>
         </Root>
       )}

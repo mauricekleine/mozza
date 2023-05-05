@@ -4,17 +4,17 @@ type Props = {
   className?: string;
 };
 
-export function SmileyXEyes({ className }: Props) {
+export function SmileyXEyes(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <circle
         cx="128"
         cy="128"
         fill="none"
         r="96"
         stroke="currentColor"
-        stroke-miterlimit="10"
-        stroke-width="16"
+        strokeMiterlimit="10"
+        strokeWidth="16"
       />
 
       <line

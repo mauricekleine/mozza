@@ -1,6 +1,9 @@
 import {
   siChakraui,
+  siCss3,
   siEslint,
+  siGit,
+  siHtml5,
   siJavascript,
   siMui,
   siMysql,
@@ -76,6 +79,18 @@ const hardSkills = [
   {
     icon: siPostgresql,
     title: "PostgressQL",
+  },
+  {
+    icon: siGit,
+    title: "git",
+  },
+  {
+    icon: siCss3,
+    title: "CSS",
+  },
+  {
+    icon: siHtml5,
+    title: "HTML",
   },
 ];
 

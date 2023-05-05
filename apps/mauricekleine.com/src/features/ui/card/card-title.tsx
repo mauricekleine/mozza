@@ -1,13 +1,9 @@
-import { Header } from "~/ui";
+import { Header } from "~/ui/typography";
 
 type Props = {
   children: string;
 };
 
 export function CardTitle({ children }: Props) {
-  return (
-    <div>
-      <Header as="h2">{children}</Header>
-    </div>
-  );
+  return <Header as="h2">{children}</Header>;
 }

@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function Database({ className }: Props) {
+export function Database(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <ellipse
         cx="128"
         cy="80"

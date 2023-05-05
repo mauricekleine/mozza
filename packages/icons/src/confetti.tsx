@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function Confetti({ className }: Props) {
+export function Confetti(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <path
         d="M40.49,205.52,93,61.14a7.79,7.79,0,0,1,12.84-2.85l91.88,91.88A7.79,7.79,0,0,1,194.86,163L50.48,215.51A7.79,7.79,0,0,1,40.49,205.52Z"
         fill="none"

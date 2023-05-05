@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function BracketsCurly({ className }: Props) {
+export function BracketsCurly(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <path
         d="M80,40c-64,0,0,88-64,88,64,0,0,88,64,88"
         fill="none"

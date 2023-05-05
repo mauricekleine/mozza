@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function LinkedinLogo({ className }: Props) {
+export function LinkedinLogo(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <rect
         fill="none"
         height="184"

@@ -1,0 +1,26 @@
+.card-icon {
+  margin: var(--space-6) 0;
+  padding: var(--space-1);
+  position: relative;
+
+  &:before {
+    background: linear-gradient(
+      to right,
+      var(--color-blue-700),
+      var(--color-blue-600),
+      var(--color-purple-700)
+    );
+    border-radius: var(--radii-full);
+    content: "";
+    filter: blur(var(--blur-3xl));
+    inset: 0;
+    position: absolute;
+    z-index: calc(-1 * var(--z-index-10));
+  }
+
+  & svg {
+    color: var(--color-gray-200);
+    height: var(--space-20);
+    width: var(--space-20);
+  }
+}

@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function UsersThree({ className }: Props) {
+export function UsersThree(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <circle
         cx="128"
         cy="140"

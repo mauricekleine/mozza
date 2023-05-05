@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function Stack({ className }: Props) {
+export function Stack(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <polyline
         fill="none"
         points="32 176 128 232 224 176"

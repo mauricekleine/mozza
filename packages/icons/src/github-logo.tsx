@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function GithubLogo({ className }: Props) {
+export function GithubLogo(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <path
         d="M84,240a23.9,23.9,0,0,0,24-24V168"
         fill="none"

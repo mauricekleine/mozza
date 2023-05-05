@@ -1,0 +1,15 @@
+.link {
+  color: var(--color-gray-400);
+  display: inline-block;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--color-gray-200);
+  }
+
+  & svg {
+    height: var(--space-4);
+    width: var(--space-4);
+  }
+}

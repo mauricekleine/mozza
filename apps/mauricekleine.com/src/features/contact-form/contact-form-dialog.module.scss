@@ -1,0 +1,50 @@
+@use "~/ui/mixins.scss";
+
+.dialog {
+  margin: 0 auto;
+  width: calc(100% * (10 / 12));
+
+  @include mixins.screen(sm) {
+    width: 50%;
+  }
+}
+
+.dialog-close {
+  margin-right: calc(-1 * var(--space-1));
+  padding: var(--space-2);
+}
+
+.form-protection-group {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-6);
+
+  text-align: center;
+}
+
+.toast {
+  background: var(--color-black);
+  border: 1px solid var(--color-border);
+  border-bottom-color: var(--color-green-900);
+  border-bottom-width: var(--space-1);
+  border-radius: var(--radii-lg);
+  max-width: 28rem;
+  overflow: hidden;
+  pointer-events: auto;
+  width: 100%;
+
+  &[data-invalid="true"] {
+    border-bottom-color: var(--color-red-900);
+  }
+
+  & > div {
+    padding: var(--space-4);
+  }
+}
+
+.toast-close {
+  flex-shrink: 0;
+
+  & div {
+    padding: var(--space-1);
+  }
+}

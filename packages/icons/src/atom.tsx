@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function Atom({ className }: Props) {
+export function Atom(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <ellipse
         cx="128"
         cy="128"

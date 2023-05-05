@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function JSXFile({ className }: Props) {
+export function JSXFile(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <path
         d="M48,112V40a8,8,0,0,1,8-8h96l56,56v24"
         fill="none"

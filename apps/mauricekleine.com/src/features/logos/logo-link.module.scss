@@ -1,0 +1,30 @@
+.logo-link {
+  position: relative;
+
+  &:before {
+    background-color: var(--color-gray-200);
+    content: "";
+    filter: blur(var(--blur-xl));
+    position: absolute;
+    inset: calc(-1 * var(--space-2));
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    z-index: calc(-1 * var(--z-index-10));
+  }
+
+  &:hover {
+    &:before {
+      opacity: 0.7;
+    }
+  }
+
+  & svg {
+    fill: var(--color-gray-100);
+    max-height: var(--space-8);
+    max-width: 160px;
+    transition: fill 0.15s ease-in;
+    width: 100%;
+  }
+}

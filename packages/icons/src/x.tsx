@@ -4,9 +4,9 @@ type Props = {
   className?: string;
 };
 
-export function X({ className }: Props) {
+export function X(props: Props) {
   return (
-    <IconBase className={className}>
+    <IconBase {...props}>
       <line
         stroke="currentColor"
         strokeLinecap="round"

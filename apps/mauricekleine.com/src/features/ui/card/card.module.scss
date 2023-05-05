@@ -1,0 +1,77 @@
+@use "../mixins.scss";
+
+.card {
+  position: relative;
+
+  /* Variants */
+
+  &[data-variant="neon"] {
+    background: linear-gradient(
+      to bottom right,
+      var(--color-blue-700),
+      rgba(146, 51, 234, 0.1),
+      /* purple-700/10 */ var(--color-red-700)
+    );
+    border-radius: var(--radii-xl);
+    padding: var(--space-0\.5);
+
+    &:before {
+      background: linear-gradient(
+        to bottom right,
+        var(--color-blue-500),
+        rgb(126, 34, 206, 0.3),
+        /* purple-500/30 */ var(--color-red-500)
+      );
+      border-radius: var(--radii-xl);
+      content: "";
+      filter: blur(var(--blur-3xl));
+      height: 100%;
+      inset: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    & > div {
+      background: var(--color-black);
+      border-radius: var(--radii-xl);
+      height: 100%;
+      padding: var(--space-8);
+      position: relative;
+      width: 100%;
+      z-index: var(--z-index-10);
+
+      &:before {
+        background: linear-gradient(
+          to bottom right,
+          rgba(30, 59, 138, 0.25),
+          /* blue-900/25 */ var(--color-black),
+          rgba(127, 29, 29, 0.25) /* blue-900/25 */
+        );
+        border-radius: var(--radii-xl);
+        content: "";
+        height: 100%;
+        inset: 0;
+        position: absolute;
+        width: 100%;
+        z-index: calc(-1 * var(--z-index-10));
+      }
+
+      @include mixins.screen(sm) {
+        & {
+          padding: var(--space-12);
+        }
+      }
+    }
+  }
+
+  &[data-variant="plain"] {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radii-lg);
+    padding: var(--space-8);
+    background: linear-gradient(
+      to bottom right,
+      var(--color-border),
+      var(--color-black)
+    );
+  }
+}

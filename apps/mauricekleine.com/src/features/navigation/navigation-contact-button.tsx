@@ -1,32 +1,28 @@
 "use client";
 
 import { PaperPlaneTilt } from "@mozza-icons/react";
-import { useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
 
 import { ContactFormDialog } from "~/contact-form/contact-form-dialog";
-import { Button } from "~/ui";
+import { Button } from "~/ui/button";
 
 export function NavigationContactButton() {
   const { scrollYProgress } = useScroll();
   const [isHalfwayPage, setIsHalfwayPage] = useState(false);
 
-  useEffect(() => {
-    return scrollYProgress.onChange((latest) => {
-      if (latest > 0.5) {
-        setIsHalfwayPage(true);
-      }
-    });
-  }, [scrollYProgress]);
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest > 0.5) {
+      setIsHalfwayPage(true);
+    }
+  });
 
   return (
     <ContactFormDialog>
-      <Button
-        iconLeft={PaperPlaneTilt}
-        size="sm"
-        variant={isHalfwayPage ? "primary" : "secondary"}
-      >
-        Contact
+      <Button size="sm" variant={isHalfwayPage ? "primary" : "secondary"}>
+        <PaperPlaneTilt />
+
+        <span>Contact</span>
       </Button>
     </ContactFormDialog>
   );

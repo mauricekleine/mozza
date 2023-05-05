@@ -4,15 +4,21 @@ import { Arrow, Content, Root, Trigger } from "@radix-ui/react-tooltip";
 import { ReactNode } from "react";
 
 type Props = {
+  "aria-label"?: string;
   children: ReactNode;
   className?: string;
   content: string;
 };
 
-export function Tooltip({ children, className, content }: Props) {
+export function Tooltip({
+  "aria-label": ariaLabel,
+  children,
+  className,
+  content,
+}: Props) {
   return (
     <Root delayDuration={0}>
-      <Trigger>{children}</Trigger>
+      <Trigger aria-label={ariaLabel}>{children}</Trigger>
 
       <Content
         align="center"
@@ -22,8 +28,10 @@ export function Tooltip({ children, className, content }: Props) {
       >
         {content}
 
-        <Arrow className="fill-white/50" height={5} width={11} />
+        <Arrow height={5} width={11} />
       </Content>
     </Root>
   );
 }
+
+export type TooltipProps = Omit<Props, "className">;

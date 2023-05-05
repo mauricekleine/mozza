@@ -20,7 +20,6 @@
     "typecheck": "tsc -b"
   },
   "dependencies": {
-    "@hookform/resolvers": "~3.1.0",
     "@mozza-icons/react": "workspace:*",
     "@mozza-ui/react": "workspace:*",
     "@radix-ui/react-dialog": "~1.0.3",

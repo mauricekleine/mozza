@@ -10,7 +10,7 @@
 
   /* Colors */
 
-  --color-white: #ffffff;
+  --color-white: #fff;
   --color-gray-100: #f1f5f9;
   --color-gray-200: #e2e8f0;
   --color-gray-300: #cbd5e1;
@@ -20,8 +20,7 @@
   --color-gray-700: #334155;
   --color-gray-800: #1e293b;
   --color-gray-900: #0f172a;
-  --color-black: #000000;
-
+  --color-black: #000;
   --color-blue-100: #dbeafe;
   --color-blue-200: #bfdbfe;
   --color-blue-300: #93c5fd;
@@ -31,7 +30,6 @@
   --color-blue-700: #1d4ed8;
   --color-blue-800: #1e40af;
   --color-blue-900: #1e3a8a;
-
   --color-green-100: #dcfce7;
   --color-green-200: #bbf7d0;
   --color-green-300: #86efac;
@@ -41,7 +39,6 @@
   --color-green-700: #15803d;
   --color-green-800: #166534;
   --color-green-900: #14532d;
-
   --color-purple-100: #f3e8ff;
   --color-purple-200: #e9d5ff;
   --color-purple-300: #d8b4fe;
@@ -51,7 +48,6 @@
   --color-purple-700: #7e22ce;
   --color-purple-800: #6b21a8;
   --color-purple-900: #581c87;
-
   --color-red-100: #fee2e2;
   --color-red-200: #fecaca;
   --color-red-300: #fca5a5;
@@ -61,8 +57,7 @@
   --color-red-700: #b91c1c;
   --color-red-800: #991b1b;
   --color-red-900: #7f1d1d;
-
-  --color-border: rgb(226 232 240 / 0.1); /* slate-200/10 */
+  --color-border: rgb(226 232 240 / 10%); /* slate-200/10 */
 
   /* Typography */
 
@@ -78,15 +73,12 @@
   --font-size-6xl: 3.75rem; /* 60px */
   --font-size-7xl: 4.5rem; /* 72px */
   --font-size-8xl: 6rem; /* 96px */
-
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-
   --line-height-tight: 1.25;
   --line-height-normal: 1.5;
-
   --tracking-tight: -0.025em;
   --tracking-normal: 0;
 

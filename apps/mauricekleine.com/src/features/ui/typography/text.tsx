@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
+// eslint-disable-next-line no-restricted-imports
 import {
   ResponsiveProp,
   transformResponsiveProp,

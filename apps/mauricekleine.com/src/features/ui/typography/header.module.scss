@@ -1,8 +1,8 @@
 @use "../mixins.scss";
 
 .h1 {
-  font-family: var(--font-family-serif);
   color: var(--color-white);
+  font-family: var(--font-family-serif);
   font-size: var(--font-size-6xl);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--tracking-tight);
@@ -10,16 +10,16 @@
 }
 
 .h2 {
-  font-family: var(--font-family-serif);
   color: var(--color-gray-100);
+  font-family: var(--font-family-serif);
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-bold);
   line-height: 2.5rem;
 }
 
 .h3 {
-  font-family: var(--font-family-serif);
   color: var(--color-gray-100);
+  font-family: var(--font-family-serif);
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--tracking-tight);

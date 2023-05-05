@@ -31,13 +31,13 @@
 
   /* Line heights */
 
-  $lineHeights: (
+  $line-heights: (
     tight: var(--line-height-tight),
     normal: var(--line-height-normal),
   );
 
-  @each $lineHeight, $value in $lineHeights {
-    &[data-line-height="#{$lineHeight}"] {
+  @each $line-height, $value in $line-heights {
+    &[data-line-height="#{$line-height}"] {
       line-height: $value;
     }
   }

@@ -1,0 +1,20 @@
+{
+  "name": "stylelint-config-mozza",
+  "version": "0.1.0",
+  "description": "A set of custom Stylelint rules",
+  "homepage": "https://github.com/mauricekleine/mozza",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauricekleine/mozza/tree/main/packages/eslint-config-mozza"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {
+    "stylelint": "~15.6.1",
+    "stylelint-config-standard": "~33.0.0",
+    "stylelint-config-standard-scss": "~9.0.0",
+    "stylelint-order": "~6.0.3"
+  }
+}

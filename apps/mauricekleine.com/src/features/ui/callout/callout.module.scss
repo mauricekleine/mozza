@@ -5,7 +5,7 @@
   background-image: linear-gradient(
     to right,
     var(--color-black),
-    rgba(15, 23, 42, 0.5) /* gray-900/50 */,
+    rgb(15 23 42 / 50%) /* gray-900/50 */,
     var(--color-black)
   );
   border-bottom: 1px solid var(--color-border);

@@ -3,13 +3,13 @@
 .box {
   /* Align items */
 
-  $alignItems: (
+  $align-items: (
     center: center,
     end: flex-end,
     start: flex-start,
   );
 
-  @each $key, $value in $alignItems {
+  @each $key, $value in $align-items {
     &[data-align-items~="base:#{$key}"] {
       align-items: $value;
     }
@@ -17,7 +17,7 @@
 
   @each $breakpoint, $_ in mixins.$breakpoints {
     @include mixins.screen($breakpoint) {
-      @each $key, $value in $alignItems {
+      @each $key, $value in $align-items {
         &[data-align-items~="#{$breakpoint}:#{$key}"] {
           align-items: $value;
         }
@@ -157,7 +157,7 @@
 
   /* Justify content */
 
-  $justify: (
+  $justify-content: (
     around: space-around,
     between: space-between,
     center: center,
@@ -166,7 +166,7 @@
     start: flex-start,
   );
 
-  @each $key, $value in $justify {
+  @each $key, $value in $justify-content {
     &[data-justify-content~="base:#{$key}"] {
       justify-content: $value;
     }
@@ -174,7 +174,7 @@
 
   @each $breakpoint, $_ in mixins.$breakpoints {
     @include mixins.screen($breakpoint) {
-      @each $key, $value in $justify {
+      @each $key, $value in $justify-content {
         &[data-justify-content~="#{$breakpoint}:#{$key}"] {
           justify-content: $value;
         }
@@ -240,13 +240,13 @@
 
   /* Text align */
 
-  $textAlign: (
+  $text-align: (
     center: center,
     left: left,
     right: right,
   );
 
-  @each $key, $value in $textAlign {
+  @each $key, $value in $text-align {
     &[data-text-align~="base:#{$key}"] {
       text-align: $value;
     }
@@ -254,7 +254,7 @@
 
   @each $breakpoint, $_ in mixins.$breakpoints {
     @include mixins.screen($breakpoint) {
-      @each $align, $value in $textAlign {
+      @each $align, $value in $text-align {
         &[data-text-align~="#{$breakpoint}:#{$align}"] {
           text-align: $value;
         }

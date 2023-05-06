@@ -3,9 +3,11 @@ const path = require("node:path");
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
 const ContentSecurityPolicy = `
-  default-src 'self';
+  default-src 'self' https://vitals.vercel-insights.com;
   frame-ancestors 'none';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' challenges.cloudflare.com *.vercel-scripts.com vitals.vercel-insights.com;
+  frame-src https://challenges.cloudflare.com;
+  object-src 'none';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com https://\*.vercel-scripts.com;
   style-src 'self' 'unsafe-inline';
 `
   .replaceAll(/\s{2,}/g, " ")
@@ -21,7 +23,7 @@ const securityHeaders = [
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains; preload",
   },
-  { key: "Referrer-Policy", value: "origin-when-cross-origin" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-DNS-Prefetch-Control", value: "on" },
 ];

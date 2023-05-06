@@ -15,6 +15,8 @@ import { Icon } from "~/ui/icon";
 import { Box } from "~/ui/layout";
 import { Header, Link, Text } from "~/ui/typography";
 
+export const runtime = "edge";
+
 export default function Page() {
   return (
     <>

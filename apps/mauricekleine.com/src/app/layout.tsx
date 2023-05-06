@@ -39,9 +39,6 @@ export const metadata: Metadata = {
   openGraph: {
     description:
       "Freelance Software Engineer based in Amsterdam, The Netherlands. I build web applications with React, TypeScript, Node.js, and GraphQL.",
-    images: [
-      { alt: "Maurice Kleine", height: 630, url: "/og-image.png", width: 1200 },
-    ],
     locale: "en_US",
     siteName: "Maurice Kleine",
     title: "Maurice Kleine - Freelance Software Engineer",

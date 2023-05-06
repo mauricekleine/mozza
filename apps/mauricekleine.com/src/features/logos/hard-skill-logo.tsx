@@ -11,8 +11,8 @@ export function HardSkillLogo({ path, title }: Props) {
   return (
     <Tooltip aria-label={title} content={title}>
       <svg
+        aria-label={title}
         className={styles["hard-skill-logo"]}
-        name={title}
         role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"

@@ -18,7 +18,7 @@ export const petProjects = [
   {
     description: "Yep, the website you're looking at right now.",
     name: "🤙 This website",
-    repo: "https://github.com/mauricekleine/mauricekleine.com",
-    url: "https://mauricekleine.com/",
+    repo: "https://github.com/mauricekleine/mozza",
+    url: "https://www.mauricekleine.com/",
   },
 ];

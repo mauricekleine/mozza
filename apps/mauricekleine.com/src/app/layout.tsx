@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Maurice Kleine",
     title: "Maurice Kleine - Freelance Software Engineer",
     type: "website",
-    url: "https://mauricekleine.com",
+    url: "https://www.mauricekleine.com",
   },
   themeColor: "#ffffff",
   title: "Maurice Kleine - Freelance Software Engineer",

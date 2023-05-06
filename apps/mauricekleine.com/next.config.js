@@ -5,7 +5,7 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 const ContentSecurityPolicy = `
   default-src 'self';
   frame-ancestors 'none';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com https://\*.vercel-scripts.com https://vitals.vercel-insights.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' challenges.cloudflare.com *.vercel-scripts.com vitals.vercel-insights.com;
   style-src 'self' 'unsafe-inline';
 `
   .replaceAll(/\s{2,}/g, " ")

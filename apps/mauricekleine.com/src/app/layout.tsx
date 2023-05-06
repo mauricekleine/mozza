@@ -50,8 +50,6 @@ export const metadata: Metadata = {
   title: "Maurice Kleine - Freelance Software Engineer",
 };
 
-export const revalidate = 60 * 60; // 1 hour
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`${sans.variable} ${serif.variable}`} lang="en">

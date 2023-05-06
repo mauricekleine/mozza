@@ -1,3 +1,0 @@
-.input-group > * + * {
-  margin-top: var(--space-1);
-}

@@ -1,8 +1,7 @@
-"use client";
-
 import { ComponentProps, ReactNode } from "react";
 
-import styles from "./form.module.css";
+// eslint-disable-next-line no-restricted-imports
+import { Box } from "../layout";
 
 type Props = {
   action: ComponentProps<"form">["action"];
@@ -11,8 +10,8 @@ type Props = {
 
 export function Form({ action, children }: Props) {
   return (
-    <form action={action} className={styles.form}>
+    <Box action={action} as="form" gap={4}>
       {children}
-    </form>
+    </Box>
   );
 }

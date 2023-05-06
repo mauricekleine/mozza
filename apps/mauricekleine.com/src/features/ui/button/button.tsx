@@ -15,8 +15,6 @@ type ButtonProps = {
 type LinkProps = {
   as: "a";
   href: string;
-  onClick?: never;
-  type?: never;
 };
 
 type Props = (ButtonProps | LinkProps) & {

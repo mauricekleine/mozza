@@ -8,6 +8,12 @@ import {
 
 import styles from "./text.module.scss";
 
+type LabelProps = {
+  as?: "label";
+  children: string;
+  htmlFor: string;
+};
+
 type ParagraphProps = {
   as?: "p";
   children: ReactNode;
@@ -18,7 +24,7 @@ type SpanProps = {
   children: string | string[];
 };
 
-type Props = (ParagraphProps | SpanProps) & {
+type Props = (LabelProps | ParagraphProps | SpanProps) & {
   color?: "gray.100" | "gray.200" | "gray.300" | "gray.400";
   family?: "sans" | "serif";
   lineHeight?: "normal" | "tight";

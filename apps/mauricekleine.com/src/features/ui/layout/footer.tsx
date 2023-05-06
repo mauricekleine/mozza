@@ -2,12 +2,12 @@ import { GithubLogo, LinkedinLogo } from "@mozza-icons/react";
 
 import { Button } from "~/ui/button";
 
-import { Box } from "./box";
+import { Container } from "./container";
 import styles from "./footer.module.css";
 
 export function Footer() {
   return (
-    <Box
+    <Container
       alignItems="center"
       className={styles.footer}
       direction="horizontal"
@@ -36,6 +36,6 @@ export function Footer() {
 
         <span>LinkedIn</span>
       </Button>
-    </Box>
+    </Container>
   );
 }

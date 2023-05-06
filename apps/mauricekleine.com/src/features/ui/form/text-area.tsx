@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 
+// eslint-disable-next-line no-restricted-imports
+import { Text } from "../typography";
+
 import styles from "./text-area.module.scss";
 
 type Props = {
@@ -31,13 +34,13 @@ export function TextArea({ name, ...props }: Props) {
       />
 
       {props.maxLength && props.maxLength > 0 ? (
-        <p>
-          <span>{value?.length}</span>
+        <Text color="gray.400" size="xs">
+          <span>{value?.length ?? 0}</span>
 
           <span>/</span>
 
           <span>{props.maxLength}</span>
-        </p>
+        </Text>
       ) : null}
     </div>
   );

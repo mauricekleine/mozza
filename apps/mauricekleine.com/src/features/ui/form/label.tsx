@@ -1,4 +1,5 @@
-import styles from "./label.module.css";
+// eslint-disable-next-line no-restricted-imports
+import { Text } from "../typography";
 
 type Props = {
   children: string;
@@ -7,8 +8,8 @@ type Props = {
 
 export function Label({ children, htmlFor }: Props) {
   return (
-    <label className={styles.label} htmlFor={htmlFor}>
+    <Text as="label" color="gray.300" htmlFor={htmlFor} size="sm" weight="bold">
       {children}
-    </label>
+    </Text>
   );
 }

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
-import styles from "./input-group.module.css";
+// eslint-disable-next-line no-restricted-imports
+import { Box } from "../layout";
 
 type Props = {
   children: ReactNode | ReactNode[];
@@ -8,8 +9,8 @@ type Props = {
 
 export function InputGroup({ children }: Props) {
   return (
-    <div className={styles["input-group"]} role="group">
+    <Box gap={1} role="group">
       {children}
-    </div>
+    </Box>
   );
 }

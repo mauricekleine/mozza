@@ -1,4 +1,4 @@
-import { ElementType, ReactNode } from "react";
+import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 
 import {
   ResponsiveProp,
@@ -15,13 +15,13 @@ type FlexProps = {
 
 type GridProps = {
   columns?: ResponsiveProp<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10>;
-  display: "grid";
+  display?: "grid";
   rows?: ResponsiveProp<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10>;
 };
 
-type Props = (FlexProps | GridProps) & {
+type BoxProps<As extends ElementType = "div"> = (FlexProps | GridProps) & {
   alignItems?: ResponsiveProp<"center" | "end" | "start">;
-  as?: ElementType;
+  as?: As;
   children: ReactNode;
   className?: string;
   direction?: ResponsiveProp<"horizontal" | "vertical">;
@@ -32,13 +32,15 @@ type Props = (FlexProps | GridProps) & {
   >;
   overflow?: ResponsiveProp<"auto" | "hidden" | "scroll" | "visible">;
   textAlign?: ResponsiveProp<"center" | "left" | "right">;
-  width?: "sm" | "md" | "lg";
   wrap?: "nowrap" | "wrap" | "wrap-reverse";
 };
 
-export function Box({
+type Props<As extends ElementType = "div"> = BoxProps<As> &
+  Omit<ComponentPropsWithoutRef<As>, keyof BoxProps<As>>;
+
+export function Box<As extends ElementType = "div">({
   alignItems,
-  as = "div",
+  as,
   children,
   className,
   columns,
@@ -50,11 +52,10 @@ export function Box({
   overflow,
   rows,
   textAlign,
-  width,
   wrap,
   ...rest
-}: Props) {
-  const As = as;
+}: Props<As>) {
+  const As = as ?? "div";
 
   return (
     <As
@@ -77,7 +78,6 @@ export function Box({
       data-text-align={
         textAlign ? transformResponsiveProp(textAlign) : undefined
       }
-      data-width={width}
       data-wrap={wrap ? transformResponsiveProp(wrap) : undefined}
       {...rest}
     >
@@ -86,4 +86,4 @@ export function Box({
   );
 }
 
-export type BoxProps = Props;
+export type { Props as BoxProps };

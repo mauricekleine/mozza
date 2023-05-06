@@ -6,22 +6,22 @@ import { CardTitle } from "./card-title";
 import styles from "./card.module.scss";
 
 type Props = BoxProps & {
-  variant?: "plain" | "neon";
+  variant?: "callout" | "plain" | "neon";
 };
 
 function Card({ children, variant = "plain", ...props }: Props) {
-  if (variant === "plain") {
+  if (variant === "neon") {
     return (
-      <Box className={styles.card} data-variant={variant} {...props}>
-        {children}
-      </Box>
+      <div className={styles.card} data-variant={variant}>
+        <Box {...props}>{children}</Box>
+      </div>
     );
   }
 
   return (
-    <div className={styles.card} data-variant={variant}>
-      <Box {...props}>{children}</Box>
-    </div>
+    <Box className={styles.card} data-variant={variant} {...props}>
+      {children}
+    </Box>
   );
 }
 

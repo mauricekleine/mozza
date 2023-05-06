@@ -1,5 +1,4 @@
 import { HandWaving, PaperPlaneTilt } from "@mozza-icons/react";
-import { TooltipProvider } from "@mozza-ui/react";
 
 import { ContactFormDialog } from "~/contact-form";
 import { hardSkills } from "~/data/hard-skills";
@@ -9,10 +8,9 @@ import { softSkills } from "~/data/soft-skills";
 import { ProfilePicture } from "~/images/profile-picture";
 import { HardSkillLogo, LogoLink } from "~/logos";
 import { Button } from "~/ui/button";
-import { Callout } from "~/ui/callout";
 import { Card } from "~/ui/card";
 import { Icon } from "~/ui/icon";
-import { Box } from "~/ui/layout";
+import { Box, Container } from "~/ui/layout";
 import { Header, Link, Text } from "~/ui/typography";
 
 export const runtime = "edge";
@@ -20,7 +18,7 @@ export const runtime = "edge";
 export default function Page() {
   return (
     <>
-      <Box
+      <Container
         alignItems="center"
         gap={8}
         height="screen"
@@ -65,11 +63,16 @@ export default function Page() {
             </Button>
           </ContactFormDialog>
         </Box>
-      </Box>
+      </Container>
 
       <Box gap={64}>
         {/* Hard skills */}
-        <Box alignItems="center" gap={8} justifyContent="center" width="sm">
+        <Container
+          alignItems="center"
+          gap={8}
+          justifyContent="center"
+          width="sm"
+        >
           <Text color="gray.400" tracking="tight" transform="uppercase">
             Languages, tools and frameworks I love
           </Text>
@@ -80,22 +83,25 @@ export default function Page() {
             justifyContent="center"
             wrap="wrap"
           >
-            <TooltipProvider>
-              {hardSkills.map((skill) => {
-                return (
-                  <HardSkillLogo
-                    key={skill.title}
-                    path={skill.icon.path}
-                    title={skill.title}
-                  />
-                );
-              })}
-            </TooltipProvider>
+            {hardSkills.map((skill) => {
+              return (
+                <HardSkillLogo
+                  key={skill.title}
+                  path={skill.icon.path}
+                  title={skill.title}
+                />
+              );
+            })}
           </Box>
-        </Box>
+        </Container>
 
         {/* Soft skills */}
-        <Box alignItems="center" gap={8} justifyContent="center" width="lg">
+        <Container
+          alignItems="center"
+          gap={8}
+          justifyContent="center"
+          width="lg"
+        >
           <Header as="h2">Expertise</Header>
 
           <Box columns={{ base: 1, md: 2 }} display="grid" gap={4}>
@@ -115,10 +121,15 @@ export default function Page() {
               );
             })}
           </Box>
-        </Box>
+        </Container>
 
         {/* Portfolio */}
-        <Box alignItems="center" gap={8} justifyContent="center" width="sm">
+        <Container
+          alignItems="center"
+          gap={8}
+          justifyContent="center"
+          width="sm"
+        >
           <Text color="gray.400" tracking="tight" transform="uppercase">
             Trusted By
           </Text>
@@ -141,10 +152,10 @@ export default function Page() {
               );
             })}
           </Box>
-        </Box>
+        </Container>
 
         {/* Intro section */}
-        <Box width="md">
+        <Container width="md">
           <Card
             alignItems="center"
             gap={8}
@@ -235,56 +246,58 @@ export default function Page() {
               <ProfilePicture />
             </Box>
           </Card>
-        </Box>
+        </Container>
 
         {/* Pet projects */}
-        <Callout alignItems="center" gap={8} width="md">
-          <Header as="h2">Passion Projects</Header>
+        <Card variant="callout">
+          <Container alignItems="center" gap={8} width="md">
+            <Header as="h2">Passion Projects</Header>
 
-          <Box gap={8}>
-            <Box gap={1}>
-              <Header as="h3">SEDS</Header>
+            <Box gap={8}>
+              <Box gap={1}>
+                <Header as="h3">SEDS</Header>
 
-              <div>
-                <Text as="span">
-                  The Social Education and Development Society (SEDS) is a NGO
-                  that has been actively involved in socially transforming
-                  initiatives and rural development for over 38 years near the
-                  town of Penukonda in Andhra Pradesh, India. I created and
-                  maintain their homepage.
-                </Text>
+                <div>
+                  <Text as="span">
+                    The Social Education and Development Society (SEDS) is a NGO
+                    that has been actively involved in socially transforming
+                    initiatives and rural development for over 38 years near the
+                    town of Penukonda in Andhra Pradesh, India. I created and
+                    maintain their homepage.
+                  </Text>
 
-                <Box direction="horizontal" gap={2}>
-                  <Link href="https://sedsngo.org">website</Link>
+                  <Box direction="horizontal" gap={2}>
+                    <Link href="https://sedsngo.org">website</Link>
 
-                  <Link href="https://github.com/mauricekleine/seds">
-                    source
-                  </Link>
-                </Box>
-              </div>
+                    <Link href="https://github.com/mauricekleine/seds">
+                      source
+                    </Link>
+                  </Box>
+                </div>
+              </Box>
+
+              <Box columns={{ base: 1, md: 2 }} display="grid" gap={8}>
+                {petProjects.map((project) => (
+                  <Box gap={1} key={project.name}>
+                    <Header as="h3">{project.name}</Header>
+
+                    <div>
+                      <Text as="span">{project.description}</Text>
+
+                      <Box direction="horizontal" gap={2}>
+                        {project.url ? (
+                          <Link href={project.url}>website</Link>
+                        ) : null}
+
+                        <Link href={project.repo}>source</Link>
+                      </Box>
+                    </div>
+                  </Box>
+                ))}
+              </Box>
             </Box>
-
-            <Box columns={{ base: 1, md: 2 }} display="grid" gap={8}>
-              {petProjects.map((project) => (
-                <Box gap={1} key={project.name}>
-                  <Header as="h3">{project.name}</Header>
-
-                  <div>
-                    <Text as="span">{project.description}</Text>
-
-                    <Box direction="horizontal" gap={2}>
-                      {project.url ? (
-                        <Link href={project.url}>website</Link>
-                      ) : null}
-
-                      <Link href={project.repo}>source</Link>
-                    </Box>
-                  </div>
-                </Box>
-              ))}
-            </Box>
-          </Box>
-        </Callout>
+          </Container>
+        </Card>
       </Box>
     </>
   );

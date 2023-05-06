@@ -1,0 +1,62 @@
+@use "../mixins.scss";
+
+.container {
+  /* Width */
+
+  &[data-width="sm"] {
+    margin: 0 auto;
+    width: calc(100% * (11 / 12));
+  }
+
+  &[data-width="md"] {
+    margin: 0 auto;
+    width: calc(100% * (11 / 12));
+  }
+
+  &[data-width="lg"] {
+    margin: 0 auto;
+    width: calc(100% * (11 / 12));
+  }
+
+  @include mixins.screen(sm) {
+    &[data-width="sm"] {
+      width: calc(100% * (9 / 12));
+    }
+
+    &[data-width="md"] {
+      width: calc(100% * (10 / 12));
+    }
+
+    &[data-width="lg"] {
+      width: calc(100% * (10 / 12));
+    }
+  }
+
+  @include mixins.screen(md) {
+    &[data-width="sm"] {
+      width: calc(100% * (8 / 12));
+    }
+
+    &[data-width="md"] {
+      width: calc(100% * (9 / 12));
+    }
+
+    &[data-width="lg"] {
+      width: calc(100% * (10 / 12));
+    }
+  }
+
+  @include mixins.screen(lg) {
+    &[data-width="sm"] {
+      width: calc(100% * (6 / 12));
+    }
+
+    &[data-width="md"] {
+      width: calc(100% * (8 / 12));
+    }
+
+    &[data-width="lg"] {
+      width: calc(100% * (10 / 12));
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { ToastProvider, ToastViewport } from "@mozza-ui/react";
+import { ToastProvider, ToastViewport, TooltipProvider } from "@mozza-ui/react";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -59,11 +59,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <body>
         <ToastProvider>
-          <Navigation />
+          <TooltipProvider>
+            <Navigation />
 
-          <main>{children}</main>
+            <main>{children}</main>
 
-          <ToastViewport />
+            <ToastViewport />
+          </TooltipProvider>
         </ToastProvider>
 
         <Footer />

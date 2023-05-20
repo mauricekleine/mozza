@@ -3,6 +3,7 @@
 import { Confetti, SmileyXEyes, X } from "@mozza-icons/react";
 import { CircleNotch } from "@mozza-icons/react";
 import { Dialog, Toast } from "@mozza-ui/react";
+import Script from "next/script";
 import { ReactNode, useState } from "react";
 
 import { Button } from "~/ui/button";
@@ -46,6 +47,8 @@ export function ContactFormDialog({ children }: Props) {
 
   return (
     <>
+      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" />
+
       <Dialog
         isOpen={isDialogOpen}
         onOpenChange={(open) => setIsDialogOpen(open)}

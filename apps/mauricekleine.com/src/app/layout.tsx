@@ -1,12 +1,7 @@
-import { ToastProvider, ToastViewport, TooltipProvider } from "@mozza-ui/react";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import Script from "next/script";
-
-import { Navigation } from "~/navigation";
-import { Footer } from "~/ui/layout";
 
 import "./layout.css";
 
@@ -53,22 +48,8 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`${sans.variable} ${serif.variable}`} lang="en">
-      <head>
-        <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" />
-      </head>
-
       <body>
-        <ToastProvider>
-          <TooltipProvider>
-            <Navigation />
-
-            <main>{children}</main>
-
-            <ToastViewport />
-          </TooltipProvider>
-        </ToastProvider>
-
-        <Footer />
+        {children}
 
         <Analytics />
       </body>

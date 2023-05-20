@@ -3,7 +3,7 @@ const path = require("node:path");
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
 const ContentSecurityPolicy = `
-  default-src 'self' https://vitals.vercel-insights.com;
+  default-src 'self' https://vitals.vercel-insights.com https://images.unsplash.com/;
   frame-ancestors 'none';
   frame-src https://challenges.cloudflare.com;
   object-src 'none';

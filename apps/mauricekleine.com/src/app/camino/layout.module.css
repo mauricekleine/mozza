@@ -1,0 +1,6 @@
+.camino-image {
+  object-fit: cover;
+  opacity: 0.15;
+  position: fixed !important;
+  z-index: -1;
+}

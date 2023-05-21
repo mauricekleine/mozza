@@ -5,67 +5,61 @@ import { Icon } from "~/ui/icon";
 import { Box, Container } from "~/ui/layout";
 import { Header, Text } from "~/ui/typography";
 
-import styles from "./page.module.css";
-
 export default function Page() {
   return (
-    <div className={styles.camino}>
-      <div className={styles["camino-container"]}>
-        <Container
-          alignItems="center"
-          gap={8}
-          height="full"
-          justifyContent="center"
-          width="sm"
+    <Container
+      alignItems="center"
+      gap={8}
+      height="screen"
+      justifyContent="center"
+      width="sm"
+    >
+      <Box alignItems="center" gap={4} textAlign="center">
+        <Header as="h2">Maurice&apos;s Camino</Header>
+
+        <Text
+          color="gray.300"
+          lineHeight="tight"
+          size={{ base: "xl", md: "2xl" }}
+          tracking="tight"
         >
-          <Box alignItems="center" gap={4} textAlign="center">
-            <Header as="h2">Maurice&apos;s Camino</Header>
+          Follow along for updates on my camino to Santiago de Compostela by
+          checking out the links below.
+        </Text>
+      </Box>
 
-            <Text
-              color="gray.300"
-              lineHeight="tight"
-              size={{ base: "xl", md: "2xl" }}
-              tracking="tight"
-            >
-              Follow along for updates on my camino to Santiago de Compostela by
-              checking out the links below.
-            </Text>
-          </Box>
+      <Box
+        alignItems="center"
+        direction={{ base: "vertical", md: "horizontal" }}
+        gap={4}
+        textAlign="center"
+      >
+        <Button
+          as="a"
+          href="https://www.polarsteps.com/mauricekleine/7181704-camino-de-santiago?s=A6DF8AC0-5999-4E9B-A945-021B11981D26"
+          variant="primary"
+        >
+          <Icon icon={Compass} />
 
-          <Box
-            alignItems="center"
-            direction={{ base: "vertical", md: "horizontal" }}
-            gap={4}
-            textAlign="center"
-          >
-            <Button
-              as="a"
-              href="https://www.polarsteps.com/mauricekleine/7181704-camino-de-santiago?s=A6DF8AC0-5999-4E9B-A945-021B11981D26"
-              variant="primary"
-            >
-              <Icon icon={Compass} />
+          <Text>Polarsteps</Text>
+        </Button>
 
-              <Text>Polarsteps</Text>
-            </Button>
+        <Button
+          as="a"
+          href="https://lighterpack.com/r/qakv0o"
+          variant="primary"
+        >
+          <Icon icon={Tent} />
 
-            <Button
-              as="a"
-              href="https://lighterpack.com/r/qakv0o"
-              variant="primary"
-            >
-              <Icon icon={Tent} />
+          <Text>Gear list</Text>
+        </Button>
 
-              <Text>Gear list</Text>
-            </Button>
+        <Button as="a" href="/camino/route" variant="primary">
+          <Icon icon={Footprints} />
 
-            <Button as="a" href="/camino/route" variant="primary">
-              <Icon icon={Footprints} />
-
-              <Text>Route</Text>
-            </Button>
-          </Box>
-        </Container>
-      </div>
-    </div>
+          <Text>Route</Text>
+        </Button>
+      </Box>
+    </Container>
   );
 }

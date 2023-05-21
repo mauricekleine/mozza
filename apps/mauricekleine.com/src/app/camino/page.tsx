@@ -14,7 +14,7 @@ export default function Page() {
         <Container
           alignItems="center"
           gap={8}
-          height="screen"
+          height="full"
           justifyContent="center"
           width="sm"
         >
@@ -58,11 +58,7 @@ export default function Page() {
               <Text>Gear list</Text>
             </Button>
 
-            <Button
-              as="a"
-              href="https://lighterpack.com/r/qakv0o"
-              variant="primary"
-            >
+            <Button as="a" href="/camino/route" variant="primary">
               <Icon icon={Footprints} />
 
               <Text>Route</Text>

@@ -73,6 +73,8 @@
   --font-size-6xl: 3.75rem; /* 60px */
   --font-size-7xl: 4.5rem; /* 72px */
   --font-size-8xl: 6rem; /* 96px */
+  --font-size-9xl: 8rem; /* 128px */
+  --font-size-10xl: 10rem; /* 160px */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;

@@ -3,7 +3,7 @@
 .h1 {
   color: var(--color-white);
   font-family: var(--font-family-serif);
-  font-size: var(--font-size-6xl);
+  font-size: var(--font-size-8xl);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--tracking-loose);
   line-height: 1;
@@ -28,7 +28,7 @@
 
 @include mixins.screen(md) {
   .h1 {
-    font-size: var(--font-size-8xl);
+    font-size: var(--font-size-10xl);
   }
 
   .h2 {

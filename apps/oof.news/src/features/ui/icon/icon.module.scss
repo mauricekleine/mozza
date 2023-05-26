@@ -1,0 +1,97 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  /* Animations */
+
+  &[data-animation="spin"] {
+    animation: spin 1s linear infinite;
+  }
+
+  /* Colors */
+
+  $color: (
+    "black": var(--color-black),
+    "blue.100": var(--color-blue-100),
+    "blue.200": var(--color-blue-200),
+    "blue.300": var(--color-blue-300),
+    "blue.400": var(--color-blue-400),
+    "blue.500": var(--color-blue-500),
+    "blue.600": var(--color-blue-600),
+    "blue.700": var(--color-blue-700),
+    "blue.800": var(--color-blue-800),
+    "blue.900": var(--color-blue-900),
+    "gray.100": var(--color-gray-100),
+    "gray.200": var(--color-gray-200),
+    "gray.300": var(--color-gray-300),
+    "gray.400": var(--color-gray-400),
+    "gray.500": var(--color-gray-500),
+    "gray.600": var(--color-gray-600),
+    "gray.700": var(--color-gray-700),
+    "gray.800": var(--color-gray-800),
+    "gray.900": var(--color-gray-900),
+    "green.100": var(--color-green-100),
+    "green.200": var(--color-green-200),
+    "green.300": var(--color-green-300),
+    "green.400": var(--color-green-400),
+    "green.500": var(--color-green-500),
+    "green.600": var(--color-green-600),
+    "green.700": var(--color-green-700),
+    "green.800": var(--color-green-800),
+    "green.900": var(--color-green-900),
+    "purple.100": var(--color-purple-100),
+    "purple.200": var(--color-purple-200),
+    "purple.300": var(--color-purple-300),
+    "purple.400": var(--color-purple-400),
+    "purple.500": var(--color-purple-500),
+    "purple.600": var(--color-purple-600),
+    "purple.700": var(--color-purple-700),
+    "purple.800": var(--color-purple-800),
+    "purple.900": var(--color-purple-900),
+    "red.100": var(--color-red-100),
+    "red.200": var(--color-red-200),
+    "red.300": var(--color-red-300),
+    "red.400": var(--color-red-400),
+    "red.500": var(--color-red-500),
+    "red.600": var(--color-red-600),
+    "red.700": var(--color-red-700),
+    "red.800": var(--color-red-800),
+    "red.900": var(--color-red-900),
+    "white": var(--color-white),
+  );
+
+  @each $name, $value in $color {
+    &[data-color="#{$name}"] {
+      color: $value;
+    }
+  }
+
+  /* Sizes */
+
+  &[data-size="xs"] {
+    height: var(--space-3);
+    width: var(--space-3);
+  }
+
+  &[data-size="sm"] {
+    height: var(--space-5);
+    width: var(--space-5);
+  }
+
+  &[data-size="md"] {
+    height: var(--space-8);
+    width: var(--space-8);
+  }
+
+  &[data-size="lg"] {
+    height: var(--space-12);
+    width: var(--space-12);
+  }
+}

@@ -1,0 +1,288 @@
+@use "../mixins.scss";
+
+.box {
+  /* Align items */
+
+  $align-items: (
+    center: center,
+    end: flex-end,
+    start: flex-start,
+  );
+
+  @each $key, $value in $align-items {
+    &[data-align-items~="base:#{$key}"] {
+      align-items: $value;
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $key, $value in $align-items {
+        &[data-align-items~="#{$breakpoint}:#{$key}"] {
+          align-items: $value;
+        }
+      }
+    }
+  }
+
+  /* Columns */
+
+  $columns: (
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10,
+  );
+
+  @each $key, $value in $columns {
+    &[data-columns~="base:#{$key}"] {
+      grid-template-columns: repeat(#{$value}, minmax(0, 1fr));
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $key, $value in $columns {
+        &[data-columns~="#{$breakpoint}:#{$key}"] {
+          grid-template-columns: repeat(#{$value}, minmax(0, 1fr));
+        }
+      }
+    }
+  }
+
+  /* Direction */
+
+  $directions: (
+    horizontal: row,
+    vertical: column,
+  );
+
+  @each $key, $value in $directions {
+    &[data-direction~="base:#{$key}"] {
+      flex-direction: $value;
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $key, $value in $directions {
+        &[data-direction~="#{$breakpoint}:#{$key}"] {
+          flex-direction: $value;
+        }
+      }
+    }
+  }
+
+  /* Display */
+
+  $displays: (
+    flex: flex,
+    grid: grid,
+  );
+
+  @each $key, $value in $displays {
+    &[data-display~="base:#{$key}"] {
+      display: $value;
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $key, $value in $displays {
+        &[data-display~="#{$breakpoint}:#{$key}"] {
+          display: $value;
+        }
+      }
+    }
+  }
+
+  /* Gap */
+
+  $gaps: (
+    0: 0,
+    1: var(--space-1),
+    2: var(--space-2),
+    4: var(--space-4),
+    8: var(--space-8),
+    12: var(--space-12),
+    16: var(--space-16),
+    32: var(--space-32),
+    64: var(--space-64),
+  );
+
+  @each $key, $value in $gaps {
+    &[data-gap~="base:#{$key}"] {
+      gap: $value;
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $key, $value in $gaps {
+        &[data-gap~="#{$breakpoint}:#{$key}"] {
+          gap: $value;
+        }
+      }
+    }
+  }
+
+  /* Height */
+
+  $heights: (
+    full: 100%,
+    screen: 100vh,
+  );
+
+  @each $key, $value in $heights {
+    &[data-height~="base:#{$key}"] {
+      height: $value;
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $key, $value in $heights {
+        &[data-height~="#{$breakpoint}:#{$key}"] {
+          height: $value;
+        }
+      }
+    }
+  }
+
+  /* Justify content */
+
+  $justify-content: (
+    around: space-around,
+    between: space-between,
+    center: center,
+    end: flex-end,
+    evenly: space-evenly,
+    start: flex-start,
+  );
+
+  @each $key, $value in $justify-content {
+    &[data-justify-content~="base:#{$key}"] {
+      justify-content: $value;
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $key, $value in $justify-content {
+        &[data-justify-content~="#{$breakpoint}:#{$key}"] {
+          justify-content: $value;
+        }
+      }
+    }
+  }
+
+  /* Overflow */
+
+  $overflows: (
+    auto: auto,
+    hidden: hidden,
+    scroll: scroll,
+    visible: visible,
+  );
+
+  @each $key, $value in $overflows {
+    &[data-overflow~="base:#{$key}"] {
+      overflow: $value;
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $key, $value in $overflows {
+        &[data-overflow~="#{$breakpoint}:#{$key}"] {
+          overflow: $value;
+        }
+      }
+    }
+  }
+
+  /* Rows */
+
+  $rows: (
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10,
+  );
+
+  @each $row, $value in $rows {
+    &[data-rows~="base:#{$row}"] {
+      grid-template-rows: repeat(#{$value}, minmax(0, 1fr));
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $row, $value in $rows {
+        &[data-rows~="#{$breakpoint}:#{$row}"] {
+          grid-template-rows: repeat(#{$value}, minmax(0, 1fr));
+        }
+      }
+    }
+  }
+
+  /* Text align */
+
+  $text-align: (
+    center: center,
+    left: left,
+    right: right,
+  );
+
+  @each $key, $value in $text-align {
+    &[data-text-align~="base:#{$key}"] {
+      text-align: $value;
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $align, $value in $text-align {
+        &[data-text-align~="#{$breakpoint}:#{$align}"] {
+          text-align: $value;
+        }
+      }
+    }
+  }
+
+  /* Wrap */
+
+  $wrap: (
+    nowrap: nowrap,
+    wrap: wrap,
+    "wrap-reverse": wrap-reverse,
+  );
+
+  @each $key, $value in $wrap {
+    &[data-wrap~="base:#{$key}"] {
+      flex-wrap: $value;
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $key, $value in $wrap {
+        &[data-wrap~="#{$breakpoint}:#{$key}"] {
+          flex-wrap: $value;
+        }
+      }
+    }
+  }
+}

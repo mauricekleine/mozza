@@ -1,0 +1,12 @@
+.tooltip {
+  backdrop-filter: blur(var(--blur-xl));
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radii-md);
+  font-size: var(--font-size-sm);
+  padding: var(--space-1) var(--space-2);
+  z-index: var(--z-index-50);
+
+  & svg {
+    fill: var(--color-gray-200);
+  }
+}

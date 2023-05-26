@@ -25,7 +25,7 @@ type SpanProps = {
 };
 
 type Props = (LabelProps | ParagraphProps | SpanProps) & {
-  color?: "gray.100" | "gray.200" | "gray.300" | "gray.400";
+  color?: "gray.100" | "gray.200" | "gray.300" | "gray.400" | "green" | "red";
   family?: "sans" | "serif";
   lineHeight?: "normal" | "tight";
   size?: ResponsiveProp<"xs" | "sm" | "base" | "lg" | "xl" | "2xl">;

@@ -2,6 +2,8 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
   "globalEnv": [
+    "BEEHIIV_API_KEY",
+    "BEEHIIV_PUBLICATION_ID",
     "NEXT_PUBLIC_TURNSTILE_SITE_KEY",
     "SLACK_WAITINGLIST_WEBHOOK_URL",
     "TURNSTILE_SECRET_KEY"

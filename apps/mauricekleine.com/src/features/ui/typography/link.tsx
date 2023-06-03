@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "@mozza-icons/react";
 import { Route } from "next";
 import NextLink from "next/link";
 import { ReactNode } from "react";
@@ -24,9 +23,7 @@ export function Link<H extends string>({ children, href }: Props<H>) {
       rel={isExternalLink(href) ? "noopener noreferrer" : undefined}
       target={isExternalLink(href) ? "_blank" : undefined}
     >
-      <span>{children}</span>
-
-      {isExternalLink(href) ? <ArrowUpRight /> : null}
+      {children}
     </As>
   );
 }

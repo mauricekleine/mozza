@@ -12,7 +12,7 @@
   "main": "index.js",
   "scripts": {},
   "dependencies": {
-    "eslint": "~8.41.0",
+    "eslint": "~8.42.0",
     "eslint-config-next": "~13.4.4",
     "eslint-config-prettier": "~8.8.0",
     "eslint-config-turbo": "latest",
@@ -22,6 +22,6 @@
     "eslint-plugin-unicorn": "~47.0.0",
     "eslint-plugin-unused-imports": "~2.0.0",
     "next": "~13.4.4",
-    "typescript": "~5.0.4"
+    "typescript": "~5.1.3"
   }
 }

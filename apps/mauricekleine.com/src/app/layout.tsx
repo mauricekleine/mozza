@@ -1,20 +1,17 @@
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./layout.css";
 
-const sans = Inter({
+const sans = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-family-sans",
 });
 
 const serif = localFont({
-  src: [
-    { path: "../../public/fonts/Recoleta-Regular.otf", weight: "400" },
-    { path: "../../public/fonts/Recoleta-SemiBold.otf", weight: "600" },
-  ],
+  src: [{ path: "../../public/fonts/Recoleta-Bold.otf", weight: "700" }],
   variable: "--font-family-serif",
 });
 

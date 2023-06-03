@@ -1,4 +1,8 @@
-import { HandWaving, PaperPlaneTilt } from "@mozza-icons/react";
+import {
+  CaretDown,
+  HandWaving,
+  PaperPlaneTilt,
+} from "@mozza-icons/react";
 import { ToastProvider, TooltipProvider } from "@mozza-ui/react";
 
 import { ContactFormDialog } from "~/contact-form";
@@ -24,59 +28,68 @@ export default function Page() {
 
       <ToastProvider>
         <TooltipProvider>
-          <Container
-            alignItems="center"
-            gap={8}
-            height="screen"
-            justifyContent="center"
-            width="md"
-          >
-            <Box alignItems="center" gap={4} textAlign="center">
-              <Header as="h1">Maurice Kleine</Header>
-
-              <Text
-                color="gray.300"
-                lineHeight="tight"
-                size={{ base: "xl", md: "2xl" }}
-                tracking="tight"
-              >
-                I like solving problems in product teams that have a strong
-                vision. Sometimes I do this with code, and other times by
-                coaching and mentoring the people on those teams. I understand
-                that fast iteration is key to building amazing products.
-              </Text>
-            </Box>
-
-            <Box
-              alignItems="center"
-              direction="horizontal"
-              gap={4}
-              justifyContent="center"
-            >
-              <Button
-                as="a"
-                href="https://www.linkedin.com/in/mauricekleine/"
-                variant="secondary"
-              >
-                LinkedIn
-              </Button>
-
-              <ContactFormDialog>
-                <Button variant="primary">
-                  <Icon icon={PaperPlaneTilt} />
-
-                  <span>Contact</span>
-                </Button>
-              </ContactFormDialog>
-            </Box>
-          </Container>
-
           <Box gap={64}>
+            <Container
+              alignItems="center"
+              height="screen"
+              justifyContent="evenly"
+              style={{ paddingTop: "6rem" }}
+              width="md"
+            >
+              <Box alignItems="center" gap={8} textAlign="center">
+                <Box alignItems="center" gap={2} textAlign="center">
+                  <Header as="h1">Maurice Kleine</Header>
+
+                  <Container width="lg">
+                    <Text
+                      color="gray.300"
+                      lineHeight="tight"
+                      size={{ base: "xl", md: "2xl" }}
+                    >
+                      I like solving problems in product teams that have a
+                      strong vision. Sometimes I do this with code, and other
+                      times by coaching and mentoring the people on those teams.
+                      I understand that fast iteration is key to building
+                      amazing products.
+                    </Text>
+                  </Container>
+                </Box>
+
+                <Box
+                  alignItems="center"
+                  direction="horizontal"
+                  gap={4}
+                  justifyContent="center"
+                >
+                  <Button
+                    as="a"
+                    href="https://www.linkedin.com/in/mauricekleine/"
+                    variant="secondary"
+                  >
+                    LinkedIn
+                  </Button>
+
+                  <ContactFormDialog>
+                    <Button variant="primary">
+                      <Icon icon={PaperPlaneTilt} />
+
+                      <span>Contact</span>
+                    </Button>
+                  </ContactFormDialog>
+                </Box>
+              </Box>
+
+              <Box alignItems="center" justifyContent="center">
+                <Icon icon={CaretDown} />
+              </Box>
+            </Container>
+
             {/* Hard skills */}
             <Container
               alignItems="center"
               gap={8}
               justifyContent="center"
+              textAlign="center"
               width="sm"
             >
               <Text color="gray.400" tracking="tight" transform="uppercase">
@@ -264,44 +277,48 @@ export default function Page() {
                 <Header as="h2">Passion Projects</Header>
 
                 <Box gap={8}>
-                  <Box gap={1}>
+                  <Box gap={2}>
                     <Header as="h3">SEDS</Header>
 
-                    <div>
-                      <Text as="span">
-                        The Social Education and Development Society (SEDS) is a
-                        NGO that has been actively involved in socially
-                        transforming initiatives and rural development for over
-                        38 years near the town of Penukonda in Andhra Pradesh,
-                        India. I created and maintain their homepage.
+                    <Text>
+                      The Social Education and Development Society (SEDS) is a
+                      NGO that has been actively involved in socially
+                      transforming initiatives and rural development for over 38
+                      years near the town of Penukonda in Andhra Pradesh, India.
+                      I created and maintain their homepage.
+                    </Text>
+
+                    <Box direction="horizontal" gap={2}>
+                      <Text size="sm">
+                        <Link href="https://sedsngo.org">website</Link>
                       </Text>
 
-                      <Box direction="horizontal" gap={2}>
-                        <Link href="https://sedsngo.org">website</Link>
-
+                      <Text size="sm">
                         <Link href="https://github.com/mauricekleine/seds">
                           source
                         </Link>
-                      </Box>
-                    </div>
+                      </Text>
+                    </Box>
                   </Box>
 
                   <Box columns={{ base: 1, md: 2 }} display="grid" gap={8}>
                     {petProjects.map((project) => (
-                      <Box gap={1} key={project.name}>
+                      <Box gap={2} key={project.name}>
                         <Header as="h3">{project.name}</Header>
 
-                        <div>
-                          <Text as="span">{project.description}</Text>
+                        <Text>{project.description}</Text>
 
-                          <Box direction="horizontal" gap={2}>
-                            {project.url ? (
+                        <Box direction="horizontal" gap={2}>
+                          {project.url ? (
+                            <Text size="sm">
                               <Link href={project.url}>website</Link>
-                            ) : null}
+                            </Text>
+                          ) : null}
 
+                          <Text size="sm">
                             <Link href={project.repo}>source</Link>
-                          </Box>
-                        </div>
+                          </Text>
+                        </Box>
                       </Box>
                     ))}
                   </Box>

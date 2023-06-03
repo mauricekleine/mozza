@@ -14,14 +14,13 @@ export default function Page() {
       justifyContent="center"
       width="sm"
     >
-      <Box alignItems="center" gap={4} textAlign="center">
+      <Box alignItems="center" gap={{ base: 4, md: 1 }} textAlign="center">
         <Header as="h2">Maurice&apos;s Camino</Header>
 
         <Text
-          color="gray.300"
+          color="gray.200"
           lineHeight="tight"
           size={{ base: "xl", md: "2xl" }}
-          tracking="tight"
         >
           Follow along for updates on my camino to Santiago de Compostela by
           checking out the links below.

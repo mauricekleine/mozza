@@ -74,8 +74,6 @@
   --font-size-7xl: 4.5rem; /* 72px */
   --font-size-8xl: 6rem; /* 96px */
   --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --line-height-tight: 1.25;
   --line-height-normal: 1.5;
@@ -129,4 +127,6 @@ html body {
   background-color: var(--color-black);
   color: var(--color-gray-200);
   font-family: var(--font-family-sans);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-tight);
 }

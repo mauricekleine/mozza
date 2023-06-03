@@ -7,6 +7,7 @@
  */
 declare namespace __next_route_internal_types__ {
   type SearchOrHash = `?${string}` | `#${string}`;
+  type WithProtocol = `${string}:${string}`;
 
   type Suffix = "" | SearchOrHash;
 
@@ -32,6 +33,8 @@ declare namespace __next_route_internal_types__ {
 
   type RouteImpl<T> =
     | StaticRoutes
+    | SearchOrHash
+    | WithProtocol
     | `${StaticRoutes}${SearchOrHash}`
     | (T extends `${DynamicRoutes<infer _>}${Suffix}` ? T : never);
 }

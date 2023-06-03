@@ -1,6 +1,11 @@
+.camino-container {
+  inset: 0;
+  opacity: 0.2;
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+}
+
 .camino-image {
   object-fit: cover;
-  opacity: 0.25;
-  position: fixed !important;
-  z-index: -1;
 }

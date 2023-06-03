@@ -4,16 +4,13 @@
   color: var(--color-white);
   font-family: var(--font-family-serif);
   font-size: var(--font-size-6xl);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--tracking-tight);
   line-height: 1;
 }
 
 .h2 {
   color: var(--color-gray-100);
   font-family: var(--font-family-serif);
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-5xl);
   line-height: 2.5rem;
 }
 
@@ -21,9 +18,10 @@
   color: var(--color-gray-100);
   font-family: var(--font-family-serif);
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--tracking-tight);
   line-height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @include mixins.screen(md) {
@@ -32,7 +30,11 @@
   }
 
   .h2 {
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-6xl);
     line-height: 1;
+  }
+
+  .h3 {
+    font-size: var(--font-size-3xl);
   }
 }

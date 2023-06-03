@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 export default function Page() {
   return (
     <Container className={styles.container} gap={8} width="sm">
-      <Box gap={4}>
+      <Box gap={2}>
         <Box
           alignItems="center"
           direction="horizontal"
@@ -17,7 +17,7 @@ export default function Page() {
           <Link href="/camino">Back</Link>
         </Box>
 
-        <Text color="gray.300">
+        <Text color="gray.200">
           My camino combines multiple, historically significant routes. I choose
           this combination because it travels through some of the most beautiful
           parts of France and Spain, while avoiding the peak season crowds of
@@ -67,7 +67,9 @@ export default function Page() {
             Périgueux to Mont-de-Marsan (249km)
           </Link>
 
-          <Text>Mont-de-Marsan to Irun (140km, custom route / no map)</Text>
+          <Text color="gray.300">
+            Mont-de-Marsan to Irun (140km, custom route / no map)
+          </Text>
         </Box>
 
         <Box gap={2}>
@@ -89,7 +91,9 @@ export default function Page() {
             Santander to Gijón (205km)
           </Link>
 
-          <Text>Gijón to Oviedo (28km, custom route / no map)</Text>
+          <Text color="gray.300">
+            Gijón to Oviedo (28km, custom route / no map)
+          </Text>
         </Box>
 
         <Box gap={2}>

@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../mixins.scss";
 
 .text {
@@ -29,33 +30,39 @@
     }
   }
 
-  /* Line heights */
-
-  $line-heights: (
-    tight: var(--line-height-tight),
-    normal: var(--line-height-normal),
-  );
-
-  @each $line-height, $value in $line-heights {
-    &[data-line-height="#{$line-height}"] {
-      line-height: $value;
-    }
-  }
-
   /* Sizes */
 
   $sizes: (
-    xs: var(--font-size-xs),
-    sm: var(--font-size-sm),
-    base: var(--font-size-base),
-    lg: var(--font-size-lg),
-    xl: var(--font-size-xl),
-    2xl: var(--font-size-2xl),
+    xs: (
+      font-size: var(--font-size-xs),
+      line-height: var(--line-height-xs),
+    ),
+    sm: (
+      font-size: var(--font-size-sm),
+      line-height: var(--line-height-sm),
+    ),
+    base: (
+      font-size: var(--font-size-base),
+      line-height: var(--line-height-base),
+    ),
+    lg: (
+      font-size: var(--font-size-lg),
+      line-height: var(--line-height-lg),
+    ),
+    xl: (
+      font-size: var(--font-size-xl),
+      line-height: var(--line-height-xl),
+    ),
+    2xl: (
+      font-size: var(--font-size-2xl),
+      line-height: var(--line-height-2xl),
+    ),
   );
 
   @each $size, $value in $sizes {
     &[data-size~="base:#{$size}"] {
-      font-size: $value;
+      font-size: map.get($value, "font-size");
+      line-height: map.get($value, "line-height");
     }
   }
 
@@ -63,7 +70,8 @@
     @include mixins.screen($breakpoint) {
       @each $size, $value in $sizes {
         &[data-size~="#{$breakpoint}:#{$size}"] {
-          font-size: $value;
+          font-size: map.get($value, "font-size");
+          line-height: map.get($value, "line-height");
         }
       }
     }

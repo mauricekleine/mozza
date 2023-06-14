@@ -27,7 +27,6 @@ type SpanProps = {
 type Props = (LabelProps | ParagraphProps | SpanProps) & {
   color?: "gray.100" | "gray.200" | "gray.300" | "gray.400";
   family?: "sans" | "serif";
-  lineHeight?: "normal" | "tight";
   size?: ResponsiveProp<"xs" | "sm" | "base" | "lg" | "xl" | "2xl">;
   tracking?: "normal" | "tight";
   transform?: "uppercase";
@@ -39,7 +38,6 @@ export function Text({
   children,
   color,
   family,
-  lineHeight,
   size,
   tracking,
   transform,
@@ -52,7 +50,6 @@ export function Text({
       className={styles.text}
       data-color={color}
       data-family={family}
-      data-line-height={lineHeight}
       data-size={size ? transformResponsiveProp(size) : undefined}
       data-tracking={tracking}
       data-transform={transform}

@@ -75,8 +75,18 @@
   --font-size-8xl: 6rem; /* 96px */
   --font-weight-normal: 400;
   --font-weight-bold: 700;
-  --line-height-tight: 1.25;
-  --line-height-normal: 1.5;
+  --line-height-xs: 1rem;
+  --line-height-sm: 1.25rem;
+  --line-height-base: 1.5rem;
+  --line-height-lg: 1.75rem;
+  --line-height-xl: 1.75rem;
+  --line-height-2xl: 2rem;
+  --line-height-3xl: 2.25rem;
+  --line-height-4xl: 2.5rem;
+  --line-height-5xl: 1;
+  --line-height-6xl: 1;
+  --line-height-7xl: 1;
+  --line-height-8xl: 1;
   --tracking-tight: -0.025em;
   --tracking-normal: 0;
 
@@ -128,5 +138,5 @@ html body {
   color: var(--color-gray-200);
   font-family: var(--font-family-sans);
   font-size: var(--font-size-lg);
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-base);
 }

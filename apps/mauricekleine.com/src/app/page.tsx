@@ -1,8 +1,4 @@
-import {
-  CaretDown,
-  HandWaving,
-  PaperPlaneTilt,
-} from "@mozza-icons/react";
+import { CaretDown, PaperPlaneTilt } from "@mozza-icons/react";
 import { ToastProvider, TooltipProvider } from "@mozza-ui/react";
 
 import { ContactFormDialog } from "~/contact-form";
@@ -36,16 +32,12 @@ export default function Page() {
               style={{ paddingTop: "6rem" }}
               width="md"
             >
-              <Box alignItems="center" gap={8} textAlign="center">
-                <Box alignItems="center" gap={2} textAlign="center">
+              <Box alignItems="center" gap={16} textAlign="center">
+                <Box alignItems="center" gap={4} textAlign="center">
                   <Header as="h1">Maurice Kleine</Header>
 
                   <Container width="lg">
-                    <Text
-                      color="gray.300"
-                      lineHeight="tight"
-                      size={{ base: "xl", md: "2xl" }}
-                    >
+                    <Text color="gray.300" size={{ base: "xl", md: "2xl" }}>
                       I like solving problems in product teams that have a
                       strong vision. Sometimes I do this with code, and other
                       times by coaching and mentoring the people on those teams.
@@ -175,14 +167,7 @@ export default function Page() {
 
             {/* Intro section */}
             <Container width="md">
-              <Card
-                alignItems="center"
-                gap={8}
-                justifyContent="center"
-                variant="neon"
-              >
-                <Card.Icon icon={HandWaving} />
-
+              <Card gap={8} justifyContent="center" variant="neon">
                 <Card.Title>Hi, nice to meet you!</Card.Title>
 
                 <Box

@@ -52,7 +52,7 @@
       background: var(--color-black);
       border-radius: var(--radii-xl);
       height: 100%;
-      padding: var(--space-8);
+      padding: var(--space-12);
       position: relative;
       width: 100%;
       z-index: var(--z-index-10);
@@ -75,7 +75,7 @@
 
       @include mixins.screen(sm) {
         & {
-          padding: var(--space-12);
+          padding: var(--space-16);
         }
       }
     }
@@ -89,6 +89,6 @@
     );
     border: 1px solid var(--color-border);
     border-radius: var(--radii-lg);
-    padding: var(--space-8);
+    padding: var(--space-10);
   }
 }

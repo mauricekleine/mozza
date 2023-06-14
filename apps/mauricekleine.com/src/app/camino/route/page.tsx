@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 export default function Page() {
   return (
     <Container className={styles.container} gap={8} width="sm">
-      <Box gap={2}>
+      <Box gap={4}>
         <Box
           alignItems="center"
           direction="horizontal"

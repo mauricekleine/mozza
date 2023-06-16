@@ -167,7 +167,7 @@ export default function Page() {
 
             {/* Intro section */}
             <Container width="md">
-              <Card gap={8} justifyContent="center" variant="neon">
+              <Card gap={8} variant="neon">
                 <Card.Title>Hi, nice to meet you!</Card.Title>
 
                 <Box

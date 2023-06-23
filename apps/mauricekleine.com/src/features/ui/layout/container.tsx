@@ -3,8 +3,8 @@ import { ElementType } from "react";
 import { Box, BoxProps } from "./box";
 import styles from "./container.module.scss";
 
-type Props<As extends ElementType = "div"> = BoxProps<As> & {
-  width: "sm" | "md" | "lg";
+type Props<As extends ElementType = "div"> = Omit<BoxProps<As>, "width"> & {
+  width: "xs" | "sm" | "md" | "lg";
 };
 
 export function Container<As extends ElementType = "div">({

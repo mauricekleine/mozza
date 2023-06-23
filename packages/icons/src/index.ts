@@ -29,6 +29,7 @@ export * from "./linkedin-logo";
 export * from "./package";
 export * from "./paper-plane-tilt";
 export * from "./rocket-launch";
+export * from "./seal-question";
 export * from "./smiley-x-eyes";
 export * from "./stack";
 export * from "./tent";

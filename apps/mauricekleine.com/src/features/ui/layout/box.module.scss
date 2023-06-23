@@ -262,6 +262,28 @@
     }
   }
 
+  /* Width */
+
+  $widths: (
+    full: 100%,
+  );
+
+  @each $key, $value in $widths {
+    &[data-width~="base:#{$key}"] {
+      width: $value;
+    }
+  }
+
+  @each $breakpoint, $_ in mixins.$breakpoints {
+    @include mixins.screen($breakpoint) {
+      @each $key, $value in $widths {
+        &[data-width~="#{$breakpoint}:#{$key}"] {
+          width: $value;
+        }
+      }
+    }
+  }
+
   /* Wrap */
 
   $wrap: (

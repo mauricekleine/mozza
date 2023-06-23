@@ -1,0 +1,6 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  margin-left: calc(-1 * var(--space-4));
+  margin-right: calc(-1 * var(--space-4));
+}

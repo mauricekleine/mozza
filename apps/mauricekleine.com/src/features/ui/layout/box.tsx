@@ -32,6 +32,7 @@ type BoxProps<As extends ElementType = "div"> = (FlexProps | GridProps) & {
   >;
   overflow?: ResponsiveProp<"auto" | "hidden" | "scroll" | "visible">;
   textAlign?: ResponsiveProp<"center" | "left" | "right">;
+  width?: ResponsiveProp<"full">;
   wrap?: "nowrap" | "wrap" | "wrap-reverse";
 };
 
@@ -52,6 +53,7 @@ export function Box<As extends ElementType = "div">({
   overflow,
   rows,
   textAlign,
+  width,
   wrap,
   ...rest
 }: Props<As>) {
@@ -78,6 +80,7 @@ export function Box<As extends ElementType = "div">({
       data-text-align={
         textAlign ? transformResponsiveProp(textAlign) : undefined
       }
+      data-width={width ? transformResponsiveProp(width) : undefined}
       data-wrap={wrap ? transformResponsiveProp(wrap) : undefined}
       {...rest}
     >

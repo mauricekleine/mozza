@@ -140,3 +140,13 @@ html body {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-base);
 }
+
+a:not([class*="button"]) {
+  color: var(--color-gray-400);
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--color-gray-200);
+  }
+}

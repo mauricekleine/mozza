@@ -1,4 +1,4 @@
-import { Compass, Footprints, Tent } from "@mozza-icons/react";
+import { Compass, Footprints, SealQuestion, Tent } from "@mozza-icons/react";
 
 import { Button } from "~/ui/button";
 import { Icon } from "~/ui/icon";
@@ -12,7 +12,7 @@ export default function Page() {
       gap={8}
       height="screen"
       justifyContent="center"
-      width="sm"
+      width="xs"
     >
       <Box alignItems="center" gap={4} textAlign="center">
         <Header as="h2">Maurice&apos;s Camino</Header>
@@ -24,10 +24,11 @@ export default function Page() {
       </Box>
 
       <Box
-        alignItems="center"
-        direction={{ base: "vertical", md: "horizontal" }}
+        columns={{ base: 1, md: 2 }}
+        display="grid"
         gap={4}
-        textAlign="center"
+        justifyContent="center"
+        wrap="wrap"
       >
         <Button
           as="a"
@@ -53,6 +54,12 @@ export default function Page() {
           <Icon icon={Footprints} />
 
           <Text>Route</Text>
+        </Button>
+
+        <Button as="a" href="/camino/faq" variant="primary">
+          <Icon icon={SealQuestion} />
+
+          <Text>FAQ</Text>
         </Button>
       </Box>
     </Container>

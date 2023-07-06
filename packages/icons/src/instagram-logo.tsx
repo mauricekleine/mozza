@@ -11,11 +11,10 @@ export function InstagramLogo(props: Props) {
         cx="128"
         cy="128"
         fill="none"
-        r="36"
+        r="40"
         stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
+        strokeMiterlimit="10"
+        strokeWidth="16"
       />
 
       <rect
@@ -25,13 +24,13 @@ export function InstagramLogo(props: Props) {
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="24"
+        strokeWidth="16"
         width="192"
         x="32"
         y="32"
       />
 
-      <circle cx="180" cy="76" r="16" />
+      <circle cx="180" cy="76" r="12" />
     </IconBase>
   );
 }

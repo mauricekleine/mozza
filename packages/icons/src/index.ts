@@ -23,6 +23,7 @@ export * from "./footprints";
 export * from "./github-logo";
 export * from "./hand-waving";
 export * from "./heart";
+export * from "./instagram-logo";
 export * from "./js-file";
 export * from "./jsx-file";
 export * from "./linkedin-logo";

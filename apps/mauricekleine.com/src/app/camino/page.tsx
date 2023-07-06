@@ -1,4 +1,4 @@
-import { Compass, Footprints, SealQuestion, Tent } from "@mozza-icons/react";
+import { Compass, Footprints, InstagramLogo, Tent } from "@mozza-icons/react";
 
 import { Button } from "~/ui/button";
 import { Icon } from "~/ui/icon";
@@ -42,6 +42,16 @@ export default function Page() {
 
         <Button
           as="a"
+          href="https://www.instagram.com/hikingwithmorrie/"
+          variant="primary"
+        >
+          <Icon icon={InstagramLogo} />
+
+          <Text>Instagram</Text>
+        </Button>
+
+        <Button
+          as="a"
           href="https://lighterpack.com/r/qakv0o"
           variant="primary"
         >
@@ -54,12 +64,6 @@ export default function Page() {
           <Icon icon={Footprints} />
 
           <Text>Route</Text>
-        </Button>
-
-        <Button as="a" href="/camino/faq" variant="primary">
-          <Icon icon={SealQuestion} />
-
-          <Text>FAQ</Text>
         </Button>
       </Box>
     </Container>

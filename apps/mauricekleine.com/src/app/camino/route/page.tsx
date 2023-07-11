@@ -1,3 +1,6 @@
+import { ArrowUpRight } from "@mozza-icons/react";
+
+import { Icon } from "~/ui/icon";
 import { Box, Container } from "~/ui/layout";
 import { Header, Link, Text } from "~/ui/typography";
 
@@ -25,83 +28,83 @@ export default function Page() {
           approximately
           <Text as="span" weight="bold">
             {" "}
-            2,450km
+            2,350km
           </Text>
           .
         </Text>
       </Box>
 
       <Box gap={8}>
-        <Box gap={2}>
-          <Header as="h3">Via Campaniensis</Header>
-
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=860&end=862&B1=Startendpoint">
-            Namur to Reims (235km)
+        <Box gap={1}>
+          <Link href="https://compostelagenootschap.be/op-weg/pelgrimswegen/stappen/vertrekken-belgie-luxemburg/via-monastica/">
+            <Header as="h4">
+              Via Monastica
+              <Icon icon={ArrowUpRight} size="sm" />
+            </Header>
           </Link>
 
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=862&end=1128&B1=Startendpoint">
-            Reims to Vézelay (406km)
-          </Link>
+          <Text color="gray.300">101km from Namur to Rocroi</Text>
         </Box>
 
-        <Box gap={2}>
-          <Header as="h3">Via Lemovicensis</Header>
-
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=1128&end=880&B1=Startendpoint">
-            Vézelay to Nevers (103km)
+        <Box gap={1}>
+          <Link href="https://compostelagenootschap.be/op-weg/pelgrimswegen/stappen/vertrekken-vanuit-frankrijk/via-campaniensis/">
+            <Header as="h4">
+              Via Campaniensis
+              <Icon icon={ArrowUpRight} size="sm" />
+            </Header>
           </Link>
 
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=880&end=882&B1=Startendpoint">
-            Nevers to Saint-Amand-Montrond (97km)
-          </Link>
+          <Text color="gray.300">387km from Rocroi to Vézelay</Text>
+        </Box>
 
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=882&end=861&B1=Startendpoint">
-            Saint-Amand-Montrond to Limoges (239km)
-          </Link>
-
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=861&end=869&B1=Startendpoint">
-            Limoges to Périgueux (118km)
-          </Link>
-
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=869&end=881&B1=Startendpoint">
-            Périgueux to Mont-de-Marsan (249km)
+        <Box gap={1}>
+          <Link href="https://compostelagenootschap.be/op-weg/pelgrimswegen/stappen/vertrekken-vanuit-frankrijk/via-lemovicensis/">
+            <Header as="h4">
+              Via Lemovicensis
+              <Icon icon={ArrowUpRight} size="sm" />
+            </Header>
           </Link>
 
           <Text color="gray.300">
-            Mont-de-Marsan to Irun (140km, custom route / no map)
+            944km from Vézelay via Nevers to Saint-Jean-Pied-de-Port
           </Text>
         </Box>
 
-        <Box gap={2}>
-          <Header as="h3">Camino del Norte</Header>
-
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=1441&end=1419&routenr=3&B1=Startendpoint">
-            Irun to Donostia / San Sebastián (25km)
-          </Link>
-
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=1419&end=1417&routenr=3&B1=Startendpoint">
-            Donostia / San Sebastián to Bilbao (126km)
-          </Link>
-
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=1417&end=1710&routenr=3&B1=Startendpoint">
-            Bilbao to Santander (141km)
-          </Link>
-
-          <Link href="https://www.longdistancepaths.eu/camino/en/index.php?start=1710&end=1709&routenr=3&B1=Startendpoint">
-            Santander to Gijón (205km)
+        <Box gap={1}>
+          <Link href="https://www.santiago.nl/route-saint-jean-pied-de-port-naar-irun/">
+            <Header as="h4">
+              Connection to Camino del Norte
+              <Icon icon={ArrowUpRight} size="sm" />
+            </Header>
           </Link>
 
           <Text color="gray.300">
-            Gijón to Oviedo (28km, custom route / no map)
+            75km from Saint-Jean-Pied-de-Port to Irun
           </Text>
         </Box>
 
-        <Box gap={2}>
-          <Header as="h3">Camino Primitivo</Header>
-
-          <Link href="https://stingynomads.com/camino-primitivo-stages/">
-            Oviedo to Santiago de Compostela (321km)
+        <Box gap={1}>
+          <Link href="https://compostelagenootschap.be/op-weg/pelgrimswegen/stappen/vertrekken-in-spanje/camino-del-norte/">
+            <Header as="h4">
+              Camino del Norte
+              <Icon icon={ArrowUpRight} size="sm" />
+            </Header>
           </Link>
+
+          <Text color="gray.300">471km from Irun to Villaviciosa</Text>
+        </Box>
+
+        <Box gap={1}>
+          <Link href="https://compostelagenootschap.be/op-weg/pelgrimswegen/stappen/vertrekken-in-spanje/camino-primitivo/">
+            <Header as="h4">
+              Camino Primitivo
+              <Icon icon={ArrowUpRight} size="sm" />
+            </Header>
+          </Link>
+
+          <Text color="gray.300">
+            355km from Villaviciosa to Santiago de Compostela
+          </Text>
         </Box>
       </Box>
     </Container>

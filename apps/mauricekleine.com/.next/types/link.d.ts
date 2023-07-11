@@ -28,7 +28,7 @@ declare namespace __next_route_internal_types__ {
   type OptionalCatchAllSlug<S extends string> =
     S extends `${string}${SearchOrHash}` ? never : S;
 
-  type StaticRoutes = `/` | `/camino` | `/camino/faq` | `/camino/route`;
+  type StaticRoutes = `/` | `/camino` | `/camino/route`;
   type DynamicRoutes<T extends string = string> = never;
 
   type RouteImpl<T> =
@@ -49,11 +49,17 @@ declare module "next" {
 
 declare module "next/link" {
   import type { LinkProps as OriginalLinkProps } from "next/dist/client/link";
-  import type { AnchorHTMLAttributes } from "react";
+  import type { AnchorHTMLAttributes, DetailedHTMLProps } from "react";
   import type { UrlObject } from "url";
 
   type LinkRestProps = Omit<
-    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof OriginalLinkProps> &
+    Omit<
+      DetailedHTMLProps<
+        AnchorHTMLAttributes<HTMLAnchorElement>,
+        HTMLAnchorElement
+      >,
+      keyof OriginalLinkProps
+    > &
       OriginalLinkProps,
     "href"
   >;
@@ -67,7 +73,7 @@ declare module "next/link" {
   };
 
   export default function Link<RouteType>(
-    props: LinkProps<RouteType>
+    props: LinkProps<RouteType>,
   ): JSX.Element;
 }
 
@@ -85,7 +91,7 @@ declare module "next/navigation" {
      */
     push<RouteType>(
       href: __next_route_internal_types__.RouteImpl<RouteType>,
-      options?: NavigateOptions
+      options?: NavigateOptions,
     ): void;
     /**
      * Navigate to the provided href.
@@ -93,13 +99,13 @@ declare module "next/navigation" {
      */
     replace<RouteType>(
       href: __next_route_internal_types__.RouteImpl<RouteType>,
-      options?: NavigateOptions
+      options?: NavigateOptions,
     ): void;
     /**
      * Prefetch the provided href.
      */
     prefetch<RouteType>(
-      href: __next_route_internal_types__.RouteImpl<RouteType>
+      href: __next_route_internal_types__.RouteImpl<RouteType>,
     ): void;
   }
 

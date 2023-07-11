@@ -1,27 +1,65 @@
 @use "../mixins.scss";
 
 .h1 {
+  align-items: center;
   color: var(--color-white);
+  display: inline-flex;
   font-family: var(--font-family-serif);
   font-size: var(--font-size-6xl);
+  gap: var(--space-1);
   line-height: var(--line-height-6xl);
 }
 
 .h2 {
+  align-items: center;
   color: var(--color-gray-100);
+  display: inline-flex;
   font-family: var(--font-family-serif);
   font-size: var(--font-size-5xl);
+  gap: var(--space-1);
   line-height: var(--line-height-5xl);
 }
 
 .h3 {
+  align-items: center;
   color: var(--color-gray-100);
+  display: inline-flex;
   font-family: var(--font-family-serif);
   font-size: var(--font-size-2xl);
+  gap: var(--space-1);
   line-height: var(--line-height-2xl);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.h4 {
+  align-items: center;
+  color: var(--color-gray-100);
+  display: inline-flex;
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-xl);
+  gap: var(--space-1);
+  line-height: var(--line-height-xl);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a > .h1,
+a > .h2,
+a > .h3,
+a > .h4 {
+  color: var(--color-gray-200);
+  text-decoration: none;
+  transition:
+    color 0.2s ease-in-out,
+    text-decoration 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--color-gray-100);
+    text-decoration: underline;
+  }
 }
 
 @include mixins.screen(md) {
@@ -38,5 +76,10 @@
   .h3 {
     font-size: var(--font-size-3xl);
     line-height: var(--line-height-3xl);
+  }
+
+  .h4 {
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-2xl);
   }
 }

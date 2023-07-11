@@ -71,9 +71,9 @@ export default function Page() {
         </Box>
 
         <Box gap={1}>
-          <Link href="https://www.santiago.nl/route-saint-jean-pied-de-port-naar-irun/">
+          <Link href="https://compostelagenootschap.be/op-weg/pelgrimswegen/stappen/vertrekken-vanuit-frankrijk/saint-jean-pied-de-port-hendaye/">
             <Header as="h4">
-              Connection to Camino del Norte
+              Voie Nive Bidassoa
               <Icon icon={ArrowUpRight} size="sm" />
             </Header>
           </Link>

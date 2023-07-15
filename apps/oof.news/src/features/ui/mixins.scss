@@ -5,6 +5,7 @@ $breakpoints: (
 );
 
 @mixin screen($breakpoint) {
+  /* stylelint-disable-next-line media-query-no-invalid */
   @media (min-width: map-get($breakpoints, $breakpoint)) {
     @content;
   }

@@ -125,7 +125,7 @@
   --space-64: 16rem; /* 256px */
 
   /* Z-Indices */
-
+  --z-index-0: 0;
   --z-index-10: 10;
   --z-index-20: 20;
   --z-index-30: 30;
@@ -144,7 +144,9 @@ html body {
 a:not([class*="button"]) {
   color: var(--color-gray-400);
   text-decoration: underline;
-  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+  transition:
+    color 0.2s ease-in-out,
+    text-decoration 0.2s ease-in-out;
 
   &:hover {
     color: var(--color-gray-200);

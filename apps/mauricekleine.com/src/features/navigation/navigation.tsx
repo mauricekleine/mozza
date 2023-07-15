@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-} from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -46,6 +42,7 @@ export function Navigation() {
           <Box
             alignItems="center"
             as={Link}
+            className={styles["navigation-link"]}
             direction="horizontal"
             gap={2}
             href="/"
@@ -60,7 +57,7 @@ export function Navigation() {
             </div>
 
             <div className={styles.brand}>
-              <Text weight="bold">Maurice Kleine</Text>
+              <Text as="span">Maurice Kleine</Text>
             </div>
           </Box>
 

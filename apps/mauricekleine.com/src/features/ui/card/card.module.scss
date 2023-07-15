@@ -48,7 +48,10 @@
       border-radius: var(--radii-xl);
       padding: var(--space-12);
       position: relative;
-      z-index: var(--z-index-10);
+
+      & > * {
+        z-index: var(--z-index-10);
+      }
 
       &::before {
         animation: spin 12s linear infinite;

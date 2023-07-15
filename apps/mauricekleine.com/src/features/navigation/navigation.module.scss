@@ -42,3 +42,10 @@
 .navigation-inner {
   height: var(--space-16);
 }
+
+.navigation-link {
+  color: var(--color-gray-100) !important;
+  font-family: var(--font-family-serif);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none !important;
+}

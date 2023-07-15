@@ -17,6 +17,19 @@
     }
   }
 
+  /* Decoration */
+
+  $decoration: (
+    none: "none",
+    underline: "underline",
+  );
+
+  @each $decoration, $value in $decoration {
+    &[data-decoration="#{$decoration}"] {
+      text-decoration: $value;
+    }
+  }
+
   /* Family */
 
   $family: (

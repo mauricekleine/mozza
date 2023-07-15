@@ -27,7 +27,7 @@
     "update:minor": "taze -r minor -w"
   },
   "devDependencies": {
-    "eslint": "~8.44.0",
+    "eslint": "~8.45.0",
     "eslint-config-mozza": "workspace:*",
     "husky": "~8.0.3",
     "lint-staged": "~13.2.3",

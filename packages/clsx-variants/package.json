@@ -24,7 +24,7 @@
     "typecheck": "tsc -b"
   },
   "dependencies": {
-    "clsx": "~1.2.1"
+    "clsx": "~2.0.0"
   },
   "devDependencies": {
     "eslint": "~8.45.0",

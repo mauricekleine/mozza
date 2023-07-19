@@ -126,7 +126,7 @@ export default function Page() {
 
         <Box gap={1}>
           <Text color="gray.400" size="sm">
-            Mid-October till Early November
+            Mid-October till early November
           </Text>
 
           <Box>

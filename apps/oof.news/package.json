@@ -26,29 +26,29 @@
   "dependencies": {
     "@mozza-icons/react": "workspace:*",
     "@mozza-ui/react": "workspace:*",
-    "@vercel/analytics": "~1.0.1",
+    "@vercel/analytics": "~1.0.2",
     "date-fns": "~2.30.0",
-    "framer-motion": "~10.12.22",
+    "framer-motion": "~10.16.4",
     "modern-normalize": "~2.0.0",
-    "next": "~13.4.10",
+    "next": "~13.5.3",
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
-    "simple-icons": "~9.6.0",
-    "zod": "~3.21.4",
+    "simple-icons": "~9.16.0",
+    "zod": "~3.22.2",
     "zod-form-data": "~2.0.1"
   },
   "devDependencies": {
-    "@types/node": "~20.4.2",
-    "@types/react": "~18.2.15",
-    "@types/react-dom": "~18.2.7",
-    "concurrently": "~8.2.0",
-    "eslint": "~8.45.0",
+    "@types/node": "~20.7.1",
+    "@types/react": "~18.2.23",
+    "@types/react-dom": "~18.2.8",
+    "concurrently": "~8.2.1",
+    "eslint": "~8.50.0",
     "eslint-config-mozza": "workspace:*",
-    "sass": "~1.63.6",
-    "stylelint": "~15.10.2",
+    "sass": "~1.68.0",
+    "stylelint": "~15.10.3",
     "stylelint-config-mozza": "workspace:*",
     "tsconfig": "workspace:*",
-    "typescript": "~5.1.6"
+    "typescript": "~5.2.2"
   },
   "engines": {
     "node": "^18.0.0"

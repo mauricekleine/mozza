@@ -13,20 +13,20 @@
   "dependencies": {
     "@mozza-icons/react": "workspace:*",
     "@radix-ui/react-accordion": "~1.1.2",
-    "@radix-ui/react-dialog": "~1.0.4",
-    "@radix-ui/react-toast": "~1.1.4",
-    "@radix-ui/react-tooltip": "~1.0.6",
-    "framer-motion": "~10.12.22",
+    "@radix-ui/react-dialog": "~1.0.5",
+    "@radix-ui/react-toast": "~1.1.5",
+    "@radix-ui/react-tooltip": "~1.0.7",
+    "framer-motion": "~10.16.4",
     "react": "~18.2.0"
   },
   "devDependencies": {
-    "@types/react": "~18.2.15",
-    "@types/react-dom": "~18.2.7",
-    "eslint": "~8.45.0",
+    "@types/react": "~18.2.23",
+    "@types/react-dom": "~18.2.8",
+    "eslint": "~8.50.0",
     "eslint-config-mozza": "workspace:*",
-    "prettier": "~3.0.0",
+    "prettier": "~3.0.3",
     "tsconfig": "workspace:*",
-    "typescript": "~5.1.6"
+    "typescript": "~5.2.2"
   },
   "engines": {
     "node": "^18.0.0"

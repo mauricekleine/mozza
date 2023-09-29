@@ -15,8 +15,6 @@ export function Markdown({ children }: Props) {
     <div
       dangerouslySetInnerHTML={{
         __html: marked(children, {
-          headerIds: false,
-          mangle: false,
           renderer: renderer,
         }),
       }}

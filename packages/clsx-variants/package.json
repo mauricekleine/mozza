@@ -27,14 +27,14 @@
     "clsx": "~2.0.0"
   },
   "devDependencies": {
-    "eslint": "~8.45.0",
+    "eslint": "~8.50.0",
     "eslint-config-mozza": "workspace:*",
-    "prettier": "~3.0.0",
-    "rimraf": "~5.0.1",
+    "prettier": "~3.0.3",
+    "rimraf": "~5.0.5",
     "tsconfig": "workspace:*",
-    "tsup": "~7.1.0",
-    "typescript": "~5.1.6",
-    "vitest": "~0.33.0"
+    "tsup": "~7.2.0",
+    "typescript": "~5.2.2",
+    "vitest": "~0.34.6"
   },
   "engines": {
     "node": "^18.0.0"

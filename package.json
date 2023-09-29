@@ -27,19 +27,19 @@
     "update:minor": "taze -r minor -w"
   },
   "devDependencies": {
-    "eslint": "~8.45.0",
+    "eslint": "~8.50.0",
     "eslint-config-mozza": "workspace:*",
     "husky": "~8.0.3",
-    "lint-staged": "~13.2.3",
-    "prettier": "~3.0.0",
-    "sort-package-json": "~2.5.1",
-    "stylelint": "~15.10.2",
+    "lint-staged": "~14.0.1",
+    "prettier": "~3.0.3",
+    "sort-package-json": "~2.6.0",
+    "stylelint": "~15.10.3",
     "stylelint-config-mozza": "workspace:*",
-    "taze": "~0.11.2",
-    "turbo": "~1.10.8",
-    "typescript": "~5.1.6"
+    "taze": "~0.11.3",
+    "turbo": "~1.10.14",
+    "typescript": "~5.2.2"
   },
-  "packageManager": "pnpm@8.6.9",
+  "packageManager": "pnpm@8.8.0",
   "engines": {
     "node": "^18.0.0"
   }

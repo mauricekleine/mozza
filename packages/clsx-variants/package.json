@@ -27,7 +27,7 @@
     "clsx": "~2.0.0"
   },
   "devDependencies": {
-    "eslint": "~8.50.0",
+    "eslint": "~8.52.0",
     "eslint-config-mozza": "workspace:*",
     "prettier": "~3.0.3",
     "rimraf": "~5.0.5",

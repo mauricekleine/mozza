@@ -35,7 +35,6 @@ module.exports = (phase) => {
       removeConsole: phase !== PHASE_DEVELOPMENT_SERVER,
     },
     experimental: {
-      serverActions: true,
       typedRoutes: true,
     },
     headers() {

@@ -1,5 +1,4 @@
 User-Agent: *
 Allow: /
-Disallow: /camino/
 
 Sitemap: https://www.mauricekleine.com/sitemap.xml

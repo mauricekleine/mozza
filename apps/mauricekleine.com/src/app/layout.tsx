@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 
@@ -16,7 +16,6 @@ const serif = localFont({
 });
 
 export const metadata: Metadata = {
-  colorScheme: "light",
   description:
     "Freelance Software Engineer based in Amsterdam, The Netherlands. I build web applications with React, TypeScript, Node.js, and GraphQL.",
   icons: {
@@ -38,8 +37,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.mauricekleine.com",
   },
-  themeColor: "#ffffff",
   title: "Maurice Kleine - Freelance Software Engineer",
+};
+
+export const viewport: Viewport = {
+  colorScheme: "light",
+  themeColor: "#000000",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

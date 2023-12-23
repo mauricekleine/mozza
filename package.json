@@ -10,11 +10,14 @@
   },
   "license": "",
   "sideEffects": false,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
-    "preinstall": "npx only-allow pnpm",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "precommit": "lint-staged",
@@ -38,7 +41,6 @@
     "turbo": "~1.11.2",
     "typescript": "~5.3.3"
   },
-  "packageManager": "pnpm@8.12.1",
   "engines": {
     "node": "^20.0.0"
   }

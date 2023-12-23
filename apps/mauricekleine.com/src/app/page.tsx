@@ -7,6 +7,7 @@ import { petProjects } from "~/data/pet-projects";
 import { portfolio } from "~/data/portfolio";
 import { softSkills } from "~/data/soft-skills";
 import { ProfilePicture } from "~/images/profile-picture";
+import { SubthreadLogo } from "~/images/subthread-logo";
 import { HardSkillLogo, LogoLink } from "~/logos";
 import { Navigation } from "~/navigation";
 import { Button } from "~/ui/button";
@@ -74,6 +75,35 @@ export default function Page() {
               <Box alignItems="center" justifyContent="center">
                 <Icon icon={CaretDown} />
               </Box>
+            </Container>
+
+            {/* Intro section */}
+            <Container width="md">
+              <Card gap={8} variant="neon">
+                <Card.Title>Subthread</Card.Title>
+
+                <Box
+                  alignItems="center"
+                  direction={{ base: "vertical", lg: "horizontal" }}
+                  gap={{ base: 8, md: 16 }}
+                >
+                  <Box gap={4}>
+                    <Text as="p">
+                      <Text as="span">
+                        Subthread is a product studio to help companies big and
+                        small go from idea to product that I co-founded with
+                        fellow creative technologist, AI engineer and product
+                        manager Toon Verbeek. To find out more, check out our
+                        website at{" "}
+                      </Text>
+
+                      <Link href="https://subthread.io">subthread.io</Link>.
+                    </Text>
+                  </Box>
+
+                  <SubthreadLogo />
+                </Box>
+              </Card>
             </Container>
 
             {/* Hard skills */}
@@ -240,7 +270,9 @@ export default function Page() {
                       </Link>
 
                       <Text as="span">
-                        , or browse my experience and skills on{" "}
+                        {" "}
+
+                        or browse my experience and skills on{" "}
                       </Text>
 
                       <Link href="https://www.linkedin.com/in/mauricekleine/">
@@ -294,15 +326,17 @@ export default function Page() {
                         <Text>{project.description}</Text>
 
                         <Box direction="horizontal" gap={2}>
-                          {project.url ? (
+                          {"url" in project ? (
                             <Text size="sm">
                               <Link href={project.url}>website</Link>
                             </Text>
                           ) : null}
 
-                          <Text size="sm">
-                            <Link href={project.repo}>source</Link>
-                          </Text>
+                          {"repo" in project ? (
+                            <Text size="sm">
+                              <Link href={project.repo}>source</Link>
+                            </Text>
+                          ) : null}
                         </Box>
                       </Box>
                     ))}

@@ -31,16 +31,16 @@
       animation: spin 12s linear infinite;
       background: linear-gradient(
         to bottom right,
-        var(--color-blue-600),
         var(--color-black),
-        var(--color-red-600)
+        var(--color-blue-500),
+        var(--color-black)
       );
       content: "";
       filter: blur(var(--blur-xl));
-      height: 100%;
-      margin: auto;
+      inset: 0;
+      margin: 0;
       position: absolute;
-      width: 100%;
+      scale: 1;
     }
 
     & > div {
@@ -57,18 +57,17 @@
         animation: spin 12s linear infinite;
         background: linear-gradient(
           to bottom right,
-          var(--color-blue-600),
           var(--color-black),
-          var(--color-red-600)
+          var(--color-blue-500),
+          var(--color-black)
         );
         border-radius: var(--radii-xl);
         content: "";
         filter: blur(var(--blur-3xl));
-        height: 100%;
-        margin: auto;
-        opacity: 0.2;
+        inset: 0;
+        opacity: 0.1;
         position: absolute;
-        width: 100%;
+        scale: 1;
       }
 
       @include mixins.screen(sm) {

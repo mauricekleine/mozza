@@ -139,6 +139,7 @@ html body {
   font-family: var(--font-family-sans);
   font-size: var(--font-size-lg);
   line-height: var(--line-height-base);
+  text-wrap: balance;
 }
 
 a:not([class*="button"]) {

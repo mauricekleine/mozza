@@ -1,51 +1,56 @@
-import {
-  AeonLogo,
-  DistriversLogo,
-  GoodupLogo,
-  KlippaLogo,
-  OpenUpLogo,
-  ProductboardLogo,
-  QuestLogo,
-  StormDigitalLogo,
-  TopAnimationLogo,
-  UButlerLogo,
-  VacanceSelectLogo,
-} from "~/logos/client-logos";
+import * as clientLogos from "~/logos/client-logos";
 
 export const portfolio = [
   {
+    link: "https://www.generativeaistrategy.com/",
+    logo: clientLogos.GenerativeAIStrategyLogo,
+    title: "Generative AI Strategy",
+  },
+  {
     link: "https://openup.com/",
-    logo: OpenUpLogo,
+    logo: clientLogos.OpenUpLogo,
     title: "OpenUp",
   },
-  { link: "https://goodup.com/", logo: GoodupLogo, title: "GoodUp" },
+  {
+    link: "https://goodup.com/",
+    logo: clientLogos.GoodupLogo,
+    title: "GoodUp",
+  },
   {
     link: "https://ubutler.nl/",
-    logo: UButlerLogo,
+    logo: clientLogos.UButlerLogo,
     title: "uButler",
   },
-  { link: "https://quest.app/", logo: QuestLogo, title: "Quest" },
+  { link: "https://quest.app/", logo: clientLogos.QuestLogo, title: "Quest" },
   {
     link: "https://productboard.com/",
-    logo: ProductboardLogo,
+    logo: clientLogos.ProductboardLogo,
     title: "Productboard",
   },
-  { link: "https://aeon.co/", logo: AeonLogo, title: "Aeon" },
-  { link: "https://klippa.com/", logo: KlippaLogo, title: "Klippa" },
+  { link: "https://aeon.co/", logo: clientLogos.AeonLogo, title: "Aeon" },
+  {
+    link: "https://klippa.com/",
+    logo: clientLogos.KlippaLogo,
+    title: "Klippa",
+  },
   {
     link: "https://www.crunchbase.com/organization/storm-digital/",
-    logo: StormDigitalLogo,
+    logo: clientLogos.StormDigitalLogo,
     title: "Storm Digital",
   },
   {
     link: "https://vacanceselect.recruitee.com/",
-    logo: VacanceSelectLogo,
+    logo: clientLogos.VacanceSelectLogo,
     title: "VacanceSelect",
   },
   {
     link: "https://animatiewerk.nl/",
-    logo: TopAnimationLogo,
+    logo: clientLogos.TopAnimationLogo,
     title: "TopAnimation",
   },
-  { link: "https://distrivers.nl/", logo: DistriversLogo, title: "Distrivers" },
+  {
+    link: "https://distrivers.nl/",
+    logo: clientLogos.DistriversLogo,
+    title: "Distrivers",
+  },
 ];

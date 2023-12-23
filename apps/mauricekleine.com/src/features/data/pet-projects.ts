@@ -1,5 +1,11 @@
 export const petProjects = [
   {
+    description:
+      "An AI-powered political party comparison tool, for the 2023 Dutch elections.",
+    name: "🤖 Partijchat",
+    url: "https://partijchat.io/",
+  },
+  {
     description: "A powerful and modern RSS feed reader ",
     name: "📖 RSS Power",
     repo: "https://github.com/mauricekleine/rss-power",
@@ -21,4 +27,4 @@ export const petProjects = [
     repo: "https://github.com/mauricekleine/mozza",
     url: "https://www.mauricekleine.com/",
   },
-];
+] as const;

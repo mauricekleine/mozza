@@ -1,0 +1,27 @@
+@use "~/ui/mixins.scss";
+
+.back {
+  border-radius: var(--radii-full);
+  filter: blur(var(--blur-md));
+  inset: 0;
+  opacity: 0.6;
+  position: absolute;
+  z-index: calc(-1 * var(--z-index-10));
+}
+
+.container {
+  border-radius: var(--radii-full);
+  height: var(--space-40);
+  position: relative;
+  width: var(--space-40);
+
+  @include mixins.screen(md) {
+    min-width: var(--space-40);
+  }
+}
+
+.front {
+  border-radius: var(--radii-full);
+  height: var(--space-40);
+  width: var(--space-40);
+}

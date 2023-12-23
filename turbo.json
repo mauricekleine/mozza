@@ -20,12 +20,6 @@
     "lint": {},
     "lint:fix": {},
     "start": {},
-    "test": {
-      "outputs": ["coverage/**"]
-    },
-    "test:watch": {
-      "cache": false
-    },
     "typecheck": {}
   }
 }

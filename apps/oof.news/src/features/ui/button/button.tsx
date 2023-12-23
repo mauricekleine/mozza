@@ -85,7 +85,7 @@ const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
         {children}
       </button>
     );
-  }
+  },
 );
 
 Button.displayName = "Button";

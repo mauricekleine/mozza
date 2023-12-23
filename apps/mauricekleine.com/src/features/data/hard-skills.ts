@@ -95,7 +95,7 @@ const hardSkills = [
 ];
 
 const sortedHardSkills = hardSkills.sort((a, b) =>
-  a.title.localeCompare(b.title)
+  a.title.localeCompare(b.title),
 );
 
 export { sortedHardSkills as hardSkills };

@@ -12,7 +12,7 @@ export type ResponsiveProp<Prop extends ResponsiveValue> =
     };
 
 export function transformResponsiveProp<T extends ResponsiveValue>(
-  prop: ResponsiveProp<T>
+  prop: ResponsiveProp<T>,
 ) {
   if (isObject(prop)) {
     return Object.entries(prop)

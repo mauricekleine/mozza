@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "allowJs": true,
+    "noEmit": true
   },
   "exclude": ["node_modules"],
   "extends": "tsconfig/next.json",

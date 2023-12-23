@@ -14,16 +14,16 @@ declare namespace __next_route_internal_types__ {
   type SafeSlug<S extends string> = S extends `${string}/${string}`
     ? never
     : S extends `${string}${SearchOrHash}`
-    ? never
-    : S extends ""
-    ? never
-    : S;
+      ? never
+      : S extends ""
+        ? never
+        : S;
 
   type CatchAllSlug<S extends string> = S extends `${string}${SearchOrHash}`
     ? never
     : S extends ""
-    ? never
-    : S;
+      ? never
+      : S;
 
   type OptionalCatchAllSlug<S extends string> =
     S extends `${string}${SearchOrHash}` ? never : S;
@@ -67,7 +67,7 @@ declare module "next/link" {
   };
 
   export default function Link<RouteType>(
-    props: LinkProps<RouteType>
+    props: LinkProps<RouteType>,
   ): JSX.Element;
 }
 
@@ -85,7 +85,7 @@ declare module "next/navigation" {
      */
     push<RouteType>(
       href: __next_route_internal_types__.RouteImpl<RouteType>,
-      options?: NavigateOptions
+      options?: NavigateOptions,
     ): void;
     /**
      * Navigate to the provided href.
@@ -93,13 +93,13 @@ declare module "next/navigation" {
      */
     replace<RouteType>(
       href: __next_route_internal_types__.RouteImpl<RouteType>,
-      options?: NavigateOptions
+      options?: NavigateOptions,
     ): void;
     /**
      * Prefetch the provided href.
      */
     prefetch<RouteType>(
-      href: __next_route_internal_types__.RouteImpl<RouteType>
+      href: __next_route_internal_types__.RouteImpl<RouteType>,
     ): void;
   }
 

@@ -35,3 +35,9 @@ tsconfig.tsbuildinfo
 
 # vercel
 .vercel
+
+# outputs
+.next/
+out/
+build
+dist

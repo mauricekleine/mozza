@@ -1,5 +1,9 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: ["mozza"],
+  extends: ["mozza/next"],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: true,
+  },
   root: true,
 };

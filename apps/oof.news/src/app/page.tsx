@@ -20,7 +20,7 @@ async function subscribe(data: FormData) {
         "Content-Type": "application/json",
       },
       method: "POST",
-    }
+    },
   );
 
   if (response.ok) {

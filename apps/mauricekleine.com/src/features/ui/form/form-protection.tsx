@@ -12,7 +12,7 @@ declare global {
         options: {
           callback: (token: string) => void;
           sitekey: string;
-        }
+        },
       ) => void;
     };
   }

@@ -3,7 +3,7 @@ import { serverConfig } from "src/config/server";
 export const turnstile = {
   verify: async function verify(
     data: { verificationToken: string },
-    headers: Headers
+    headers: Headers,
   ) {
     const token = data.verificationToken;
     const ip = headers.get("CF-Connecting-IP");
@@ -25,7 +25,7 @@ export const turnstile = {
       {
         body: formData,
         method: "POST",
-      }
+      },
     );
 
     return (await result.json()) as { success: boolean };

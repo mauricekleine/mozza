@@ -20,7 +20,7 @@ export async function submitContactForm(data: FormData) {
     const parsed = schema.parse(data);
     const verification = await turnstile.verify(
       { verificationToken: parsed["cf-turnstile-response"] },
-      new Headers()
+      new Headers(),
     );
 
     if (verification.success === false) {

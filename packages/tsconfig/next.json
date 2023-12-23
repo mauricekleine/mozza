@@ -2,8 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
     "paths": {
       "~/config/*": ["./src/config/*"],
       "~/lib/*": ["./src/lib/*"],

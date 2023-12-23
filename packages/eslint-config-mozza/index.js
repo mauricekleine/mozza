@@ -1,96 +1,46 @@
-/** @type {import('eslint').Linter.Config} */
+const { resolve } = require("node:path");
+const rules = require("./rules");
+
+const project = resolve(process.cwd(), "tsconfig.json");
+
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["next/core-web-vitals", "plugin:unicorn/all", "turbo", "prettier"],
+  env: {
+    node: true,
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:sort/recommended",
+    "plugin:unicorn/all",
+    "turbo",
+    "prettier",
+  ],
+  ignorePatterns: [
+    // Ignore dotfiles
+    ".*.js",
+    "node_modules/",
+    "dist/",
+  ],
   overrides: [
     {
-      files: ["./src/**/*.{js,jsx,ts,tsx}"],
-      rules: {
-        "unicorn/prefer-module": "error",
-      },
+      files: ["*.js?(x)", "*.ts?(x)"],
     },
     {
       extends: ["plugin:testing-library/react"],
-      files: ["./**/*.test.{js,jsx,ts,tsx}"],
+      files: ["*.test.js?(x)", "*.test.ts?(x)"],
     },
   ],
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve("next/babel")],
-    },
-  },
   plugins: ["sort", "unused-imports"],
   rules: {
-    "@next/next/no-html-link-for-pages": "off",
-    "import/order": [
-      "error",
-      {
-        alphabetize: {
-          order: "asc",
-        },
-        groups: [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index",
-        ],
-        "newlines-between": "always",
-        pathGroups: [
-          {
-            group: "internal",
-            pattern: "~/**",
-            position: "before",
-          },
-        ],
-      },
-    ],
-    "no-restricted-imports": [
-      "warn",
-      {
-        patterns: [
-          {
-            group: ["../*"],
-            message:
-              "Imports are only allowed as siblings ('./') or as absolute imports",
-          },
-        ],
-      },
-    ],
-    "react/jsx-newline": ["warn", { prevent: false }],
-    "react/jsx-sort-props": [
-      "warn",
-      {
-        ignoreCase: true,
-      },
-    ],
-    "sort/destructuring-properties": "error",
-    "sort/object-properties": "error",
-    "sort/type-properties": "error",
-    "sort-imports": [
-      "error",
-      {
-        ignoreCase: false,
-        ignoreDeclarationSort: true,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
-      },
-    ],
-    "unicorn/filename-case": [
-      "error",
-      {
-        case: "kebabCase",
-      },
-    ],
-    "unicorn/no-keyword-prefix": "off",
-    "unicorn/no-null": "off",
-    "unicorn/prefer-module": "off",
-    "unicorn/prevent-abbreviations": "off",
-    "unused-imports/no-unused-imports": "error",
+    ...rules,
   },
   settings: {
-    react: {
-      version: "detect",
+    "import/resolver": {
+      typescript: {
+        project,
+      },
     },
   },
 };

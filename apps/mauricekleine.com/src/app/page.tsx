@@ -89,15 +89,20 @@ export default function Page() {
                 >
                   <Box gap={4}>
                     <Text as="p">
-                      <Text as="span">
+                      <>
                         Subthread is a product studio to help companies big and
                         small go from idea to product that I co-founded with
                         fellow creative technologist, AI engineer and product
-                        manager Toon Verbeek. To find out more, check out our
-                        website at{" "}
-                      </Text>
+                        manager{" "}
+                      </>
 
-                      <Link href="https://subthread.io">subthread.io</Link>.
+                      <Link href="https://toonverbeek.com/">Toon Verbeek</Link>
+
+                      <>. To find out more, check out our website at </>
+
+                      <Link href="https://subthread.io">subthread.io</Link>
+
+                      <>.</>
                     </Text>
                   </Box>
 
@@ -207,79 +212,63 @@ export default function Page() {
                 >
                   <Box gap={4}>
                     <Text>
-                      <Text as="span">
+                      <>
                         You can find out more about me by reading articles I
                         wrote about{" "}
-                      </Text>
-
+                      </>
                       <Link href="https://www.linkedin.com/pulse/how-we-want-do-remote-productboard-maurice-kleine/">
                         remote work
                       </Link>
 
-                      <Text as="span">, </Text>
-
+                      <>, </>
                       <Link href="https://theunsettledlife.com/2019/07/23/on-comfort-zones/">
                         comfort zones
                       </Link>
 
-                      <Text as="span"> and </Text>
-
+                      <> and </>
                       <Link href="https://www.productboard.com/blog/supporting-mental-health/">
                         mental health in the work place
                       </Link>
 
-                      <Text as="span">; by reading </Text>
-
+                      <>; by reading </>
                       <Link href="https://www.productboard.com/blog/what-ive-done-learned-and-taught-during-my-first-4-weeks-as-a-front-end-engineer-at-productboard/">
                         this article
                       </Link>
 
-                      <Text as="span"> or listening to </Text>
-
+                      <> or listening to </>
                       <Link href="https://soundcloud.com/people-of-productboard/1-maurice/">
                         this podcast
                       </Link>
 
-                      <Text as="span">
-                        {" "}
-                        about my time at Productboard; by listening to a podcast
+                      <> about my time at Productboard; </>
 
-                        in which{" "}
-                      </Text>
-
+                      <>by listening to </>
                       <Link href="https://open.spotify.com/episode/3q9fPb4zXXPhANnfzT0gyD?si=1b09a3bdd93e4fb5">
-                        I get interviewed about remote work
+                        a podcast
                       </Link>
 
-                      <Text as="span">; or by watching the recording of </Text>
+                      <> in which I get interviewed about remote work;</>
 
+                      <> or by watching </>
                       <Link href="https://www.youtube-nocookie.com/embed/6erqtEfHozU">
-                        a meetup I organized about remote work
+                        the recording
                       </Link>
 
-                      <Text as="span">.</Text>
+                      <> of a meetup I organized about remote work.</>
                     </Text>
 
                     <Text>
-                      <Text as="span">
-                        You can find my open source work on{" "}
-                      </Text>
-
+                      <>You can find my open source work on </>
                       <Link href="https://github.com/mauricekleine/">
                         GitHub
                       </Link>
 
-                      <Text as="span">
-                        {" "}
-
-                        or browse my experience and skills on{" "}
-                      </Text>
-
+                      <> or browse my experience and skills on </>
                       <Link href="https://www.linkedin.com/in/mauricekleine/">
                         LinkedIn
                       </Link>
 
-                      <Text as="span">.</Text>
+                      <>.</>
                     </Text>
                   </Box>
 

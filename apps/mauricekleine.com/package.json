@@ -13,10 +13,10 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "concurrently \"bun:lint-*\"",
+    "lint": "concurrently \"pnpm:lint-*\"",
     "lint-css": "stylelint \"./src/**/*.{css,scss}\"",
     "lint-ts": "next lint",
-    "lint:fix": "concurrently \"bun:lint:fix-*\"",
+    "lint:fix": "concurrently \"pnpm:lint:fix-*\"",
     "lint:fix-css": "stylelint \"./src/**/*.{css,scss}\" --fix",
     "lint:fix-ts": "next lint --fix",
     "start": "next start",

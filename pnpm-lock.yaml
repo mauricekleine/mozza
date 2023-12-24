@@ -300,22 +300,16 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ~1.0.7
         version: 1.0.7(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      framer-motion:
+        specifier: ~10.16.16
+        version: 10.16.16(react-dom@18.2.0)(react@18.2.0)
+    devDependencies:
       '@types/react':
         specifier: ^18.2.45
         version: 18.2.45
       '@types/react-dom':
         specifier: ^18.2.18
         version: 18.2.18
-      framer-motion:
-        specifier: ~10.16.16
-        version: 10.16.16(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
       eslint:
         specifier: ~8.56.0
         version: 8.56.0
@@ -325,6 +319,12 @@ importers:
       prettier:
         specifier: ~3.1.1
         version: 3.1.1
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig

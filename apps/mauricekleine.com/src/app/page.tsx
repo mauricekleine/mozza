@@ -40,10 +40,12 @@ export default function Page() {
                   <Container width="lg">
                     <Text color="gray.300" size={{ base: "xl", md: "2xl" }}>
                       I like solving problems in product teams that have a
-                      strong vision. Sometimes I do this with code, and other
-                      times by coaching and mentoring the people on those teams.
-                      I understand that fast iteration is key to building
-                      amazing products.
+                      strong vision. As an AI engineer, my focus lies in
+                      crafting AI-powered applications to enhance and elevate
+                      software products. Whether through hands-on coding or
+                      providing guidance through coaching and mentoring, I
+                      understand that fast iteration is key to building amazing
+                      products.
                     </Text>
                   </Container>
                 </Box>

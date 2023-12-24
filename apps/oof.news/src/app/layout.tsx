@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { Inter, Rubik_Bubbles } from "next/font/google";
 
 import "./layout.css";
@@ -16,7 +16,6 @@ const serif = Rubik_Bubbles({
 });
 
 export const metadata: Metadata = {
-  colorScheme: "light",
   description: "D&B events agenda, announcements and new releases",
   icons: {
     apple: [{ sizes: "180x180", url: "/apple-touch-icon.png" }],
@@ -32,8 +31,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.oof.news",
   },
-  themeColor: "#ffffff",
   title: "OOF",
+};
+
+export const viewport: Viewport = {
+  colorScheme: "dark",
+  themeColor: "#000000",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

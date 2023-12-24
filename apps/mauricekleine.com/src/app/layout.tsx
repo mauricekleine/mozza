@@ -17,7 +17,7 @@ const serif = localFont({
 
 export const metadata: Metadata = {
   description:
-    "Freelance Software Engineer based in Amsterdam, The Netherlands. I build web applications with React, TypeScript, Node.js, and GraphQL.",
+    "Freelance AI Engineer based in Amsterdam, The Netherlands. I build AI applications with React, TypeScript, Node.js, and GraphQL.",
   icons: {
     apple: [{ sizes: "180x180", url: "/apple-touch-icon.png" }],
     icon: [
@@ -30,18 +30,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.mauricekleine.com/"),
   openGraph: {
     description:
-      "Freelance Software Engineer based in Amsterdam, The Netherlands. I build web applications with React, TypeScript, Node.js, and GraphQL.",
+      "Freelance AI Engineer based in Amsterdam, The Netherlands. I build AI applications with React, TypeScript, Node.js, and GraphQL.",
     locale: "en_US",
     siteName: "Maurice Kleine",
-    title: "Maurice Kleine - Freelance Software Engineer",
+    title: "Maurice Kleine - Freelance AI Engineer",
     type: "website",
     url: "https://www.mauricekleine.com",
   },
-  title: "Maurice Kleine - Freelance Software Engineer",
+  title: "Maurice Kleine - Freelance AI Engineer",
 };
 
 export const viewport: Viewport = {
-  colorScheme: "light",
+  colorScheme: "dark",
   themeColor: "#000000",
 };
 

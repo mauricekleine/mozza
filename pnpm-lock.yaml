@@ -78,8 +78,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       simple-icons:
-        specifier: ~10.3.0
-        version: 10.3.0
+        specifier: ~10.4.0
+        version: 10.4.0
       zod:
         specifier: ~3.22.4
         version: 3.22.4
@@ -154,8 +154,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       simple-icons:
-        specifier: ~10.3.0
-        version: 10.3.0
+        specifier: ~10.4.0
+        version: 10.4.0
       zod:
         specifier: ~3.22.4
         version: 3.22.4
@@ -5170,8 +5170,8 @@ packages:
       - supports-color
     dev: true
 
-  /simple-icons@10.3.0:
-    resolution: {integrity: sha512-MpqALzcKXPNfVKiNkESkahmXIt0tTVnTOZAhD6q4MmL3XUroaKwy8stPwXZOfK1WoT6jqpjUfc0nopPePZvY7w==}
+  /simple-icons@10.4.0:
+    resolution: {integrity: sha512-XBoU1ljCsWjw59IVkaQ1nKc0PiaDAAKNFVx59ueC0tBy4WY/I4Q040sGj6ok2cZRLT8zBzL1HaTubi8MRqmojQ==}
     engines: {node: '>=0.12.18'}
     dev: false
 

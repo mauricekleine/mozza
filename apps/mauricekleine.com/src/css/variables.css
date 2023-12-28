@@ -129,9 +129,9 @@
   --line-height-2xl: 2rem;
   --line-height-3xl: 2.25rem;
   --line-height-4xl: 2.5rem;
-  --line-height-5xl: 1;
-  --line-height-6xl: 1;
-  --line-height-7xl: 1;
+  --line-height-5xl: 2.75rem;
+  --line-height-6xl: 3rem;
+  --line-height-7xl: 3.25rem;
   --line-height-8xl: 1;
   --tracking-tight: -0.025em;
   --tracking-normal: 0;

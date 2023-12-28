@@ -49,9 +49,9 @@ button,
       background-color: var(--color-blue-800);
       content: "";
       height: 100%;
-      left: 8px;
+      left: 6px;
       position: absolute;
-      top: 8px;
+      top: 6px;
       transition: all 0.2s ease-in-out;
       width: 100%;
       z-index: -2;
@@ -72,8 +72,22 @@ button,
       transform: translate(4px, 4px);
 
       &::before {
-        left: 4px;
-        top: 4px;
+        left: 2px;
+        top: 2px;
+      }
+    }
+
+    @media (width >= 768px) {
+      &::before {
+        left: 8px;
+        top: 8px;
+      }
+
+      &:not(:disabled):hover {
+        &::before {
+          left: 4px;
+          top: 4px;
+        }
       }
     }
   }
@@ -92,9 +106,9 @@ button,
       background-color: var(--color-gray-800);
       content: "";
       height: 100%;
-      left: 8px;
+      left: 6px;
       position: absolute;
-      top: 8px;
+      top: 6px;
       transition: all 0.2s ease-in-out;
       width: 100%;
       z-index: -2;
@@ -115,8 +129,22 @@ button,
       transform: translate(4px, 4px);
 
       &::before {
-        left: 4px;
-        top: 4px;
+        left: 2px;
+        top: 2px;
+      }
+    }
+
+    @media (width >= 768px) {
+      &::before {
+        left: 8px;
+        top: 8px;
+      }
+
+      &:not(:disabled):hover {
+        &::before {
+          left: 4px;
+          top: 4px;
+        }
       }
     }
   }

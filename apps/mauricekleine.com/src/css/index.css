@@ -18,12 +18,7 @@ body {
   );
   color: var(--color-gray-800);
   font-family: var(--font-family-sans);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
   text-wrap: balance;
-
-  @media (width >= 768px) {
-    font-size: var(--font-size-xl);
-    line-height: var(--line-height-xl);
-  }
 }

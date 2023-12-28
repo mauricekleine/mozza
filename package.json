@@ -13,7 +13,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{html,js,jsx,md,ts,tsx}\"",
     "preinstall": "npx only-allow pnpm",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",

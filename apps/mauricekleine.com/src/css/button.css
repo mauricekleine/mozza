@@ -1,0 +1,123 @@
+button,
+.button {
+  align-items: center;
+  border-width: 2px;
+  display: flex;
+  gap: var(--space-2);
+  text-decoration: none;
+
+  &:disabled {
+    opacity: 0.75;
+  }
+
+  /* Sizes */
+
+  &[data-size="sm"] {
+    font-size: var(--font-size-sm);
+    padding: var(--space-2) var(--space-6);
+
+    & svg {
+      height: var(--space-4);
+      width: var(--space-4);
+    }
+  }
+
+  &[data-size="md"],
+  &:not([data-size]) {
+    font-size: var(--font-size-base);
+    padding: var(--space-3) var(--space-8);
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    & svg {
+      height: var(--space-5);
+      width: var(--space-5);
+    }
+  }
+
+  /* Variants */
+
+  &[data-variant="primary"],
+  &:not([data-variant]) {
+    background-color: var(--color-white);
+    border-color: var(--color-blue-800);
+    color: var(--color-blue-800);
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    z-index: 10;
+
+    &::before {
+      background-color: var(--color-blue-800);
+      content: "";
+      height: 100%;
+      left: 8px;
+      position: absolute;
+      top: 8px;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+      z-index: -2;
+    }
+
+    &::after {
+      background-color: var(--color-white);
+      content: "";
+      height: 100%;
+      inset: 0;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &:not(:disabled):hover {
+      color: var(--color-blue-800);
+      transform: translate(4px, 4px);
+
+      &::before {
+        left: 4px;
+        top: 4px;
+      }
+    }
+  }
+
+  /* Rest of the code */
+
+  &[data-variant="secondary"] {
+    background-color: var(--color-white);
+    border-color: var(--color-gray-800);
+    color: var(--color-gray-800);
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    z-index: 10;
+
+    &::before {
+      background-color: var(--color-gray-800);
+      content: "";
+      height: 100%;
+      left: 8px;
+      position: absolute;
+      top: 8px;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+      z-index: -2;
+    }
+
+    &::after {
+      background-color: var(--color-white);
+      content: "";
+      height: 100%;
+      inset: 0;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &:not(:disabled):hover {
+      color: var(--color-gray-800);
+      transform: translate(4px, 4px);
+
+      &::before {
+        left: 4px;
+        top: 4px;
+      }
+    }
+  }
+}

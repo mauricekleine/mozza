@@ -1,0 +1,29 @@
+input,
+textarea {
+  align-items: center;
+  background-color: var(--color-white);
+  border-color: var(--color-gray-800);
+  border-width: 2px;
+  color: var(--color-gray-800);
+  display: flex;
+  font-size: var(--font-size-base);
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+
+  &:disabled {
+    opacity: 0.75;
+  }
+
+  &:focus {
+    border-color: var(--color-blue-800);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--color-gray-500);
+  }
+}
+
+label {
+  font-size: var(--font-size-base);
+}

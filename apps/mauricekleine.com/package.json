@@ -11,45 +11,21 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "build": "wrangler pages build",
+    "dev": "wrangler pages dev --live-reload ./src",
     "lint": "concurrently \"pnpm:lint-*\"",
-    "lint-css": "stylelint \"./src/**/*.{css,scss}\"",
-    "lint-ts": "next lint",
+    "lint-css": "stylelint \"./src/**/*.css\"",
     "lint:fix": "concurrently \"pnpm:lint:fix-*\"",
-    "lint:fix-css": "stylelint \"./src/**/*.{css,scss}\" --fix",
-    "lint:fix-ts": "next lint --fix",
-    "start": "next start",
-    "typecheck": "tsc -b"
+    "lint:fix-css": "stylelint \"./src/**/*.css\" --fix"
   },
   "dependencies": {
-    "@mozza-icons/react": "workspace:*",
-    "@mozza-ui/react": "workspace:*",
-    "@vercel/analytics": "~1.1.1",
-    "date-fns": "~3.0.6",
-    "framer-motion": "~10.16.16",
-    "marked": "~11.1.0",
-    "modern-normalize": "~2.0.0",
-    "next": "~14.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "simple-icons": "~10.4.0",
     "zod": "~3.22.4",
     "zod-form-data": "~2.0.2"
   },
   "devDependencies": {
-    "@types/marked": "~6.0.0",
-    "@types/node": "~20.10.5",
-    "@types/react": "^18.2.45",
-    "@types/react-dom": "^18.2.18",
-    "concurrently": "~8.2.2",
-    "eslint": "~8.56.0",
-    "eslint-config-mozza": "workspace:*",
-    "sass": "~1.69.5",
     "stylelint": "~16.0.2",
     "stylelint-config-mozza": "workspace:*",
-    "tsconfig": "workspace:*",
-    "typescript": "~5.3.3"
+    "wrangler": "~3.22.1"
   },
   "engines": {
     "node": "^20.0.0"

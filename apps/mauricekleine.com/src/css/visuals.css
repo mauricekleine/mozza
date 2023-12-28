@@ -1,0 +1,48 @@
+.client-logo {
+  & svg {
+    max-height: var(--space-8);
+    max-width: 160px;
+    width: 100%;
+  }
+}
+
+.icon {
+  /* Animations */
+
+  &[data-animation="spin"] {
+    animation: spin 1s linear infinite;
+  }
+
+  /* Sizes */
+
+  &[data-size="xs"] {
+    height: var(--space-3);
+    width: var(--space-3);
+  }
+
+  &[data-size="sm"] {
+    height: var(--space-5);
+    width: var(--space-5);
+  }
+
+  &[data-size="md"],
+  &:not([data-size]) {
+    height: var(--space-8);
+    width: var(--space-8);
+  }
+
+  &[data-size="lg"] {
+    height: var(--space-12);
+    width: var(--space-12);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

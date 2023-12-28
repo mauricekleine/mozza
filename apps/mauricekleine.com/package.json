@@ -12,10 +12,8 @@
   "sideEffects": false,
   "scripts": {
     "dev": "wrangler pages dev --live-reload ./src",
-    "lint": "concurrently \"pnpm:lint-*\"",
-    "lint-css": "stylelint \"./src/**/*.css\"",
-    "lint:fix": "concurrently \"pnpm:lint:fix-*\"",
-    "lint:fix-css": "stylelint \"./src/**/*.css\" --fix"
+    "lint": "stylelint \"./src/**/*.css\"",
+    "lint:fix": "stylelint \"./src/**/*.css\" --fix"
   },
   "dependencies": {
     "zod": "~3.22.4",

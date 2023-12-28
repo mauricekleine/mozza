@@ -11,7 +11,7 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "dev": "wrangler pages dev --live-reload .",
+    "dev": "wrangler pages dev --live-reload ./src",
     "lint": "concurrently \"pnpm:lint-*\"",
     "lint-css": "stylelint \"./src/**/*.css\"",
     "lint:fix": "concurrently \"pnpm:lint:fix-*\"",

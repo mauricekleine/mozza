@@ -22,3 +22,7 @@ body {
   line-height: var(--line-height-xl);
   text-wrap: balance;
 }
+
+iframe {
+  max-width: 100%;
+}

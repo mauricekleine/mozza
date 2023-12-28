@@ -75,7 +75,7 @@
       width: calc(100% * (6 / 12));
     }
 
-    @media (width >= 720px) {
+    @media (width >= 768px) {
       width: calc(100% * (6 / 12));
     }
 
@@ -92,7 +92,7 @@
       width: calc(100% * (9 / 12));
     }
 
-    @media (width >= 720px) {
+    @media (width >= 768px) {
       width: calc(100% * (8 / 12));
     }
 
@@ -109,7 +109,7 @@
       width: calc(100% * (10 / 12));
     }
 
-    @media (width >= 720px) {
+    @media (width >= 768px) {
       width: calc(100% * (9 / 12));
     }
 
@@ -126,7 +126,7 @@
       width: calc(100% * (10 / 12));
     }
 
-    @media (width >= 720px) {
+    @media (width >= 768px) {
       width: calc(100% * (10 / 12));
     }
 
@@ -145,7 +145,7 @@
 .card {
   background: var(--color-white);
   border: 2px solid var(--color-gray-900);
-  padding: var(--space-12);
+  padding: var(--space-8);
   position: relative;
   z-index: 10;
 
@@ -153,9 +153,9 @@
     background: var(--color-gray-900);
     content: "";
     height: 100%;
-    left: 16px;
+    left: 8px;
     position: absolute;
-    top: 16px;
+    top: 8px;
     width: 100%;
     z-index: -2;
   }
@@ -168,5 +168,14 @@
     position: absolute;
     width: 100%;
     z-index: -1;
+  }
+
+  @media (width >= 768px) {
+    padding: var(--space-12);
+
+    &::before {
+      left: 16px;
+      top: 16px;
+    }
   }
 }

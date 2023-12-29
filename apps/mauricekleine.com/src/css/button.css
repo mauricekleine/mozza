@@ -40,54 +40,23 @@ button,
   &:not([data-variant]) {
     background-color: var(--color-white);
     border-color: var(--color-blue-800);
+    box-shadow: 4px 4px 0 var(--color-blue-800);
     color: var(--color-blue-800);
-    position: relative;
-    transition: transform 0.2s ease-in-out;
-    z-index: 10;
-
-    &::before {
-      background-color: var(--color-blue-800);
-      content: "";
-      height: 100%;
-      left: 6px;
-      position: absolute;
-      top: 6px;
-      transition: all 0.2s ease-in-out;
-      width: 100%;
-      z-index: -2;
-    }
-
-    &::after {
-      background-color: var(--color-white);
-      content: "";
-      height: 100%;
-      inset: 0;
-      position: absolute;
-      width: 100%;
-      z-index: -1;
-    }
+    transition:
+      box-shadow 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
 
     &:not(:disabled):hover {
+      box-shadow: none;
       color: var(--color-blue-800);
       transform: translate(4px, 4px);
-
-      &::before {
-        left: 2px;
-        top: 2px;
-      }
     }
 
     @media (width >= 768px) {
-      &::before {
-        left: 8px;
-        top: 8px;
-      }
+      box-shadow: 6px 6px 0 var(--color-blue-800);
 
       &:not(:disabled):hover {
-        &::before {
-          left: 4px;
-          top: 4px;
-        }
+        box-shadow: 3px 3px 0 var(--color-blue-800);
       }
     }
   }
@@ -96,55 +65,24 @@ button,
 
   &[data-variant="secondary"] {
     background-color: var(--color-white);
-    border-color: var(--color-gray-800);
-    color: var(--color-gray-800);
-    position: relative;
-    transition: transform 0.2s ease-in-out;
-    z-index: 10;
-
-    &::before {
-      background-color: var(--color-gray-800);
-      content: "";
-      height: 100%;
-      left: 6px;
-      position: absolute;
-      top: 6px;
-      transition: all 0.2s ease-in-out;
-      width: 100%;
-      z-index: -2;
-    }
-
-    &::after {
-      background-color: var(--color-white);
-      content: "";
-      height: 100%;
-      inset: 0;
-      position: absolute;
-      width: 100%;
-      z-index: -1;
-    }
+    border-color: var(--color-gray-900);
+    box-shadow: 4px 4px 0 var(--color-gray-900);
+    color: var(--color-gray-900);
+    transition:
+      box-shadow 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
 
     &:not(:disabled):hover {
-      color: var(--color-gray-800);
+      box-shadow: none;
+      color: var(--color-gray-900);
       transform: translate(4px, 4px);
-
-      &::before {
-        left: 2px;
-        top: 2px;
-      }
     }
 
     @media (width >= 768px) {
-      &::before {
-        left: 8px;
-        top: 8px;
-      }
+      box-shadow: 6px 6px 0 var(--color-gray-900);
 
       &:not(:disabled):hover {
-        &::before {
-          left: 4px;
-          top: 4px;
-        }
+        box-shadow: 3px 3px 0 var(--color-gray-900);
       }
     }
   }

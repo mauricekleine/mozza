@@ -7,7 +7,8 @@ a {
   }
 }
 
-h1 {
+h1,
+.h1 {
   font-family: var(--font-family-serif);
   font-size: var(--font-size-6xl);
   line-height: var(--line-height-6xl);
@@ -18,7 +19,8 @@ h1 {
   }
 }
 
-h2 {
+h2,
+.h2 {
   font-family: var(--font-family-serif);
   font-size: var(--font-size-5xl);
   line-height: var(--line-height-5xl);
@@ -29,7 +31,8 @@ h2 {
   }
 }
 
-h3 {
+h3,
+.h3 {
   font-family: var(--font-family-serif);
   font-size: var(--font-size-2xl);
   line-height: var(--line-height-2xl);

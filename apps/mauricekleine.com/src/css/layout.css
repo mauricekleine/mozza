@@ -179,3 +179,11 @@
     }
   }
 }
+
+.toast {
+  bottom: 24px;
+  display: none;
+  position: fixed;
+  right: 24px;
+  z-index: 20;
+}

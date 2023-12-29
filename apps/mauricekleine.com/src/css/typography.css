@@ -1,5 +1,5 @@
 a {
-  color: var(--color-blue-800);
+  color: var(--color-blue-700);
   text-decoration: underline;
 
   &:hover {
@@ -13,6 +13,10 @@ h1,
   font-size: var(--font-size-6xl);
   line-height: var(--line-height-6xl);
 
+  &.text-shadow {
+    text-shadow: 3px 3px 0 var(--color-black);
+  }
+
   @media (width >= 768px) {
     font-size: var(--font-size-8xl);
     line-height: var(--line-height-8xl);
@@ -24,6 +28,11 @@ h2,
   font-family: var(--font-family-serif);
   font-size: var(--font-size-5xl);
   line-height: var(--line-height-5xl);
+  text-transform: uppercase;
+
+  &.text-shadow {
+    text-shadow: 2px 2px 0 var(--color-black);
+  }
 
   @media (width >= 768px) {
     font-size: var(--font-size-6xl);
@@ -36,6 +45,11 @@ h3,
   font-family: var(--font-family-serif);
   font-size: var(--font-size-2xl);
   line-height: var(--line-height-2xl);
+  text-transform: uppercase;
+
+  &.text-shadow {
+    text-shadow: 1px 1px 0 var(--color-black);
+  }
 
   @media (width >= 768px) {
     font-size: var(--font-size-3xl);
@@ -43,22 +57,14 @@ h3,
   }
 }
 
-.text {
-  /* Sizes */
-
-  &[data-size="xl"] {
-    font-size: var(--font-size-xl);
-    line-height: var(--line-height-xl);
+.text-decoration {
+  &::before {
+    content: "~";
+    display: inline;
   }
 
-  &[data-size="2xl"] {
-    font-size: var(--font-size-2xl);
-    line-height: var(--line-height-2xl);
+  &::after {
+    content: "~";
+    display: inline;
   }
-}
-
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }

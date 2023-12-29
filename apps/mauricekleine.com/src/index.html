@@ -4,60 +4,60 @@
     <title>Maurice Kleine - Freelance AI Engineer</title>
 
     <link
-      rel="apple-touch-icon"
       href="./images/apple-touch-icon.png"
+      rel="apple-touch-icon"
       sizes="180x180"
     />
-    <link rel="icon" href="./images/favicon.ico" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link href="./images/favicon.ico" rel="icon" />
+    <link href="/site.webmanifest" rel="manifest" />
 
     <meta
+      content="Freelance AI Engineer based in Amsterdam, The Netherlands. I build AI applications with JavaScript and Python, for companies big and small."
       name="description"
-      content="Freelance AI Engineer based in Amsterdam, The Netherlands. I build AI applications with JavaScript and Python, for companies big and small."
     />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#bfdbfe" />
-    <meta name="color-scheme" content="light" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#bfdbfe" name="theme-color" />
+    <meta content="light" name="color-scheme" />
 
     <meta
-      property="og:title"
       content="Maurice Kleine - Freelance AI Engineer"
+      property="og:title"
     />
     <meta
+      content="Freelance AI Engineer based in Amsterdam, The Netherlands. I build AI applications with JavaScript and Python, for companies big and small."
       property="og:description"
-      content="Freelance AI Engineer based in Amsterdam, The Netherlands. I build AI applications with JavaScript and Python, for companies big and small."
     />
-    <meta property="og:url" content="https://www.mauricekleine.com/" />
-    <meta property="og:site_name" content="Maurice Kleine" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="2400" />
-    <meta property="og:image:height" content="1600" />
+    <meta content="https://www.mauricekleine.com/" property="og:url" />
+    <meta content="Maurice Kleine" property="og:site_name" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="image/png" property="og:image:type" />
+    <meta content="2400" property="og:image:width" />
+    <meta content="1600" property="og:image:height" />
     <meta
+      content="https://www.mauricekleine.com/images/og-image.png"
       property="og:image"
-      content="https://www.mauricekleine.com/images/og-image.png"
     />
-    <meta property="og:type" content="website" />
+    <meta content="website" property="og:type" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Maurice Kleine" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Maurice Kleine" name="twitter:title" />
     <meta
-      name="twitter:description"
       content="Freelance AI Engineer based in Amsterdam, The Netherlands. I build AI applications with JavaScript and Python, for companies big and small."
+      name="twitter:description"
     />
-    <meta name="twitter:image:type" content="image/png" />
-    <meta name="twitter:image:width" content="2400" />
-    <meta name="twitter:image:height" content="1600" />
+    <meta content="image/png" name="twitter:image:type" />
+    <meta content="2400" name="twitter:image:width" />
+    <meta content="1600" name="twitter:image:height" />
     <meta
-      name="twitter:image"
       content="https://www.mauricekleine.com/images/og-image.png"
+      name="twitter:image"
     />
 
     <script
-      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
       async
       defer
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
     ></script>
 
     <script>
@@ -74,15 +74,27 @@
         if (urlParams.get("error")) {
           toastDiv.style.display = "flex";
           toastDiv.querySelector("p").innerText = `${urlParams.get(
-            "error"
+            "error",
           )}. Please try again.`;
         }
 
-        // Add onclick handler to button
+        // Add onclick handler to toast close button
         button.onclick = function () {
           toastDiv.style.display = "none";
           window.history.replaceState({}, document.title, "/");
         };
+
+        // Smooth scroll to #contact when clicking #holler button
+        const hollerButton = document.getElementById("holler");
+        const contactSection = document.getElementById("contact");
+
+        hollerButton.addEventListener("click", function (event) {
+          event.preventDefault();
+          contactSection.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        });
       };
     </script>
 
@@ -98,14 +110,13 @@
       @import "./css/visuals.css";
 
       body {
-        background-color: var(--color-white);
-        background-image: linear-gradient(
-          to bottom,
-          var(--color-white),
-          var(--color-blue-200),
-          var(--color-white)
+        background-color: var(--color-blue-600);
+        background-image: radial-gradient(
+          var(--color-blue-500) 1px,
+          var(--color-blue-600) 1px
         );
-        color: var(--color-gray-900);
+        background-size: var(--space-4) var(--space-4);
+        color: var(--color-white);
         font-family: var(--font-family-sans);
         font-size: var(--font-size-xl);
         line-height: var(--line-height-xl);
@@ -121,22 +132,20 @@
   <body>
     <div
       class="box card toast"
-      id="toast"
-      data-display="none"
-      data-justify-content="space-between"
       data-align-items="center"
-      data-gap="4"
-      data-width="xs"
       data-direction="row"
+      data-display="none"
+      data-gap="4"
+      data-justify-content="space-between"
+      data-width="xs"
+      id="toast"
     >
-      <p class="text">
-        Thank you for your message! I'll get back to you as soon as possible.
-      </p>
+      <p class="text">Got your message! I'll hit you back real soon. Thanks!</p>
 
       <button data-size="sm">x</button>
     </div>
 
-    <div class="box" data-gap="64">
+    <div class="box" data-gap="40">
       <!-- intro -->
       <div
         class="box"
@@ -145,8 +154,8 @@
         style="margin-top: 8rem"
       >
         <div class="box" data-gap="2">
-          <h1>Maurice Kleine</h1>
-          <h2 class="h3">Freelance AI Engineer</h2>
+          <h1 class="text-shadow">Maurice Kleine</h1>
+          <h2 class="h3 text-shadow">Freelance AI Engineer</h2>
         </div>
 
         <div class="box" data-gap="16" data-width="md">
@@ -163,10 +172,12 @@
             data-direction="row"
             data-gap="4"
             data-justify-content="center"
+            data-wrap="wrap"
           >
             <a
-              class="button"
-              data-variant="secondary"
+              class="box button"
+              data-direction="row"
+              data-justify-content="space-between"
               href="https://www.linkedin.com/in/mauricekleine/"
               target="_blank"
             >
@@ -174,16 +185,47 @@
 
               <svg
                 fill="currentColor"
+                height="32"
                 viewBox="0 0 256 256"
+                width="32"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"
+                  d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
                 ></path>
               </svg>
             </a>
 
-            <a class="button" href="#contact">
+            <a
+              class="box button"
+              data-direction="row"
+              data-justify-content="space-between"
+              href="https://github.com/mauricekleine/"
+              target="_blank"
+            >
+              <span>Github</span>
+
+              <svg
+                fill="currentColor"
+                height="32"
+                viewBox="0 0 256 256"
+                width="32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
+                ></path>
+              </svg>
+            </a>
+
+            <button
+              class="box"
+              data-direction="row"
+              data-justify-content="space-between"
+              id="holler"
+            >
+              <span>Holler at me</span>
+
               <svg
                 fill="currentColor"
                 viewBox="0 0 256 256"
@@ -210,9 +252,7 @@
                   y2="99.9"
                 ></line>
               </svg>
-
-              <span>Contact</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -220,7 +260,30 @@
 
       <!-- subthread -->
       <div class="box card" data-gap="4" data-width="md">
-        <h2>Subthread</h2>
+        <div
+          class="box"
+          data-align-items="center"
+          data-direction="row"
+          data-gap="4"
+          data-justify-content="base:center;sm:left"
+          data-wrap="wrap"
+        >
+          <svg
+            fill="currentColor"
+            style="width: 64px"
+            viewBox="0 0 1025 1025"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M496.474 0.453915C474.669 2.29346 451.455 4.97079 439.108 7.07102C396.381 14.339 341.282 32.6197 307.983 50.5758C255.25 79.0116 218.76 107.023 182.983 146.53C138.389 195.772 108.458 247.428 92.6366 302.454C88.1833 317.941 80.1322 356.653 75.9854 382.518C71.855 408.285 70.9552 480.513 74.3251 515.938C76.6017 539.881 77.6442 545.497 80.6223 549.868C86.7966 558.926 94.8231 560.862 102.184 555.072C109.427 549.371 109.958 545.689 107.323 519.427C103.446 480.782 102.728 456.261 104.62 427.038C106.47 398.428 111.846 357.332 114.384 352.394C115.193 350.817 117.16 343.993 118.753 337.23C123.441 317.334 135.368 284.022 144.814 264.447C155.429 242.447 175.791 209.672 190.998 190.107C204.338 172.943 235.464 141.354 251.436 128.771C309.985 82.6432 382.834 50.9955 457.137 39.4073C480.836 35.7119 551.138 35.2233 575.149 38.5876C618.371 44.6456 661.992 56.8256 702.872 74.2538C720.41 81.7316 757.022 100.384 765.022 105.918C804.311 133.096 825.816 150.677 850.779 176.024C919.091 245.39 957.696 315.105 980.092 409.539C989.788 450.418 992.04 474.084 990.921 523.316C990.408 545.859 988.944 571.265 987.666 579.773C986.179 589.679 985.854 597.093 986.764 600.388C991.258 616.668 1010.86 617.998 1017.6 602.478C1022.6 590.941 1025.08 558.993 1025 506.921C1024.94 465.755 1024.45 456.513 1021.33 438.061C1009.59 368.487 984.532 300.636 950.125 245.282C939.256 227.795 911.673 190.134 901.578 178.998C898.282 175.361 890.789 166.965 884.93 160.342C860.375 132.581 817.278 96.9185 782.686 75.7326C734.511 46.231 670.306 20.6381 618.584 10.3222C584.755 3.57556 520.775 -1.59549 496.474 0.453915ZM484.182 61.1818C404.609 73.1176 348.996 93.7296 302.047 128.688C252.541 165.547 217.803 216.335 205.38 270.009C201.519 286.692 200.558 334.603 203.7 353.755C210.811 397.082 234.141 439.772 268.063 471.518C275.86 478.816 282.786 484.787 283.452 484.787C284.117 484.787 287.71 479.806 291.434 473.72C295.156 467.634 299.075 461.417 300.139 459.906C301.783 457.576 300.323 455.313 290.501 444.971C284.135 438.267 274.434 426.731 268.941 419.339C226.244 361.851 224.951 279.494 265.77 217.235C296.499 170.367 350.281 130.807 408.785 112.04C455.036 97.2038 473.877 94.0772 517.782 93.951C566.455 93.8116 593.992 98.1203 636.536 112.535C647.312 116.186 657.788 119.173 659.816 119.173C665.736 119.173 671.917 115.607 674.435 110.738C681.415 97.2349 673.838 87.9274 649.577 80.2019C605.324 66.1119 576.413 61.5425 527.616 60.9294C506.432 60.6621 486.886 60.7769 484.182 61.1818ZM495.655 122.431C434.023 129.037 380.031 153.441 341.584 192.072C305.686 228.141 288.315 267.514 288.315 312.814C288.315 363.175 310.765 407.406 355.395 444.971C363.124 451.477 369.817 456.812 370.267 456.825C370.718 456.84 375.083 450.483 379.966 442.702L388.844 428.553L378.327 419.447C356.755 400.775 346.305 387.768 335.092 365.648C326.052 347.815 323.589 336.227 323.645 311.817C323.69 292.086 324.092 289.349 329.045 274.962C335.256 256.929 341.514 245.243 352.333 231.481C381.546 194.319 428.624 168.692 485.001 159.261C507.595 155.482 552.566 156.625 575.515 161.56C612.783 169.576 643.34 179.806 663.579 191.047L672.515 196.008L680.379 181.342C684.705 173.276 688.244 166.324 688.244 165.893C688.244 164.598 656.287 148.97 644.406 144.455C618.764 134.713 596.537 128.661 572.69 124.933C552.668 121.803 513.416 120.528 495.655 122.431ZM776.407 157.445C764.504 165.396 763.166 179.905 773.587 188.033C830.49 232.425 869.151 280.212 898.836 342.85C918.285 383.891 931.448 428.289 936.527 469.982C939.795 496.805 939.768 547.833 936.47 574.693C933.611 597.97 922.367 656.375 918.194 669.617C915.646 677.703 915.649 678.638 918.247 684.086C922.12 692.21 930.278 695.603 938.091 692.337C941.185 691.044 944.814 687.865 946.155 685.273C949.148 679.482 957.805 644.081 961.224 623.653C962.613 615.359 964.432 604.513 965.27 599.554C971.074 565.132 972.345 492.266 967.718 459.146C961.823 416.958 945.676 365.877 924.256 321.654C896.536 264.429 870.495 230.236 814.324 177.316C804.788 168.331 795.562 159.737 793.822 158.215C788.659 153.705 782.419 153.43 776.407 157.445ZM711.285 200.623C703.056 213.748 702.598 214.984 705.362 216.607C707.009 217.573 718.679 226.075 731.295 235.499C773.771 267.227 788.26 283.924 788.2 301.072C788.141 317.223 775.213 329.032 757.594 329.032C740.131 329.032 730.448 320.707 724.578 300.647C719.717 284.031 710.825 269.919 695.541 254.567C658.931 217.792 608.079 196.401 544.763 191.14C509.925 188.246 479.137 191.665 449.73 201.692C406.654 216.381 372.621 249.904 362.965 287.159C359.758 299.537 359.714 320.661 362.87 332.785C366.209 345.608 374.99 362.359 384.475 374.003C407.71 402.526 445.016 420.226 554.022 454.444C615.489 473.74 687.5 497.916 710.745 507.06C772.768 531.459 817.378 571.459 843.991 626.535C861.082 661.903 866.053 683.591 865.996 722.518C865.95 753.147 863.296 770.651 854.709 796.965C842.811 833.423 814.587 872.887 779.142 902.621C723.805 949.044 662.702 974.739 575.149 988.406C553.251 991.823 480.825 991.303 457.137 987.556C362.52 972.596 287.795 940.582 216.66 884.53C178.274 854.283 127.927 796.131 99.3796 749.067C67.7968 696.997 48.0527 642.07 38.2692 579.06C34.1814 552.73 33.3127 492.012 36.617 463.473C39.8919 435.173 45.4843 405.695 52.4782 379.857C62.3371 343.435 62.3666 342.835 54.663 335.131C45.4221 325.886 33.1439 328.65 27.5826 341.227C22.5343 352.641 8.09589 411.63 4.48506 435.591C2.03959 451.823 0.929973 469.336 0.333358 501.182C-0.420606 541.388 -0.155084 547.195 3.89337 579.027C13.0573 651.103 34.3207 711.246 71.6354 770.633C151.049 897.02 261.68 978.995 397.312 1011.95C445.787 1023.73 457.191 1024.99 515.324 1025C571.469 1025.01 582.09 1024.02 623.501 1014.92C695.021 999.207 754.914 970.569 803.926 928.655C846.081 892.607 873.034 853.58 889.109 805.314C902.786 764.257 905.882 707.008 896.543 667.856C880.7 601.421 840.205 543.626 782.007 504.383C750.823 483.354 732.891 476.06 624.747 440.412C469.786 389.331 467.091 388.38 445.1 377.018C426.721 367.523 410.693 352.896 402.885 338.494C397.543 328.64 397.313 327.496 397.345 310.998C397.374 295.92 397.91 292.641 401.657 284.593C407.343 272.382 424.566 254.423 438.672 245.999C462.679 231.659 486.876 225.737 521.401 225.752C584.27 225.778 636.076 244.943 670.083 280.752C678.898 290.036 683.499 296.599 687.676 305.849C700.146 333.464 703.387 338.899 712.189 346.944C734.735 367.556 762.496 371.712 789.368 358.499C813.308 346.728 827.532 317.836 822.964 290.259C818.865 265.511 802.325 244.841 762.001 214.072C744.047 200.372 723.326 186.389 720.992 186.397C720.559 186.399 716.191 192.801 711.285 200.623ZM156.781 302.098C149.717 305.931 147.353 313.895 147.384 333.741C147.456 377.933 154.662 409.402 173.139 446.227C190.339 480.506 218.034 512.931 251.884 538.422C287.204 565.02 327.68 583.371 404.688 607.704C424.971 614.113 462.587 625.994 488.279 634.107C540.057 650.457 562.761 658.381 577.873 665.377C588.945 670.504 592.598 670.994 598.76 668.186C609.425 663.324 609.684 646.187 599.212 638.197C590.01 631.177 553.096 618.461 450.581 586.995C409.252 574.31 363.79 559.113 344.862 551.657C298.9 533.55 260.485 506.916 231.479 473.043C195.548 431.084 180.137 389.478 180.137 334.425C180.137 310.389 178.923 306.44 170.141 301.897C164.473 298.965 162.5 298.995 156.781 302.098ZM840.464 370.03C829.446 375.854 822.652 387.43 822.67 400.352C822.68 407.295 829.559 421.239 835.144 425.633C841.649 430.752 849.867 433.962 856.468 433.962C861.652 433.962 862.303 434.59 866.158 443.312C872.042 456.622 877.921 477.737 881.724 499.215C885.43 520.15 886.787 523.088 894.417 526.708C901.611 530.123 908.316 528.493 913.777 522.002C917.862 517.146 918.075 516.076 917.262 504.497C916.074 487.571 909.009 457.038 900.353 431.416C895.928 418.312 893.125 407.072 893.125 402.421C893.125 388.635 885.489 375.45 874.396 370.078C865.246 365.648 848.799 365.625 840.464 370.03ZM413.997 455.564C407.659 466.57 403.048 475.596 403.048 476.996C403.048 479.729 446.752 497.256 492.377 512.821C614.916 554.624 634.888 562.586 666.829 582.368C705.883 606.556 734.521 643.303 744.109 681.53C747 693.057 747.461 698.582 746.766 713.5C745.447 741.802 738.079 761.381 719.427 786.141C706.016 803.943 690.93 817.41 670.745 829.598C661.502 835.178 653.914 840.38 653.883 841.155C653.85 841.932 657.579 848.787 662.169 856.388L670.516 870.209L678.15 865.791C708.02 848.502 732.588 827.503 749.411 804.878C780.175 763.506 789.598 719.772 777.785 673.191C769.014 638.609 753.681 612.153 727.027 585.622C694.228 552.975 668.291 539.398 576.788 506.984C554.702 499.161 531.837 491.022 525.977 488.901C520.118 486.777 503.522 480.839 489.099 475.702C474.675 470.567 453.654 462.681 442.386 458.179C431.117 453.679 421.039 449.654 419.99 449.236C418.939 448.816 416.243 451.665 413.997 455.564ZM322.142 491.755L314.713 505.281L318.257 508.012C327.383 515.049 362.656 531.666 387.102 540.444C401.983 545.787 452.082 562.351 498.433 577.251C588.222 606.117 605.25 612.432 621.451 622.887C638.298 633.759 657.698 654.392 664.407 668.576C680.406 702.399 672.912 734.045 642.155 762.529C613.444 789.118 568.616 802.358 512.865 800.715C470.181 799.456 428.862 789.748 395.089 773.041C371.149 761.201 346.101 739.41 337.763 723.174C336.791 721.28 334.462 714.01 332.589 707.018C328.032 690.006 324.015 682.597 313.827 672.406C295.466 654.038 271.165 647.801 247.024 655.26C218.003 664.228 199.806 689.204 199.806 720.075C199.806 741.761 208.878 757.743 236.114 784.036C278.643 825.094 330.211 858.887 377.391 876.613C392.895 882.438 438.465 895.719 453.236 898.716L458.35 899.753L460.317 886.144C461.4 878.658 462.418 871.086 462.581 869.317C462.831 866.57 460.732 865.586 448.122 862.544C409.615 853.26 374.994 840.629 348.96 826.367C317.111 808.919 278.413 779.931 258.487 758.595C241.617 740.531 234.206 728.561 234.262 719.462C234.347 705.255 246.193 691.3 260.831 688.16C267.768 686.671 269.925 686.907 276.925 689.919C289.336 695.259 295.54 703.24 298.849 718.116C302.809 735.922 309.693 748.45 323.707 763.352C358.004 799.82 405.846 822.311 472.708 833.399C499.73 837.88 550.381 837.509 572.933 832.666C593.415 828.267 619.979 819.171 634.155 811.703C657.731 799.282 679.365 778.922 692.867 756.448C722.942 706.388 706.331 642.463 652.806 602.28C626.345 582.416 614.512 577.612 504.67 542.141C399.156 508.068 380.19 501.377 355.703 489.584C342.735 483.339 331.55 478.229 330.847 478.229C330.145 478.229 326.228 484.315 322.142 491.755ZM106.228 601.729C102.255 603.826 96.7916 608.686 94.0871 612.527C89.801 618.615 89.17 620.926 89.17 630.563C89.17 640.124 89.7846 642.424 93.7249 647.59C101.678 658.019 108.901 662.416 119.243 663.121C130.907 663.916 141.084 658.953 148.037 649.08C166.961 622.205 135.319 586.367 106.228 601.729ZM814.324 683.043C809.646 687.722 809.533 688.235 809.533 704.809C809.533 739.075 804.388 761.945 789.852 792.278C770.542 832.577 726.683 872.483 674.661 897.088C651.996 907.808 638.371 912.722 608.314 921.021C580.005 928.835 570.722 930.293 535.923 932.386C502.895 934.374 481.626 932.683 443.205 925.015C380.554 912.512 338.293 895.378 288.017 862.102C256.025 840.926 226.26 815.213 202.637 788.345C182.507 765.449 171.429 750.176 158.071 726.903C152.041 716.399 145.219 706.319 142.913 704.504C133.857 697.379 119.133 703.37 116.939 715.071C115.536 722.552 119.773 731.568 136.126 755.892C183.77 826.765 233.049 872.245 305.663 912.361C360.899 942.876 427.443 961.532 492.777 964.821C637.176 972.089 764.994 912.465 817.045 813.555C835.604 778.289 846.776 728.474 842.967 697.976C840.751 680.23 825.227 672.137 814.324 683.043ZM620.857 854.411C619.657 855.611 588.824 863.349 577.907 865.187C572.333 866.127 555.477 867.561 540.449 868.376C510.474 869.999 504.86 871.618 500.6 879.858C497.478 885.898 497.478 888.682 500.6 894.722C504.712 902.677 510.441 904.505 531.267 904.505C552.789 904.505 571.879 902.406 591.539 897.876C610.102 893.602 639.072 884.583 639.072 883.079C639.072 882.419 636.156 875.533 632.591 867.779C626.945 855.496 623.591 851.676 620.857 854.411Z"
+              fill="#1d4ed8"
+              fill-rule="evenodd"
+            />
+          </svg>
+
+          <h2>Subthread</h2>
+        </div>
 
         <p class="text">
           Subthread is a product studio that helps companies big and small go
@@ -235,15 +298,23 @@
 
       <!-- trusted by -->
       <div class="box" data-gap="16" data-width="lg">
-        <h2 class="box" data-text-align="center">Trusted by</h2>
+        <h2
+          class="box text-shadow text-decoration"
+          data-direction="row"
+          data-gap="4"
+          data-justify-content="center"
+          data-text-align="center"
+        >
+          Rolling with
+        </h2>
 
         <div
           class="box"
           data-align-items="center"
           data-direction="row"
-          data-wrap="wrap"
-          data-justify-content="center"
           data-gap="16"
+          data-justify-content="center"
+          data-wrap="wrap"
         >
           <a
             aria-label="Generative AI Strategy"
@@ -494,48 +565,36 @@
 
       <!-- contact -->
       <form
-        class="box card"
         action="/contact"
+        class="box card"
+        data-gap="8"
+        data-width="sm"
         id="contact"
         method="POST"
-        data-gap="4"
-        data-width="md"
-        style="margin-bottom: 8rem"
       >
-        <h2 class="box" data-text-align="center">Contact</h2>
+        <h2>Holler at me</h2>
 
         <div class="box">
-          <label for="email">Email *</label>
+          <label for="email">Your email *</label>
 
           <input
             id="email"
             name="email"
-            placeholder="Email"
+            placeholder="dragon@ballz.com"
             required
             type="email"
           />
         </div>
 
         <div class="box">
-          <label for="phone">Phone number</label>
-
-          <input
-            id="phone"
-            name="phone"
-            placeholder="Phone number"
-            type="text"
-          />
-        </div>
-
-        <div class="box">
-          <label for="inquiry">Your inquiry *</label>
+          <label for="inquiry">Your burning question(s) *</label>
 
           <textarea
+            id="inquiry"
             maxlength="496"
             minlength="3"
-            id="inquiry"
             name="inquiry"
-            placeholder="Inquiry"
+            placeholder="You're good with computers right? I have a broken printer."
             required
           ></textarea>
         </div>
@@ -543,22 +602,42 @@
         <div class="box">
           <label for="">Spam protection</label>
 
-          <div className="">
-            <div
-              class="cf-turnstile"
-              data-sitekey="0x4AAAAAAABLi4eHqaf6akyS"
-              data-theme="light"
-            ></div>
-          </div>
+          <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAAABLi4eHqaf6akyS"
+            data-theme="light"
+          ></div>
         </div>
 
-        <div class="box" data-direction="row" justifyContent="end">
-          <button data-variant="secondary" type="submit">
-            <span>Submit</span>
+        <div class="box" data-direction="row">
+          <button type="submit">
+            <span>Fire away!</span>
+
+            <svg
+              fill="#000000"
+              height="32"
+              viewBox="0 0 256 256"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M183.89,153.34a57.6,57.6,0,0,1-46.56,46.55A8.75,8.75,0,0,1,136,200a8,8,0,0,1-1.32-15.89c16.57-2.79,30.63-16.85,33.44-33.45a8,8,0,0,1,15.78,2.68ZM216,144a88,88,0,0,1-176,0c0-27.92,11-56.47,32.66-84.85a8,8,0,0,1,11.93-.89l24.12,23.41,22-60.41a8,8,0,0,1,12.63-3.41C165.21,36,216,84.55,216,144Zm-16,0c0-46.09-35.79-85.92-58.21-106.33L119.52,98.74a8,8,0,0,1-13.09,3L80.06,76.16C64.09,99.21,56,122,56,144a72,72,0,0,0,144,0Z"
+              ></path>
+            </svg>
           </button>
         </div>
       </form>
       <!-- /contact -->
+
+      <!-- footer -->
+      <div
+        class="box"
+        data-text-align="center"
+        data-width="xs"
+        style="margin-bottom: 4rem"
+      >
+        <p class="h3">Sincerly, ya boy Maurice ✌️</p>
+      </div>
     </div>
   </body>
 </html>

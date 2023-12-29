@@ -1,89 +1,46 @@
 button,
 .button {
   align-items: center;
-  border-width: 2px;
+  background-color: var(--color-white);
+  border: var(--border-md);
+  box-shadow: var(--box-shadow-md);
+  color: var(--color-black);
   display: flex;
+  flex-grow: 1;
+  font-size: var(--font-size-md);
   gap: var(--space-2);
+  padding: var(--space-3) var(--space-8);
   text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    box-shadow var(--transition),
+    transform var(--transition);
+
+  & svg {
+    height: var(--space-5);
+    width: var(--space-5);
+  }
 
   &:disabled {
     opacity: 0.75;
   }
 
-  /* Sizes */
-
-  &[data-size="sm"] {
-    font-size: var(--font-size-sm);
-    padding: var(--space-2) var(--space-6);
-
-    & svg {
-      height: var(--space-4);
-      width: var(--space-4);
-    }
+  &:not(:disabled):hover {
+    box-shadow: none;
+    color: var(--color-black);
+    transform: translate(2px, 2px);
   }
 
-  &[data-size="md"],
-  &:not([data-size]) {
-    font-size: var(--font-size-base);
-    padding: var(--space-3) var(--space-8);
-
-    /* stylelint-disable-next-line no-descending-specificity */
-    & svg {
-      height: var(--space-5);
-      width: var(--space-5);
-    }
+  @media (width >= 640px) {
+    flex-grow: 0;
   }
 
-  /* Variants */
-
-  &[data-variant="primary"],
-  &:not([data-variant]) {
-    background-color: var(--color-white);
-    border-color: var(--color-blue-800);
-    box-shadow: 4px 4px 0 var(--color-blue-800);
-    color: var(--color-blue-800);
-    transition:
-      box-shadow 0.2s ease-in-out,
-      transform 0.2s ease-in-out;
+  @media (width >= 768px) {
+    box-shadow: var(--box-shadow-lg);
 
     &:not(:disabled):hover {
       box-shadow: none;
-      color: var(--color-blue-800);
       transform: translate(4px, 4px);
-    }
-
-    @media (width >= 768px) {
-      box-shadow: 6px 6px 0 var(--color-blue-800);
-
-      &:not(:disabled):hover {
-        box-shadow: 3px 3px 0 var(--color-blue-800);
-      }
-    }
-  }
-
-  /* Rest of the code */
-
-  &[data-variant="secondary"] {
-    background-color: var(--color-white);
-    border-color: var(--color-gray-900);
-    box-shadow: 4px 4px 0 var(--color-gray-900);
-    color: var(--color-gray-900);
-    transition:
-      box-shadow 0.2s ease-in-out,
-      transform 0.2s ease-in-out;
-
-    &:not(:disabled):hover {
-      box-shadow: none;
-      color: var(--color-gray-900);
-      transform: translate(4px, 4px);
-    }
-
-    @media (width >= 768px) {
-      box-shadow: 6px 6px 0 var(--color-gray-900);
-
-      &:not(:disabled):hover {
-        box-shadow: 3px 3px 0 var(--color-gray-900);
-      }
     }
   }
 }

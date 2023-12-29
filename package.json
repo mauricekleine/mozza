@@ -13,7 +13,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "format": "prettier --write \"**/*.{html,js,jsx,md,ts,tsx}\"",
+    "format": "prettier --plugin=prettier-plugin-organize-attributes --write \"**/*.{html,js,jsx,md,ts,tsx}\"",
     "preinstall": "npx only-allow pnpm",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
@@ -30,6 +30,7 @@
     "husky": "~8.0.3",
     "lint-staged": "~15.2.0",
     "prettier": "~3.1.1",
+    "prettier-plugin-organize-attributes": "~1.0.0",
     "sort-package-json": "~2.6.0",
     "stylelint": "~16.0.2",
     "stylelint-config-mozza": "workspace:*",

@@ -1,8 +1,19 @@
 .client-logo {
+  fill: var(--color-white);
+
   & svg {
+    filter: drop-shadow(var(--box-shadow-sm));
     max-height: var(--space-8);
     max-width: 160px;
+    transition: transform var(--transition);
     width: 100%;
+  }
+
+  &:hover {
+    svg {
+      filter: none;
+      transform: translate(2px, 2px);
+    }
   }
 }
 
@@ -25,8 +36,7 @@
     width: var(--space-5);
   }
 
-  &[data-size="md"],
-  &:not([data-size]) {
+  &[data-size="md"] {
     height: var(--space-8);
     width: var(--space-8);
   }
@@ -34,6 +44,11 @@
   &[data-size="lg"] {
     height: var(--space-12);
     width: var(--space-12);
+  }
+
+  &:not([data-size]) {
+    height: var(--space-8);
+    width: var(--space-8);
   }
 }
 

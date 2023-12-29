@@ -10,7 +10,6 @@
     />
     <link rel="icon" href="./images/favicon.ico" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="./css/index.css" />
 
     <meta
       name="description"
@@ -86,6 +85,37 @@
         };
       };
     </script>
+
+    <style>
+      @import "./css/preflight.css";
+      @import "./css/variables.css";
+
+      /* Components */
+      @import "./css/button.css";
+      @import "./css/forms.css";
+      @import "./css/layout.css";
+      @import "./css/typography.css";
+      @import "./css/visuals.css";
+
+      body {
+        background-color: var(--color-blue-200);
+        background-image: linear-gradient(
+          to bottom,
+          var(--color-white),
+          var(--color-blue-200),
+          var(--color-white)
+        );
+        color: var(--color-gray-800);
+        font-family: var(--font-family-sans);
+        font-size: var(--font-size-xl);
+        line-height: var(--line-height-xl);
+        text-wrap: balance;
+      }
+
+      iframe {
+        max-width: 100%;
+      }
+    </style>
   </head>
 
   <body>

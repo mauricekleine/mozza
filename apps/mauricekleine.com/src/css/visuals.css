@@ -2,7 +2,6 @@
   fill: var(--color-white);
 
   & svg {
-    filter: drop-shadow(var(--box-shadow-sm));
     max-height: var(--space-8);
     max-width: 160px;
     transition: transform var(--transition);
@@ -11,7 +10,6 @@
 
   &:hover {
     svg {
-      filter: none;
       transform: translate(2px, 2px);
     }
   }

@@ -6,7 +6,6 @@ button,
   box-shadow: var(--box-shadow-md);
   color: var(--color-black);
   display: flex;
-  flex-grow: 1;
   font-size: var(--font-size-md);
   gap: var(--space-2);
   padding: var(--space-3) var(--space-8);
@@ -31,16 +30,22 @@ button,
     transform: translate(2px, 2px);
   }
 
-  @media (width >= 640px) {
-    flex-grow: 0;
-  }
-
   @media (width >= 768px) {
     box-shadow: var(--box-shadow-lg);
 
     &:not(:disabled):hover {
       box-shadow: none;
       transform: translate(4px, 4px);
+    }
+  }
+
+  &[data-flex-grow*="base:1"] {
+    flex-grow: 1;
+  }
+
+  @media (width >= 640px) {
+    &[data-flex-grow*="sm:0"] {
+      flex-grow: 0;
     }
   }
 }

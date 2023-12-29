@@ -10,8 +10,8 @@ a {
 h1,
 .h1 {
   font-family: var(--font-family-serif);
-  font-size: var(--font-size-6xl);
-  line-height: var(--line-height-6xl);
+  font-size: var(--font-size-7xl);
+  line-height: var(--line-height-8xl);
 
   &.text-shadow {
     text-shadow: 3px 3px 0 var(--color-black);
@@ -26,8 +26,8 @@ h1,
 h2,
 .h2 {
   font-family: var(--font-family-serif);
-  font-size: var(--font-size-5xl);
-  line-height: var(--line-height-5xl);
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-4xl);
   text-transform: uppercase;
 
   &.text-shadow {

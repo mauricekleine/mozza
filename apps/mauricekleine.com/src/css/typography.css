@@ -12,6 +12,7 @@ h1,
   font-family: var(--font-family-serif);
   font-size: var(--font-size-7xl);
   line-height: var(--line-height-8xl);
+  text-transform: uppercase;
 
   &.text-shadow {
     text-shadow: 3px 3px 0 var(--color-black);
@@ -44,6 +45,7 @@ h3,
 .h3 {
   font-family: var(--font-family-serif);
   font-size: var(--font-size-2xl);
+  font-style: italic;
   line-height: var(--line-height-2xl);
   text-transform: uppercase;
 

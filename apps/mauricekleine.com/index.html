@@ -3,12 +3,27 @@
   <head>
     <title>Maurice Kleine - Freelance AI Engineer</title>
 
+    <link href="./css/index.css" rel="stylesheet" />
+
     <link
       href="./images/apple-touch-icon.png"
       rel="apple-touch-icon"
       sizes="180x180"
     />
     <link href="./images/favicon.ico" rel="icon" />
+    <link
+      href="./images/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      href="./images/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+
     <link href="/site.webmanifest" rel="manifest" />
 
     <meta
@@ -54,79 +69,13 @@
       name="twitter:image"
     />
 
+    <script src="./js/index.js" type="module"></script>
+
     <script
       async
       defer
       src="https://challenges.cloudflare.com/turnstile/v0/api.js"
     ></script>
-
-    <script>
-      window.onload = function () {
-        // Parse the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const toastDiv = document.getElementById("toast");
-        const button = toastDiv.querySelector("button");
-
-        if (urlParams.get("success") === "true") {
-          toastDiv.style.display = "flex";
-        }
-
-        if (urlParams.get("error")) {
-          toastDiv.style.display = "flex";
-          toastDiv.querySelector("p").innerText = `${urlParams.get(
-            "error",
-          )}. Please try again.`;
-        }
-
-        // Add onclick handler to toast close button
-        button.onclick = function () {
-          toastDiv.style.display = "none";
-          window.history.replaceState({}, document.title, "/");
-        };
-
-        // Smooth scroll to #contact when clicking #holler button
-        const hollerButton = document.getElementById("holler");
-        const contactSection = document.getElementById("contact");
-
-        hollerButton.addEventListener("click", function (event) {
-          event.preventDefault();
-          contactSection.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-          });
-        });
-      };
-    </script>
-
-    <style>
-      @import "./css/preflight.css";
-      @import "./css/variables.css";
-
-      /* Components */
-      @import "./css/button.css";
-      @import "./css/forms.css";
-      @import "./css/layout.css";
-      @import "./css/typography.css";
-      @import "./css/visuals.css";
-
-      body {
-        background-color: var(--color-blue-600);
-        background-image: radial-gradient(
-          var(--color-blue-500) 1px,
-          var(--color-blue-600) 1px
-        );
-        background-size: var(--space-4) var(--space-4);
-        color: var(--color-white);
-        font-family: var(--font-family-sans);
-        font-size: var(--font-size-xl);
-        line-height: var(--line-height-xl);
-        text-wrap: balance;
-      }
-
-      iframe {
-        max-width: 100%;
-      }
-    </style>
   </head>
 
   <body>

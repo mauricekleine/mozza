@@ -29,17 +29,17 @@
     "eslint-config-mozza": "workspace:*",
     "husky": "~8.0.3",
     "lint-staged": "~15.2.0",
-    "prettier": "~3.1.1",
+    "prettier": "~3.2.1",
     "prettier-plugin-organize-attributes": "~1.0.0",
     "sort-package-json": "~2.6.0",
-    "stylelint": "~16.0.2",
+    "stylelint": "~16.1.0",
     "stylelint-config-mozza": "workspace:*",
-    "taze": "~0.13.0",
+    "taze": "~0.13.1",
     "tsconfig": "workspace:*",
-    "turbo": "~1.11.2",
+    "turbo": "~1.11.3",
     "typescript": "~5.3.3"
   },
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@8.14.1",
   "engines": {
     "node": "^20.0.0"
   }

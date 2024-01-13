@@ -11,7 +11,8 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "dev": "wrangler pages dev --live-reload ./src",
+    "build": "vite build",
+    "dev": "wrangler pages dev --live-reload .",
     "lint": "stylelint \"./src/**/*.css\"",
     "lint:fix": "stylelint \"./src/**/*.css\" --fix"
   },
@@ -22,6 +23,8 @@
   "devDependencies": {
     "stylelint": "~16.0.2",
     "stylelint-config-mozza": "workspace:*",
+    "vite": "~5.0.11",
+    "vite-plugin-static-copy": "~1.0.0",
     "wrangler": "~3.22.1"
   },
   "engines": {

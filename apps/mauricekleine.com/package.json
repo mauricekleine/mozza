@@ -13,8 +13,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "wrangler pages dev --live-reload .",
-    "lint": "stylelint \"./src/**/*.css\"",
-    "lint:fix": "stylelint \"./src/**/*.css\" --fix"
+    "lint": "stylelint \"./css/*.css\"",
+    "lint:fix": "stylelint \"./css/*.css\" --fix"
   },
   "dependencies": {
     "zod": "~3.22.4",

@@ -1,12 +1,12 @@
-@import "./preflight.css";
-@import "./variables.css";
+@import url("./preflight.css");
+@import url("./variables.css");
 
 /* Components */
-@import "./button.css";
-@import "./forms.css";
-@import "./layout.css";
-@import "./typography.css";
-@import "./visuals.css";
+@import url("./button.css");
+@import url("./forms.css");
+@import url("./layout.css");
+@import url("./typography.css");
+@import url("./visuals.css");
 
 body {
   background-color: var(--color-blue-600);

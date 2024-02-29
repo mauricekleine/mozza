@@ -23,9 +23,9 @@
   "devDependencies": {
     "stylelint": "~16.2.1",
     "stylelint-config-mozza": "workspace:*",
-    "vite": "~5.0.12",
+    "vite": "~5.1.4",
     "vite-plugin-static-copy": "~1.0.1",
-    "wrangler": "~3.27.0"
+    "wrangler": "~3.30.0"
   },
   "engines": {
     "node": "^20.0.0"

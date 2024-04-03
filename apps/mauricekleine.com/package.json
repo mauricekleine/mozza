@@ -23,7 +23,7 @@
   "devDependencies": {
     "stylelint": "~16.2.1",
     "stylelint-config-mozza": "workspace:*",
-    "vite": "~5.1.4",
+    "vite": "~5.1.7",
     "vite-plugin-static-copy": "~1.0.1",
     "wrangler": "~3.30.0"
   },

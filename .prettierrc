@@ -1,5 +1,3 @@
 {
-  "attributeGroups": ["$DEFAULT"],
-  "attributeSort": "ASC",
-  "plugins": ["prettier-plugin-organize-attributes"]
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

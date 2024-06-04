@@ -8,39 +8,48 @@
     "type": "git",
     "url": "https://github.com/mauricekleine/mozza"
   },
-  "license": "",
-  "sideEffects": false,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "format": "prettier --plugin=prettier-plugin-organize-attributes --write \"**/*.{html,js,jsx,md,ts,tsx}\"",
-    "preinstall": "npx only-allow pnpm",
-    "lint": "turbo lint",
-    "lint:fix": "turbo lint:fix",
+    "build": "next build",
+    "dev": "next dev --turbo",
+    "format": "prettier --write .",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "precommit": "lint-staged",
-    "prepare": "husky install",
-    "start": "turbo start",
-    "typecheck": "turbo typecheck",
+    "prepare": "husky",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
     "update:major": "taze -r major -w",
     "update:minor": "taze -r minor -w"
   },
-  "devDependencies": {
-    "eslint": "~8.57.0",
-    "eslint-config-mozza": "workspace:*",
-    "husky": "~9.0.11",
-    "lint-staged": "~15.2.2",
-    "prettier": "~3.2.5",
-    "prettier-plugin-organize-attributes": "~1.0.0",
-    "sort-package-json": "~2.8.0",
-    "stylelint": "~16.2.1",
-    "stylelint-config-mozza": "workspace:*",
-    "taze": "~0.13.3",
-    "tsconfig": "workspace:*",
-    "turbo": "~1.12.4",
-    "typescript": "~5.3.3"
+  "dependencies": {
+    "@phosphor-icons/react": "~2.1.5",
+    "clsx": "~2.1.1",
+    "next": "15.0.0-rc.0",
+    "react": "19.0.0-rc-f994737d14-20240522",
+    "react-dom": "19.0.0-rc-f994737d14-20240522"
   },
-  "packageManager": "pnpm@8.15.4",
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.0-rc.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-sort": "^3.0.2",
+    "eslint-plugin-unicorn": "^53.0.0",
+    "eslint-plugin-unused-imports": "^4.0.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
+    "postcss": "^8",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "sort-package-json": "^2.10.0",
+    "tailwindcss": "^3.4.1",
+    "taze": "^0.13.8",
+    "typescript": "^5"
+  },
   "engines": {
-    "node": "^20.0.0"
+    "node": ">=20"
   }
 }

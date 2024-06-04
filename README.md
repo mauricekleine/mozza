@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/mauricekleine/mozza">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img style="border-radius: 9999px" src="images/stache.jpg" alt="Logo" width="80" height="80">
   </a>
 
   <br />

@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import "./globals.css";
 
 const sans = Grandstander({
+  subsets: ["latin"],
   variable: "--font-sans",
 });
 

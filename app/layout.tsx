@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   title: "Maurice Kleine - Freelance AI Engineer",
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     description:
       "Freelance AI Engineer based in Amsterdam, The Netherlands. I build AI applications with JavaScript and Python, for companies big and small.",
     title: "Maurice Kleine - Freelance AI Engineer",

@@ -22,32 +22,32 @@
     "update:minor": "taze -r minor -w"
   },
   "dependencies": {
-    "@phosphor-icons/react": "~2.1.5",
+    "@phosphor-icons/react": "~2.1.7",
     "clsx": "~2.1.1",
-    "next": "15.0.0-rc.0",
-    "react": "19.0.0-rc-f994737d14-20240522",
-    "react-dom": "19.0.0-rc-f994737d14-20240522"
+    "next": "canary",
+    "react": "canary",
+    "react-dom": "canary"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.0-rc.0",
+    "@types/node": "^20.16.11",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^9.12.0",
+    "eslint-config-next": "canary",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-sort": "^3.0.2",
-    "eslint-plugin-unicorn": "^53.0.0",
-    "eslint-plugin-unused-imports": "^4.0.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.5",
-    "postcss": "^8",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.14",
-    "sort-package-json": "^2.10.0",
-    "tailwindcss": "^3.4.1",
-    "taze": "^0.13.8",
-    "typescript": "^5"
+    "eslint-plugin-unicorn": "^56.0.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "sort-package-json": "^2.10.1",
+    "tailwindcss": "^3.4.13",
+    "taze": "^0.17.2",
+    "typescript": "^5.6.3"
   },
   "engines": {
     "node": ">=20"

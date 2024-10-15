@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import { Button } from "./ui/button";
+import { Button } from "./button";
 
 const svgClasses = clsx("fill-black max-w-32 h-8");
 

@@ -25,8 +25,8 @@
     "@phosphor-icons/react": "~2.1.7",
     "clsx": "~2.1.1",
     "next": "canary",
-    "react": "canary",
-    "react-dom": "canary"
+    "react": "19.0.0-rc-cd22717c-20241013",
+    "react-dom": "19.0.0-rc-cd22717c-20241013"
   },
   "devDependencies": {
     "@types/node": "^20.16.11",

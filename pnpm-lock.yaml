@@ -10,19 +10,19 @@ importers:
     dependencies:
       '@phosphor-icons/react':
         specifier: ~2.1.7
-        version: 2.1.7(react-dom@19.0.0-rc-6cf85185-20241014(react@19.0.0-rc-6cf85185-20241014))(react@19.0.0-rc-6cf85185-20241014)
+        version: 2.1.7(react-dom@19.0.0-rc-cd22717c-20241013(react@19.0.0-rc-cd22717c-20241013))(react@19.0.0-rc-cd22717c-20241013)
       clsx:
         specifier: ~2.1.1
         version: 2.1.1
       next:
         specifier: canary
-        version: 15.0.0-canary.191(react-dom@19.0.0-rc-6cf85185-20241014(react@19.0.0-rc-6cf85185-20241014))(react@19.0.0-rc-6cf85185-20241014)
+        version: 15.0.0-canary.191(react-dom@19.0.0-rc-cd22717c-20241013(react@19.0.0-rc-cd22717c-20241013))(react@19.0.0-rc-cd22717c-20241013)
       react:
-        specifier: canary
-        version: 19.0.0-rc-6cf85185-20241014
+        specifier: 19.0.0-rc-cd22717c-20241013
+        version: 19.0.0-rc-cd22717c-20241013
       react-dom:
-        specifier: canary
-        version: 19.0.0-rc-6cf85185-20241014(react@19.0.0-rc-6cf85185-20241014)
+        specifier: 19.0.0-rc-cd22717c-20241013
+        version: 19.0.0-rc-cd22717c-20241013(react@19.0.0-rc-cd22717c-20241013)
     devDependencies:
       '@types/node':
         specifier: ^20.16.11
@@ -2055,16 +2055,16 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  react-dom@19.0.0-rc-6cf85185-20241014:
-    resolution: {integrity: sha512-n+pmxQKKXwj19wlQN73JFs6VZnCi3spj5Id0iCAj5jCtu5geuw+7zLlJsNjt71SqQcTTrVTdXbmOy/91pJRI9w==}
+  react-dom@19.0.0-rc-cd22717c-20241013:
+    resolution: {integrity: sha512-NzjTBOXygonUxLRQuUUW5V2QLGkAcyUwJoS8+UWxs089paMvQQfoRD51w65Ovgd2OEQ8Rm3HWx+82fvXiT0czQ==}
     peerDependencies:
-      react: 19.0.0-rc-6cf85185-20241014
+      react: 19.0.0-rc-cd22717c-20241013
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react@19.0.0-rc-6cf85185-20241014:
-    resolution: {integrity: sha512-dj/vHI5yNC9PSk1z+K97NOMZ67aBcwMC7rw9jehI2BMKkDHGWdnWnq7/z3dILXOZ8Q13CSYDYaPlMq33FRYcGQ==}
+  react@19.0.0-rc-cd22717c-20241013:
+    resolution: {integrity: sha512-k28GszmyQ1tX/JmeLGZINq5KXiNy/MmN0fCAtcwF8a9INDyVYG0zATCRGJwaPB9WixmkuwPv1BfB1QBfJC7cNg==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -2139,8 +2139,8 @@ packages:
     resolution: {integrity: sha512-CdASjNJPvRa7roO6Ra/gLYBTzYzzPyyBXxIMdGW3USQLyjWEls2RgW5UBTXaQVp+OrpeCK3bLem8smtmheoRuw==}
     engines: {node: '>= 0.4'}
 
-  scheduler@0.25.0-rc-6cf85185-20241014:
-    resolution: {integrity: sha512-EABlmnb4IURV4rYEdTI6z17PWXCwZduJrGP3tVAZTeHBXuuS59LEaJIeOFfSASCu9kf1Ji9QnPcTKzx/Icz/AQ==}
+  scheduler@0.25.0-rc-cd22717c-20241013:
+    resolution: {integrity: sha512-MnsFR57bKcrYslnbCUsaUG0qBuAArk92VxE0zu6A2Usz38iIuL2uZLunqKlP1W47MF33GrRGDj1sXdPbFKIZfw==}
 
   semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
@@ -2803,10 +2803,10 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@phosphor-icons/react@2.1.7(react-dom@19.0.0-rc-6cf85185-20241014(react@19.0.0-rc-6cf85185-20241014))(react@19.0.0-rc-6cf85185-20241014)':
+  '@phosphor-icons/react@2.1.7(react-dom@19.0.0-rc-cd22717c-20241013(react@19.0.0-rc-cd22717c-20241013))(react@19.0.0-rc-cd22717c-20241013)':
     dependencies:
-      react: 19.0.0-rc-6cf85185-20241014
-      react-dom: 19.0.0-rc-6cf85185-20241014(react@19.0.0-rc-6cf85185-20241014)
+      react: 19.0.0-rc-cd22717c-20241013
+      react-dom: 19.0.0-rc-cd22717c-20241013(react@19.0.0-rc-cd22717c-20241013)
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -4293,7 +4293,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next@15.0.0-canary.191(react-dom@19.0.0-rc-6cf85185-20241014(react@19.0.0-rc-6cf85185-20241014))(react@19.0.0-rc-6cf85185-20241014):
+  next@15.0.0-canary.191(react-dom@19.0.0-rc-cd22717c-20241013(react@19.0.0-rc-cd22717c-20241013))(react@19.0.0-rc-cd22717c-20241013):
     dependencies:
       '@next/env': 15.0.0-canary.191
       '@swc/counter': 0.1.3
@@ -4301,9 +4301,9 @@ snapshots:
       busboy: 1.6.0
       caniuse-lite: 1.0.30001668
       postcss: 8.4.31
-      react: 19.0.0-rc-6cf85185-20241014
-      react-dom: 19.0.0-rc-6cf85185-20241014(react@19.0.0-rc-6cf85185-20241014)
-      styled-jsx: 5.1.6(react@19.0.0-rc-6cf85185-20241014)
+      react: 19.0.0-rc-cd22717c-20241013
+      react-dom: 19.0.0-rc-cd22717c-20241013(react@19.0.0-rc-cd22717c-20241013)
+      styled-jsx: 5.1.6(react@19.0.0-rc-cd22717c-20241013)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.0.0-canary.191
       '@next/swc-darwin-x64': 15.0.0-canary.191
@@ -4528,14 +4528,14 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  react-dom@19.0.0-rc-6cf85185-20241014(react@19.0.0-rc-6cf85185-20241014):
+  react-dom@19.0.0-rc-cd22717c-20241013(react@19.0.0-rc-cd22717c-20241013):
     dependencies:
-      react: 19.0.0-rc-6cf85185-20241014
-      scheduler: 0.25.0-rc-6cf85185-20241014
+      react: 19.0.0-rc-cd22717c-20241013
+      scheduler: 0.25.0-rc-cd22717c-20241013
 
   react-is@16.13.1: {}
 
-  react@19.0.0-rc-6cf85185-20241014: {}
+  react@19.0.0-rc-cd22717c-20241013: {}
 
   read-cache@1.0.0:
     dependencies:
@@ -4625,7 +4625,7 @@ snapshots:
       es-errors: 1.3.0
       is-regex: 1.1.4
 
-  scheduler@0.25.0-rc-6cf85185-20241014: {}
+  scheduler@0.25.0-rc-cd22717c-20241013: {}
 
   semver@5.7.2: {}
 
@@ -4830,10 +4830,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  styled-jsx@5.1.6(react@19.0.0-rc-6cf85185-20241014):
+  styled-jsx@5.1.6(react@19.0.0-rc-cd22717c-20241013):
     dependencies:
       client-only: 0.0.1
-      react: 19.0.0-rc-6cf85185-20241014
+      react: 19.0.0-rc-cd22717c-20241013
 
   sucrase@3.35.0:
     dependencies:

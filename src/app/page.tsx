@@ -1,13 +1,13 @@
-import { LogoGrid } from "./logo-grid";
-import { MailtoLink } from "./mailto-link";
-import { Button } from "./ui/button";
-import { GithubLogo, LinkedinLogo, PaperPlaneTilt } from "./ui/icons";
-import { StarBurst } from "./ui/starburst";
-import { H1, H2, H3 } from "./ui/typography";
+import { Button } from "~/ui/button";
+import { GithubLogo, LinkedinLogo, PaperPlaneTilt } from "~/ui/icons";
+import { LogoGrid } from "~/ui/logo-grid";
+import { MailtoLink } from "~/ui/mailto-link";
+import { StarBurst } from "~/ui/starburst";
+import { H1, H2, H3 } from "~/ui/typography";
 
 export default function Page() {
   return (
-    <main className="mt-32 space-y-32 md:mt-64 md:space-y-64">
+    <div className="mt-32 space-y-32 md:mt-64 md:space-y-64">
       <div className="mx-auto max-w-4xl space-y-16 text-center md:space-y-32">
         <div className="relative flex flex-col items-center space-y-4">
           <H1>Maurice Kleine</H1>
@@ -199,65 +199,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-
-      <div className="border-t-4 border-dashed border-black bg-red-600 p-8 text-center text-yellow-300 md:p-12">
-        <div className="mx-auto max-w-4xl space-y-8">
-          <H2>You won&apos;t regret it!</H2>
-
-          <p>
-            For a limited time only, we are offering a free consultation to new
-            clients. Contact us today to learn more about our services and how
-            we can help you transform your ideas into reality!
-          </p>
-
-          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
-            <Button
-              as="a"
-              href="https://www.linkedin.com/in/mauricekleine/"
-              leadingIcon={
-                <LinkedinLogo
-                  className="size-5 transition-transform duration-200"
-                  weight="bold"
-                />
-              }
-              target="_blank"
-            >
-              LinkedIn
-            </Button>
-
-            <Button
-              as="a"
-              href="https://github.com/mauricekleine/"
-              leadingIcon={
-                <GithubLogo
-                  className="size-5 transition-transform duration-200"
-                  weight="bold"
-                />
-              }
-              target="_blank"
-            >
-              Github
-            </Button>
-
-            <MailtoLink
-              leadingIcon={
-                <PaperPlaneTilt
-                  className="size-5 transition-transform duration-200"
-                  weight="bold"
-                />
-              }
-            >
-              Email
-            </MailtoLink>
-          </div>
-        </div>
-
-        <div className="mt-16 text-base">
-          <p>Maurice Kleine</p>
-
-          <p>Amsterdam, The Netherlands</p>
-        </div>
-      </div>
-    </main>
+    </div>
   );
 }

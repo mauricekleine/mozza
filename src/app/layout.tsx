@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { Grandstander } from "next/font/google";
 import { ReactNode } from "react";
 
-import "./globals.css";
 import { Button } from "~/ui/button";
 import { GithubLogo, LinkedinLogo, PaperPlaneTilt } from "~/ui/icons";
 import { MailtoLink } from "~/ui/mailto-link";
 import { H2 } from "~/ui/typography";
+
+import "./globals.css";
 
 const sans = Grandstander({
   subsets: ["latin"],
@@ -42,7 +43,7 @@ export default function RootLayout({ children }: Readonly<Props>) {
   return (
     <html lang="en">
       <body
-        className={`relative space-y-8 overflow-x-hidden text-balance bg-white bg-[url(./noise.svg)] font-sans text-xl leading-7 tracking-wide text-black ${sans.variable}`}
+        className={`relative overflow-x-hidden text-balance bg-white bg-[url(./noise.svg)] font-sans text-xl leading-7 tracking-wide text-black ${sans.variable}`}
       >
         {/* <header className="sticky top-4 z-50">
           <nav className="shadow-brutal-sm border-black border-2 hover:shadow-brutal-xs transition-all w-fit mx-auto rounded-md hover:bg-white/90 bg-white/70 backdrop-blur-md py-1 px-1 flex items-center text-base justify-between">
@@ -59,7 +60,7 @@ export default function RootLayout({ children }: Readonly<Props>) {
           </nav>
         </header> */}
 
-        <main>{children}</main>
+        <main className="my-16">{children}</main>
 
         <footer className="space-y-16 border-t-4 border-dashed border-black bg-red-600 p-8 text-center text-yellow-300 md:p-12">
           <div className="mx-auto max-w-4xl space-y-8">

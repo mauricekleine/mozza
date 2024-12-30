@@ -5,6 +5,9 @@ on:
       - main
   pull_request: {}
 
+env:
+  NODE_VERSION: 22
+
 jobs:
   lint:
     name: ESLint
@@ -19,7 +22,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: ${{ env.NODE_VERSION }}
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -61,7 +64,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: ${{ env.NODE_VERSION }}
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
